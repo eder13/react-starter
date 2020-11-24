@@ -8,24 +8,40 @@ class Search extends Component {
 
   static propTypes = {
     searchUsers: PropTypes.func.isRequired,
+    clearUser: PropTypes.func.isRequired,
+    showClear: PropTypes.bool.isRequired,
+    setAlert: PropTypes.func.isRequired,
   };
 
   onChange = (e) => {
-    // update state, what's in here
     this.setState({ [e.target.name]: e.target.value });
   };
 
   onSubmit = (e) => {
-    this.props.searchUsers(this.state.text);
-    this.setState({ text: "" });
+    if (this.state.text === "") {
+      this.props.setAlert("Enter Something...", "alert alert-danger");
+    } else {
+      this.props.searchUsers(this.state.text);
+      this.setState({ text: "" });
+    }
 
     e.preventDefault();
   };
 
   render() {
+    const { showClear, clearUser } = this.props;
+
     return (
       <div>
-        <form onSubmit={this.onSubmit} className="form">
+        <form
+          style={{
+            display: "flex",
+            flexFlow: "column nowrap",
+            alignItems: "center",
+          }}
+          onSubmit={this.onSubmit}
+          className="form"
+        >
           <input
             name="text"
             value={this.state.text}
@@ -33,11 +49,12 @@ class Search extends Component {
             placeholder="search users.."
             onChange={this.onChange}
           />
-          <input
-            type="submit"
-            className="btn btn-dark btn-block"
-            value="Search"
-          />
+          <input type="submit" className="btn btn-dark" value="Search" />
+          {showClear && (
+            <button className="btn btn-light" onClick={clearUser}>
+              clear
+            </button>
+          )}
         </form>
       </div>
     );

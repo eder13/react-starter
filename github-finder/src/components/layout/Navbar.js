@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Navbar = ({ title: title }) => {
   return (
-    <nav className="navbar bg-primary">
+    <nav className="navbar bg-light">
       <h2>{title}</h2>
     </nav>
   );
