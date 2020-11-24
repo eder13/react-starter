@@ -3,6 +3,7 @@ import React, { Component, Fragment } from "react";
 import Navbar from "./components/layout/Navbar";
 import Users from "./components/users/Users";
 import axios from "axios";
+import Search from "./components/layout/Search";
 
 class App extends Component {
   state = {
@@ -10,20 +11,33 @@ class App extends Component {
     loading: false,
   };
 
-  async componentDidMount() {
-    this.setState({ loading: true }); // destructuring, pulling out loading from state
+  search = async (queryString) => {
+
+    this.setState({loading: true});
 
     const req = await axios.get(
-      "https://api.github.com/users?client_id=af67235771058324e4aa&client_secret=08752555d44caf5ba4d2ab0c47b06c908e70373a"
+      `https://api.github.com/search/users?q=${queryString}&client_id=af67235771058324e4aa&client_secret=08752555d44caf5ba4d2ab0c47b06c908e70373a`
     );
 
-    this.setState({ loading: false, users: req.data });
-  }
+    this.setState({ users: req.data.items });
+    this.setState({loading: false});
+  };
+
+  // async componentDidMount() {
+  //   this.setState({ loading: true }); // destructuring, pulling out loading from state
+
+  //   const req = await axios.get(
+  //     "https://api.github.com/users?client_id=af67235771058324e4aa&client_secret=08752555d44caf5ba4d2ab0c47b06c908e70373a"
+  //   );
+
+  //   this.setState({ loading: false, users: req.data });
+  // }
 
   render() {
     return (
       <Fragment>
         <Navbar title="Github Finder" />
+        <Search searchUsers={this.search} />
         <div className="container">
           <Users loading={this.state.loading} users={this.state.users} />
         </div>
