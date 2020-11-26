@@ -5,12 +5,16 @@ import Users from "./components/users/Users";
 import axios from "axios";
 import Search from "./components/layout/Search";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import About from "./components/pages/About";
+import User from "./components/users/User";
 
 class App extends Component {
   state = {
     users: [],
+    user: {},
     loading: false,
     alert: null,
+    repos: [],
   };
 
   search = async (queryString) => {
@@ -21,6 +25,28 @@ class App extends Component {
     );
 
     this.setState({ users: req.data.items });
+    this.setState({ loading: false });
+  };
+
+  getSingleGithubUser = async (user) => {
+    this.setState({ loading: true });
+
+    const req = await axios.get(
+      `https://api.github.com/users/${user}?client_id=af67235771058324e4aa&client_secret=08752555d44caf5ba4d2ab0c47b06c908e70373a`
+    );
+
+    this.setState({ user: req.data });
+    this.setState({ loading: false });
+  };
+
+  getUserRepos = async (username) => {
+    this.setState({ loading: true });
+
+    const req = await axios.get(
+      `https://api.github.com/users/${username}/repos?per_page=5&sort=created:asc&client_id=af67235771058324e4aa&client_secret=08752555d44caf5ba4d2ab0c47b06c908e70373a`
+    );
+
+    this.setState({ repos: req.data });
     this.setState({ loading: false });
   };
 
@@ -48,7 +74,7 @@ class App extends Component {
   // }
 
   render() {
-    const { users, loading } = this.state;
+    const { users, user, loading, repos } = this.state;
 
     return (
       <Router>
@@ -59,15 +85,40 @@ class App extends Component {
               {this.state.alert.msg}
             </div>
           )}
-          <Search
-            clearUser={this.clear}
-            searchUsers={this.search}
-            showClear={users.length > 0 ? true : false}
-            setAlert={this.alert}
-          />
-          <div className="container">
-            <Users loading={loading} users={users} />
-          </div>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={(props) => (
+                <Fragment>
+                  <Search
+                    clearUser={this.clear}
+                    searchUsers={this.search}
+                    showClear={users.length > 0 ? true : false}
+                    setAlert={this.alert}
+                  />
+                  <div className="container">
+                    <Users loading={loading} users={users} />
+                  </div>
+                </Fragment>
+              )}
+            ></Route>
+            <Route exact path="/about" component={About} />
+            <Route
+              exact
+              path="/user/:login"
+              render={(props) => (
+                <User
+                  {...props}
+                  getSingleGithubUser={this.getSingleGithubUser}
+                  getUserRepos={this.getUserRepos}
+                  repos={repos}
+                  user={user}
+                  loading={loading}
+                />
+              )}
+            ></Route>
+          </Switch>
         </div>
       </Router>
     );
@@ -75,11 +126,3 @@ class App extends Component {
 }
 
 export default App;
-
-// https://api.github.com/users/${name}?client_id=${this._clientId}&client_secret=${this._clientSecret}`;
-
-// clientId: af67235771058324e4aa
-// clientSecret: 08752555d44caf5ba4d2ab0c47b06c908e70373a
-
-// E.g. https://api.github.com/users/eder13?client_id=af67235771058324e4aa&client_secret=08752555d44caf5ba4d2ab0c47b06c908e70373a
-// To get a user profile
