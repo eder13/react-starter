@@ -1,45 +1,23 @@
-import { compose, pipe } from "lodash/fp";
+import store from "./store";
+import { ADD_BUG, REMOVE_BUG, MARK_RESOLVED } from "./actionCreators";
 
-//let input = "   JavaScript   "; // remove whitepace from both sides of input
-//let output = "<div>" + input.trim() + "</div>";
+// gets called whenever dispatched
+const unsubscribe = store.subscribe(() => {
+  console.log("DISPATCHED", store.getState());
+});
 
-// Implementation in Functional Programming
-//// Steps to take:
-// trim string
-// wrapInDiv
+unsubscribe();
 
-let input = "   JavaScript   ";
+// User clicks on Add Button
+store.dispatch(ADD_BUG("This is Bug Numero Uno"));
 
-const trim = (str) => {
-  return str.trim();
-};
+console.log(store.getState());
 
-// const wrapInDiv = (str) => {
-//   return `<div>${str}</div>`;
-// };
+store.dispatch(MARK_RESOLVED(1));
 
-// function wrap(type) {
-//   return function (str) {
-//     return `<${type}>${str}</${type}>`;
-//   };
-// }
+console.log(store.getState());
 
-// <=>
+// store.dispatch(REMOVE_BUG(1));
 
-const wrap = (type) => (str) => `<${type}>${str}</${type}>`;
+// console.log(store.getState());
 
-const toLowerCase = (str) => {
-  return str.toLowerCase();
-};
-
-// const res = wrapInDiv(toLowerCase(trim(input)));
-
-// const transform = compose(wrapInDiv, toLowerCase, trim);
-// const res = transform(input);
-// console.log(res);
-
-const transform = pipe(trim, toLowerCase, wrap("span"));
-const res = transform(input);
-console.log(res);
-
-console.log(wrap("div")("Hello"));
