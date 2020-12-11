@@ -1,23 +1,37 @@
-import store from "./store";
-import { ADD_BUG, REMOVE_BUG, MARK_RESOLVED } from "./actionCreators";
+import { createStoreBug, createStoreProject } from "./store/configureStore";
+import * as actions from "./store/bugTracker";
+import * as actionsProjects from "./store/projects";
+
+const bugStore = createStoreBug();
 
 // gets called whenever dispatched
-const unsubscribe = store.subscribe(() => {
-  console.log("DISPATCHED", store.getState());
+const unsubscribe = bugStore.subscribe(() => {
+  console.log("DISPATCHED", bugStore.getState());
 });
 
 unsubscribe();
 
 // User clicks on Add Button
-store.dispatch(ADD_BUG("This is Bug Numero Uno"));
+bugStore.dispatch(actions.bugAdded({ description: "This is Bug Numero Uno" }));
 
-console.log(store.getState());
+console.log(bugStore.getState());
 
-store.dispatch(MARK_RESOLVED(1));
+bugStore.dispatch(actions.bugMarkedResolved({ id: 1 }));
 
-console.log(store.getState());
+console.log(bugStore.getState());
 
-// store.dispatch(REMOVE_BUG(1));
+bugStore.dispatch(actions.bugAdded({ description: "This is Bug Numero Dos" }));
 
-// console.log(store.getState());
+bugStore.dispatch(actions.bugAdded({ description: "This is Bug Numero Tres" }));
 
+bugStore.dispatch(actions.bugRemoved({ id: 3 }));
+
+console.log(bugStore.getState());
+
+// bugStore.dispatch(REMOVE_BUG(1));
+
+// console.log(bugStore.getState());
+
+const projectStore = createStoreProject();
+
+projectStore.dispatch(actionsProjects.projectAdded({ name: "Project 1" }));
