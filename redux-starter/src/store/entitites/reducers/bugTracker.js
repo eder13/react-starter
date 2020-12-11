@@ -1,4 +1,5 @@
 import { createAction, createReducer } from "@reduxjs/toolkit";
+import { createSelector } from "reselect";
 
 // Action Creators                  // Actions
 export const bugAdded = createAction("bugAdded");
@@ -13,6 +14,7 @@ export default createReducer([], {
       id: ++lastId, // generate id,
       description: action.payload.description,
       resolved: false,
+      projectId: action.payload.projectId,
     });
   },
   [bugRemoved.type]: (state, action) => {
@@ -23,3 +25,14 @@ export default createReducer([], {
     state[idx].resolved = true;
   },
 });
+
+// Selectors
+export const unresolvedBugsSelector = createSelector(
+  (state) => state.entities.bugs,
+  (bugs) => bugs.filter((bug) => bug.resolved === false)
+);
+
+export const resolvedBugsSelector = createSelector(
+  (state) => state.entities.bugs,
+  (bugs) => bugs.filter((bug) => bug.resolved === true)
+);

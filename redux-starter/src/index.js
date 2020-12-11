@@ -1,37 +1,59 @@
-import { createStoreBug, createStoreProject } from "./store/configureStore";
-import * as actions from "./store/bugTracker";
-import * as actionsProjects from "./store/projects";
+import createStore from "./store/store";
+import {
+  bugAdded,
+  bugMarkedResolved,
+  bugRemoved,
+  resolvedBugsSelector,
+  unresolvedBugsSelector,
+} from "./store/entitites/reducers/bugTracker";
+import * as actionsProjects from "./store/entitites/reducers/projects";
+import {
+  teamAdded,
+  bugsAssignedTeamSelector,
+  teamWithIdSelector,
+} from "./store/entitites/reducers/teams";
 
-const bugStore = createStoreBug();
+const store = createStore();
 
 // gets called whenever dispatched
-const unsubscribe = bugStore.subscribe(() => {
-  console.log("DISPATCHED", bugStore.getState());
+const unsubscribe = store.subscribe(() => {
+  console.log("DISPATCHED", store.getState());
 });
 
 unsubscribe();
 
-// User clicks on Add Button
-bugStore.dispatch(actions.bugAdded({ description: "This is Bug Numero Uno" }));
+store.dispatch(
+  bugAdded({ description: "This is Bug Numero Uno", projectId: 1 })
+);
 
-console.log(bugStore.getState());
+store.dispatch(
+  bugAdded({ description: "This is Bug Numero Dos", projectId: 2 })
+);
 
-bugStore.dispatch(actions.bugMarkedResolved({ id: 1 }));
+store.dispatch(bugMarkedResolved({ id: 2 }));
 
-console.log(bugStore.getState());
+store.dispatch(
+  bugAdded({ description: "This is Bug Numero Tres", projectId: 2 })
+);
 
-bugStore.dispatch(actions.bugAdded({ description: "This is Bug Numero Dos" }));
+store.dispatch(
+  bugAdded({ description: "This is Bug Numero Quatro", projectId: 2 })
+);
 
-bugStore.dispatch(actions.bugAdded({ description: "This is Bug Numero Tres" }));
+store.dispatch(bugRemoved({ id: 4 }));
 
-bugStore.dispatch(actions.bugRemoved({ id: 3 }));
+store.dispatch(actionsProjects.projectAdded({ name: "Project 1", teamId: 1 })); // refers to
 
-console.log(bugStore.getState());
+console.log(unresolvedBugsSelector(store.getState()));
+console.log(resolvedBugsSelector(store.getState()));
 
-// bugStore.dispatch(REMOVE_BUG(1));
+store.dispatch(
+  teamAdded({
+    members: ["John Doe", "John Smith", "Max Mustermann"],
+    projectIds: [1],
+    openBugId: 1,
+  })
+);
 
-// console.log(bugStore.getState());
-
-const projectStore = createStoreProject();
-
-projectStore.dispatch(actionsProjects.projectAdded({ name: "Project 1" }));
+const team = teamWithIdSelector(store.getState(), 1);
+console.log(bugsAssignedTeamSelector(store.getState(), team));
