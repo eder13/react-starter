@@ -1,4 +1,4 @@
-import createStore from "./store/store";
+import createStore from "./store/configStore";
 import {
   bugAdded,
   bugMarkedResolved,
@@ -20,42 +20,42 @@ const unsubscribe = store.subscribe(() => {
   console.log("DISPATCHED", store.getState());
 });
 
-unsubscribe();
-
 store.dispatch(
   bugAdded({ description: "This is Bug Numero Uno", projectId: 1 })
 );
 
-store.dispatch(
-  bugAdded({ description: "This is Bug Numero Dos", projectId: 2 })
-);
+// unsubscribe();
 
-store.dispatch(bugMarkedResolved({ id: 2 }));
+// store.dispatch(
+//   bugAdded({ description: "This is Bug Numero Dos", projectId: 2 })
+// );
 
-store.dispatch(
-  bugAdded({ description: "This is Bug Numero Tres", projectId: 2 })
-);
+// store.dispatch(bugMarkedResolved({ id: 2 }));
 
-store.dispatch(
-  bugAdded({ description: "This is Bug Numero Quatro", projectId: 2 })
-);
+// store.dispatch(
+//   bugAdded({ description: "This is Bug Numero Tres", projectId: 2 })
+// );
 
-store.dispatch(bugRemoved({ id: 4 }));
+// store.dispatch(
+//   bugAdded({ description: "This is Bug Numero Quatro", projectId: 2 })
+// );
 
-store.dispatch(actionsProjects.projectAdded({ name: "Project 1", teamId: 1 })); // refers to
+// store.dispatch(bugRemoved({ id: 4 }));
 
-console.log(unresolvedBugsSelector(store.getState()));
-console.log(resolvedBugsSelector(store.getState()));
+// store.dispatch(actionsProjects.projectAdded({ name: "Project 1", teamId: 1 })); // refers to
 
-store.dispatch(
-  teamAdded({
-    members: ["John Doe", "John Smith", "Max Mustermann"],
-    projectIds: [1],
-    openBugId: 1,
-  })
-);
+// console.log("All unresolved bugs: ", unresolvedBugsSelector(store.getState()));
+// console.log("Resolved bugs: ", resolvedBugsSelector(store.getState()));
 
-const team = teamWithIdSelector(1)(store.getState());
-const assignedBugsForTeams = bugsAssignedTeamSelector(team)(store.getState());
+// store.dispatch(
+//   teamAdded({
+//     members: ["John Doe", "John Smith", "Max Mustermann"],
+//     projectIds: [1],
+//     openBugId: 1,
+//   })
+// );
 
-console.log(assignedBugsForTeams);
+// const team = teamWithIdSelector(1)(store.getState());
+// const assignedBugsForTeams = bugsAssignedTeamSelector(team)(store.getState());
+
+// console.log("Assigned Bugs for Team with ID 1", assignedBugsForTeams);
