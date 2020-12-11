@@ -55,5 +55,7 @@ store.dispatch(
   })
 );
 
-const team = teamWithIdSelector(store.getState(), 1);
-console.log(bugsAssignedTeamSelector(store.getState(), team));
+const team = teamWithIdSelector(1)(store.getState());
+const assignedBugsForTeams = bugsAssignedTeamSelector(team)(store.getState());
+
+console.log(assignedBugsForTeams);

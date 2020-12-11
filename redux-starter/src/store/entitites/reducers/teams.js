@@ -19,28 +19,21 @@ export default createReducer([], {
 });
 
 // Selectors
-export const teamWithIdSelector = createSelector(
-  (state, id) => {
-    // search team with id
-    const teams = state.entities.teams;
-    return { teams, id };
-  },
-  (obj) => {
-    for (let i = 0; i < obj.teams.length; i++) {
-      if (obj.teams[i].id === obj.id) {
-        return obj.teams[i];
+export const teamWithIdSelector = (id) =>
+  createSelector(
+    (state) => state.entities.teams,
+    (teams) => {
+      for (let i = 0; i < teams.length; i++) {
+        if (teams[i].id === id) {
+          return teams[i];
+        }
       }
+      return null;
     }
-    return null;
-  }
-);
+  );
 
-export const bugsAssignedTeamSelector = createSelector(
-  (state, team) => {
-    const bugs = state.entities.bugs;
-    console.log(team);
-    return { bugs, team };
-  },
-  (obj) => obj.bugs.filter((bug) => bug.id === obj.team.openBugId)
-  //state.entities.bugs.filter((bug) => bug.id === team.openBugId)
-);
+export const bugsAssignedTeamSelector = (team) =>
+  createSelector(
+    (state) => state.entities.bugs,
+    (bugs) => bugs.filter((bug) => bug.id === team.openBugId)
+  );
