@@ -14,15 +14,28 @@ import {
 } from "./store/entitites/reducers/teams";
 
 const store = createStore();
+store.dispatch((dispatch, getState) => { // passing Reference from Middleware -- getState useful for decision makng -> e.g. Data already there no need for refetch!
+  // Call API
+  // When Promise resolved => dispatch action
+  const success = true; // promise succeeded bzw. promise rejected
 
-// gets called whenever dispatched
-const unsubscribe = store.subscribe(() => {
-  console.log("DISPATCHED", store.getState());
+  // -> this comes already with Redux Toolkit -> THUNK 
+
+  if (success) {
+    dispatch({ type: "bugsReceived", bugs: [1, 2, 3] });  
+  } else {
+    dispatch({ type: "bugsReceivedError", msg: "ERROR" }); 
+  }
 });
 
-store.dispatch(
-  bugAdded({ description: "This is Bug Numero Uno", projectId: 1 })
-);
+// // gets called whenever dispatched
+// const unsubscribe = store.subscribe(() => {
+//   console.log("DISPATCHED", store.getState());
+// });
+
+// store.dispatch(
+//   bugAdded({ description: "This is Bug Numero Uno", projectId: 1 })
+// );
 
 // unsubscribe();
 
