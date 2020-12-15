@@ -5,6 +5,8 @@ import {
   bugRemoved,
   resolvedBugsSelector,
   unresolvedBugsSelector,
+  bugsReceived,
+  loadBugs,
 } from "./store/entitites/reducers/bugTracker";
 import * as actionsProjects from "./store/entitites/reducers/projects";
 import {
@@ -14,19 +16,31 @@ import {
 } from "./store/entitites/reducers/teams";
 
 const store = createStore();
-store.dispatch((dispatch, getState) => { // passing Reference from Middleware -- getState useful for decision makng -> e.g. Data already there no need for refetch!
-  // Call API
-  // When Promise resolved => dispatch action
-  const success = true; // promise succeeded bzw. promise rejected
 
-  // -> this comes already with Redux Toolkit -> THUNK 
+// with loadBugs() we are actually dispatching a function here --> catch with action creator
+store.dispatch(loadBugs());
 
-  if (success) {
-    dispatch({ type: "bugsReceived", bugs: [1, 2, 3] });  
-  } else {
-    dispatch({ type: "bugsReceivedError", msg: "ERROR" }); 
-  }
-});
+setTimeout(() => {
+  store.dispatch(loadBugs());
+}, 5000);
+
+setTimeout(() => {
+  store.dispatch(loadBugs());
+}, 35000);
+
+// store.dispatch((dispatch, getState) => { // passing Reference from Middleware -- getState useful for decision makng -> e.g. Data already there no need for refetch!
+//   // Call API
+//   // When Promise resolved => dispatch action
+//   const success = true; // promise succeeded bzw. promise rejected
+
+//   // -> this comes already with Redux Toolkit -> THUNK
+
+//   if (success) {
+//     dispatch({ type: "bugsReceived", bugs: [1, 2, 3] });
+//   } else {
+//     dispatch({ type: "bugsReceivedError", msg: "ERROR" });
+//   }
+// });
 
 // // gets called whenever dispatched
 // const unsubscribe = store.subscribe(() => {
