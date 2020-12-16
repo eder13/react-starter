@@ -10,16 +10,14 @@ export const bugMarkedResolved = createAction("bugMarkedResolved");
 export const bugsReceived = createAction("bugsReceived");
 export const bugsRequested = createAction("bugsRequested");
 export const bugsRequestDone = createAction("bugsRequestDone");
-
 export const loadBugs = () => (dispatch, getState) => {
   const { lastFetch } = getState().entities.bugs;
-
   console.log(lastFetch);
-
   const diffInSeconds = moment().diff(moment(lastFetch), "seconds");
 
+  // but store this number in config file -> how valid, AND generalize this approach, want to reuse cache in other parts as well
+  //                  |
   if (diffInSeconds < 30) {
-    // but store this number in config file -> how valid, AND generalize this approach, want to reuse cache in other parts as well
     console.log("Please Wait...");
     return;
   }
@@ -34,6 +32,18 @@ export const loadBugs = () => (dispatch, getState) => {
       onSuccess: bugsReceived.type,
     })
   );
+};
+
+export const postBug = (bug) => {
+
+  console.log(bug);
+
+  return apiCallBegan({
+    url: "/bugs",
+    method: "POST",
+    data: bug,
+    onSuccess: bugAdded.type,
+  });
 };
 
 // Reducer

@@ -7,6 +7,7 @@ import {
   unresolvedBugsSelector,
   bugsReceived,
   loadBugs,
+  postBug,
 } from "./store/entitites/reducers/bugTracker";
 import * as actionsProjects from "./store/entitites/reducers/projects";
 import {
@@ -15,18 +16,26 @@ import {
   teamWithIdSelector,
 } from "./store/entitites/reducers/teams";
 
+import { apiCallBegan } from "./store/entitites/reducers/apiCreators";
+
 const store = createStore();
 
+store.dispatch(
+  postBug({
+    description: "Test2",
+  })
+);
+
 // with loadBugs() we are actually dispatching a function here --> catch with action creator
-store.dispatch(loadBugs());
+//store.dispatch(loadBugs());
 
 setTimeout(() => {
   store.dispatch(loadBugs());
-}, 5000);
+}, 1000);
 
-setTimeout(() => {
-  store.dispatch(loadBugs());
-}, 35000);
+// setTimeout(() => {
+//   store.dispatch(loadBugs());
+// }, 35000);
 
 // store.dispatch((dispatch, getState) => { // passing Reference from Middleware -- getState useful for decision makng -> e.g. Data already there no need for refetch!
 //   // Call API

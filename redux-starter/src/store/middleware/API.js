@@ -74,6 +74,22 @@ const api = ({ dispatch, getState }) => (next) => async (action) => {
           });
       }
 
+    case "POST":
+      try {
+        const req = await axios.post("http://localhost:9001/api" + url, data);
+        console.log(req.data);
+        // General Success Call
+        dispatch(apiCreators.apiCallSucceeded(req.data));
+
+        // Specific Success Call
+        if (onSuccess) {
+          dispatch({
+            type: onSuccess,
+            payload: { data: req.data },
+          });
+        }
+      } catch (e) {}
+
     default:
       return;
   }
