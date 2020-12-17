@@ -37,7 +37,7 @@ const api = ({ dispatch, getState }) => (next) => async (action) => {
   switch (method) {
     case "GET":
       try {
-        const req = await axios.get("http://localhost:9001/api" + url);
+        const req = await axios.get("http://localhost:3000" + url);
 
         // General Success Call
         dispatch(apiCreators.apiCallSucceeded(req.data));
@@ -77,7 +77,7 @@ const api = ({ dispatch, getState }) => (next) => async (action) => {
 
     case "POST":
       try {
-        const req = await axios.post("http://localhost:9001/api" + url, data);
+        const req = await axios.post("http://localhost:3000" + url, data);
         console.log(req.data);
         // General Success Call
         dispatch(apiCreators.apiCallSucceeded(req.data));

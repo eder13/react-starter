@@ -35,7 +35,6 @@ export const loadBugs = () => (dispatch, getState) => {
 };
 
 export const postBug = (bug) => {
-
   console.log(bug);
 
   return apiCallBegan({
@@ -94,4 +93,9 @@ export const unresolvedBugsSelector = createSelector(
 export const resolvedBugsSelector = createSelector(
   (state) => state.entities.bugs.list,
   (bugs) => bugs.filter((bug) => bug.resolved === true)
+);
+
+export const storeSelector = createSelector(
+  (state) => state.entities.bugs.list,
+  (bugs) => bugs
 );
