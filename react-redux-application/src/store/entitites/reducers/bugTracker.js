@@ -45,6 +45,16 @@ export const postBug = (bug) => {
   });
 };
 
+export const updateBug = (data, id) => {
+  return apiCallBegan({
+    url: "/bugs",
+    id,
+    method: "PUT",
+    data,
+    onSuccess: bugMarkedResolved.type,
+  });
+};
+
 // Reducer
 let lastId = 0;
 export default createReducer(
@@ -87,7 +97,11 @@ export default createReducer(
 // Selectors
 export const unresolvedBugsSelector = createSelector(
   (state) => state.entities.bugs.list,
-  (bugs) => bugs.filter((bug) => bug.resolved === false)
+  (bugs) =>
+    bugs.filter((bug) => {
+      const { resolved } = bug;
+      return !resolved;
+    })
 );
 
 export const resolvedBugsSelector = createSelector(
@@ -99,3 +113,12 @@ export const storeSelector = createSelector(
   (state) => state.entities.bugs.list,
   (bugs) => bugs
 );
+
+export const bugByIdSelector = (id) =>
+  createSelector(
+    (state) => {
+      console.log(state.entities.bugs.list);
+      return state.entities.bugs.list;
+    },
+    (bugs) => bugs.find((bug) => bug.id === id)
+  );

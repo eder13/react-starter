@@ -1,10 +1,21 @@
 import React, { useEffect } from "react";
-import { loadBugs, storeSelector } from "./store/entitites/reducers/bugTracker";
+import {
+  loadBugs,
+  updateBug,
+  unresolvedBugsSelector,
+} from "./store/entitites/reducers/bugTracker";
 import { useDispatch, useSelector } from "react-redux";
+
+const markResolved = (dispatch) => (e) => {
+  if (e.target.className === "mark-resolved") {
+    const id = parseInt(e.target.getAttribute("id"));
+    dispatch(updateBug({ resolved: true }, id)); // normally need a PUT action -> updates on server
+  }
+};
 
 const Bugs = () => {
   const dispatch = useDispatch(); // get the dispatch function from store
-  const store = useSelector(storeSelector); // get everything from store to output (bugs)
+  const store = useSelector(unresolvedBugsSelector); // get everything from store to output (bugs)
 
   // "componentDidMount"
   useEffect(() => {
@@ -17,9 +28,16 @@ const Bugs = () => {
 
   return (
     <div>
-      <ul>
+      <ul onClick={markResolved(dispatch)}>
         {store.map((bug) => {
-          return <li key={bug.id}>{bug.description}</li>;
+          return (
+            <li key={bug.id}>
+              {bug.description}{" "}
+              <button className="mark-resolved" id={bug.id}>
+                Mark Resolved
+              </button>
+            </li>
+          );
         })}
       </ul>
     </div>

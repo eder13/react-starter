@@ -1,5 +1,6 @@
 import axios from "axios";
 import * as apiCreators from "./../entitites/reducers/apiCreators";
+import { bugByIdSelector } from "./../entitites/reducers/bugTracker";
 // How does an action API call look like?
 // "serializable action"
 // const action = {
@@ -21,6 +22,7 @@ const api = ({ dispatch, getState }) => (next) => async (action) => {
   }
 
   const {
+    id,
     url,
     method,
     data,
@@ -87,6 +89,30 @@ const api = ({ dispatch, getState }) => (next) => async (action) => {
           dispatch({
             type: onSuccess,
             payload: { data: req.data },
+          });
+        }
+      } catch (e) {}
+      break;
+
+    case "PUT":
+      try {
+        const updatedBug = {
+          ...bugByIdSelector(id)(getState()),
+          resolved: true,
+        };
+
+        const req = await axios.put(
+          "http://localhost:3000" + url + "/" + id,
+          updatedBug
+        );
+
+        // General Success Call
+        dispatch(apiCreators.apiCallSucceeded(req.data));
+
+        if (onSuccess) {
+          dispatch({
+            type: onSuccess,
+            payload: { id: req.data.id },
           });
         }
       } catch (e) {}
