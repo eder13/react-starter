@@ -13,6 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.security.web.AuthenticationEntryPoint;
@@ -70,6 +71,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                         if(a instanceof OAuth2AuthenticationToken) {
                             System.out.println("We have an OAuth2 Login!");
                             OAuth2User user = ((OAuth2AuthenticationToken) a).getPrincipal();
+
+
+
 
                             // parse JSON
                             Gson gson = new Gson();

@@ -16,6 +16,8 @@
 package com.greglturnquist.payroll.controller;
 
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
+import org.springframework.security.oauth2.client.annotation.RegisteredOAuth2AuthorizedClient;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -50,6 +52,12 @@ public class HomeController {
 		String message = (String) httpServletRequest.getSession().getAttribute("error.message");
 		httpServletRequest.getSession().removeAttribute("error.message");
 		return message;
+	}
+
+	@ResponseBody
+	@GetMapping("/authorized-client")
+	public String authorizedClient(@RegisteredOAuth2AuthorizedClient("github") OAuth2AuthorizedClient authorizedClient) {
+		return "{ " + "\"accessToken\":"  + " \"" +  authorizedClient.getAccessToken().getTokenValue() + "\" " + "}";
 	}
 
 }

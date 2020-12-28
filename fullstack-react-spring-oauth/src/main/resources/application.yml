@@ -29,5 +29,5 @@ spring:
         registration:
           github:
             # TODO: generate on github and paste info here, for testing
-            client-id: dc5c1c328d4146c5a0be
-            client-secret: 3a9c5537e046a95356d98a78dba5d3a6001e53ee
+            client-id: 5d2a5c43ca31ecebd625
+            client-secret: 1cc866f8c1c023afe465df0ea86bb58d9cf197b4
