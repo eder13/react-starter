@@ -1,0 +1,32 @@
+#------------------------------------------------------------------------------
+# Server Configurations
+#
+server:
+  port: 8081
+
+#------------------------------------------------------------------------------
+# MySQL Database config
+#
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/db_springreact?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: student
+    password: student
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    rest:
+      base-path: "/api"
+
+  #------------------------------------------------------------------------------
+  # OAuth2 Authorization Servers
+  #
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: dc5c1c328d4146c5a0be
+            client-secret: 3a9c5537e046a95356d98a78dba5d3a6001e53ee
