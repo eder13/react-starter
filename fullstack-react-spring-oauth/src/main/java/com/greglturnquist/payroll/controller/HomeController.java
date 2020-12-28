@@ -35,9 +35,9 @@ public class HomeController {
 		return message;
 	}
 
-	@ResponseBody
-	@GetMapping("/access-token")
-	public String accessToken(@RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient) {
-		return "{ " + "\"accessToken\":"  + " \"" + authorizedClient.getAccessToken().getTokenValue() + "\" " + "}";
-	}
+	//@ResponseBody
+	//@GetMapping("/access-token")
+	//public String accessToken(@RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient) {
+	//	return "{ " + "\"accessToken\":"  + " \"" + authorizedClient.getAccessToken().getTokenValue() + "\" " + "}";
+	//}
 }

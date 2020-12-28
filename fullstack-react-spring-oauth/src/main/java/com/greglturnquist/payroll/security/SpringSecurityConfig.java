@@ -52,7 +52,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                             public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
                                 httpServletResponse.setContentType(MediaType.TEXT_HTML_VALUE);
                                 httpServletResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                                httpServletResponse.getOutputStream().println("<script>window.location.href = \"http://localhost:8081/\"</script>");
+                                //httpServletResponse.getOutputStream().println("<script>window.location.href = \"http://localhost:8081/\"</script>");
                             }
                         })
                 )
