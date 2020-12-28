@@ -1,0 +1,21 @@
+#------------------------------------------------------------------------------
+# Server Configurations
+#
+server:
+  port: 8081
+
+#------------------------------------------------------------------------------
+# MySQL Database config
+#
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/db_springreact?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: student
+    password: student
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    rest:
+      base-path: "/api"
