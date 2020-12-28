@@ -2,9 +2,6 @@ package com.springreact.template.security;
 
 import java.util.Date;
 
-/// TODO: Create any other OAuth2 Provider like here (see returned JSON for attributes -
-///       can get that JSON in successHandler with user.getAttributes()) -
-///       example Github
 public class GithubUser {
 
     private String login;
