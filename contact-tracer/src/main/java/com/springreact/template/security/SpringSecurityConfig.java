@@ -67,7 +67,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
                         Authentication a = SecurityContextHolder.getContext().getAuthentication();
 
-                        if(a instanceof OAuth2AuthenticationToken) {
+                        if (a instanceof OAuth2AuthenticationToken) {
                             OAuth2User user = ((OAuth2AuthenticationToken) a).getPrincipal();
 
                             // parse JSON
@@ -81,7 +81,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                             Example<User> usersExample = Example.of(newUser, userMatcher);
                             boolean userExists = userRepository.exists(usersExample);
 
-                            if(!userExists) {
+                            if (!userExists) {
                                 userRepository.save(newUser);
                             }
                         }

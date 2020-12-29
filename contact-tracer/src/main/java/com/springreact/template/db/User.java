@@ -23,7 +23,8 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Contact> contacts;
 
-    public User() {}
+    public User() {
+    }
 
     public User(String name, String email, boolean newsletter) {
         this.name = name;

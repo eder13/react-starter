@@ -22,7 +22,8 @@ public class Contact {
     @JoinColumn(name = "user_id", nullable = true)
     private User user;
 
-    private Contact() {}
+    private Contact() {
+    }
 
     public Contact(Long id, String firstName, String lastName, String email, Date date, User user) {
         this.id = id;

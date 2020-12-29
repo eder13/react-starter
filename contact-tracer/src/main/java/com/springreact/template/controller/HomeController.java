@@ -18,41 +18,41 @@ import java.util.Map;
 @Controller
 public class HomeController {
 
-	@Autowired
-	private UserRepository userRepository;
+    @Autowired
+    private UserRepository userRepository;
 
-	@RequestMapping(value = "/")
-	public String index() {
-		return "index";
-	}
+    @RequestMapping(value = "/")
+    public String index() {
+        return "index";
+    }
 
-	@ResponseBody
-	@GetMapping("/user")
-	public Map<String, Object> user(@AuthenticationPrincipal OAuth2User principal) {
-		return Collections.singletonMap("email", principal.getAttribute("email"));
-	}
+    @ResponseBody
+    @GetMapping("/user")
+    public Map<String, Object> user(@AuthenticationPrincipal OAuth2User principal) {
+        return Collections.singletonMap("email", principal.getAttribute("email"));
+    }
 
-	@ResponseBody
-	@GetMapping("/userid")
-	public String userId(@RequestParam("email") String email) {
+    @ResponseBody
+    @GetMapping("/userid")
+    public String userId(@RequestParam("email") String email) {
 
-		User user = userRepository.findUserByEmail(email);
-		if(user != null) {
-			return "{" +
-					"\"id\": " +  user.getUserID() +
-					"}";
-		} else {
-			return "{" +
-					"\"error\": " +  "\"UserId not found\"" +
-					"}";
-		}
-	}
+        User user = userRepository.findUserByEmail(email);
+        if (user != null) {
+            return "{" +
+                    "\"id\": " + user.getUserID() +
+                    "}";
+        } else {
+            return "{" +
+                    "\"error\": " + "\"UserId not found\"" +
+                    "}";
+        }
+    }
 
-	@ResponseBody
-	@GetMapping("/error")
-	public String error(HttpServletRequest httpServletRequest) {
-		String message = (String) httpServletRequest.getSession().getAttribute("error.message");
-		httpServletRequest.getSession().removeAttribute("error.message");
-		return message;
-	}
+    @ResponseBody
+    @GetMapping("/error")
+    public String error(HttpServletRequest httpServletRequest) {
+        String message = (String) httpServletRequest.getSession().getAttribute("error.message");
+        httpServletRequest.getSession().removeAttribute("error.message");
+        return message;
+    }
 }

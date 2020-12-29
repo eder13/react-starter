@@ -41128,10 +41128,10 @@ var App = function App() {
             case 0:
               _context2.next = 2;
               return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("/api/contacts", {
-                firstName: "Irvin",
-                lastName: "Konjic",
-                email: "irvin.konjic@gmail.com",
-                date: "2020-12-23"
+                firstName: "Thomas",
+                lastName: "Wagner",
+                email: "tom@gmail.com",
+                date: "2020-12-25"
               }, {
                 headers: {
                   "Content-Type": "application/json"
