@@ -37,15 +37,45 @@ const App = () => {
 		window.location.href = "http://localhost:8081";
 	};
 
+	const addExampleData = async (e) => {
+		const req = await axios.post("/api/contacts", {
+			firstName: "Irvin",
+			lastName: "Konjic",
+			email: "irvin.konjic@gmail.com",
+			date: "2020-12-23",
+		}, {
+			headers: {
+				"Content-Type": "application/json"
+			}
+		});
+
+		// get reference link of created resource
+		const ref = req.data._links.user.href;
+
+		// get email from logged user
+		const req2 = await axios.get("/user");
+		const { email } = req2.data;
+
+		// get id from logged in user
+		const req3 = await axios.get(`/userid?email=${email}`);
+		const { id } = req3.data;
+
+		// connect the created contact with the logged in user
+		const resp = await axios.put(ref, `/api/users/${id}`, {
+			headers: {
+				"Content-Type": "text/uri-list"
+			}
+		});
+	}
+
 	useEffect(() => {
 
 		const loadData = async () => {
-			const userData = await axios.get("/user");
-			return userData;
+			return await axios.get("/user");
 		}
 
 		loadData().then(async (userData) => {
-			setUser(userData.data.name);
+			setUser(userData.data.email);
 			setIsLoggedIn('succeeded');
 		}).catch(async e => {
 			setIsLoggedIn('failed');
@@ -76,6 +106,7 @@ const App = () => {
 			return (
 				<Fragment>
 					<div>Hello {user}</div>
+					<button onClick={addExampleData}>Add Data</button>
 					<button onClick={logout}>Logout</button>
 				</Fragment>
 			);

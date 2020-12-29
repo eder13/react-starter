@@ -62,4 +62,15 @@ public class User {
     public void setNewsletter(Boolean newsletter) {
         this.newsletter = newsletter;
     }
+
+    //@Override
+    //public String toString() {
+    //    return "User{" +
+    //            "id=" + id +
+    //            ", name='" + name + '\'' +
+    //            ", email='" + email + '\'' +
+    //            ", newsletter=" + newsletter +
+    //            ", contacts=" + contacts +
+    //            '}';
+    //}
 }

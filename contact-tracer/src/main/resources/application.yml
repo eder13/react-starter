@@ -30,3 +30,15 @@ spring:
           github:
             client-id: fb809632e360f0b89c95
             client-secret: b008940f86bf6c947b0c26b340c71fcb33929530
+
+#------------------------------------------------------------------------------
+# MySQL Enable Logging
+#
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        SQL: debug
+#        type:
+#          descriptor:
+#            sql: trace

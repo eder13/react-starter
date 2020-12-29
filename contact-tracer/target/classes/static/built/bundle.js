@@ -41119,44 +41119,81 @@ var App = function App() {
     };
   }();
 
+  var addExampleData = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(e) {
+      var req, ref, req2, email, req3, id, resp;
+      return regeneratorRuntime.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("/api/contacts", {
+                firstName: "Irvin",
+                lastName: "Konjic",
+                email: "irvin.konjic@gmail.com",
+                date: "2020-12-23"
+              }, {
+                headers: {
+                  "Content-Type": "application/json"
+                }
+              });
+
+            case 2:
+              req = _context2.sent;
+              // get reference link of created resource
+              ref = req.data._links.user.href; // get email from logged user
+
+              _context2.next = 6;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/user");
+
+            case 6:
+              req2 = _context2.sent;
+              email = req2.data.email; // get id from logged in user
+
+              _context2.next = 10;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/userid?email=".concat(email));
+
+            case 10:
+              req3 = _context2.sent;
+              id = req3.data.id; // connect the created contact with the logged in user
+
+              _context2.next = 14;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default.a.put(ref, "/api/users/".concat(id), {
+                headers: {
+                  "Content-Type": "text/uri-list"
+                }
+              });
+
+            case 14:
+              resp = _context2.sent;
+
+            case 15:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function addExampleData(_x2) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     var loadData = /*#__PURE__*/function () {
-      var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-        var userData;
-        return regeneratorRuntime.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                _context2.next = 2;
-                return axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/user");
-
-              case 2:
-                userData = _context2.sent;
-                return _context2.abrupt("return", userData);
-
-              case 4:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2);
-      }));
-
-      return function loadData() {
-        return _ref2.apply(this, arguments);
-      };
-    }();
-
-    loadData().then( /*#__PURE__*/function () {
-      var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(userData) {
+      var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
         return regeneratorRuntime.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                setUser(userData.data.name);
-                setIsLoggedIn('succeeded');
+                _context3.next = 2;
+                return axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/user");
 
               case 2:
+                return _context3.abrupt("return", _context3.sent);
+
+              case 3:
               case "end":
                 return _context3.stop();
             }
@@ -41164,28 +41201,21 @@ var App = function App() {
         }, _callee3);
       }));
 
-      return function (_x2) {
+      return function loadData() {
         return _ref3.apply(this, arguments);
       };
-    }())["catch"]( /*#__PURE__*/function () {
-      var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(e) {
-        var req;
+    }();
+
+    loadData().then( /*#__PURE__*/function () {
+      var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(userData) {
         return regeneratorRuntime.wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
               case 0:
-                setIsLoggedIn('failed');
-                _context4.next = 3;
-                return axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/error");
+                setUser(userData.data.email);
+                setIsLoggedIn('succeeded');
 
-              case 3:
-                req = _context4.sent;
-
-                if (req.data !== "") {
-                  setErrorLogging(req.data);
-                }
-
-              case 5:
+              case 2:
               case "end":
                 return _context4.stop();
             }
@@ -41195,6 +41225,35 @@ var App = function App() {
 
       return function (_x3) {
         return _ref4.apply(this, arguments);
+      };
+    }())["catch"]( /*#__PURE__*/function () {
+      var _ref5 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(e) {
+        var req;
+        return regeneratorRuntime.wrap(function _callee5$(_context5) {
+          while (1) {
+            switch (_context5.prev = _context5.next) {
+              case 0:
+                setIsLoggedIn('failed');
+                _context5.next = 3;
+                return axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/error");
+
+              case 3:
+                req = _context5.sent;
+
+                if (req.data !== "") {
+                  setErrorLogging(req.data);
+                }
+
+              case 5:
+              case "end":
+                return _context5.stop();
+            }
+          }
+        }, _callee5);
+      }));
+
+      return function (_x4) {
+        return _ref5.apply(this, arguments);
       };
     }());
   }, []);
@@ -41208,6 +41267,8 @@ var App = function App() {
   } else {
     if (isLoggedIn === 'succeeded') {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Hello ", user), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: addExampleData
+      }, "Add Data"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: logout
       }, "Logout"));
     } else {

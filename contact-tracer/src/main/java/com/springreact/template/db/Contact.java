@@ -18,10 +18,8 @@ public class Contact {
     private String email;
     private Date date;
 
-    //private Long fiUserId;
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    //@RestResource(path = "userContact", rel = "contact")
+    @JoinColumn(name = "user_id", nullable = true)
     private User user;
 
     private Contact() {}
@@ -105,15 +103,15 @@ public class Contact {
     //}
 
 
-    @Override
-    public String toString() {
-        return "Contact{" +
-                "contact_id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", date=" + date +
-                ", user=" + user +
-                '}';
-    }
+    //@Override
+    //public String toString() {
+    //    return "Contact{" +
+    //            "contact_id=" + id +
+    //            ", firstName='" + firstName + '\'' +
+    //            ", lastName='" + lastName + '\'' +
+    //            ", email='" + email + '\'' +
+    //            ", date=" + date +
+    //            ", user=" + user +
+    //            '}';
+    //}
 }
