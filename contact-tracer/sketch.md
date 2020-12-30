@@ -54,3 +54,18 @@ REST
 
 **Designing the store (Redux)**
 
+Reminder: Design of Redux:
+```txt
+(Event)  (Listener)
+Actions - Reducer - Store
+```
+
+Design to implement:
+
+```js
+// store design - this should be immutable
+{
+
+}
+```
+

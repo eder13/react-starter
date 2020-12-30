@@ -22,6 +22,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 @Configuration
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -68,17 +70,17 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                         if (a instanceof OAuth2AuthenticationToken) {
                             OAuth2User oauth2user = ((OAuth2AuthenticationToken) a).getPrincipal();
 
-                            // parse JSON
-                            Gson gson = new Gson();
-                            String json = gson.toJson(oauth2user.getAttributes());
+                            // get fields of interest
+                            Map<String, Object> map = new HashMap<>();
+                            map.put("name", oauth2user.getAttribute("name"));
+                            map.put("email", oauth2user.getAttribute("email"));
 
-                            GithubUser githubUser = gson.fromJson(json, GithubUser.class);
-                            User newUser = new User(githubUser.getName(), githubUser.getEmail(), false);
-
-                            User user = userRepository.findUserByEmail(githubUser.getEmail());
-
-                            if (user == null) {
-                                userRepository.save(newUser);
+                            // check if user logs in the first time -> true: save to database
+                            if (userRepository.findUserByEmail(map.get("email").toString()) == null) {
+                                User user = new User(map.get("name").toString(), map.get("email").toString(), false);
+                                userRepository.save(user);
+                            } else {
+                                System.out.println("User already in Database!");
                             }
                         }
                         super.onAuthenticationSuccess(request, response, authentication);
