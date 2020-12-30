@@ -2,7 +2,6 @@ package com.springreact.template.security;
 
 import com.springreact.template.db.User;
 import com.springreact.template.db.UserRepository;
-import com.google.gson.Gson;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -79,8 +78,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                             if (userRepository.findUserByEmail(map.get("email").toString()) == null) {
                                 User user = new User(map.get("name").toString(), map.get("email").toString(), false);
                                 userRepository.save(user);
-                            } else {
-                                System.out.println("User already in Database!");
                             }
                         }
                         super.onAuthenticationSuccess(request, response, authentication);

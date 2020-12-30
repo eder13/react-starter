@@ -5,8 +5,6 @@ com/springreact/template/db/ContactRepository.class
 com/springreact/template/security/SpringSecurityConfig$1.class
 com/springreact/template/SpringReactOAuthApplication.class
 com/springreact/template/db/Contact.class
-com/springreact/template/security/GithubUser$plan.class
-com/springreact/template/security/GithubUser.class
 com/springreact/template/db/User.class
 com/springreact/template/controller/HomeController.class
 com/springreact/template/security/SpringSecurityConfig$3.class
