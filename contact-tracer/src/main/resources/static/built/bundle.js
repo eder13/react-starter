@@ -41104,6 +41104,7 @@ var App = function App() {
               return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("/logout");
 
             case 2:
+              // "refresh" site
               window.location.href = "http://localhost:8081";
 
             case 3:
@@ -41128,10 +41129,10 @@ var App = function App() {
             case 0:
               _context2.next = 2;
               return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("/api/contacts", {
-                firstName: "Thomas",
-                lastName: "Wagner",
-                email: "tom@gmail.com",
-                date: "2020-12-25"
+                firstName: "John",
+                lastName: "Doe",
+                email: "johndoe@mail.com",
+                date: "2020-12-30"
               }, {
                 headers: {
                   "Content-Type": "application/json"

@@ -3,10 +3,7 @@ package com.springreact.template.security;
 import com.springreact.template.db.User;
 import com.springreact.template.db.UserRepository;
 import com.google.gson.Gson;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.http.MediaType;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -26,13 +23,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers.ignoreCase;
-
 @Configuration
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
+
+    public SpringSecurityConfig(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -45,7 +43,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(e -> e
-                        // Return unauthenticated Webpage if not logged in (could also transform this into json this way)
+                        /// TODO: return a JSON 'not authenticated 401' Response + Reason ('You need to be logged in to use this service')
                         .authenticationEntryPoint(new AuthenticationEntryPoint() {
                             @Override
                             public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
@@ -68,20 +66,18 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                         Authentication a = SecurityContextHolder.getContext().getAuthentication();
 
                         if (a instanceof OAuth2AuthenticationToken) {
-                            OAuth2User user = ((OAuth2AuthenticationToken) a).getPrincipal();
+                            OAuth2User oauth2user = ((OAuth2AuthenticationToken) a).getPrincipal();
 
                             // parse JSON
                             Gson gson = new Gson();
-                            String json = gson.toJson(user.getAttributes());
+                            String json = gson.toJson(oauth2user.getAttributes());
 
                             GithubUser githubUser = gson.fromJson(json, GithubUser.class);
                             User newUser = new User(githubUser.getName(), githubUser.getEmail(), false);
 
-                            ExampleMatcher userMatcher = ExampleMatcher.matching().withIgnorePaths("id").withMatcher("email", ignoreCase());
-                            Example<User> usersExample = Example.of(newUser, userMatcher);
-                            boolean userExists = userRepository.exists(usersExample);
+                            User user = userRepository.findUserByEmail(githubUser.getEmail());
 
-                            if (!userExists) {
+                            if (user == null) {
                                 userRepository.save(newUser);
                             }
                         }

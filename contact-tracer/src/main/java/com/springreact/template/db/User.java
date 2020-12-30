@@ -14,7 +14,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotNull
-    private int id;
+    private Long id;
     private String name;
     private String email;
     @Column(columnDefinition = "boolean default false")
@@ -32,11 +32,11 @@ public class User {
         this.newsletter = newsletter;
     }
 
-    public int getUserID() {
+    public Long getUserID() {
         return id;
     }
 
-    public void setUserID(int userId) {
+    public void setUserID(Long userId) {
         this.id = userId;
     }
 

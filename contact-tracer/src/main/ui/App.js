@@ -35,16 +35,17 @@ const App = () => {
 
   const logout = async (e) => {
     await axios.post("/logout");
+    // "refresh" site
     window.location.href = "http://localhost:8081";
   };
 
   const addExampleData = async (e) => {
 
     const req = await axios.post("/api/contacts", {
-      firstName: "Thomas",
-      lastName: "Wagner",
-      email: "tom@gmail.com",
-      date: "2020-12-25",
+      firstName: "John",
+      lastName: "Doe",
+      email: "johndoe@mail.com",
+      date: "2020-12-30",
     }, {
       headers: {
         "Content-Type": "application/json"
