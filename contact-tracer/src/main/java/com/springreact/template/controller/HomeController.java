@@ -6,6 +6,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+//import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
+//import org.springframework.security.oauth2.client.annotation.RegisteredOAuth2AuthorizedClient;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -79,4 +81,12 @@ public class HomeController {
         httpServletRequest.getSession().removeAttribute("error.message");
         return message;
     }
+
+    /// DEBUG: Getting accessToken from currently logged in user
+    //  @ResponseBody
+    //  @GetMapping("/access-token")
+    //  public String accessToken(@RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient) {
+    //      return "{ " + "\"accessToken\":"  + " \"" + authorizedClient.getAccessToken().getTokenValue() + "\" " + "}";
+    //  }
+
 }

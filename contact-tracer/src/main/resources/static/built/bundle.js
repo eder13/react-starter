@@ -41017,10 +41017,10 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./src/main/ui/App.js":
-/*!****************************!*\
-  !*** ./src/main/ui/App.js ***!
-  \****************************/
+/***/ "./src/main/frontend/App.js":
+/*!**********************************!*\
+  !*** ./src/main/frontend/App.js ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -41129,10 +41129,10 @@ var App = function App() {
             case 0:
               _context2.next = 2;
               return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("/api/contacts", {
-                firstName: "John",
-                lastName: "Doe",
-                email: "johndoe@mail.com",
-                date: "2020-12-30"
+                firstName: "James",
+                lastName: "Smith",
+                email: "james.smith@mail.com",
+                date: "2020-12-31"
               }, {
                 headers: {
                   "Content-Type": "application/json"
@@ -41290,10 +41290,10 @@ var App = function App() {
 
 /***/ }),
 
-/***/ "./src/main/ui/index.js":
-/*!******************************!*\
-  !*** ./src/main/ui/index.js ***!
-  \******************************/
+/***/ "./src/main/frontend/index.js":
+/*!************************************!*\
+  !*** ./src/main/frontend/index.js ***!
+  \************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -41303,7 +41303,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ "./src/main/ui/App.js");
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ "./src/main/frontend/App.js");
 
 
 
@@ -41312,14 +41312,14 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 /***/ }),
 
 /***/ 0:
-/*!****************************************************!*\
-  !*** multi @babel/polyfill ./src/main/ui/index.js ***!
-  \****************************************************/
+/*!**********************************************************!*\
+  !*** multi @babel/polyfill ./src/main/frontend/index.js ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! @babel/polyfill */"./node_modules/@babel/polyfill/lib/index.js");
-module.exports = __webpack_require__(/*! ./src/main/ui/index.js */"./src/main/ui/index.js");
+module.exports = __webpack_require__(/*! ./src/main/frontend/index.js */"./src/main/frontend/index.js");
 
 
 /***/ })

@@ -54,18 +54,75 @@ REST
 
 **Designing the store (Redux)**
 
+Required npm packages:
+* redux
+* @reduxjs/toolkit
+* moment
+* reselect 
+* react-redux
+
 Reminder: Design of Redux:
 ```txt
 (Event)  (Listener)
 Actions - Reducer - Store
 ```
 
-Design to implement:
+<!-- Remember that store is immutable - only via reducer after dispatching action alter state -->
 
-```js
-// store design - this should be immutable
+State Design:
+
+```javascript
 {
-
+  entities: {
+    contacts: []
+  },
+  
+  auth: {
+    userId: "", 
+    user: "" 
+  },
+  
+  ui: {
+    contacts: {
+      query: "page=0&size=5", 
+      sortBy: "firstName"
+    }
+  }
 }
 ```
 
+Goal: Store any state completely in redux (globally) BUT local state of temp form data (local state)
+
+Structure of the files 
+
+```txt
+
+    store/
+        configStore.js	        // our createStore() function  combined of entities, ui etc.
+        reducers.js 		// combines the other reducers to "main" reducer (entities, auth and ui)
+        middleware/             
+        entities/
+           reducers/
+              contact.js
+           entitites.js		// combines contact.js reducer to entities.js reducer
+       auth/
+          auth.js
+        ui/
+          ui.js
+```
+
+Login dispatching design:
+
+// componentdidmount
+Initially, try to load resources from /user endpoint -> if not allowed, user is unauthenticated (auth state is empty)
+else he is logged in (set auth state)
+
+Dispatch Action to login when user clicks on link: dispatch(loadLogin());
+
+* onStart: loginRequested
+* onSuccess: loginSucceeded
+* onFailure: loginFailed
+
+Possible Actions by the User (dispatch) when logged in:
+
+* 
