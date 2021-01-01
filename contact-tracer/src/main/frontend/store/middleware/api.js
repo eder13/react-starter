@@ -25,6 +25,7 @@ axios.interceptors.request.use((req) => {
 });
 
 const api = ({getState, dispatch}) => (next) => async (action) => {
+
   if (action.type !== apiCallBegan.type) {
     next(action);
     return;
@@ -52,43 +53,58 @@ const api = ({getState, dispatch}) => (next) => async (action) => {
         const userId = req1.data.id;
 
         // api success
-        dispatch({type: apiCallSucceeded(), payload: {}});
+        dispatch({type: apiCallSucceeded.type, payload: {}});
 
         // custom success
-        if(onSuccess) {
-          dispatch({type: onSuccess, payload: { userId, user }})
+        if (onSuccess) {
+          dispatch({type: onSuccess, payload: {userId, user}})
         }
 
       } catch (e) {
 
         // api error
-        dispatch({type: apiCallFailed, payload: {}});
+        dispatch({type: apiCallFailed.type, payload: {}});
 
         // custom error
-        if(onFailed) {
+        if (onFailed) {
           try {
             // check if error message generated
             const req = await axios.get("/error");
             if (req.data !== "") {
               // dispatch error with generated error message
-              dispatch({type: onFailed, payload: {error: req.data, type: "error"}});
+              if(onFailed)
+                dispatch({type: onFailed, payload: {error: req.data, type: "error"}});
             } else {
               // 403 error: dispatch error with custom unauthorized message
-              dispatch({type: onFailed, payload: {error: "Please login to use this service.", type: "info"}});
+              if(onFailed)
+                dispatch({type: onFailed, payload: {error: "Please login to use this service.", type: "info"}});
             }
           } catch (exception) {
-
             // error when trying to fetch /error
-            dispatch({type: onFailed, payload: {error: "Resource not found.", type: "notfound"}});
-
+            if(onFailed)
+              dispatch({type: onFailed, payload: {error: "Error: but could not load error message from OAuth2 Provider.", type: "error"}});
           }
         }
       }
-      dispatch({type: onDone, payload: {}}); // loading spinner stop
+      // loading spinner stop
+      setTimeout(() => dispatch({type: onDone, payload: {}}), 500);
       break;
 
-    // TODO: dispatch logout POST
     case "post":
+      try {
+        await axios.post(url);
+        dispatch({type: apiCallSucceeded.type, payload: {}});
+
+        if(onSuccess)
+          dispatch({type: onSuccess, payload: {}});
+      } catch (e) {
+        dispatch({type: apiCallFailed.type, payload: {}});
+
+        if(onFailed)
+          dispatch({type: onFailed, payload: {error: e.toString(), type: "error"}});
+      }
+      // loading spinner stop
+      setTimeout(() => dispatch({type: onDone, payload: {}}), 500);
       break;
 
     default:

@@ -1,4 +1,5 @@
 import React from 'react';
+import "./App.css";
 import createStore from "./store/configStore";
 import { Provider } from "react-redux";
 import Login from "./components/Login";
