@@ -74,13 +74,7 @@ public class HomeController {
         }
     }
 
-    @ResponseBody
-    @GetMapping("/error")
-    public String error(HttpServletRequest httpServletRequest) {
-        String message = (String) httpServletRequest.getSession().getAttribute("error.message");
-        httpServletRequest.getSession().removeAttribute("error.message");
-        return message;
-    }
+
 
     /// DEBUG: Getting accessToken from currently logged in user
     //  @ResponseBody

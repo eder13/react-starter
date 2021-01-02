@@ -36,14 +36,17 @@ const api = ({getState, dispatch}) => (next) => async (action) => {
 
   const {url, method, onStart, onDone, onSuccess, onFailed} = action.payload;
 
+  console.log("url:" + url);
+
   // set loading spinner
   dispatch({type: onStart, payload: {}})
 
   // check http method
   switch (method) {
-    case "get":
+    case "get": // TODO: case the different actual calls (login, contacts etc.)
       try {
 
+        // todo: this is specify code for auth store api all
         // get user name
         const req = await axios.get(url);
         const user = req.data.email;
@@ -69,7 +72,7 @@ const api = ({getState, dispatch}) => (next) => async (action) => {
         if (onFailed) {
           try {
             // check if error message generated
-            const req = await axios.get("/error");
+            const req = await axios.get("/error", {params: {message: "true"}});
             if (req.data !== "") {
               // dispatch error with generated error message
               if(onFailed)

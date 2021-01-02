@@ -1,9 +1,10 @@
 import {combineReducers} from "redux";
 import auth from "./auth/auth";
+import entities from "./entities/entities";
 
-/// TODO: add ui and entities reducers
+/// TODO: add ui reducer
 export default combineReducers({
-  //entitites
+  entities,
   auth
   //ui
 });

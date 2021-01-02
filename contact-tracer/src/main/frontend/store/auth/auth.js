@@ -6,7 +6,7 @@ import {apiCallBegan} from "../middleware/apiCreators";
 const loginRequested = createAction("loginRequested");
 const loginRequestDone = createAction("loginRequestDone");
 const loginDataReceived = createAction("loginDataReceived"); // user *successfully* logged in
-const loginFailed = createAction("loginFailed"); // user *failed* to gather resource - 2 cases: unauthenticated or authroization abort)
+const loginFailed = createAction("loginFailed"); // user *failed* to gather resource - 2 cases: unauthenticated or authorization process aborted)
 const logoutRequested = createAction("logoutRequested");
 const logoutRequestedDone = createAction("logoutRequestedDone");
 const logoutSucceeded = createAction("logoutSucceeded");
@@ -96,3 +96,8 @@ export const loginInfoSelector = createSelector(
   (state) => state.auth,
   (loginState) => loginState
 );
+
+export const loginUserIdSelector = createSelector(
+  (state) => state.auth,
+  (loginState) => loginState.userId
+)

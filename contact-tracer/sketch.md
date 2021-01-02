@@ -4,7 +4,7 @@ The Frontend is served on the server-endpoint `/` and is an SPA powered by React
 
 **Requirements**
 
-* Login System (with Registration) -> OAuth2
+* Home System (with Registration) -> OAuth2
 * Show Content only to authorized users
 * Each user has its own data (contacts)
     * Add, Remove, Delete and Alter Data
@@ -21,8 +21,8 @@ The Frontend is served on the server-endpoint `/` and is an SPA powered by React
 
 **API Endpoints (Backend)**
 
-Login System
-* Login with Github: `/oauth2/authorization/github`
+Home System
+* Home with Github: `/oauth2/authorization/github`
 * Logout of any service (POST): `/logout` <!-- TODO: HTTP 404 Not Found Custom Error (Not found does not return any JSON Data!), same with /login --> 
 * Authorization errors: `/error` <!-- TODO: HTTP 999 map to Not found -->
 * Try To Access Data when unauthenticated: redirect to homepage with message you have to be logged in (see TODO in spring)
@@ -111,7 +111,7 @@ Structure of the files
           ui.js
 ```
 
-Login dispatching design:
+Home dispatching design:
 
 // componentdidmount
 Initially, try to load resources from /user endpoint -> if not allowed, user is unauthenticated (auth state is empty)
@@ -125,4 +125,8 @@ Dispatch Action to login when user clicks on link: dispatch(loadLogin());
 
 Possible Actions by the User (dispatch) when logged in:
 
-* 
+* add a contact
+* delete a contact
+* update a contact (tmp contact - setcurrent, clearcurrent)
+* filter contact
+* clear filter
