@@ -1,9 +1,8 @@
 import axios from "axios";
 import Cookies from "js-cookie";
-import {apiCallBegan, apiCallSucceeded, apiCallFailed} from "./apiCreators";
+import {apiCallBegan, apiCallFailed, apiCallSucceeded} from "./apiCreators";
 
 // axios config for csrf protection
-// add xsrf cookie to every stuff
 axios.interceptors.request.use((req) => {
 
   if (
@@ -34,38 +33,31 @@ const api = ({getState, dispatch}) => (next) => async (action) => {
   // log that api call (apiCallBegan)
   next(action);
 
-  const {url, method, onStart, onDone, onSuccess, onFailed} = action.payload;
-
-  console.log("url:" + url);
+  const {url, method, data, onStart, onDone, onSuccess, onFailed} = action.payload;
 
   // set loading spinner
-  dispatch({type: onStart, payload: {}})
+  dispatch({type: onStart, payload: {}});
+
+  console.log("URL to call: " + url);
 
   // check http method
   switch (method) {
-    case "get": // TODO: case the different actual calls (login, contacts etc.)
+    case "get":
       try {
-
-        // todo: this is specify code for auth store api all
-        // get user name
+        // get data from provided url
         const req = await axios.get(url);
-        const user = req.data.email;
+        const data = req.data;
 
-        // get id
-        const req1 = await axios.get(`/userid?email=${user}`);
-        const userId = req1.data.id;
-
-        // api success
+        // if success, dispatch api success message
         dispatch({type: apiCallSucceeded.type, payload: {}});
 
-        // custom success
+        // custom success delegation: dispatch data to store
         if (onSuccess) {
-          dispatch({type: onSuccess, payload: {userId, user}})
+          dispatch({type: onSuccess, payload: {data}});
         }
-
       } catch (e) {
 
-        // api error
+        // if failed, dispatch api error message
         dispatch({type: apiCallFailed.type, payload: {}});
 
         // custom error
@@ -75,38 +67,39 @@ const api = ({getState, dispatch}) => (next) => async (action) => {
             const req = await axios.get("/error", {params: {message: "true"}});
             if (req.data !== "") {
               // dispatch error with generated error message
-              if(onFailed)
-                dispatch({type: onFailed, payload: {error: req.data, type: "error"}});
+              dispatch({type: onFailed, payload: {error: req.data, type: "error"}});
             } else {
               // 403 error: dispatch error with custom unauthorized message
-              if(onFailed)
-                dispatch({type: onFailed, payload: {error: "Please login to use this service.", type: "info"}});
+              dispatch({type: onFailed, payload: {error: "Please login to use this service.", type: "info"}});
             }
           } catch (exception) {
-            // error when trying to fetch /error
-            if(onFailed)
-              dispatch({type: onFailed, payload: {error: "Error: but could not load error message from OAuth2 Provider.", type: "error"}});
+            // General error: problem with url (not allowed, false url etc.)
+            dispatch({
+              type: onFailed,
+              payload: {error: "Error: An error occurred while trying to communicate with the API.", type: "error"}
+            });
           }
         }
       }
-      // loading spinner stop
-      setTimeout(() => dispatch({type: onDone, payload: {}}), 500);
+      // login spinner end
+      dispatch({type: onDone, payload: {}});
       break;
 
     case "post":
       try {
-        await axios.post(url);
+        const req = await axios.post(url, data, {headers: {"Content-Type": "application/json"}});
+        console.log(req.status, req.data);
+
         dispatch({type: apiCallSucceeded.type, payload: {}});
 
-        if(onSuccess)
+        if (onSuccess)
           dispatch({type: onSuccess, payload: {}});
       } catch (e) {
         dispatch({type: apiCallFailed.type, payload: {}});
 
-        if(onFailed)
+        if (onFailed)
           dispatch({type: onFailed, payload: {error: e.toString(), type: "error"}});
       }
-      // loading spinner stop
       setTimeout(() => dispatch({type: onDone, payload: {}}), 500);
       break;
 

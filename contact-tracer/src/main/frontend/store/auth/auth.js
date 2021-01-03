@@ -5,23 +5,36 @@ import {apiCallBegan} from "../middleware/apiCreators";
 // create Actions
 const loginRequested = createAction("loginRequested");
 const loginRequestDone = createAction("loginRequestDone");
-const loginDataReceived = createAction("loginDataReceived"); // user *successfully* logged in
-const loginFailed = createAction("loginFailed"); // user *failed* to gather resource - 2 cases: unauthenticated or authorization process aborted)
+const loginUserNameReceived = createAction("loginUserNameReceived"); // user *successfully* logged in
+const loginUserNameFailed = createAction("loginUserNameFailed"); // user *failed* to gather resource - 2 cases: unauthenticated or authorization process aborted)
+const loginUserIdReceived = createAction("loginUserIdReceived");
 const logoutRequested = createAction("logoutRequested");
 const logoutRequestedDone = createAction("logoutRequestedDone");
 const logoutSucceeded = createAction("logoutSucceeded");
 const logoutFailed = createAction("logoutFailed");
 
 // UI actions
-export const loadLogin = () => (dispatch, getState) => {
-  dispatch(apiCallBegan({
+export const loadLogin = () => async (dispatch, getState) => {
+  await dispatch(apiCallBegan({
     url: "/user", // FIXME: Remove Hardcoded URL
     method: "get",
     data: {},
     onStart: loginRequested.type,
     onDone: loginRequestDone.type,
-    onSuccess: loginDataReceived.type,
-    onFailed: loginFailed.type,
+    onSuccess: loginUserNameReceived.type,
+    onFailed: loginUserNameFailed.type,
+  }));
+}
+export const loadLoginUserId = () => (dispatch, getState) => {
+
+  // user credentials id
+  dispatch(apiCallBegan({
+    url: `/userid?email=${getState().auth.user}`, // FIXME: Remove Hardcoded URL
+    method: "get",
+    data: {},
+    onStart: loginRequested.type,
+    onDone: loginRequestDone.type,
+    onSuccess: loginUserIdReceived.type
   }));
 }
 export const loadLogout = () => (dispatch, getState) => {
@@ -57,15 +70,18 @@ export default createReducer(
       loginState.loading = false;
     },
     // Success: Store Data in state
-    [loginDataReceived.type]: (loginState, action) => {
-      loginState.userId = action.payload.userId;
-      loginState.user = action.payload.user;
+    [loginUserNameReceived.type]: (loginState, action) => {
+      loginState.user = action.payload.data.email;
     },
     // Failed: Update error message
-    [loginFailed.type]: (loginState, action) => {
+    [loginUserNameFailed.type]: (loginState, action) => {
       const {error, type} = action.payload;
       loginState.notification.error = error;
       loginState.notification.type = type;
+    },
+    // Success: saved login userId to store
+    [loginUserIdReceived.type]: (loginState, action) => {
+      loginState.userId = action.payload.data.id;
     },
     // Loading Spinner start
     [logoutRequested.type]: (loginState, action) => {

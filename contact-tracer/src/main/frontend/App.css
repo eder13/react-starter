@@ -38,6 +38,62 @@
   justify-content: center;
 }
 
+.container-even {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+
+.container-card {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card{
+  width: 100%;
+  margin: 50px auto 50px auto;
+  display: grid;
+  grid-template-rows: 50px auto 50px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  background-color: white;
+  border-radius: 25px;
+}
+
+.card-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1em;
+  color: white;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+
+}
+
+.card-content{
+  padding: 1em;
+}
+
+.card-content ul{
+  margin: 5px auto auto 25px;
+}
+
+.card-bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1em;
+  background-color: #eeeeee;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+#date-top{
+  background-color: #333;
+}
+
 #navbar {
   display: flex;
   flex-flow: row nowrap;

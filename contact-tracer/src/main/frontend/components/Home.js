@@ -1,17 +1,18 @@
-import React, {Fragment, useLayoutEffect} from "react";
-import {loadLogin, loadLogout, loginInfoSelector} from "../store/auth/auth";
+import React, {useLayoutEffect} from "react";
+import {loadLogin, loadLoginUserId, loginInfoSelector} from "../store/auth/auth";
 import {useDispatch, useSelector} from "react-redux";
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import Navbar from "./Navbar";
 import Login from "./Login";
-import Dashboard from "./Dashboard";
+import Contacts from "./Contacts";
 
 function Home() {
   const dispatch = useDispatch();
   const loginState = useSelector(loginInfoSelector);
 
   useLayoutEffect(() => {
-    dispatch(loadLogin());
+    // load the username
+    dispatch(loadLogin()).then(() => dispatch(loadLoginUserId()));
   }, []);
 
   if (loginState.loading) {
@@ -46,7 +47,8 @@ function Home() {
                 logout={loginState.user !== ""}/>
         <Switch>
           <Route exact path="/" render={() => <Login info={info} render={loginState.user === ""}/>}/>
-          <Route exact path="/dashboard" component={Dashboard}/> {/*TODO: this should be protected*/}
+          <Route exact path="/dashboard"
+                 render={() => <Contacts userId={loginState.userId}/>}/> {/*TODO: this should be protected*/}
         </Switch>
       </Router>
     );

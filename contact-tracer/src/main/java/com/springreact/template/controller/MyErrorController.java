@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
-/// Remaps not found always to index.html->React Router
+/// Remaps: "NOT FOUND" maps always to index.html -> React (handle here not found messages)
 
 @Controller
 public class MyErrorController implements ErrorController {

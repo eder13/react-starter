@@ -44,12 +44,12 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(e -> e
-                        /// TODO: return a JSON 'not authenticated 401' Response + Reason ('You need to be logged in to use this service')
                         .authenticationEntryPoint(new AuthenticationEntryPoint() {
                             @Override
                             public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
                                 httpServletResponse.setContentType(MediaType.TEXT_HTML_VALUE);
                                 httpServletResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                                /// TODO: For deployment, replace window.location.href with homepage domain home-url
                                 httpServletResponse.getOutputStream().println("<script>window.location.href = \"http://localhost:8081/\"</script>");
                             }
                         })
@@ -60,7 +60,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout(l -> l
                         .logoutSuccessUrl("/").permitAll()
                 )
-                .oauth2Login().defaultSuccessUrl("/")
+                .oauth2Login().defaultSuccessUrl("/dashboard")
                 .successHandler(new SavedRequestAwareAuthenticationSuccessHandler() {
                     @Override
                     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {

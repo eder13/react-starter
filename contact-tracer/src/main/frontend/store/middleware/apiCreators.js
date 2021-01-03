@@ -3,7 +3,8 @@ import { createAction } from "@reduxjs/toolkit";
 // Schema for API calls
 // {
 //   url: "",
-//   method: "get" || "post",
+//   method: "get" || "post", || "put" || "delete"
+//   data: {}
 //   onStart: ... ,
 //   onDone: ... ,
 //   onSuccess: ... ,

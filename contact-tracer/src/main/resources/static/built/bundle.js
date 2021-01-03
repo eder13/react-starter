@@ -13464,7 +13464,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: Arial, serif;\n}\n\n.info {\n  text-align: center;\n  height: 35px;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n  color: #31708f;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.error {\n  text-align: center;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n  color: #721c24;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n}\n\n#navbar {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n}\n\n#navbar .logo {\n  padding: 0.5rem 0;\n}\n\n#navbar .navbar-nav {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n}\n\n#navbar .navbar-nav ul {\n  list-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#navbar .navbar-nav ul li:first-child {\n  font-size: 0.8rem;\n}\n\n.login {\n  margin-top: 2rem;\n  background-color: #f4f4f4;\n  height: 200px;\n  width: 40%;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: center;\n}\n\n.login h1 {\n  margin-bottom: 2rem;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}", "",{"version":3,"sources":["webpack://./src/main/frontend/App.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,SAAS;EACT,UAAU;EACV,yBAAyB;AAC3B;;AAEA;EACE,kBAAkB;EAClB,YAAY;EACZ,UAAU;EACV,eAAe;EACf,cAAc;EACd,6BAA6B;EAC7B,yBAAyB;EACzB,qBAAqB;EACrB,cAAc;EACd,yBAAyB;EACzB,iBAAiB;AACnB;;AAEA;EACE,kBAAkB;EAClB,UAAU;EACV,eAAe;EACf,cAAc;EACd,6BAA6B;EAC7B,yBAAyB;EACzB,qBAAqB;EACrB,cAAc;EACd,yBAAyB;EACzB,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,8BAA8B;EAC9B,eAAe;EACf,sBAAsB;EACtB,YAAY;AACd;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;AACrB;;AAEA;EACE,qBAAqB;EACrB,aAAa;EACb,qBAAqB;AACvB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,gBAAgB;EAChB,yBAAyB;EACzB,aAAa;EACb,UAAU;EACV,aAAa;EACb,wBAAwB;EACxB,mBAAmB;EACnB,uBAAuB;AACzB;;AAEA;EACE,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,yBAAyB;EACzB,kBAAkB;EAClB,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,oCAAoC;AACtC;;AAEA;EACE,KAAK,uBAAuB,EAAE;EAC9B,OAAO,yBAAyB,EAAE;AACpC","sourcesContent":["* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: Arial, serif;\n}\n\n.info {\n  text-align: center;\n  height: 35px;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n  color: #31708f;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.error {\n  text-align: center;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n  color: #721c24;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n}\n\n#navbar {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n}\n\n#navbar .logo {\n  padding: 0.5rem 0;\n}\n\n#navbar .navbar-nav {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n}\n\n#navbar .navbar-nav ul {\n  list-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#navbar .navbar-nav ul li:first-child {\n  font-size: 0.8rem;\n}\n\n.login {\n  margin-top: 2rem;\n  background-color: #f4f4f4;\n  height: 200px;\n  width: 40%;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: center;\n}\n\n.login h1 {\n  margin-bottom: 2rem;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: Arial, serif;\n}\n\n.info {\n  text-align: center;\n  height: 35px;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n  color: #31708f;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.error {\n  text-align: center;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n  color: #721c24;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n}\n\n#navbar {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n}\n\n#navbar .logo {\n  padding: 0.5rem 0;\n}\n\n#navbar .navbar-nav {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n}\n\n#navbar .navbar-nav ul {\n  list-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#navbar .navbar-nav ul li {\n  margin: 0 1rem;\n}\n\n#navbar .navbar-nav ul li a {\n  color: white;\n}\n\n#navbar .navbar-nav ul li:first-child {\n  font-size: 0.8rem;\n}\n\n.login {\n  margin-top: 2rem;\n  background-color: #f4f4f4;\n  height: 200px;\n  width: 40%;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: center;\n}\n\n.login h1 {\n  margin-bottom: 2rem;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}", "",{"version":3,"sources":["webpack://./src/main/frontend/App.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,SAAS;EACT,UAAU;EACV,yBAAyB;AAC3B;;AAEA;EACE,kBAAkB;EAClB,YAAY;EACZ,UAAU;EACV,eAAe;EACf,cAAc;EACd,6BAA6B;EAC7B,yBAAyB;EACzB,qBAAqB;EACrB,cAAc;EACd,yBAAyB;EACzB,iBAAiB;AACnB;;AAEA;EACE,kBAAkB;EAClB,UAAU;EACV,eAAe;EACf,cAAc;EACd,6BAA6B;EAC7B,yBAAyB;EACzB,qBAAqB;EACrB,cAAc;EACd,yBAAyB;EACzB,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,8BAA8B;EAC9B,eAAe;EACf,sBAAsB;EACtB,YAAY;AACd;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;AACrB;;AAEA;EACE,qBAAqB;EACrB,aAAa;EACb,qBAAqB;AACvB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,gBAAgB;EAChB,yBAAyB;EACzB,aAAa;EACb,UAAU;EACV,aAAa;EACb,wBAAwB;EACxB,mBAAmB;EACnB,uBAAuB;AACzB;;AAEA;EACE,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,yBAAyB;EACzB,kBAAkB;EAClB,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,oCAAoC;AACtC;;AAEA;EACE,KAAK,uBAAuB,EAAE;EAC9B,OAAO,yBAAyB,EAAE;AACpC","sourcesContent":["* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: Arial, serif;\n}\n\n.info {\n  text-align: center;\n  height: 35px;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n  color: #31708f;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.error {\n  text-align: center;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n  color: #721c24;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n}\n\n#navbar {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n}\n\n#navbar .logo {\n  padding: 0.5rem 0;\n}\n\n#navbar .navbar-nav {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n}\n\n#navbar .navbar-nav ul {\n  list-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#navbar .navbar-nav ul li {\n  margin: 0 1rem;\n}\n\n#navbar .navbar-nav ul li a {\n  color: white;\n}\n\n#navbar .navbar-nav ul li:first-child {\n  font-size: 0.8rem;\n}\n\n.login {\n  margin-top: 2rem;\n  background-color: #f4f4f4;\n  height: 200px;\n  width: 40%;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: center;\n}\n\n.login h1 {\n  margin-bottom: 2rem;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -50174,11 +50174,30 @@ function App() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/entities/reducers/contact */ "./src/main/frontend/store/entities/reducers/contact.js");
 
 
-function Dashboard(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Dashboard"));
-}
+ //import {loginUserIdSelector} from "../store/auth/auth";
+
+var Dashboard = function Dashboard(_ref) {
+  var userId = _ref.userId;
+  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useLayoutEffect"])(function () {
+    // TODO: Investigate how useSelector done before this call
+    // e.g. const userId = useSelector(loginUserIdSelector);
+    if (userId) dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["loadContacts"])(userId));
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      marginTop: '2rem'
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    style: {
+      textAlign: 'center'
+    }
+  }, "Dashboard")));
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (Dashboard);
 
@@ -50213,7 +50232,10 @@ function Home() {
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
   var loginState = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_1__["loginInfoSelector"]);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useLayoutEffect"])(function () {
-    dispatch(Object(_store_auth_auth__WEBPACK_IMPORTED_MODULE_1__["loadLogin"])());
+    // load the username
+    dispatch(Object(_store_auth_auth__WEBPACK_IMPORTED_MODULE_1__["loadLogin"])()).then(function () {
+      return dispatch(Object(_store_auth_auth__WEBPACK_IMPORTED_MODULE_1__["loadLoginUserId"])());
+    });
   }, []);
 
   if (loginState.loading) {
@@ -50240,20 +50262,26 @@ function Home() {
       user: loginState.user !== "" ? loginState.user : "You are not signed in",
       dash: loginState.user !== "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         to: "/dashboard"
-      }, "Dashboard") : ""
+      }, "Dashboard") : "",
+      logout: loginState.user !== ""
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
       exact: true,
       path: "/",
       render: function render() {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Login__WEBPACK_IMPORTED_MODULE_5__["default"], {
-          info: info
+          info: info,
+          render: loginState.user === ""
         });
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
       exact: true,
       path: "/dashboard",
-      component: _Dashboard__WEBPACK_IMPORTED_MODULE_6__["default"]
-    })));
+      render: function render() {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Dashboard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+          userId: loginState.userId
+        });
+      }
+    }), " "));
   }
 }
 
@@ -50274,23 +50302,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar */ "./src/main/frontend/components/Navbar.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 
 
 
 Login.propTypes = {};
 
 function Login(_ref) {
-  var info = _ref.info;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, info !== "" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container"
-  }, info), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "login"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "With GitHub: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/oauth2/authorization/github"
-  }, "click here")))));
+  var info = _ref.info,
+      render = _ref.render;
+
+  if (render) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, info !== "" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "container"
+    }, info), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "container"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "login"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "With GitHub: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "/oauth2/authorization/github"
+    }, "click here")))));
+  } else {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        textAlign: 'center',
+        marginTop: '2rem',
+        fontSize: '1.3rem'
+      }
+    }, "You are logged in! ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      to: "/dashboard"
+    }, "proceed to the side"), ".");
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Login);
@@ -50311,6 +50353,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
+
+
 
 
 
@@ -50320,15 +50366,29 @@ Navbar.propTypes = {
 };
 
 function Navbar(props) {
+  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useDispatch"])();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     id: "navbar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "logo"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    style: {
+      color: 'red'
+    },
     className: props.title + " fa-3x"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
     className: "navbar-nav"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, props.user), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, props.dash))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, props.user), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/"
+  }, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, props.dash), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, props.logout && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick(e) {
+      dispatch(Object(_store_auth_auth__WEBPACK_IMPORTED_MODULE_4__["loadLogout"])()); // redirect to homepage
+
+      window.location.href = "/";
+    }
+  }, "logout")))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
@@ -50360,14 +50420,16 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 /*!**********************************************!*\
   !*** ./src/main/frontend/store/auth/auth.js ***!
   \**********************************************/
-/*! exports provided: loadLogin, loadLogout, default, loginInfoSelector */
+/*! exports provided: loadLogin, loadLoginUserId, loadLogout, default, loginInfoSelector, loginUserIdSelector */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadLogin", function() { return loadLogin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadLoginUserId", function() { return loadLoginUserId; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadLogout", function() { return loadLogout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loginInfoSelector", function() { return loginInfoSelector; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loginUserIdSelector", function() { return loginUserIdSelector; });
 /* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
 /* harmony import */ var reselect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reselect */ "./node_modules/reselect/es/index.js");
 /* harmony import */ var _middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../middleware/apiCreators */ "./src/main/frontend/store/middleware/apiCreators.js");
@@ -50375,32 +50437,70 @@ var _createReducer;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 
 
  // create Actions
 
 var loginRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("loginRequested");
 var loginRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("loginRequestDone");
-var loginDataReceived = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("loginDataReceived"); // user *successfully* logged in
+var loginUserNameReceived = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("loginUserNameReceived"); // user *successfully* logged in
 
-var loginFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("loginFailed"); // user *failed* to gather resource - 2 cases: unauthenticated or authroization abort)
+var loginUserNameFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("loginUserNameFailed"); // user *failed* to gather resource - 2 cases: unauthenticated or authorization process aborted)
 
+var loginUserIdReceived = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("loginUserIdReceived");
 var logoutRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("logoutRequested");
 var logoutRequestedDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("logoutRequestedDone");
 var logoutSucceeded = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("logoutSucceeded");
-var logoutFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("logoutFailed"); // UI actions
+var logoutFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("logoutFailed"); // TODO: Check promise based of ui actions
+// UI actions
 
 var loadLogin = function loadLogin() {
+  return /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(dispatch, getState) {
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
+                url: "/user",
+                // FIXME: Remove Hardcoded URL
+                method: "get",
+                data: {},
+                onStart: loginRequested.type,
+                onDone: loginRequestDone.type,
+                onSuccess: loginUserNameReceived.type,
+                onFailed: loginUserNameFailed.type
+              }));
+
+            case 2:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function (_x, _x2) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+};
+var loadLoginUserId = function loadLoginUserId() {
   return function (dispatch, getState) {
+    // user credentials id
     dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
-      url: "/user",
+      url: "/userid?email=".concat(getState().auth.user),
       // FIXME: Remove Hardcoded URL
       method: "get",
       data: {},
       onStart: loginRequested.type,
       onDone: loginRequestDone.type,
-      onSuccess: loginDataReceived.type,
-      onFailed: loginFailed.type
+      onSuccess: loginUserIdReceived.type
     }));
   };
 };
@@ -50431,15 +50531,16 @@ var loadLogout = function loadLogout() {
   loginState.loading = true;
 }), _defineProperty(_createReducer, loginRequestDone.type, function (loginState, action) {
   loginState.loading = false;
-}), _defineProperty(_createReducer, loginDataReceived.type, function (loginState, action) {
-  loginState.userId = action.payload.userId;
-  loginState.user = action.payload.user;
-}), _defineProperty(_createReducer, loginFailed.type, function (loginState, action) {
+}), _defineProperty(_createReducer, loginUserNameReceived.type, function (loginState, action) {
+  loginState.user = action.payload.data.email;
+}), _defineProperty(_createReducer, loginUserNameFailed.type, function (loginState, action) {
   var _action$payload = action.payload,
       error = _action$payload.error,
       type = _action$payload.type;
   loginState.notification.error = error;
   loginState.notification.type = type;
+}), _defineProperty(_createReducer, loginUserIdReceived.type, function (loginState, action) {
+  loginState.userId = action.payload.data.id;
 }), _defineProperty(_createReducer, logoutRequested.type, function (loginState, action) {
   loginState.loading = true;
 }), _defineProperty(_createReducer, logoutRequestedDone.type, function (loginState, action) {
@@ -50461,6 +50562,11 @@ var loginInfoSelector = Object(reselect__WEBPACK_IMPORTED_MODULE_1__["createSele
   return state.auth;
 }, function (loginState) {
   return loginState;
+});
+var loginUserIdSelector = Object(reselect__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(function (state) {
+  return state.auth;
+}, function (loginState) {
+  return loginState.userId;
 });
 
 /***/ }),
@@ -50504,6 +50610,86 @@ var createStore = function createStore() {
 
 /***/ }),
 
+/***/ "./src/main/frontend/store/entities/entities.js":
+/*!******************************************************!*\
+  !*** ./src/main/frontend/store/entities/entities.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
+/* harmony import */ var _reducers_contact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reducers/contact */ "./src/main/frontend/store/entities/reducers/contact.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+  contactReducer: _reducers_contact__WEBPACK_IMPORTED_MODULE_1__["default"]
+}));
+
+/***/ }),
+
+/***/ "./src/main/frontend/store/entities/reducers/contact.js":
+/*!**************************************************************!*\
+  !*** ./src/main/frontend/store/entities/reducers/contact.js ***!
+  \**************************************************************/
+/*! exports provided: loadContacts, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadContacts", function() { return loadContacts; });
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
+/* harmony import */ var _middleware_apiCreators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../middleware/apiCreators */ "./src/main/frontend/store/middleware/apiCreators.js");
+var _createReducer;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var contactDataRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDataRequested");
+var contactDataRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDataRequestDone");
+var contactDataReceived = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDataReceived");
+var contactDataFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDataFailed");
+var loadContacts = function loadContacts(id) {
+  return function (dispatch, getState) {
+    dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_1__["apiCallBegan"])({
+      url: "/api/users/".concat(id, "/contacts"),
+      // FIXME: Remove hardcoded url
+      method: "get",
+      onStart: contactDataRequested.type,
+      onDone: contactDataRequestDone.type,
+      onSuccess: contactDataReceived.type,
+      onFailed: contactDataFailed.type
+    }));
+  };
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createReducer"])({
+  contacts: [],
+  loading: false,
+  lastFetch: null,
+  notification: {
+    error: "",
+    type: ""
+  }
+}, (_createReducer = {}, _defineProperty(_createReducer, contactDataRequested.type, function (contactState, action) {
+  contactState.loading = true;
+}), _defineProperty(_createReducer, contactDataRequestDone.type, function (contactState, action) {
+  contactState.loading = false;
+}), _defineProperty(_createReducer, contactDataReceived.type, function (contactState, action) {
+  contactState.contacts = action.payload._embedded.contacts;
+  contactState.notification.error = "";
+  contactState.notification.type = "";
+}), _defineProperty(_createReducer, contactDataFailed().type, function (contactState, action) {
+  var _action$payload = action.payload,
+      type = _action$payload.type,
+      error = _action$payload.error;
+  contactState.notification.type = type;
+  contactState.notification.error = error;
+}), _createReducer)));
+
+/***/ }),
+
 /***/ "./src/main/frontend/store/middleware/api.js":
 /*!***************************************************!*\
   !*** ./src/main/frontend/store/middleware/api.js ***!
@@ -50531,7 +50717,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
  // axios config for csrf protection
-// add xsrf cookie to every stuff
 
 axios__WEBPACK_IMPORTED_MODULE_0___default.a.interceptors.request.use(function (req) {
   if (req.method === "post" || req.method === "delete" || req.method === "put" || req.method === "patch") {
@@ -50552,7 +50737,7 @@ var api = function api(_ref) {
   return function (next) {
     return /*#__PURE__*/function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(action) {
-        var _action$payload, url, method, onStart, onDone, onSuccess, onFailed, req, user, req1, userId, _req;
+        var _action$payload, url, method, data, onStart, onDone, onSuccess, onFailed, req, _data, _req, _req2;
 
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
@@ -50569,79 +50754,72 @@ var api = function api(_ref) {
               case 3:
                 // log that api call (apiCallBegan)
                 next(action);
-                _action$payload = action.payload, url = _action$payload.url, method = _action$payload.method, onStart = _action$payload.onStart, onDone = _action$payload.onDone, onSuccess = _action$payload.onSuccess, onFailed = _action$payload.onFailed; // set loading spinner
+                _action$payload = action.payload, url = _action$payload.url, method = _action$payload.method, data = _action$payload.data, onStart = _action$payload.onStart, onDone = _action$payload.onDone, onSuccess = _action$payload.onSuccess, onFailed = _action$payload.onFailed; // set loading spinner
 
                 dispatch({
                   type: onStart,
                   payload: {}
-                }); // check http method
+                });
+                console.log("URL to call: " + url); // check http method
 
                 _context.t0 = method;
-                _context.next = _context.t0 === "get" ? 9 : _context.t0 === "post" ? 38 : 51;
+                _context.next = _context.t0 === "get" ? 10 : _context.t0 === "post" ? 35 : 50;
                 break;
 
-              case 9:
-                _context.prev = 9;
-                _context.next = 12;
+              case 10:
+                _context.prev = 10;
+                _context.next = 13;
                 return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(url);
 
-              case 12:
+              case 13:
                 req = _context.sent;
-                user = req.data.email; // get id
-
-                _context.next = 16;
-                return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/userid?email=".concat(user));
-
-              case 16:
-                req1 = _context.sent;
-                userId = req1.data.id; // api success
+                _data = req.data; // if success, dispatch api success message
 
                 dispatch({
                   type: _apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallSucceeded"].type,
                   payload: {}
-                }); // custom success
+                }); // custom success delegation: dispatch data to store
 
                 if (onSuccess) {
                   dispatch({
                     type: onSuccess,
                     payload: {
-                      userId: userId,
-                      user: user
+                      data: _data
                     }
                   });
                 }
 
-                _context.next = 36;
+                _context.next = 33;
                 break;
 
-              case 22:
-                _context.prev = 22;
-                _context.t1 = _context["catch"](9);
-                // api error
+              case 19:
+                _context.prev = 19;
+                _context.t1 = _context["catch"](10);
+                // if failed, dispatch api error message
                 dispatch({
                   type: _apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallFailed"].type,
                   payload: {}
                 }); // custom error
 
                 if (!onFailed) {
-                  _context.next = 36;
+                  _context.next = 33;
                   break;
                 }
 
-                _context.prev = 26;
-                _context.next = 29;
+                _context.prev = 23;
+                _context.next = 26;
                 return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/error", {
                   params: {
                     message: "true"
                   }
                 });
 
-              case 29:
+              case 26:
                 _req = _context.sent;
 
                 if (_req.data !== "") {
                   // dispatch error with generated error message
-                  if (onFailed) dispatch({
+                  dispatch({
                     type: onFailed,
                     payload: {
                       error: _req.data,
@@ -50650,7 +50828,7 @@ var api = function api(_ref) {
                   });
                 } else {
                   // 403 error: dispatch error with custom unauthorized message
-                  if (onFailed) dispatch({
+                  dispatch({
                     type: onFailed,
                     payload: {
                       error: "Please login to use this service.",
@@ -50659,37 +50837,41 @@ var api = function api(_ref) {
                   });
                 }
 
-                _context.next = 36;
+                _context.next = 33;
                 break;
 
-              case 33:
-                _context.prev = 33;
-                _context.t2 = _context["catch"](26);
-                // error when trying to fetch /error
-                if (onFailed) dispatch({
+              case 30:
+                _context.prev = 30;
+                _context.t2 = _context["catch"](23);
+                // General error: problem with url (not allowed, false url etc.)
+                dispatch({
                   type: onFailed,
                   payload: {
-                    error: "Error: but could not load error message from OAuth2 Provider.",
+                    error: "Error: An error occurred while trying to communicate with the API.",
                     type: "error"
                   }
                 });
 
-              case 36:
-                // loading spinner stop
-                setTimeout(function () {
-                  return dispatch({
-                    type: onDone,
-                    payload: {}
-                  });
-                }, 500);
-                return _context.abrupt("break", 52);
+              case 33:
+                // login spinner end
+                dispatch({
+                  type: onDone,
+                  payload: {}
+                });
+                return _context.abrupt("break", 51);
+
+              case 35:
+                _context.prev = 35;
+                _context.next = 38;
+                return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(url, data, {
+                  headers: {
+                    "Content-Type": "application/json"
+                  }
+                });
 
               case 38:
-                _context.prev = 38;
-                _context.next = 41;
-                return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(url);
-
-              case 41:
+                _req2 = _context.sent;
+                console.log(_req2.status, _req2.data);
                 dispatch({
                   type: _apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallSucceeded"].type,
                   payload: {}
@@ -50698,12 +50880,12 @@ var api = function api(_ref) {
                   type: onSuccess,
                   payload: {}
                 });
-                _context.next = 49;
+                _context.next = 48;
                 break;
 
-              case 45:
-                _context.prev = 45;
-                _context.t3 = _context["catch"](38);
+              case 44:
+                _context.prev = 44;
+                _context.t3 = _context["catch"](35);
                 dispatch({
                   type: _apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallFailed"].type,
                   payload: {}
@@ -50716,25 +50898,24 @@ var api = function api(_ref) {
                   }
                 });
 
-              case 49:
-                // loading spinner stop
+              case 48:
                 setTimeout(function () {
                   return dispatch({
                     type: onDone,
                     payload: {}
                   });
                 }, 500);
-                return _context.abrupt("break", 52);
+                return _context.abrupt("break", 51);
+
+              case 50:
+                return _context.abrupt("break", 51);
 
               case 51:
-                return _context.abrupt("break", 52);
-
-              case 52:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[9, 22], [26, 33], [38, 45]]);
+        }, _callee, null, [[10, 19], [23, 30], [35, 44]]);
       }));
 
       return function (_x) {
@@ -50764,7 +50945,8 @@ __webpack_require__.r(__webpack_exports__);
  // Schema for API calls
 // {
 //   url: "",
-//   method: "get" || "post",
+//   method: "get" || "post", || "put" || "delete"
+//   data: {}
 //   onStart: ... ,
 //   onDone: ... ,
 //   onSuccess: ... ,
@@ -50788,11 +50970,13 @@ var apiCallFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["create
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _auth_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth/auth */ "./src/main/frontend/store/auth/auth.js");
+/* harmony import */ var _entities_entities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./entities/entities */ "./src/main/frontend/store/entities/entities.js");
 
- /// TODO: add ui and entities reducers
+
+ /// TODO: add ui reducer
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  //entitites
+  entities: _entities_entities__WEBPACK_IMPORTED_MODULE_2__["default"],
   auth: _auth_auth__WEBPACK_IMPORTED_MODULE_1__["default"] //ui
 
 }));
