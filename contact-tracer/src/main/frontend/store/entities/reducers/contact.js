@@ -19,6 +19,10 @@ const contactRelationSettingFailed = createAction("contactRelationSettingFailed"
 // Edit Data Form Field
 const tmpContactDataSet = createAction("tmpContactDataSet");
 const tmpContactDataWiped = createAction("tmpContactDataWiped");
+const contactUpdateRequested = createAction("contactUpdateRequested");
+const contactUpdateRequestDone = createAction("contactUpdateRequestDone");
+const contactUpdated = createAction("contactUpdated");
+const contactUpdateFailed = createAction("contactUpdateFailed");
 // Delete Data
 const contactDeleteRequested = createAction("contactDeleteRequested");
 const contactDeleteRequestDone = createAction("contactDeleteRequestDone");
@@ -31,7 +35,7 @@ export const loadContacts = () => async (dispatch, getState) => {
 
   const userId = getState().auth.userId;
   // wait until userId is fetched before calling - otherwise fetching does not make sense
-  if(userId === "")
+  if (userId === "")
     return;
 
   dispatch(apiCallBegan({
@@ -63,7 +67,7 @@ export const bindNewContact = () => async (dispatch, getState) => {
   const {tmpReference} = getState().entities.contactReducer;
 
   // wait until userId and tmpReference are set before making the call
-  if(userId === "" || tmpReference === "")
+  if (userId === "" || tmpReference === "")
     return;
 
   dispatch(apiCallBegan({
@@ -88,6 +92,29 @@ export const setTmpContact = (href, firstName, lastName, email, date) => (dispat
 
 export const clearTmpContact = () => (dispatch, getState) => {
   dispatch({type: tmpContactDataWiped.type, payload: {}});
+}
+
+export const updateContact = (localHref, localFirstName, localLastName, localEmail, localDate) => (dispatch, getState) => {
+
+  dispatch(apiCallBegan({
+    url: localHref,
+    method: "put",
+    data: {
+      firstName: localFirstName,
+      lastName: localLastName,
+      email: localEmail,
+      date: localDate
+    },
+    params: {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    },
+    onStart: contactUpdateRequested.type,
+    onDone: contactUpdateRequestDone.type,
+    onSuccess: contactUpdated.type,
+    onFailed: contactUpdateFailed.type
+  }));
 }
 
 export const deleteContact = (url) => (dispatch, getState) => {
@@ -173,19 +200,46 @@ export default createReducer({
   [tmpContactDataWiped.type]: (contactState, action) => {
     contactState.tmpContact = {};
   },
+  [contactUpdateRequested.type]: (contactState, action) => {
+    contactState.loading = true;
+  },
+  [contactUpdateRequestDone.type]: (contactState, action) => {
+    contactState.loading = false;
+  },
+  [contactUpdated.type]: (contactState, action) => {
+    const {_links, firstName, lastName, email, date} = action.payload.data;
+
+    // find the updated by id (href)
+    const index = contactState.contacts.findIndex(contact => contact._links.self.href === _links.self.href);
+
+    // set updated values
+    contactState.contacts[index].href = _links.self.href;
+    contactState.contacts[index].firstName = firstName;
+    contactState.contacts[index].lastName = lastName;
+    contactState.contacts[index].email = email;
+    contactState.contacts[index].date = date;
+    contactState.tmpContact = {}; // wipe tmp
+  },
+  [contactUpdateFailed.type]: (contactState, action) => {
+    contactState.notification.type = action.payload.type;
+    contactState.notification.error = action.payload.error;
+    contactState.tmpContact = {}; // wipe tmp
+  },
   [contactDeleteRequested.type]: (contactState, action) => {
     contactState.loading = true;
   },
   [contactDeleteRequestDone.type]: (contactState, action) => {
     contactState.loading = false;
   },
-  [contactDeleted.type]: (contactState, action) =>  {
+  [contactDeleted.type]: (contactState, action) => {
     // need self.href = id (HATEOAS)
     const {id} = action.payload;
 
     // find the array position with id (=self href) -> findIndex
     const index = contactState.contacts.findIndex((contact) => contact._links.self.href === id);
     contactState.contacts.splice(index, 1);
+    // for safety also wipe tmp (e.g. user is in edit mode, but then wants to delete it anyways)
+    contactState.tmpContact = {};
   },
   [contactDeleteFailed.type]: (contactState, action) => {
     contactState.notification.type = action.payload.type;

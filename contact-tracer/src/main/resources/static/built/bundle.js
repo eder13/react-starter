@@ -13464,7 +13464,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: Arial, serif;\n}\n\n.info {\n  text-align: center;\n  height: 35px;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n  color: #31708f;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.error {\n  text-align: center;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n  color: #721c24;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.main {\n  margin-top: 100px;\n}\n\n.container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n}\n\n.container-even {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-evenly;\n}\n\n.container-card {\n  width: 100%;\n  margin: 0 auto;\n}\n\n.card{\n  width: 100%;\n  margin: 50px auto 50px auto;\n  display: grid;\n  grid-template-rows: 50px auto 50px;\n  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);\n  background-color: white;\n}\n\n.card-top{\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1em;\n  color: white;\n}\n\n.card-content{\n  padding: 1em;\n}\n\n.card-content ul{\n  margin: 5px auto auto 25px;\n}\n\n.card-bottom{\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1em;\n  background-color: #eeeeee;\n}\n\n#date-top{\n  background-color: #333;\n}\n\n#navbar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n}\n\n#navbar .logo {\n  padding: 0.5rem 0;\n}\n\n#navbar .navbar-nav {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n}\n\n#navbar .navbar-nav ul {\n  list-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#navbar .navbar-nav ul li {\n  margin: 0 1rem;\n}\n\n#navbar .navbar-nav ul li a {\n  color: white;\n}\n\n#navbar .navbar-nav ul li:first-child {\n  font-size: 0.8rem;\n}\n\n.login {\n  margin-top: 2rem;\n  background-color: #f4f4f4;\n  height: 200px;\n  width: 40%;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: center;\n}\n\n.login h1 {\n  margin-bottom: 2rem;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\n.full-width {\n  width: 100%;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"] {\n  display: inline-block;\n  height: 38px;\n  padding: 0 30px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 38px;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\ninput[type=\"submit\"].button-primary {\n  color: #fff;\n  background-color: #ff974c;\n  border-color: #ff974c;\n}", "",{"version":3,"sources":["webpack://./src/main/frontend/App.css"],"names":[],"mappings":"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","sourcesContent":["* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: Arial, serif;\n}\n\n.info {\n  text-align: center;\n  height: 35px;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n  color: #31708f;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.error {\n  text-align: center;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n  color: #721c24;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.main {\n  margin-top: 100px;\n}\n\n.container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n}\n\n.container-even {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-evenly;\n}\n\n.container-card {\n  width: 100%;\n  margin: 0 auto;\n}\n\n.card{\n  width: 100%;\n  margin: 50px auto 50px auto;\n  display: grid;\n  grid-template-rows: 50px auto 50px;\n  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);\n  background-color: white;\n}\n\n.card-top{\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1em;\n  color: white;\n}\n\n.card-content{\n  padding: 1em;\n}\n\n.card-content ul{\n  margin: 5px auto auto 25px;\n}\n\n.card-bottom{\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1em;\n  background-color: #eeeeee;\n}\n\n#date-top{\n  background-color: #333;\n}\n\n#navbar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n}\n\n#navbar .logo {\n  padding: 0.5rem 0;\n}\n\n#navbar .navbar-nav {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n}\n\n#navbar .navbar-nav ul {\n  list-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#navbar .navbar-nav ul li {\n  margin: 0 1rem;\n}\n\n#navbar .navbar-nav ul li a {\n  color: white;\n}\n\n#navbar .navbar-nav ul li:first-child {\n  font-size: 0.8rem;\n}\n\n.login {\n  margin-top: 2rem;\n  background-color: #f4f4f4;\n  height: 200px;\n  width: 40%;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: center;\n}\n\n.login h1 {\n  margin-bottom: 2rem;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\n.full-width {\n  width: 100%;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"] {\n  display: inline-block;\n  height: 38px;\n  padding: 0 30px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 38px;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\ninput[type=\"submit\"].button-primary {\n  color: #fff;\n  background-color: #ff974c;\n  border-color: #ff974c;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: Arial, serif;\n}\n\n.info {\n  text-align: center;\n  height: 35px;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n  color: #31708f;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.error {\n  text-align: center;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n  color: #721c24;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.main {\n  margin-top: 100px;\n}\n\n.container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n}\n\n.container-even {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-evenly;\n}\n\n.container-card {\n  width: 100%;\n  margin: 0 auto;\n}\n\n.card{\n  width: 100%;\n  margin: 50px auto 50px auto;\n  display: grid;\n  grid-template-rows: 50px auto 50px;\n  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);\n  background-color: white;\n}\n\n.card-top{\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1em;\n  color: white;\n}\n\n.card-content{\n  padding: 1em;\n}\n\n.card-content ul{\n  margin: 5px auto auto 25px;\n}\n\n.card-bottom{\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1em;\n  background-color: #eeeeee;\n}\n\n#date-top{\n  background-color: #333;\n}\n\n#navbar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n}\n\n#navbar .logo {\n  padding: 0.5rem 0;\n}\n\n#navbar .navbar-nav {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n}\n\n#navbar .navbar-nav ul {\n  list-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#navbar .navbar-nav ul li {\n  margin: 0 1rem;\n}\n\n#navbar .navbar-nav ul li a {\n  color: white;\n}\n\n#navbar .navbar-nav ul li:first-child {\n  font-size: 0.8rem;\n}\n\n.login {\n  margin-top: 2rem;\n  background-color: #f4f4f4;\n  height: 200px;\n  width: 40%;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: center;\n}\n\n.login h1 {\n  margin-bottom: 2rem;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\n.full-width {\n  width: 100%;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"],\ninput[type=\"button\"]{\n  display: inline-block;\n  height: 38px;\n  padding: 0 30px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 38px;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\ninput[type=\"submit\"] .button-primary,\ninput[type=\"button\"] .button-primary {\n  color: #fff;\n  background-color: #ff974c;\n  border-color: #ff974c;\n}\n\nbutton {\n  display: inline-block;\n  height: 20px;\n  padding: 0px 10px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 20px;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box;\n}\n\n.logout {\n  color: #f5c6cb;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}", "",{"version":3,"sources":["webpack://./src/main/frontend/App.css"],"names":[],"mappings":"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","sourcesContent":["* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: Arial, serif;\n}\n\n.info {\n  text-align: center;\n  height: 35px;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n  color: #31708f;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.error {\n  text-align: center;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n  color: #721c24;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.main {\n  margin-top: 100px;\n}\n\n.container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n}\n\n.container-even {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-evenly;\n}\n\n.container-card {\n  width: 100%;\n  margin: 0 auto;\n}\n\n.card{\n  width: 100%;\n  margin: 50px auto 50px auto;\n  display: grid;\n  grid-template-rows: 50px auto 50px;\n  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);\n  background-color: white;\n}\n\n.card-top{\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1em;\n  color: white;\n}\n\n.card-content{\n  padding: 1em;\n}\n\n.card-content ul{\n  margin: 5px auto auto 25px;\n}\n\n.card-bottom{\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1em;\n  background-color: #eeeeee;\n}\n\n#date-top{\n  background-color: #333;\n}\n\n#navbar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n}\n\n#navbar .logo {\n  padding: 0.5rem 0;\n}\n\n#navbar .navbar-nav {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n}\n\n#navbar .navbar-nav ul {\n  list-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#navbar .navbar-nav ul li {\n  margin: 0 1rem;\n}\n\n#navbar .navbar-nav ul li a {\n  color: white;\n}\n\n#navbar .navbar-nav ul li:first-child {\n  font-size: 0.8rem;\n}\n\n.login {\n  margin-top: 2rem;\n  background-color: #f4f4f4;\n  height: 200px;\n  width: 40%;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: center;\n}\n\n.login h1 {\n  margin-bottom: 2rem;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\n.full-width {\n  width: 100%;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"],\ninput[type=\"button\"]{\n  display: inline-block;\n  height: 38px;\n  padding: 0 30px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 38px;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\ninput[type=\"submit\"] .button-primary,\ninput[type=\"button\"] .button-primary {\n  color: #fff;\n  background-color: #ff974c;\n  border-color: #ff974c;\n}\n\nbutton {\n  display: inline-block;\n  height: 20px;\n  padding: 0px 10px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 20px;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box;\n}\n\n.logout {\n  color: #f5c6cb;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -50190,6 +50190,10 @@ var ContactItem = function ContactItem(_ref) {
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
   var dateParsed = new Date(Date.parse(date.toString())); //const tmpContact = useSelector(tmpContactSelector);
 
+  var deleteEntry = function deleteEntry(e) {
+    dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["deleteContact"])(_links.self.href));
+  };
+
   var setEditForm = function setEditForm(e) {
     // clear previous stuff
     dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["clearTmpContact"])()); // set tmp contact when clicked
@@ -50213,9 +50217,13 @@ var ContactItem = function ContactItem(_ref) {
     id: _links.self.href
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "First name: ", firstName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Last name: ", lastName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "E-Mail: ", email))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-bottom"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Actions: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "edit",
     onClick: setEditForm
-  }, "edit"), "   ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "delete"))))));
+  }, "edit"), "   ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "delete",
+    onClick: deleteEntry
+  }, "delete"))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ContactItem);
@@ -50286,10 +50294,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/entities/reducers/contact */ "./src/main/frontend/store/entities/reducers/contact.js");
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -50335,72 +50339,70 @@ var Form = function Form() {
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
   var tmpContact = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["tmpContactSelector"]); // specify selector
 
-  var onChange = function onChange(e) {
-    setContactForm(_objectSpread(_objectSpread({}, contactForm), {}, _defineProperty({}, e.target.name, e.target.value)));
-  };
-
-  var onSubmit = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(e) {
-      return regeneratorRuntime.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              e.preventDefault(); // TODO: Validation before dispatching with contactAdded
-              // TODO: check how to do synchronously...
-              // add the contact to our api/mysql generally
-
-              dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["addContact"])(localFirstName, localLastName, localEmail, localDate)).then(function () {
-                return dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["bindNewContact"])());
-              }); //await dispatch(bindNewContact());
-              //dispatch(loadContacts());
-              // // bind with currently logged in user
-              // .then(() => dispatch(bindNewContact()))
-              // // load updated user data
-              // .then(() => dispatch(loadContacts()));
-              // clear input fields
-
-              setContactForm({
-                localHref: '',
-                localFirstName: '',
-                localLastName: '',
-                localEmail: '',
-                localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate())
-              });
-
-            case 3:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    }));
-
-    return function onSubmit(_x) {
-      return _ref.apply(this, arguments);
-    };
-  }();
-
+  var href = tmpContact.href,
+      firstName = tmpContact.firstName,
+      lastName = tmpContact.lastName,
+      email = tmpContact.email,
+      date = tmpContact.date;
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    var href = tmpContact.href,
-        firstName = tmpContact.firstName,
-        lastName = tmpContact.lastName,
-        email = tmpContact.email,
-        date = tmpContact.date;
     if (href && firstName && lastName && email && date) // exist check - could also be empty (cleared)
       setContactForm({
         localHref: href,
         localFirstName: firstName,
         localLastName: lastName,
         localEmail: email,
-        // parse MySQL Date to input field date, which is specified as yyyy-mm-dd
-        localDate: "".concat(new Date(Date.parse(date.toString())).getUTCFullYear(), "-").concat(new Date(Date.parse(date.toString())).getMonth() + 1 < 10 ? '0' + new Date(Date.parse(date.toString())).getMonth() + 1 : new Date(Date.parse(date.toString())).getMonth() + 1, "-").concat(new Date(Date.parse(date.toString())).getDate() < 10 ? '0' + new Date(Date.parse(date.toString())).getDate() : new Date(Date.parse(date.toString())).getDate())
+        localDate: "".concat(new Date(Date.parse(date.toString())).getUTCFullYear(), "-").concat(parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1) : parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1, "-").concat(parseInt(new Date(Date.parse(date.toString())).getDate().toString()) < 10 ? '0' + parseInt(new Date(Date.parse(date.toString())).getDate().toString()) : parseInt(new Date(Date.parse(date.toString())).getDate().toString()))
       });
   }, [tmpContact]);
+
+  var onChange = function onChange(e) {
+    setContactForm(_objectSpread(_objectSpread({}, contactForm), {}, _defineProperty({}, e.target.name, e.target.value)));
+  };
+
+  var onDiscard = function onDiscard(e) {
+    // clear temp field in state
+    dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["clearTmpContact"])()); // clear input field
+
+    setContactForm({
+      localHref: '',
+      localFirstName: '',
+      localLastName: '',
+      localEmail: '',
+      localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate())
+    });
+  };
+
+  var onSubmit = function onSubmit(e) {
+    e.preventDefault(); // TODO: Validation before dispatching with contactAdded
+    // check if update-mode is on
+
+    if (href && firstName && lastName && email && date) {
+      // Edit Mode
+      dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["updateContact"])(href, localFirstName, localLastName, localEmail, localDate));
+    } else {
+      // Add Mode
+      // add the contact to our api/mysql generally
+      dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["addContact"])(localFirstName, localLastName, localEmail, localDate)) // set relation to currently logged in user
+      .then(function () {
+        return dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["bindNewContact"])());
+      });
+    } // clear input fields
+
+
+    setContactForm({
+      localHref: '',
+      localFirstName: '',
+      localLastName: '',
+      localEmail: '',
+      localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate())
+    });
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: onSubmit,
     className: "padding-1y",
     name: "contact"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Form"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, href && firstName && lastName && email && date ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Update Data") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Add Data"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "padding-05y"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     style: {
@@ -50459,11 +50461,29 @@ var Form = function Form() {
     onChange: onChange
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "padding-1y"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }, href && firstName && lastName && email && date ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "form-submit",
+    type: "submit",
+    style: {
+      backgroundColor: 'orange',
+      marginBottom: '1rem'
+    },
+    className: "full-width",
+    value: "Update"
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     id: "form-submit",
     type: "submit",
     className: "full-width",
-    value: "Submit"
+    value: "Add"
+  }), href && firstName && lastName && email && date && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "form-submit",
+    style: {
+      backgroundColor: 'red'
+    },
+    type: "button",
+    onClick: onDiscard,
+    className: "full-width",
+    value: "Discard"
   })));
 };
 
@@ -50653,6 +50673,7 @@ function Navbar(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, props.user), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     to: "/"
   }, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, props.dash), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, props.logout && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "logout",
     onClick: function onClick(e) {
       dispatch(Object(_store_auth_auth__WEBPACK_IMPORTED_MODULE_4__["loadLogout"])()); // redirect to homepage
 
@@ -50902,7 +50923,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!**************************************************************!*\
   !*** ./src/main/frontend/store/entities/reducers/contact.js ***!
   \**************************************************************/
-/*! exports provided: loadContacts, addContact, bindNewContact, setTmpContact, clearTmpContact, default, allContactsSelector, tmpContactSelector */
+/*! exports provided: loadContacts, addContact, bindNewContact, setTmpContact, clearTmpContact, updateContact, deleteContact, default, allContactsSelector, tmpContactSelector */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50912,6 +50933,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bindNewContact", function() { return bindNewContact; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setTmpContact", function() { return setTmpContact; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearTmpContact", function() { return clearTmpContact; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateContact", function() { return updateContact; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteContact", function() { return deleteContact; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allContactsSelector", function() { return allContactsSelector; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tmpContactSelector", function() { return tmpContactSelector; });
 /* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
@@ -50927,18 +50950,34 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
+ // Loading Data
 
 var contactDataRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDataRequested");
 var contactDataRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDataRequestDone");
 var contactDataReceived = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDataReceived");
-var contactDataFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDataFailed");
+var contactDataFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDataFailed"); // Adding data + setting relation to user
+
 var contactAddRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactAddRequested");
 var contactAddRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactAddRequestDone");
 var contactAdded = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactAdded");
 var contactAddFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactAddFailed");
+var contactRelationSetRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactRelationSetRequested");
+var contactRelationSetRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactRelationSetRequestDone");
 var contactRelationSet = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactRelationSet");
+var contactRelationSettingFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactRelationSettingFailed"); // Edit Data Form Field
+
 var tmpContactDataSet = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("tmpContactDataSet");
 var tmpContactDataWiped = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("tmpContactDataWiped");
+var contactUpdateRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactUpdateRequested");
+var contactUpdateRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactUpdateRequestDone");
+var contactUpdated = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactUpdated");
+var contactUpdateFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactUpdateFailed"); // Delete Data
+
+var contactDeleteRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDeleteRequested");
+var contactDeleteRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDeleteRequestDone");
+var contactDeleted = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDeleted");
+var contactDeleteFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDeleteFailed"); // UI Popups data
+
 var contactUiMessageWiped = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactUiMessageWiped");
 var loadContacts = function loadContacts() {
   return /*#__PURE__*/function () {
@@ -51050,10 +51089,10 @@ var bindNewContact = function bindNewContact() {
                     "Content-Type": "text/uri-list"
                   }
                 },
-                onStart: contactAddRequested.type,
-                onDone: contactAddRequestDone.type,
+                onStart: contactRelationSetRequested.type,
+                onDone: contactRelationSetRequestDone.type,
                 onSuccess: contactRelationSet.type,
-                onFailed: contactAddFailed.type
+                onFailed: contactRelationSettingFailed.type
               }));
 
             case 5:
@@ -51089,6 +51128,41 @@ var clearTmpContact = function clearTmpContact() {
       type: tmpContactDataWiped.type,
       payload: {}
     });
+  };
+};
+var updateContact = function updateContact(localHref, localFirstName, localLastName, localEmail, localDate) {
+  return function (dispatch, getState) {
+    dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
+      url: localHref,
+      method: "put",
+      data: {
+        firstName: localFirstName,
+        lastName: localLastName,
+        email: localEmail,
+        date: localDate
+      },
+      params: {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      },
+      onStart: contactUpdateRequested.type,
+      onDone: contactUpdateRequestDone.type,
+      onSuccess: contactUpdated.type,
+      onFailed: contactUpdateFailed.type
+    }));
+  };
+};
+var deleteContact = function deleteContact(url) {
+  return function (dispatch, getState) {
+    dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
+      url: url,
+      method: "delete",
+      onStart: contactDeleteRequested.type,
+      onDone: contactDeleteRequestDone.type,
+      onSuccess: contactDeleted.type,
+      onFailed: contactDeleteFailed.type
+    }));
   };
 };
 /* harmony default export */ __webpack_exports__["default"] = (Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createReducer"])({
@@ -51130,8 +51204,17 @@ var clearTmpContact = function clearTmpContact() {
   contactState.notification.error = action.payload.error; // clear tmpReference
 
   contactState.tmpReference = "";
+}), _defineProperty(_createReducer, contactRelationSetRequested.type, function (contactState, action) {
+  contactState.loading = true;
+}), _defineProperty(_createReducer, contactRelationSetRequestDone.type, function (contactState, action) {
+  contactState.loading = false;
 }), _defineProperty(_createReducer, contactRelationSet.type, function (contactState, action) {
   // clear tmpReference
+  contactState.tmpReference = "";
+}), _defineProperty(_createReducer, contactRelationSettingFailed.type, function (contactState, action) {
+  contactState.notification.type = action.payload.type;
+  contactState.notification.error = action.payload.error; // clear tmpReference
+
   contactState.tmpReference = "";
 }), _defineProperty(_createReducer, tmpContactDataSet.type, function (contactState, action) {
   var _action$payload2 = action.payload,
@@ -51147,6 +51230,49 @@ var clearTmpContact = function clearTmpContact() {
   contactState.tmpContact.date = date;
 }), _defineProperty(_createReducer, tmpContactDataWiped.type, function (contactState, action) {
   contactState.tmpContact = {};
+}), _defineProperty(_createReducer, contactUpdateRequested.type, function (contactState, action) {
+  contactState.loading = true;
+}), _defineProperty(_createReducer, contactUpdateRequestDone.type, function (contactState, action) {
+  contactState.loading = false;
+}), _defineProperty(_createReducer, contactUpdated.type, function (contactState, action) {
+  var _action$payload$data = action.payload.data,
+      _links = _action$payload$data._links,
+      firstName = _action$payload$data.firstName,
+      lastName = _action$payload$data.lastName,
+      email = _action$payload$data.email,
+      date = _action$payload$data.date; // find the updated by id (href)
+
+  var index = contactState.contacts.findIndex(function (contact) {
+    return contact._links.self.href === _links.self.href;
+  }); // set updated values
+
+  contactState.contacts[index].href = _links.self.href;
+  contactState.contacts[index].firstName = firstName;
+  contactState.contacts[index].lastName = lastName;
+  contactState.contacts[index].email = email;
+  contactState.contacts[index].date = date;
+  contactState.tmpContact = {}; // wipe tmp
+}), _defineProperty(_createReducer, contactUpdateFailed.type, function (contactState, action) {
+  contactState.notification.type = action.payload.type;
+  contactState.notification.error = action.payload.error;
+  contactState.tmpContact = {}; // wipe tmp
+}), _defineProperty(_createReducer, contactDeleteRequested.type, function (contactState, action) {
+  contactState.loading = true;
+}), _defineProperty(_createReducer, contactDeleteRequestDone.type, function (contactState, action) {
+  contactState.loading = false;
+}), _defineProperty(_createReducer, contactDeleted.type, function (contactState, action) {
+  // need self.href = id (HATEOAS)
+  var id = action.payload.id; // find the array position with id (=self href) -> findIndex
+
+  var index = contactState.contacts.findIndex(function (contact) {
+    return contact._links.self.href === id;
+  });
+  contactState.contacts.splice(index, 1); // for safety also wipe tmp (e.g. user is in edit mode, but then wants to delete it anyways)
+
+  contactState.tmpContact = {};
+}), _defineProperty(_createReducer, contactDeleteFailed.type, function (contactState, action) {
+  contactState.notification.type = action.payload.type;
+  contactState.notification.error = action.payload.error;
 }), _defineProperty(_createReducer, contactUiMessageWiped.type, function (contactState, action) {
   contactState.notification.type = "";
   contactState.notification.error = "";
@@ -51212,7 +51338,7 @@ var api = function api(_ref) {
   return function (next) {
     return /*#__PURE__*/function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(action) {
-        var _action$payload, url, method, data, params, onStart, onDone, onSuccess, onFailed, req, _data, _req, _req2, _req3;
+        var _action$payload, url, method, data, params, onStart, onDone, onSuccess, onFailed, req, _data, _req, _req2, _req3, _req4;
 
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
@@ -51238,7 +51364,7 @@ var api = function api(_ref) {
                 console.info("URL to call: " + url); // check http method
 
                 _context.t0 = method;
-                _context.next = _context.t0 === "get" ? 10 : _context.t0 === "post" ? 36 : _context.t0 === "put" ? 51 : 65;
+                _context.next = _context.t0 === "get" ? 10 : _context.t0 === "post" ? 36 : _context.t0 === "put" ? 51 : _context.t0 === "delete" ? 66 : 81;
                 break;
 
               case 10:
@@ -51334,7 +51460,7 @@ var api = function api(_ref) {
                   type: onDone,
                   payload: {}
                 });
-                return _context.abrupt("break", 66);
+                return _context.abrupt("break", 82);
 
               case 36:
                 _context.prev = 36;
@@ -51383,7 +51509,7 @@ var api = function api(_ref) {
                     payload: {}
                   });
                 }, 500);
-                return _context.abrupt("break", 66);
+                return _context.abrupt("break", 82);
 
               case 51:
                 _context.prev = 51;
@@ -51403,32 +51529,88 @@ var api = function api(_ref) {
                     data: _req3.data
                   }
                 });
-                _context.next = 63;
+                _context.next = 64;
                 break;
 
               case 60:
                 _context.prev = 60;
                 _context.t4 = _context["catch"](51);
-                console.error(_context.t4.toString());
+                dispatch({
+                  type: _apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallFailed"].type,
+                  payload: {}
+                });
+                if (onFailed) dispatch({
+                  type: onFailed,
+                  payload: {
+                    error: _context.t4.toString(),
+                    type: "error"
+                  }
+                });
 
-              case 63:
+              case 64:
                 setTimeout(function () {
                   return dispatch({
                     type: onDone,
                     payload: {}
                   });
                 }, 500);
-                return _context.abrupt("break", 66);
-
-              case 65:
-                return _context.abrupt("break", 66);
+                return _context.abrupt("break", 82);
 
               case 66:
+                _context.prev = 66;
+                _context.next = 69;
+                return axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"](url);
+
+              case 69:
+                _req4 = _context.sent;
+                console.log(_req4.status, _req4.data);
+                dispatch({
+                  type: _apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallSucceeded"].type,
+                  payload: {}
+                });
+                if (onSuccess) dispatch({
+                  type: onSuccess,
+                  payload: {
+                    id: url
+                  }
+                }); // HATEOAS - self.href = id
+
+                _context.next = 79;
+                break;
+
+              case 75:
+                _context.prev = 75;
+                _context.t5 = _context["catch"](66);
+                dispatch({
+                  type: _apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallFailed"].type,
+                  payload: {}
+                });
+                if (onFailed) dispatch({
+                  type: onFailed,
+                  payload: {
+                    error: _context.t5.toString(),
+                    type: "error"
+                  }
+                });
+
+              case 79:
+                setTimeout(function () {
+                  return dispatch({
+                    type: onDone,
+                    payload: {}
+                  });
+                }, 500);
+                return _context.abrupt("break", 82);
+
+              case 81:
+                return _context.abrupt("break", 82);
+
+              case 82:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[10, 20], [24, 31], [36, 45], [51, 60]]);
+        }, _callee, null, [[10, 20], [24, 31], [36, 45], [51, 60], [66, 75]]);
       }));
 
       return function (_x) {

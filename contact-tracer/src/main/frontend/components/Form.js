@@ -1,6 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {addContact, bindNewContact, tmpContactSelector} from "../store/entities/reducers/contact";
+import {
+  addContact,
+  bindNewContact,
+  clearTmpContact,
+  tmpContactSelector,
+  updateContact
+} from "../store/entities/reducers/contact";
 
 const Form = () => {
 
@@ -19,18 +25,50 @@ const Form = () => {
   const dispatch = useDispatch();
   const tmpContact = useSelector(tmpContactSelector); // specify selector
 
+  const {href, firstName, lastName, email, date} = tmpContact;
+  useEffect(() => {
+    if (href && firstName && lastName && email && date) // exist check - could also be empty (cleared)
+      setContactForm({
+        localHref: href,
+        localFirstName: firstName,
+        localLastName: lastName,
+        localEmail: email,
+        localDate: `${new Date(Date.parse(date.toString())).getUTCFullYear()}-${(((parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1) < 10) ? '0' + (parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1) : (parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1))}-${((parseInt(new Date(Date.parse(date.toString())).getDate().toString()) < 10) ? '0' + parseInt(new Date(Date.parse(date.toString())).getDate().toString()) : parseInt(new Date(Date.parse(date.toString())).getDate().toString()))}`
+      })
+  }, [tmpContact]);
+
   const onChange = (e) => {
     setContactForm({...contactForm, [e.target.name]: e.target.value});
   }
 
-  const onSubmit = async (e) => {
+  const onDiscard = (e) => {
+    // clear temp field in state
+    dispatch(clearTmpContact());
+    // clear input field
+    setContactForm({
+      localHref: '',
+      localFirstName: '',
+      localLastName: '',
+      localEmail: '',
+      localDate: `${new Date((Date.now())).getUTCFullYear()}-${(((parseInt(new Date((Date.now())).getMonth().toString()) + 1) < 10) ? '0' + (parseInt(new Date((Date.now())).getMonth().toString()) + 1) : parseInt(new Date((Date.now())).getMonth().toString() + 1))}-${((parseInt(new Date((Date.now())).getDate().toString()) < 10) ? '0' + new Date((Date.now())).getDate() : new Date((Date.now())).getDate())}`
+    });
+  }
+
+  const onSubmit = (e) => {
+
     e.preventDefault();
     // TODO: Validation before dispatching with contactAdded
-
-    // add the contact to our api/mysql generally
-    dispatch(addContact(localFirstName, localLastName, localEmail, localDate))
-      // set relation to currently logged in user
-      .then(() => dispatch(bindNewContact()));
+    // check if update-mode is on
+    if(href && firstName && lastName && email && date) {
+      // Edit Mode
+      dispatch(updateContact(href, localFirstName, localLastName, localEmail, localDate));
+    } else {
+      // Add Mode
+      // add the contact to our api/mysql generally
+      dispatch(addContact(localFirstName, localLastName, localEmail, localDate))
+        // set relation to currently logged in user
+        .then(() => dispatch(bindNewContact()));
+    }
 
     // clear input fields
     setContactForm({
@@ -42,22 +80,9 @@ const Form = () => {
     });
   }
 
-  useEffect(() => {
-    const {href, firstName, lastName, email, date} = tmpContact;
-
-    if (href && firstName && lastName && email && date) // exist check - could also be empty (cleared)
-      setContactForm({
-        localHref: href,
-        localFirstName: firstName,
-        localLastName: lastName,
-        localEmail: email,
-        localDate: `${new Date(Date.parse(date.toString())).getUTCFullYear()}-${(((parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1) < 10) ? '0' + (parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1) : (parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1))}-${((parseInt(new Date(Date.parse(date.toString())).getDate().toString()) < 10) ? '0' + parseInt(new Date(Date.parse(date.toString())).getDate().toString()) : parseInt(new Date(Date.parse(date.toString())).getDate().toString()))}`
-      })
-  }, [tmpContact]);
-
   return (
     <form onSubmit={onSubmit} className="padding-1y" name="contact">
-      <h1>Form</h1>
+      {(href && firstName && lastName && email && date) ? <h1>Update Data</h1> : <h1>Add Data</h1>}
 
       <div className="padding-05y">
         <input style={{display: 'none'}} className="full-width" type="text" name="localHref" value={localHref}
@@ -86,7 +111,11 @@ const Form = () => {
                onChange={onChange}/>
       </div>
       <div className="padding-1y">
-        <input id="form-submit" type="submit" className="full-width" value="Submit"/>
+        {(href && firstName && lastName && email && date) ?
+          <input id="form-submit" type="submit" style={{backgroundColor: 'orange', marginBottom: '1rem'}} className="full-width" value="Update"/> :
+          <input id="form-submit" type="submit" className="full-width" value="Add"/>}
+        {(href && firstName && lastName && email && date) &&
+        <input id="form-submit" style={{backgroundColor: 'red'}} type="button" onClick={onDiscard} className="full-width" value="Discard"/>}
       </div>
     </form>
   );
