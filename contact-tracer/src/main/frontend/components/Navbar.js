@@ -22,7 +22,7 @@ function Navbar(props) {
           <li>{props.user}</li>
           <li><Link to="/">Home</Link></li>
           <li>{props.dash}</li>
-          <li>{props.logout && <button onClick={(e) => {
+          <li>{props.logout && <button className="logout" onClick={(e) => {
             dispatch(loadLogout());
             // redirect to homepage
             window.location.href = "/";

@@ -8,7 +8,7 @@ function Login({info, render}) {
 
   if(render) {
     return (
-      <Fragment>
+      <section className="main">
         {info !== "" && <div className="container">{info}</div>}
         <div className="container">
           <div className="login">
@@ -18,13 +18,13 @@ function Login({info, render}) {
             </div>
           </div>
         </div>
-      </Fragment>
+      </section>
     );
   } else {
     return (
-      <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.3rem'}}>
+      <section className="main" style={{textAlign: 'center', fontSize: '1.3rem'}}>
         You are logged in! <Link to="/dashboard">proceed to the side</Link>.
-      </div>
+      </section>
     );
   }
 }

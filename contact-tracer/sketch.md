@@ -19,6 +19,8 @@ The Frontend is served on the server-endpoint `/` and is an SPA powered by React
 
 ![alt text](tables.png "Relationship")
 
+`CREATE TABLE contact (id INT UNSIGNED NOT NULL AUTO_INCREMENT, first_name VARCHAR(255), last_name VARCHAR(320), email VARCHAR(320), date DATE, user_id INT UNSIGNED DEFAULT 0, PRIMARY KEY (id), FOREIGN KEY (user_id) REFERENCES user (id));`
+
 **API Endpoints (Backend)**
 
 Home System
@@ -40,10 +42,15 @@ REST
     * 1:n to contacts - get all contacts from user with id=1: `/api/users/1/contacts`
         * sadly, paging and sorting does not work here - have to implement it by myself
     * Add contacts for user with id=1 (POST + PUT):
-        1. post to the contacts repo without Relation (user_id is NULL): POST `/api/contacts`
+        1. post to the contacts repo without Relation (just don't include the userId): POST `/api/contacts`
+           - The data transmitted to axios should have the following norm:
+            ````javascript
+            data: {firstName, lastName, email, date}
+            ````
         2. get reference of created resource: `const ref = req.data._links.user.href;`
         3. get the id of currently logged user (byEmail - se above endpoint)
-        4. Set Relation using: PUT `/api/users/{id}` with `"Content-Type": "text/uri-list"`
+        4. Set Relation using PUT: the data is the currently logged in user which is `/api/users/{id}`, 
+           the url is the `ref` we saved earlier and the header has the following setting: `"Content-Type": "text/uri-list"`
 
 
 * *API queries should be accessible via Relationships (HATEOAS principle)*

@@ -1,26 +1,50 @@
 import React, {Fragment} from 'react';
+import {useDispatch} from "react-redux";
+import {clearTmpContact, setTmpContact, deleteContact} from "../store/entities/reducers/contact";
 
 const ContactItem = ({contact}) => {
 
-  const date = new Date(Date.parse(contact.date.toString()))
+  const {firstName, lastName, email, date, _links} = contact;
+
+  const dispatch = useDispatch();
+  const dateParsed = new Date(Date.parse(date.toString()))
+  //const tmpContact = useSelector(tmpContactSelector);
+
+  const deleteEntry = (e) => {
+    dispatch(deleteContact(_links.self.href));
+  }
+
+  const setEditForm = (e) => {
+
+    // clear previous stuff
+    dispatch(clearTmpContact());
+
+    // set tmp contact when clicked
+    dispatch(setTmpContact(_links.self.href, firstName, lastName, email, date));
+
+  }
 
   return (
     <Fragment>
       <div className="container-card">
         <div className="card">
           <div className="card-top" id="date-top">
-            <h3>Date of Contact: {`${date.getDate()}.${date.getMonth()+1}.${date.getUTCFullYear()}`}</h3>
+            <h3>Date of
+              Contact: {`${dateParsed.getDate()}.${dateParsed.getMonth() + 1}.${dateParsed.getUTCFullYear()}`}</h3>
           </div>
           <div className="card-content">
             <ul>
-              <li style={{display: 'none'}} id={contact._links.self.href}>{}</li>
-              <li>First name: {contact.firstName}</li>
-              <li>Last name: {contact.lastName}</li>
-              <li>E-Mail: {contact.email}</li>
+              <li style={{display: 'none'}} id={_links.self.href}>{}</li>
+              <li>First name: {firstName}</li>
+              <li>Last name: {lastName}</li>
+              <li>E-Mail: {email}</li>
             </ul>
           </div>
           <div className="card-bottom">
-            <p>Actions: <button>edit</button>{"   "}<button>delete</button></p>
+            <p>
+              <button className="edit" onClick={setEditForm}>edit</button>{"   "}
+              <button className="delete" onClick={deleteEntry}>delete</button>
+            </p>
           </div>
         </div>
       </div>

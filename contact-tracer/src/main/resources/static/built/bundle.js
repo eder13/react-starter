@@ -13464,7 +13464,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: Arial, serif;\n}\n\n.info {\n  text-align: center;\n  height: 35px;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n  color: #31708f;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.error {\n  text-align: center;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n  color: #721c24;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n}\n\n#navbar {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n}\n\n#navbar .logo {\n  padding: 0.5rem 0;\n}\n\n#navbar .navbar-nav {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n}\n\n#navbar .navbar-nav ul {\n  list-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#navbar .navbar-nav ul li {\n  margin: 0 1rem;\n}\n\n#navbar .navbar-nav ul li a {\n  color: white;\n}\n\n#navbar .navbar-nav ul li:first-child {\n  font-size: 0.8rem;\n}\n\n.login {\n  margin-top: 2rem;\n  background-color: #f4f4f4;\n  height: 200px;\n  width: 40%;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: center;\n}\n\n.login h1 {\n  margin-bottom: 2rem;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}", "",{"version":3,"sources":["webpack://./src/main/frontend/App.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,SAAS;EACT,UAAU;EACV,yBAAyB;AAC3B;;AAEA;EACE,kBAAkB;EAClB,YAAY;EACZ,UAAU;EACV,eAAe;EACf,cAAc;EACd,6BAA6B;EAC7B,yBAAyB;EACzB,qBAAqB;EACrB,cAAc;EACd,yBAAyB;EACzB,iBAAiB;AACnB;;AAEA;EACE,kBAAkB;EAClB,UAAU;EACV,eAAe;EACf,cAAc;EACd,6BAA6B;EAC7B,yBAAyB;EACzB,qBAAqB;EACrB,cAAc;EACd,yBAAyB;EACzB,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,8BAA8B;EAC9B,eAAe;EACf,sBAAsB;EACtB,YAAY;AACd;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;AACrB;;AAEA;EACE,qBAAqB;EACrB,aAAa;EACb,qBAAqB;AACvB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,gBAAgB;EAChB,yBAAyB;EACzB,aAAa;EACb,UAAU;EACV,aAAa;EACb,wBAAwB;EACxB,mBAAmB;EACnB,uBAAuB;AACzB;;AAEA;EACE,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,yBAAyB;EACzB,kBAAkB;EAClB,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,oCAAoC;AACtC;;AAEA;EACE,KAAK,uBAAuB,EAAE;EAC9B,OAAO,yBAAyB,EAAE;AACpC","sourcesContent":["* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: Arial, serif;\n}\n\n.info {\n  text-align: center;\n  height: 35px;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n  color: #31708f;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.error {\n  text-align: center;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n  color: #721c24;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n}\n\n#navbar {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n}\n\n#navbar .logo {\n  padding: 0.5rem 0;\n}\n\n#navbar .navbar-nav {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n}\n\n#navbar .navbar-nav ul {\n  list-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#navbar .navbar-nav ul li {\n  margin: 0 1rem;\n}\n\n#navbar .navbar-nav ul li a {\n  color: white;\n}\n\n#navbar .navbar-nav ul li:first-child {\n  font-size: 0.8rem;\n}\n\n.login {\n  margin-top: 2rem;\n  background-color: #f4f4f4;\n  height: 200px;\n  width: 40%;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: center;\n}\n\n.login h1 {\n  margin-bottom: 2rem;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: Arial, serif;\n}\n\n.info {\n  text-align: center;\n  height: 35px;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n  color: #31708f;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.error {\n  text-align: center;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n  color: #721c24;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.main {\n  margin-top: 100px;\n}\n\n.container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n}\n\n.container-even {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-evenly;\n}\n\n.container-card {\n  width: 100%;\n  margin: 0 auto;\n}\n\n.card{\n  width: 100%;\n  margin: 50px auto 50px auto;\n  display: grid;\n  grid-template-rows: 50px auto 50px;\n  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);\n  background-color: white;\n}\n\n.card-top{\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1em;\n  color: white;\n}\n\n.card-content{\n  padding: 1em;\n}\n\n.card-content ul{\n  margin: 5px auto auto 25px;\n}\n\n.card-bottom{\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1em;\n  background-color: #eeeeee;\n}\n\n#date-top{\n  background-color: #333;\n}\n\n#navbar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n}\n\n#navbar .logo {\n  padding: 0.5rem 0;\n}\n\n#navbar .navbar-nav {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n}\n\n#navbar .navbar-nav ul {\n  list-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#navbar .navbar-nav ul li {\n  margin: 0 1rem;\n}\n\n#navbar .navbar-nav ul li a {\n  color: white;\n}\n\n#navbar .navbar-nav ul li:first-child {\n  font-size: 0.8rem;\n}\n\n.login {\n  margin-top: 2rem;\n  background-color: #f4f4f4;\n  height: 200px;\n  width: 40%;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: center;\n}\n\n.login h1 {\n  margin-bottom: 2rem;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\n.full-width {\n  width: 100%;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"] {\n  display: inline-block;\n  height: 38px;\n  padding: 0 30px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 38px;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\ninput[type=\"submit\"].button-primary {\n  color: #fff;\n  background-color: #ff974c;\n  border-color: #ff974c;\n}", "",{"version":3,"sources":["webpack://./src/main/frontend/App.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,SAAS;EACT,UAAU;EACV,yBAAyB;AAC3B;;AAEA;EACE,kBAAkB;EAClB,YAAY;EACZ,UAAU;EACV,eAAe;EACf,cAAc;EACd,6BAA6B;EAC7B,yBAAyB;EACzB,qBAAqB;EACrB,cAAc;EACd,yBAAyB;EACzB,iBAAiB;AACnB;;AAEA;EACE,kBAAkB;EAClB,UAAU;EACV,eAAe;EACf,cAAc;EACd,6BAA6B;EAC7B,yBAAyB;EACzB,qBAAqB;EACrB,cAAc;EACd,yBAAyB;EACzB,iBAAiB;AACnB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,6BAA6B;AAC/B;;AAEA;EACE,WAAW;EACX,cAAc;AAChB;;AAEA;EACE,WAAW;EACX,2BAA2B;EAC3B,aAAa;EACb,kCAAkC;EAClC,uCAAuC;EACvC,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,8BAA8B;EAC9B,qBAAqB;EACrB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,0BAA0B;AAC5B;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,8BAA8B;EAC9B,qBAAqB;EACrB,YAAY;EACZ,yBAAyB;AAC3B;;AAEA;EACE,sBAAsB;AACxB;;AAEA;EACE,eAAe;EACf,MAAM;EACN,OAAO;EACP,YAAY;EACZ,aAAa;EACb,qBAAqB;EACrB,8BAA8B;EAC9B,eAAe;EACf,sBAAsB;EACtB,YAAY;AACd;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;AACrB;;AAEA;EACE,qBAAqB;EACrB,aAAa;EACb,qBAAqB;AACvB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,gBAAgB;EAChB,yBAAyB;EACzB,aAAa;EACb,UAAU;EACV,aAAa;EACb,wBAAwB;EACxB,mBAAmB;EACnB,uBAAuB;AACzB;;AAEA;EACE,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,yBAAyB;EACzB,kBAAkB;EAClB,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,oCAAoC;AACtC;;AAEA;EACE,KAAK,uBAAuB,EAAE;EAC9B,OAAO,yBAAyB,EAAE;AACpC;;AAEA;EACE,gBAAgB;EAChB,uBAAuB;EACvB,aAAa;EACb,wBAAwB;EACxB,mBAAmB;EACnB,WAAW;EACX,wBAAwB;AAC1B;;AAEA;EACE,cAAc;EACd,gBAAgB;AAClB;;AAEA;;EAEE,YAAY;AACd;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,WAAW;EACX,sBAAsB;AACxB;;AAEA;;;;EAIE,YAAY;EACZ,iBAAiB;EACjB,sBAAsB;EACtB,yBAAyB;EACzB,kBAAkB;EAClB,gBAAgB;EAChB,sBAAsB;AACxB;;AAEA;;;;EAIE,wBAAwB;EACxB,qBAAqB;EACrB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;;;;EAIE,yBAAyB;EACzB,UAAU;AACZ;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,gBAAgB;AAClB;;AAEA;EACE,qBAAqB;EACrB,YAAY;EACZ,eAAe;EACf,WAAW;EACX,kBAAkB;EAClB,eAAe;EACf,gBAAgB;EAChB,iBAAiB;EACjB,sBAAsB;EACtB,yBAAyB;EACzB,qBAAqB;EACrB,mBAAmB;EACnB,6BAA6B;EAC7B,kBAAkB;EAClB,sBAAsB;EACtB,eAAe;EACf,sBAAsB;AACxB;;AAEA;;EAEE,WAAW;EACX,kBAAkB;EAClB,UAAU;AACZ;;AAEA;EACE,WAAW;EACX,yBAAyB;EACzB,qBAAqB;AACvB","sourcesContent":["* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: Arial, serif;\n}\n\n.info {\n  text-align: center;\n  height: 35px;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n  color: #31708f;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.error {\n  text-align: center;\n  width: 20%;\n  padding: 0.5rem;\n  margin: 20px 0;\n  border: 1px solid transparent;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n  color: #721c24;\n  border-top-color: #a6e1ec;\n  border-radius: 5%;\n}\n\n.main {\n  margin-top: 100px;\n}\n\n.container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n}\n\n.container-even {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-evenly;\n}\n\n.container-card {\n  width: 100%;\n  margin: 0 auto;\n}\n\n.card{\n  width: 100%;\n  margin: 50px auto 50px auto;\n  display: grid;\n  grid-template-rows: 50px auto 50px;\n  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);\n  background-color: white;\n}\n\n.card-top{\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1em;\n  color: white;\n}\n\n.card-content{\n  padding: 1em;\n}\n\n.card-content ul{\n  margin: 5px auto auto 25px;\n}\n\n.card-bottom{\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1em;\n  background-color: #eeeeee;\n}\n\n#date-top{\n  background-color: #333;\n}\n\n#navbar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n}\n\n#navbar .logo {\n  padding: 0.5rem 0;\n}\n\n#navbar .navbar-nav {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n}\n\n#navbar .navbar-nav ul {\n  list-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#navbar .navbar-nav ul li {\n  margin: 0 1rem;\n}\n\n#navbar .navbar-nav ul li a {\n  color: white;\n}\n\n#navbar .navbar-nav ul li:first-child {\n  font-size: 0.8rem;\n}\n\n.login {\n  margin-top: 2rem;\n  background-color: #f4f4f4;\n  height: 200px;\n  width: 40%;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: center;\n}\n\n.login h1 {\n  margin-bottom: 2rem;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\n.full-width {\n  width: 100%;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"] {\n  display: inline-block;\n  height: 38px;\n  padding: 0 30px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 38px;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\ninput[type=\"submit\"].button-primary {\n  color: #fff;\n  background-color: #ff974c;\n  border-color: #ff974c;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -50163,10 +50163,10 @@ function App() {
 
 /***/ }),
 
-/***/ "./src/main/frontend/components/Dashboard.js":
-/*!***************************************************!*\
-  !*** ./src/main/frontend/components/Dashboard.js ***!
-  \***************************************************/
+/***/ "./src/main/frontend/components/ContactItem.js":
+/*!*****************************************************!*\
+  !*** ./src/main/frontend/components/ContactItem.js ***!
+  \*****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -50178,17 +50178,80 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/entities/reducers/contact */ "./src/main/frontend/store/entities/reducers/contact.js");
 
 
- //import {loginUserIdSelector} from "../store/auth/auth";
 
-var Dashboard = function Dashboard(_ref) {
-  var userId = _ref.userId;
+
+var ContactItem = function ContactItem(_ref) {
+  var contact = _ref.contact;
+  var firstName = contact.firstName,
+      lastName = contact.lastName,
+      email = contact.email,
+      date = contact.date,
+      _links = contact._links;
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useLayoutEffect"])(function () {
-    // TODO: Investigate how useSelector done before this call
-    // e.g. const userId = useSelector(loginUserIdSelector);
-    if (userId) dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["loadContacts"])(userId));
-  }, []);
+  var dateParsed = new Date(Date.parse(date.toString())); //const tmpContact = useSelector(tmpContactSelector);
+
+  var setEditForm = function setEditForm(e) {
+    // clear previous stuff
+    dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["clearTmpContact"])()); // set tmp contact when clicked
+
+    dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["setTmpContact"])(_links.self.href, firstName, lastName, email, date));
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container-card"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-top",
+    id: "date-top"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Date of Contact: ", "".concat(dateParsed.getDate(), ".").concat(dateParsed.getMonth() + 1, ".").concat(dateParsed.getUTCFullYear()))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    style: {
+      display: 'none'
+    },
+    id: _links.self.href
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "First name: ", firstName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Last name: ", lastName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "E-Mail: ", email))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-bottom"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Actions: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: setEditForm
+  }, "edit"), "   ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "delete"))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ContactItem);
+
+/***/ }),
+
+/***/ "./src/main/frontend/components/Contacts.js":
+/*!**************************************************!*\
+  !*** ./src/main/frontend/components/Contacts.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/entities/reducers/contact */ "./src/main/frontend/store/entities/reducers/contact.js");
+/* harmony import */ var _ContactItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ContactItem */ "./src/main/frontend/components/ContactItem.js");
+/* harmony import */ var _Form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Form */ "./src/main/frontend/components/Form.js");
+
+
+
+
+
+
+var Contacts = function Contacts() {
+  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
+  var allContacts = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["allContactsSelector"]);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useLayoutEffect"])(function () {
+    dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["loadContacts"])());
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "main"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       marginTop: '2rem'
     }
@@ -50196,10 +50259,215 @@ var Dashboard = function Dashboard(_ref) {
     style: {
       textAlign: 'center'
     }
-  }, "Dashboard")));
+  }, "Dashboard")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container-even"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_4__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, allContacts.length !== 0 ? allContacts.map(function (contact) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ContactItem__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      key: contact._links.self.href,
+      contact: contact
+    });
+  }) : "Please add a contact ...")));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Dashboard);
+/* harmony default export */ __webpack_exports__["default"] = (Contacts);
+
+/***/ }),
+
+/***/ "./src/main/frontend/components/Form.js":
+/*!**********************************************!*\
+  !*** ./src/main/frontend/components/Form.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/entities/reducers/contact */ "./src/main/frontend/store/entities/reducers/contact.js");
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var Form = function Form() {
+  // local form data state
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    localHref: '',
+    localFirstName: '',
+    localLastName: '',
+    localEmail: '',
+    // transform input field with type=date to yyyy-mm-dd
+    localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate())
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      contactForm = _useState2[0],
+      setContactForm = _useState2[1]; // pull out data from parent object state
+
+
+  var localHref = contactForm.localHref,
+      localFirstName = contactForm.localFirstName,
+      localLastName = contactForm.localLastName,
+      localEmail = contactForm.localEmail,
+      localDate = contactForm.localDate;
+  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
+  var tmpContact = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["tmpContactSelector"]); // specify selector
+
+  var onChange = function onChange(e) {
+    setContactForm(_objectSpread(_objectSpread({}, contactForm), {}, _defineProperty({}, e.target.name, e.target.value)));
+  };
+
+  var onSubmit = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(e) {
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              e.preventDefault(); // TODO: Validation before dispatching with contactAdded
+              // TODO: check how to do synchronously...
+              // add the contact to our api/mysql generally
+
+              dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["addContact"])(localFirstName, localLastName, localEmail, localDate)).then(function () {
+                return dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["bindNewContact"])());
+              }); //await dispatch(bindNewContact());
+              //dispatch(loadContacts());
+              // // bind with currently logged in user
+              // .then(() => dispatch(bindNewContact()))
+              // // load updated user data
+              // .then(() => dispatch(loadContacts()));
+              // clear input fields
+
+              setContactForm({
+                localHref: '',
+                localFirstName: '',
+                localLastName: '',
+                localEmail: '',
+                localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate())
+              });
+
+            case 3:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function onSubmit(_x) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    var href = tmpContact.href,
+        firstName = tmpContact.firstName,
+        lastName = tmpContact.lastName,
+        email = tmpContact.email,
+        date = tmpContact.date;
+    if (href && firstName && lastName && email && date) // exist check - could also be empty (cleared)
+      setContactForm({
+        localHref: href,
+        localFirstName: firstName,
+        localLastName: lastName,
+        localEmail: email,
+        // parse MySQL Date to input field date, which is specified as yyyy-mm-dd
+        localDate: "".concat(new Date(Date.parse(date.toString())).getUTCFullYear(), "-").concat(new Date(Date.parse(date.toString())).getMonth() + 1 < 10 ? '0' + new Date(Date.parse(date.toString())).getMonth() + 1 : new Date(Date.parse(date.toString())).getMonth() + 1, "-").concat(new Date(Date.parse(date.toString())).getDate() < 10 ? '0' + new Date(Date.parse(date.toString())).getDate() : new Date(Date.parse(date.toString())).getDate())
+      });
+  }, [tmpContact]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    onSubmit: onSubmit,
+    className: "padding-1y",
+    name: "contact"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Form"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "padding-05y"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    style: {
+      display: 'none'
+    },
+    className: "full-width",
+    type: "text",
+    name: "localHref",
+    value: localHref,
+    onChange: onChange
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "padding-05y"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "localFirstName"
+  }, "First name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "full-width",
+    type: "text",
+    id: "localFirstName",
+    name: "localFirstName",
+    value: localFirstName,
+    onChange: onChange
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "padding-05y"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "localLastName"
+  }, "Last name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "full-width",
+    type: "text",
+    id: "localLastName",
+    name: "localLastName",
+    value: localLastName,
+    onChange: onChange
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "padding-05y"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "localEmail"
+  }, "E-Mail:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "full-width",
+    type: "email",
+    id: "localEmail",
+    name: "localEmail",
+    value: localEmail,
+    onChange: onChange
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "padding-05y"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "localDate"
+  }, "Date:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "full-width",
+    type: "date",
+    id: "localDate",
+    name: "localDate" /// TODO Regex Date
+    // value={`${new Date(Date.parse(localDate.toString())).getUTCFullYear()}-${((new Date(Date.parse(localDate.toString())).getMonth() + 1 < 10) ? '0' + new Date(Date.parse(localDate.toString())).getMonth() + 1 : new Date(Date.parse(localDate.toString())).getMonth() + 1)}-${((new Date(Date.parse(localDate.toString())).getDate() < 10) ? '0' + new Date(Date.parse(localDate.toString())).getDate() : new Date(Date.parse(localDate.toString())).getDate())}`}
+    ,
+    value: localDate,
+    onChange: onChange
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "padding-1y"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "form-submit",
+    type: "submit",
+    className: "full-width",
+    value: "Submit"
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Form);
 
 /***/ }),
 
@@ -50219,7 +50487,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Navbar */ "./src/main/frontend/components/Navbar.js");
 /* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Login */ "./src/main/frontend/components/Login.js");
-/* harmony import */ var _Dashboard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Dashboard */ "./src/main/frontend/components/Dashboard.js");
+/* harmony import */ var _Contacts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Contacts */ "./src/main/frontend/components/Contacts.js");
 
 
 
@@ -50277,7 +50545,7 @@ function Home() {
       exact: true,
       path: "/dashboard",
       render: function render() {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Dashboard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Contacts__WEBPACK_IMPORTED_MODULE_6__["default"], {
           userId: loginState.userId
         });
       }
@@ -50313,7 +50581,9 @@ function Login(_ref) {
       render = _ref.render;
 
   if (render) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, info !== "" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      className: "main"
+    }, info !== "" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "container"
     }, info), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "container"
@@ -50323,10 +50593,10 @@ function Login(_ref) {
       href: "/oauth2/authorization/github"
     }, "click here")))));
   } else {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      className: "main",
       style: {
         textAlign: 'center',
-        marginTop: '2rem',
         fontSize: '1.3rem'
       }
     }, "You are logged in! ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
@@ -50455,8 +50725,7 @@ var loginUserIdReceived = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["
 var logoutRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("logoutRequested");
 var logoutRequestedDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("logoutRequestedDone");
 var logoutSucceeded = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("logoutSucceeded");
-var logoutFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("logoutFailed"); // TODO: Check promise based of ui actions
-// UI actions
+var logoutFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("logoutFailed"); // UI actions
 
 var loadLogin = function loadLogin() {
   return /*#__PURE__*/function () {
@@ -50633,17 +50902,29 @@ __webpack_require__.r(__webpack_exports__);
 /*!**************************************************************!*\
   !*** ./src/main/frontend/store/entities/reducers/contact.js ***!
   \**************************************************************/
-/*! exports provided: loadContacts, default */
+/*! exports provided: loadContacts, addContact, bindNewContact, setTmpContact, clearTmpContact, default, allContactsSelector, tmpContactSelector */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadContacts", function() { return loadContacts; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addContact", function() { return addContact; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bindNewContact", function() { return bindNewContact; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setTmpContact", function() { return setTmpContact; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearTmpContact", function() { return clearTmpContact; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allContactsSelector", function() { return allContactsSelector; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tmpContactSelector", function() { return tmpContactSelector; });
 /* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
-/* harmony import */ var _middleware_apiCreators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../middleware/apiCreators */ "./src/main/frontend/store/middleware/apiCreators.js");
+/* harmony import */ var reselect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reselect */ "./node_modules/reselect/es/index.js");
+/* harmony import */ var _middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../middleware/apiCreators */ "./src/main/frontend/store/middleware/apiCreators.js");
 var _createReducer;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 
 
 
@@ -50651,21 +50932,170 @@ var contactDataRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__[
 var contactDataRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDataRequestDone");
 var contactDataReceived = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDataReceived");
 var contactDataFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDataFailed");
-var loadContacts = function loadContacts(id) {
-  return function (dispatch, getState) {
-    dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_1__["apiCallBegan"])({
-      url: "/api/users/".concat(id, "/contacts"),
-      // FIXME: Remove hardcoded url
-      method: "get",
-      onStart: contactDataRequested.type,
-      onDone: contactDataRequestDone.type,
-      onSuccess: contactDataReceived.type,
-      onFailed: contactDataFailed.type
+var contactAddRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactAddRequested");
+var contactAddRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactAddRequestDone");
+var contactAdded = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactAdded");
+var contactAddFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactAddFailed");
+var contactRelationSet = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactRelationSet");
+var tmpContactDataSet = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("tmpContactDataSet");
+var tmpContactDataWiped = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("tmpContactDataWiped");
+var contactUiMessageWiped = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactUiMessageWiped");
+var loadContacts = function loadContacts() {
+  return /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(dispatch, getState) {
+      var userId;
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              userId = getState().auth.userId; // wait until userId is fetched before calling - otherwise fetching does not make sense
+
+              if (!(userId === "")) {
+                _context.next = 3;
+                break;
+              }
+
+              return _context.abrupt("return");
+
+            case 3:
+              dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
+                url: "/api/users/".concat(userId, "/contacts"),
+                // FIXME: Remove hardcoded url
+                method: "get",
+                onStart: contactDataRequested.type,
+                onDone: contactDataRequestDone.type,
+                onSuccess: contactDataReceived.type,
+                onFailed: contactDataFailed.type
+              }));
+
+            case 4:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
     }));
+
+    return function (_x, _x2) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+}; // add contact without binding first
+
+var addContact = function addContact(firstName, lastName, email, date) {
+  return /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(dispatch, getState) {
+      return regeneratorRuntime.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
+              return dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
+                url: "/api/contacts",
+                // FIXME: Remove hardcoded url
+                method: "post",
+                data: {
+                  firstName: firstName,
+                  lastName: lastName,
+                  email: email,
+                  date: date
+                },
+                onStart: contactAddRequested.type,
+                onDone: contactAddRequestDone.type,
+                onSuccess: contactAdded.type,
+                onFailed: contactAddFailed.type
+              }));
+
+            case 2:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function (_x3, _x4) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+}; // bind contact to relational table
+
+var bindNewContact = function bindNewContact() {
+  return /*#__PURE__*/function () {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(dispatch, getState) {
+      var userId, tmpReference;
+      return regeneratorRuntime.wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              userId = getState().auth.userId;
+              tmpReference = getState().entities.contactReducer.tmpReference; // wait until userId and tmpReference are set before making the call
+
+              if (!(userId === "" || tmpReference === "")) {
+                _context3.next = 4;
+                break;
+              }
+
+              return _context3.abrupt("return");
+
+            case 4:
+              dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
+                url: tmpReference,
+                // FIXME: Remove hardcoded url
+                method: 'put',
+                data: "/api/users/".concat(userId),
+                // FIXME: Remove hardcoded relation data-url for contacts
+                params: {
+                  headers: {
+                    "Content-Type": "text/uri-list"
+                  }
+                },
+                onStart: contactAddRequested.type,
+                onDone: contactAddRequestDone.type,
+                onSuccess: contactRelationSet.type,
+                onFailed: contactAddFailed.type
+              }));
+
+            case 5:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3);
+    }));
+
+    return function (_x5, _x6) {
+      return _ref3.apply(this, arguments);
+    };
+  }();
+};
+var setTmpContact = function setTmpContact(href, firstName, lastName, email, date) {
+  return function (dispatch, getState) {
+    dispatch({
+      type: tmpContactDataSet.type,
+      payload: {
+        href: href,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        date: date
+      }
+    });
+  };
+};
+var clearTmpContact = function clearTmpContact() {
+  return function (dispatch, getState) {
+    dispatch({
+      type: tmpContactDataWiped.type,
+      payload: {}
+    });
   };
 };
 /* harmony default export */ __webpack_exports__["default"] = (Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createReducer"])({
   contacts: [],
+  tmpReference: "",
+  // temporary reference for later put call to set relation for added data
+  tmpContact: {},
   loading: false,
   lastFetch: null,
   notification: {
@@ -50677,16 +51107,61 @@ var loadContacts = function loadContacts(id) {
 }), _defineProperty(_createReducer, contactDataRequestDone.type, function (contactState, action) {
   contactState.loading = false;
 }), _defineProperty(_createReducer, contactDataReceived.type, function (contactState, action) {
-  contactState.contacts = action.payload._embedded.contacts;
+  contactState.contacts = action.payload.data._embedded.contacts;
   contactState.notification.error = "";
   contactState.notification.type = "";
-}), _defineProperty(_createReducer, contactDataFailed().type, function (contactState, action) {
+}), _defineProperty(_createReducer, contactDataFailed.type, function (contactState, action) {
   var _action$payload = action.payload,
       type = _action$payload.type,
       error = _action$payload.error;
   contactState.notification.type = type;
   contactState.notification.error = error;
-}), _createReducer)));
+}), _defineProperty(_createReducer, contactAddRequested.type, function (contactState, action) {
+  contactState.loading = true;
+}), _defineProperty(_createReducer, contactAddRequestDone.type, function (contactState, action) {
+  contactState.loading = false;
+}), _defineProperty(_createReducer, contactAdded.type, function (contactState, action) {
+  contactState.contacts.push(action.payload.data);
+  contactState.tmpReference = action.payload.data._links.user.href;
+  console.log(contactState.tmpReference);
+}), _defineProperty(_createReducer, contactAddFailed.type, function (contactState, action) {
+  // show ui message on screen
+  contactState.notification.type = action.payload.type;
+  contactState.notification.error = action.payload.error; // clear tmpReference
+
+  contactState.tmpReference = "";
+}), _defineProperty(_createReducer, contactRelationSet.type, function (contactState, action) {
+  // clear tmpReference
+  contactState.tmpReference = "";
+}), _defineProperty(_createReducer, tmpContactDataSet.type, function (contactState, action) {
+  var _action$payload2 = action.payload,
+      href = _action$payload2.href,
+      firstName = _action$payload2.firstName,
+      lastName = _action$payload2.lastName,
+      email = _action$payload2.email,
+      date = _action$payload2.date;
+  contactState.tmpContact.href = href;
+  contactState.tmpContact.firstName = firstName;
+  contactState.tmpContact.lastName = lastName;
+  contactState.tmpContact.email = email;
+  contactState.tmpContact.date = date;
+}), _defineProperty(_createReducer, tmpContactDataWiped.type, function (contactState, action) {
+  contactState.tmpContact = {};
+}), _defineProperty(_createReducer, contactUiMessageWiped.type, function (contactState, action) {
+  contactState.notification.type = "";
+  contactState.notification.error = "";
+}), _createReducer))); // Selectors
+
+var allContactsSelector = Object(reselect__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(function (state) {
+  return state.entities.contactReducer;
+}, function (contactState) {
+  return contactState.contacts;
+});
+var tmpContactSelector = Object(reselect__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(function (state) {
+  return state.entities.contactReducer;
+}, function (contactState) {
+  return contactState.tmpContact;
+});
 
 /***/ }),
 
@@ -50737,7 +51212,7 @@ var api = function api(_ref) {
   return function (next) {
     return /*#__PURE__*/function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(action) {
-        var _action$payload, url, method, data, onStart, onDone, onSuccess, onFailed, req, _data, _req, _req2;
+        var _action$payload, url, method, data, params, onStart, onDone, onSuccess, onFailed, req, _data, _req, _req2, _req3;
 
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
@@ -50754,16 +51229,16 @@ var api = function api(_ref) {
               case 3:
                 // log that api call (apiCallBegan)
                 next(action);
-                _action$payload = action.payload, url = _action$payload.url, method = _action$payload.method, data = _action$payload.data, onStart = _action$payload.onStart, onDone = _action$payload.onDone, onSuccess = _action$payload.onSuccess, onFailed = _action$payload.onFailed; // set loading spinner
+                _action$payload = action.payload, url = _action$payload.url, method = _action$payload.method, data = _action$payload.data, params = _action$payload.params, onStart = _action$payload.onStart, onDone = _action$payload.onDone, onSuccess = _action$payload.onSuccess, onFailed = _action$payload.onFailed; // set loading spinner
 
                 dispatch({
                   type: onStart,
                   payload: {}
                 });
-                console.log("URL to call: " + url); // check http method
+                console.info("URL to call: " + url); // check http method
 
                 _context.t0 = method;
-                _context.next = _context.t0 === "get" ? 10 : _context.t0 === "post" ? 35 : 50;
+                _context.next = _context.t0 === "get" ? 10 : _context.t0 === "post" ? 36 : _context.t0 === "put" ? 51 : 65;
                 break;
 
               case 10:
@@ -50773,6 +51248,7 @@ var api = function api(_ref) {
 
               case 13:
                 req = _context.sent;
+                console.info(req.status, req.data);
                 _data = req.data; // if success, dispatch api success message
 
                 dispatch({
@@ -50789,11 +51265,11 @@ var api = function api(_ref) {
                   });
                 }
 
-                _context.next = 33;
+                _context.next = 34;
                 break;
 
-              case 19:
-                _context.prev = 19;
+              case 20:
+                _context.prev = 20;
                 _context.t1 = _context["catch"](10);
                 // if failed, dispatch api error message
                 dispatch({
@@ -50802,19 +51278,19 @@ var api = function api(_ref) {
                 }); // custom error
 
                 if (!onFailed) {
-                  _context.next = 33;
+                  _context.next = 34;
                   break;
                 }
 
-                _context.prev = 23;
-                _context.next = 26;
+                _context.prev = 24;
+                _context.next = 27;
                 return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/error", {
                   params: {
                     message: "true"
                   }
                 });
 
-              case 26:
+              case 27:
                 _req = _context.sent;
 
                 if (_req.data !== "") {
@@ -50837,12 +51313,12 @@ var api = function api(_ref) {
                   });
                 }
 
-                _context.next = 33;
+                _context.next = 34;
                 break;
 
-              case 30:
-                _context.prev = 30;
-                _context.t2 = _context["catch"](23);
+              case 31:
+                _context.prev = 31;
+                _context.t2 = _context["catch"](24);
                 // General error: problem with url (not allowed, false url etc.)
                 dispatch({
                   type: onFailed,
@@ -50852,40 +51328,42 @@ var api = function api(_ref) {
                   }
                 });
 
-              case 33:
+              case 34:
                 // login spinner end
                 dispatch({
                   type: onDone,
                   payload: {}
                 });
-                return _context.abrupt("break", 51);
+                return _context.abrupt("break", 66);
 
-              case 35:
-                _context.prev = 35;
-                _context.next = 38;
+              case 36:
+                _context.prev = 36;
+                _context.next = 39;
                 return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(url, data, {
                   headers: {
                     "Content-Type": "application/json"
                   }
                 });
 
-              case 38:
+              case 39:
                 _req2 = _context.sent;
-                console.log(_req2.status, _req2.data);
+                console.info(_req2.status, _req2.data);
                 dispatch({
                   type: _apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallSucceeded"].type,
                   payload: {}
                 });
                 if (onSuccess) dispatch({
                   type: onSuccess,
-                  payload: {}
+                  payload: {
+                    data: _req2.data
+                  }
                 });
-                _context.next = 48;
+                _context.next = 49;
                 break;
 
-              case 44:
-                _context.prev = 44;
-                _context.t3 = _context["catch"](35);
+              case 45:
+                _context.prev = 45;
+                _context.t3 = _context["catch"](36);
                 dispatch({
                   type: _apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallFailed"].type,
                   payload: {}
@@ -50898,24 +51376,59 @@ var api = function api(_ref) {
                   }
                 });
 
-              case 48:
+              case 49:
                 setTimeout(function () {
                   return dispatch({
                     type: onDone,
                     payload: {}
                   });
                 }, 500);
-                return _context.abrupt("break", 51);
-
-              case 50:
-                return _context.abrupt("break", 51);
+                return _context.abrupt("break", 66);
 
               case 51:
+                _context.prev = 51;
+                _context.next = 54;
+                return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put(url, data, params);
+
+              case 54:
+                _req3 = _context.sent;
+                console.log(_req3.status, _req3.data);
+                dispatch({
+                  type: _apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallSucceeded"].type,
+                  payload: {}
+                });
+                if (onSuccess) dispatch({
+                  type: onSuccess,
+                  payload: {
+                    data: _req3.data
+                  }
+                });
+                _context.next = 63;
+                break;
+
+              case 60:
+                _context.prev = 60;
+                _context.t4 = _context["catch"](51);
+                console.error(_context.t4.toString());
+
+              case 63:
+                setTimeout(function () {
+                  return dispatch({
+                    type: onDone,
+                    payload: {}
+                  });
+                }, 500);
+                return _context.abrupt("break", 66);
+
+              case 65:
+                return _context.abrupt("break", 66);
+
+              case 66:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[10, 19], [23, 30], [35, 44]]);
+        }, _callee, null, [[10, 20], [24, 31], [36, 45], [51, 60]]);
       }));
 
       return function (_x) {

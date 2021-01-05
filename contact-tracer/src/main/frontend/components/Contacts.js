@@ -1,36 +1,32 @@
-import React, {Fragment, useLayoutEffect} from 'react';
+import React, {useLayoutEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {allContactsSelector, loadContacts} from "../store/entities/reducers/contact";
 import ContactItem from "./ContactItem";
+import Form from "./Form";
 
-const Contacts = ({userId}) => {
+const Contacts = () => {
 
   const dispatch = useDispatch();
   const allContacts = useSelector(allContactsSelector);
 
   useLayoutEffect(() => {
-
-    // TODO: Investigate how useSelector done before this call
-    // e.g. const userId = useSelector(loginUserIdSelector);
-
-    if (userId)
-      dispatch(loadContacts(userId));
-
+      dispatch(loadContacts());
   }, []);
 
   return (
-    <Fragment>
+    <section className="main">
       <div style={{marginTop: '2rem'}}><h1 style={{textAlign: 'center'}}>Dashboard</h1></div>
-      {/*{allContacts.map(contact => <div>{contact.firstName}</div>)}*/}
       <div className="container-even">
         <div>
-        {/*Form*/}
+          {/*Form*/}
+          <Form/>
         </div>
         <div>
-          {allContacts.map(contact => <ContactItem key={contact._links.self.href} contact={contact}/>)}
+          {allContacts.length !== 0 ? allContacts.map(contact => <ContactItem key={contact._links.self.href}
+                                                                              contact={contact}/>) : "Please add a contact ..."}
         </div>
       </div>
-    </Fragment>
+    </section>
   );
 }
 
