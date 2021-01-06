@@ -24,6 +24,10 @@ export const loadLogin = () => async (dispatch, getState) => {
     onSuccess: loginUserNameReceived.type,
     onFailed: loginUserNameFailed.type,
   }));
+  if(getState().auth.user !== "")
+    return Promise.resolve(true);
+  else
+    return Promise.reject(false);
 }
 export const loadLoginUserId = () => (dispatch, getState) => {
 

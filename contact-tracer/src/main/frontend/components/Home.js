@@ -12,7 +12,12 @@ function Home() {
 
   useLayoutEffect(() => {
     // load the username
-    dispatch(loadLogin()).then(() => dispatch(loadLoginUserId()));
+    dispatch(loadLogin())
+      .then((resolved) => {
+        if(resolved)
+          dispatch(loadLoginUserId());
+      })
+      .catch(reason => console.log(reason));
   }, []);
 
   if (loginState.loading) {

@@ -28,7 +28,7 @@ const contactDeleteRequested = createAction("contactDeleteRequested");
 const contactDeleteRequestDone = createAction("contactDeleteRequestDone");
 const contactDeleted = createAction("contactDeleted");
 const contactDeleteFailed = createAction("contactDeleteFailed");
-// UI Popups data
+// UI Popups data wipe
 const contactUiMessageWiped = createAction("contactUiMessageWiped");
 
 export const loadContacts = () => async (dispatch, getState) => {
@@ -38,7 +38,7 @@ export const loadContacts = () => async (dispatch, getState) => {
   if (userId === "")
     return;
 
-  dispatch(apiCallBegan({
+  await dispatch(apiCallBegan({
     url: `/api/users/${userId}/contacts`, // FIXME: Remove hardcoded url
     method: "get",
     onStart: contactDataRequested.type,
@@ -46,10 +46,13 @@ export const loadContacts = () => async (dispatch, getState) => {
     onSuccess: contactDataReceived.type,
     onFailed: contactDataFailed.type
   }));
+
+  return Promise.resolve(true);
 }
 
 // add contact without binding first
 export const addContact = (firstName, lastName, email, date) => async (dispatch, getState) => {
+  const before = getState().entities.contactReducer.contacts.length;
   await dispatch(apiCallBegan({
     url: "/api/contacts", // FIXME: Remove hardcoded url
     method: "post",
@@ -59,6 +62,12 @@ export const addContact = (firstName, lastName, email, date) => async (dispatch,
     onSuccess: contactAdded.type,
     onFailed: contactAddFailed.type
   }));
+  const after = getState().entities.contactReducer.contacts.length;
+  // Promise based check
+  if (before < after)
+    return Promise.resolve(true);
+  else
+    return Promise.reject("Failed to Add Contact to /api/contacts");
 }
 
 // bind contact to relational table
@@ -67,8 +76,8 @@ export const bindNewContact = () => async (dispatch, getState) => {
   const {tmpReference} = getState().entities.contactReducer;
 
   // wait until userId and tmpReference are set before making the call
-  if (userId === "" || tmpReference === "")
-    return;
+  // if (userId === "" || tmpReference === "")
+  //   return;
 
   dispatch(apiCallBegan({
     url: tmpReference, // FIXME: Remove hardcoded url
@@ -252,11 +261,19 @@ export default createReducer({
 });
 
 // Selectors
-export const allContactsSelector = createSelector(
-  (state) => state.entities.contactReducer,
-  (contactState) => contactState.contacts
-);
+// export const allContactsSelector = createSelector(
+//   (state) => state.entities.contactReducer,
+//   (contactState) => contactState.contacts
+// );
 export const tmpContactSelector = createSelector(
   (state) => state.entities.contactReducer,
   (contactState) => contactState.tmpContact
+);
+export const notificationSelector = createSelector(
+  (state) => state.entities.contactReducer,
+  (contactState) => contactState.notification
+);
+export const filteredContactsSelector = (searchString) => createSelector(
+  (state) => state.entities.contactReducer,
+  (contactState) => contactState.contacts.filter(contact => contact.firstName.indexOf(searchString) !== -1)
 );

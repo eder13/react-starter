@@ -4,6 +4,7 @@ import {
   addContact,
   bindNewContact,
   clearTmpContact,
+  notificationSelector,
   tmpContactSelector,
   updateContact
 } from "../store/entities/reducers/contact";
@@ -23,7 +24,9 @@ const Form = () => {
   // pull out data from parent object state
   const {localHref, localFirstName, localLastName, localEmail, localDate} = contactForm;
   const dispatch = useDispatch();
-  const tmpContact = useSelector(tmpContactSelector); // specify selector
+  const tmpContact = useSelector(tmpContactSelector); // specify selector to set/get data inside form when edit
+  const notification = useSelector(notificationSelector); // specify ui messages if something fails
+  const {type, error} = notification;
 
   const {href, firstName, lastName, email, date} = tmpContact;
   useEffect(() => {
@@ -35,6 +38,14 @@ const Form = () => {
         localEmail: email,
         localDate: `${new Date(Date.parse(date.toString())).getUTCFullYear()}-${(((parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1) < 10) ? '0' + (parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1) : (parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1))}-${((parseInt(new Date(Date.parse(date.toString())).getDate().toString()) < 10) ? '0' + parseInt(new Date(Date.parse(date.toString())).getDate().toString()) : parseInt(new Date(Date.parse(date.toString())).getDate().toString()))}`
       })
+    else // this specifies the case if the use is in edit mode and then deletes it anyways -> clear out local form as well
+      setContactForm({
+        localHref: '',
+        localFirstName: '',
+        localLastName: '',
+        localEmail: '',
+        localDate: `${new Date((Date.now())).getUTCFullYear()}-${(((parseInt(new Date((Date.now())).getMonth().toString()) + 1) < 10) ? '0' + (parseInt(new Date((Date.now())).getMonth().toString()) + 1) : parseInt(new Date((Date.now())).getMonth().toString() + 1))}-${((parseInt(new Date((Date.now())).getDate().toString()) < 10) ? '0' + new Date((Date.now())).getDate() : new Date((Date.now())).getDate())}`
+      });
   }, [tmpContact]);
 
   const onChange = (e) => {
@@ -54,20 +65,24 @@ const Form = () => {
     });
   }
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
 
     e.preventDefault();
     // TODO: Validation before dispatching with contactAdded
     // check if update-mode is on
-    if(href && firstName && lastName && email && date) {
+    if (href && firstName && lastName && email && date) {
       // Edit Mode
       dispatch(updateContact(href, localFirstName, localLastName, localEmail, localDate));
     } else {
       // Add Mode
       // add the contact to our api/mysql generally
-      dispatch(addContact(localFirstName, localLastName, localEmail, localDate))
-        // set relation to currently logged in user
-        .then(() => dispatch(bindNewContact()));
+      try {
+        const res = await dispatch(addContact(localFirstName, localLastName, localEmail, localDate));
+        if (res)
+          await dispatch(bindNewContact());
+      } catch (e) {
+        console.log(e);
+      }
     }
 
     // clear input fields
@@ -83,6 +98,15 @@ const Form = () => {
   return (
     <form onSubmit={onSubmit} className="padding-1y" name="contact">
       {(href && firstName && lastName && email && date) ? <h1>Update Data</h1> : <h1>Add Data</h1>}
+
+      {(type !== "" && error !== "") &&
+      <div className={type}>
+        <p>
+          <i className="fas fa-info-circle"/>
+          {" " + error}
+        </p>
+      </div>
+      }
 
       <div className="padding-05y">
         <input style={{display: 'none'}} className="full-width" type="text" name="localHref" value={localHref}
@@ -112,10 +136,12 @@ const Form = () => {
       </div>
       <div className="padding-1y">
         {(href && firstName && lastName && email && date) ?
-          <input id="form-submit" type="submit" style={{backgroundColor: 'orange', marginBottom: '1rem'}} className="full-width" value="Update"/> :
+          <input id="form-submit" type="submit" style={{backgroundColor: 'orange', marginBottom: '1rem'}}
+                 className="full-width" value="Update"/> :
           <input id="form-submit" type="submit" className="full-width" value="Add"/>}
         {(href && firstName && lastName && email && date) &&
-        <input id="form-submit" style={{backgroundColor: 'red'}} type="button" onClick={onDiscard} className="full-width" value="Discard"/>}
+        <input id="form-submit" style={{backgroundColor: 'red'}} type="button" onClick={onDiscard}
+               className="full-width" value="Discard"/>}
       </div>
     </form>
   );

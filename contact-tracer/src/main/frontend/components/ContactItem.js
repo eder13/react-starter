@@ -8,10 +8,10 @@ const ContactItem = ({contact}) => {
 
   const dispatch = useDispatch();
   const dateParsed = new Date(Date.parse(date.toString()))
-  //const tmpContact = useSelector(tmpContactSelector);
 
   const deleteEntry = (e) => {
     dispatch(deleteContact(_links.self.href));
+    dispatch(clearTmpContact());
   }
 
   const setEditForm = (e) => {
