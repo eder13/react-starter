@@ -1,30 +1,48 @@
-import React, {Fragment} from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import {Link} from "react-router-dom";
+import styled from "styled-components";
 
-Login.propTypes = {};
+const Title = styled.h1`
+  font-size: 2.0rem;
+  color: red;
+  font-family: Verdana;
+`;
 
-function Login({info, render}) {
+const Section = styled.section`
+  margin-top: 100px;
+`;
 
-  if(render) {
+const DivFlexedCenter = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+`;
+
+function Login({notification, render}) {
+
+  if (render) {
     return (
-      <section className="main">
-        {info !== "" && <div className="container">{info}</div>}
-        <div className="container">
+      <Section>
+        {notification !== "" && <DivFlexedCenter>{notification}</DivFlexedCenter>}
+        <DivFlexedCenter>
           <div className="login">
-            <h1>Login</h1>
+            <Title>
+              Login
+            </Title>
             <div>
               With GitHub: <a href="/oauth2/authorization/github">click here</a>
             </div>
           </div>
-        </div>
-      </section>
+        </DivFlexedCenter>
+      </Section>
     );
   } else {
     return (
-      <section className="main" style={{textAlign: 'center', fontSize: '1.3rem'}}>
-        You are logged in! <Link to="/dashboard">proceed to the side</Link>.
-      </section>
+      <Section>
+        <DivFlexedCenter>
+          You are logged in!&nbsp;<Link to="/dashboard">proceed to the side</Link>
+        </DivFlexedCenter>
+      </Section>
     );
   }
 }

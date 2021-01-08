@@ -1,9 +1,21 @@
-import React, {useLayoutEffect, useState} from 'react';
+import React, {Fragment, useLayoutEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 import {filteredContactsSelector, loadContacts} from "../store/entities/reducers/contact";
+import styled from "styled-components";
 import ContactItem from "./ContactItem";
 import Form from "./Form";
+
+const EvenlySpaced = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+`;
+
+const Title = styled.h1`
+  text-align: center;
+  margin-top: 7rem;
+`;
 
 const Contacts = () => {
 
@@ -20,28 +32,25 @@ const Contacts = () => {
     setSearchString(e.target.value);
   }
 
-  console.log(filteredContacts.length)
-
   return (
-    <section className="main">
-      <div style={{marginTop: '2rem'}}><h1 style={{textAlign: 'center'}}>Dashboard</h1></div>
-      <div className="container-even">
+    <Fragment>
+      <Title as="h1">Dashboard</Title>
+      <EvenlySpaced>
+        <Form/>
         <div>
-          <Form/>
-        </div>
-        <div>
-          <input style={{width: '100%', marginTop: '50px'}} type="text" value={searchString}
+          {/*TODO: Check how to use styled components with inputs*/}
+          <input style={{marginTop: '50px', width: '100%'}} type="text" value={searchString}
                  placeholder="Search Contacts ..." onChange={onChange}/>
           <TransitionGroup>
-            {filteredContacts.map(contact =>
+            {filteredContacts.map((contact, index) =>
               <CSSTransition key={contact._links.self.href} timeout={500} classNames="item">
-                <ContactItem contact={contact}/>
+                <ContactItem contact={contact} index={index}/>
               </CSSTransition>
             )}
           </TransitionGroup>
         </div>
-      </div>
-    </section>
+      </EvenlySpaced>
+    </Fragment>
   );
 }
 
