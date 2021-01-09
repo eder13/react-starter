@@ -50,14 +50,27 @@ const CardBottom = styled.div`
   background-color: #eeeeee;
 `;
 
-const Round = styled.span`
-  background-color: coral;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
+const Button = styled.button`
+  display: inline-block;
+  padding: 0 20px;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  ${props => props.primary && "background-color: transparent; height: 38px; margin: 0.5rem 0rem;"};
+  ${props => props.secondary && "color: #000; background-color: rgb(248, 249, 250); border-color: #ff974c; padding-top: 0.25rem; padding-bottom: 0.25rem;"};
+  ${props => props.danger && "background-color: rgb(240, 0, 57); height: 38px; margin: 0.5rem 0rem;"}; 
+  ${props => props.warning && "background-color: rgb(255, 194, 0); height: 38px; margin: 0.5rem 0rem;"};  
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  width: 100%;
 `;
 
 const ContactItem = ({contact, index}) => {
@@ -86,10 +99,7 @@ const ContactItem = ({contact, index}) => {
     <Fragment>
       <ContainerCard>
         <Card>
-          <CardTop>
-            <Round>{++index}</Round>
-          </CardTop>
-          {/*Card Content*/}
+          <CardTop />
           <Ul>
             <li style={{display: 'none'}} id={_links.self.href}>{}</li>
             <li><i className="fas fa-hands-wash">&nbsp;</i>{`${dateParsed.getDate()}.${dateParsed.getMonth() + 1}.${dateParsed.getUTCFullYear()}`}
@@ -98,8 +108,8 @@ const ContactItem = ({contact, index}) => {
             <li><i className="fas fa-envelope">&nbsp;</i>{email}</li>
           </Ul>
           <CardBottom>
-            <button className="edit" onClick={setEditForm}>edit</button>
-            <button className="delete" onClick={deleteEntry}>delete</button>
+            <Button secondary onClick={setEditForm}>edit</Button>
+            <Button secondary style={{backgroundColor: 'red'}} onClick={deleteEntry}>delete</Button>
           </CardBottom>
         </Card>
       </ContainerCard>

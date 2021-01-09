@@ -14226,7 +14226,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "/* Global CSS <style></style> */\n\n\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: Arial, serif;\n}\n\n.main {\n  margin-top: 100px;\n}\n\n.container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n}\n\n.container-even {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-evenly;\n}\n\n.container-card {\n  width: 100%;\n  margin: 0 auto;\n}\n\n.card{\n  width: 100%;\n  margin: 50px auto 50px auto;\n  display: grid;\n  grid-template-rows: 50px auto 50px;\n  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);\n  background-color: white;\n}\n\n.card-top{\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1em;\n  color: white;\n}\n\n.card-content{\n  padding: 1em;\n}\n\n.card-content ul{\n  margin: 5px auto auto 25px;\n}\n\n.card-bottom{\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1em;\n  background-color: #eeeeee;\n}\n\n#date-top{\n  background-color: #333;\n}\n\n#navbar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n}\n\n#navbar .logo {\n  padding: 0.5rem 0;\n}\n\n#navbar .navbar-nav {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n}\n\n#navbar .navbar-nav ul {\n  list-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#navbar .navbar-nav ul li {\n  margin: 0 1rem;\n}\n\n#navbar .navbar-nav ul li a {\n  color: white;\n}\n\n#navbar .navbar-nav ul li:first-child {\n  font-size: 0.8rem;\n}\n\n.login {\n  margin-top: 2rem;\n  background-color: #f4f4f4;\n  height: 200px;\n  width: 40%;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: center;\n}\n\n.login h1 {\n  margin-bottom: 2rem;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\n.full-width {\n  width: 100%;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"],\ninput[type=\"button\"]{\n  display: inline-block;\n  height: 38px;\n  padding: 0 30px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 38px;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\ninput[type=\"submit\"] .button-primary,\ninput[type=\"button\"] .button-primary {\n  color: #fff;\n  background-color: #ff974c;\n  border-color: #ff974c;\n}\n\nbutton {\n  display: inline-block;\n  height: 20px;\n  padding: 0px 10px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 20px;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box;\n}\n\n.logout {\n  color: #f5c6cb;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}\n\n/* Transition effects add/delete using react-transition-group */\n.item-enter {\n  opacity: 0;\n}\n.item-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n.item-exit {\n  opacity: 1;\n}\n.item-exit-active {\n  opacity: 0;\n  transition: opacity 500ms ease-in;\n}", "",{"version":3,"sources":["webpack://./src/main/frontend/App.css"],"names":[],"mappings":"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","sourcesContent":["/* Global CSS <style></style> */\n\n\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: Arial, serif;\n}\n\n.main {\n  margin-top: 100px;\n}\n\n.container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n}\n\n.container-even {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-evenly;\n}\n\n.container-card {\n  width: 100%;\n  margin: 0 auto;\n}\n\n.card{\n  width: 100%;\n  margin: 50px auto 50px auto;\n  display: grid;\n  grid-template-rows: 50px auto 50px;\n  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);\n  background-color: white;\n}\n\n.card-top{\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1em;\n  color: white;\n}\n\n.card-content{\n  padding: 1em;\n}\n\n.card-content ul{\n  margin: 5px auto auto 25px;\n}\n\n.card-bottom{\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: baseline;\n  padding: 1em;\n  background-color: #eeeeee;\n}\n\n#date-top{\n  background-color: #333;\n}\n\n#navbar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n}\n\n#navbar .logo {\n  padding: 0.5rem 0;\n}\n\n#navbar .navbar-nav {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n}\n\n#navbar .navbar-nav ul {\n  list-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#navbar .navbar-nav ul li {\n  margin: 0 1rem;\n}\n\n#navbar .navbar-nav ul li a {\n  color: white;\n}\n\n#navbar .navbar-nav ul li:first-child {\n  font-size: 0.8rem;\n}\n\n.login {\n  margin-top: 2rem;\n  background-color: #f4f4f4;\n  height: 200px;\n  width: 40%;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: center;\n}\n\n.login h1 {\n  margin-bottom: 2rem;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\n.full-width {\n  width: 100%;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"],\ninput[type=\"button\"]{\n  display: inline-block;\n  height: 38px;\n  padding: 0 30px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 38px;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\ninput[type=\"submit\"] .button-primary,\ninput[type=\"button\"] .button-primary {\n  color: #fff;\n  background-color: #ff974c;\n  border-color: #ff974c;\n}\n\nbutton {\n  display: inline-block;\n  height: 20px;\n  padding: 0px 10px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 20px;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box;\n}\n\n.logout {\n  color: #f5c6cb;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}\n\n/* Transition effects add/delete using react-transition-group */\n.item-enter {\n  opacity: 0;\n}\n.item-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n.item-exit {\n  opacity: 1;\n}\n.item-exit-active {\n  opacity: 0;\n  transition: opacity 500ms ease-in;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "/* Global CSS <style></style> */\n* {\n  box-sizing: border-box;\n  font-family: Arial, serif;\n}\n\n#navbar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n}\n\n#navbar .logo {\n  padding: 0.5rem 0;\n}\n\n#navbar .navbar-nav {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n}\n\n#navbar .navbar-nav ul {\n  list-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#navbar .navbar-nav ul li {\n  margin: 0 1rem;\n}\n\n#navbar .navbar-nav ul li a {\n  color: white;\n}\n\n#navbar .navbar-nav ul li:first-child {\n  font-size: 0.8rem;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\n.full-width {\n  width: 100%;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"],\ninput[type=\"button\"]{\n  display: inline-block;\n  height: 38px;\n  padding: 0 30px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 38px;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\ninput[type=\"submit\"] .button-primary,\ninput[type=\"button\"] .button-primary {\n  color: #fff;\n  background-color: #ff974c;\n  border-color: #ff974c;\n}\n\nbutton {\n  display: inline-block;\n  height: 20px;\n  padding: 0px 10px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 20px;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box;\n}\n\n.logout {\n  color: #f5c6cb;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}\n\n/* Transition effects add/delete using react-transition-group */\n.item-enter {\n  opacity: 0;\n}\n.item-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n.item-exit {\n  opacity: 1;\n}\n.item-exit-active {\n  opacity: 0;\n  transition: opacity 500ms ease-in;\n}", "",{"version":3,"sources":["webpack://./src/main/frontend/App.css"],"names":[],"mappings":"AAAA,+BAA+B;AAC/B;EACE,sBAAsB;EACtB,yBAAyB;AAC3B;;AAEA;EACE,eAAe;EACf,MAAM;EACN,OAAO;EACP,YAAY;EACZ,aAAa;EACb,qBAAqB;EACrB,8BAA8B;EAC9B,eAAe;EACf,sBAAsB;EACtB,YAAY;AACd;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;AACrB;;AAEA;EACE,qBAAqB;EACrB,aAAa;EACb,qBAAqB;AACvB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,yBAAyB;EACzB,kBAAkB;EAClB,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,oCAAoC;AACtC;;AAEA;EACE,KAAK,uBAAuB,EAAE;EAC9B,OAAO,yBAAyB,EAAE;AACpC;;AAEA;EACE,gBAAgB;EAChB,uBAAuB;EACvB,aAAa;EACb,wBAAwB;EACxB,mBAAmB;EACnB,WAAW;EACX,wBAAwB;AAC1B;;AAEA;EACE,cAAc;EACd,gBAAgB;AAClB;;AAEA;;EAEE,YAAY;AACd;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,WAAW;EACX,sBAAsB;AACxB;;AAEA;;;;EAIE,YAAY;EACZ,iBAAiB;EACjB,sBAAsB;EACtB,yBAAyB;EACzB,kBAAkB;EAClB,gBAAgB;EAChB,sBAAsB;AACxB;;AAEA;;;;EAIE,wBAAwB;EACxB,qBAAqB;EACrB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;;;;EAIE,yBAAyB;EACzB,UAAU;AACZ;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,gBAAgB;AAClB;;AAEA;;EAEE,qBAAqB;EACrB,YAAY;EACZ,eAAe;EACf,WAAW;EACX,kBAAkB;EAClB,eAAe;EACf,gBAAgB;EAChB,iBAAiB;EACjB,sBAAsB;EACtB,yBAAyB;EACzB,qBAAqB;EACrB,mBAAmB;EACnB,6BAA6B;EAC7B,kBAAkB;EAClB,sBAAsB;EACtB,eAAe;EACf,sBAAsB;AACxB;;AAEA;;;;EAIE,WAAW;EACX,kBAAkB;EAClB,UAAU;AACZ;;AAEA;;EAEE,WAAW;EACX,yBAAyB;EACzB,qBAAqB;AACvB;;AAEA;EACE,qBAAqB;EACrB,YAAY;EACZ,iBAAiB;EACjB,WAAW;EACX,kBAAkB;EAClB,eAAe;EACf,gBAAgB;EAChB,iBAAiB;EACjB,sBAAsB;EACtB,yBAAyB;EACzB,qBAAqB;EACrB,mBAAmB;EACnB,6BAA6B;EAC7B,kBAAkB;EAClB,sBAAsB;EACtB,eAAe;EACf,sBAAsB;AACxB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA,+DAA+D;AAC/D;EACE,UAAU;AACZ;AACA;EACE,UAAU;EACV,iCAAiC;AACnC;AACA;EACE,UAAU;AACZ;AACA;EACE,UAAU;EACV,iCAAiC;AACnC","sourcesContent":["/* Global CSS <style></style> */\n* {\n  box-sizing: border-box;\n  font-family: Arial, serif;\n}\n\n#navbar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n}\n\n#navbar .logo {\n  padding: 0.5rem 0;\n}\n\n#navbar .navbar-nav {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n}\n\n#navbar .navbar-nav ul {\n  list-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#navbar .navbar-nav ul li {\n  margin: 0 1rem;\n}\n\n#navbar .navbar-nav ul li a {\n  color: white;\n}\n\n#navbar .navbar-nav ul li:first-child {\n  font-size: 0.8rem;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\n.full-width {\n  width: 100%;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"],\ninput[type=\"button\"]{\n  display: inline-block;\n  height: 38px;\n  padding: 0 30px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 38px;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\ninput[type=\"submit\"] .button-primary,\ninput[type=\"button\"] .button-primary {\n  color: #fff;\n  background-color: #ff974c;\n  border-color: #ff974c;\n}\n\nbutton {\n  display: inline-block;\n  height: 20px;\n  padding: 0px 10px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 20px;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box;\n}\n\n.logout {\n  color: #f5c6cb;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}\n\n/* Transition effects add/delete using react-transition-group */\n.item-enter {\n  opacity: 0;\n}\n.item-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n.item-exit {\n  opacity: 1;\n}\n.item-exit-active {\n  opacity: 0;\n  transition: opacity 500ms ease-in;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -53079,12 +53079,84 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/entities/reducers/contact */ "./src/main/frontend/store/entities/reducers/contact.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  background-color: coral;\n  width: 30px;\n  height: 30px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 50%;\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  background-color: #eeeeee;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  list-style-type: none;\n  display: flex;\n  flex-flow: column nowrap;\n  height: 70px;\n  min-width: 300px;\n  justify-content: space-evenly;\n  padding: 0 1rem;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  text-align: center;\n  color: white;\n  background-color: #333;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  display: flex;\n  flex-flow: column nowrap;\n  justify-content: center;\n  align-items: center;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: 50px auto 50px auto;\n  display: grid;\n  grid-template-rows: 50px auto 50px;\n  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);\n  background-color: white;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: 0 auto;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
 
+
+ // Styled Components
+
+var ContainerCard = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject());
+var Card = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject2());
+var CardTop = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject3());
+var Ul = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].ul(_templateObject4());
+var CardBottom = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject5());
+var Round = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].span(_templateObject6());
 
 var ContactItem = function ContactItem(_ref) {
-  var contact = _ref.contact;
+  var contact = _ref.contact,
+      index = _ref.index;
   var firstName = contact.firstName,
       lastName = contact.lastName,
       email = contact.email,
@@ -53105,29 +53177,24 @@ var ContactItem = function ContactItem(_ref) {
     dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["setTmpContact"])(_links.self.href, firstName, lastName, email, date));
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container-card"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-top",
-    id: "date-top"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Date of Contact: ", "".concat(dateParsed.getDate(), ".").concat(dateParsed.getMonth() + 1, ".").concat(dateParsed.getUTCFullYear()))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContainerCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Card, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardTop, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Round, null, ++index)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Ul, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     style: {
       display: 'none'
     },
     id: _links.self.href
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "First name: ", firstName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Last name: ", lastName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "E-Mail: ", email))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-bottom"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-hands-wash"
+  }, "\xA0"), "".concat(dateParsed.getDate(), ".").concat(dateParsed.getMonth() + 1, ".").concat(dateParsed.getUTCFullYear())), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-user"
+  }, "\xA0"), firstName, "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, lastName)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-envelope"
+  }, "\xA0"), email)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardBottom, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "edit",
     onClick: setEditForm
-  }, "edit"), "   ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "edit"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "delete",
     onClick: deleteEntry
-  }, "delete"))))));
+  }, "delete")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ContactItem);
@@ -53148,8 +53215,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-transition-group */ "./node_modules/react-transition-group/esm/index.js");
 /* harmony import */ var _store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/entities/reducers/contact */ "./src/main/frontend/store/entities/reducers/contact.js");
-/* harmony import */ var _ContactItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ContactItem */ "./src/main/frontend/components/ContactItem.js");
-/* harmony import */ var _Form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Form */ "./src/main/frontend/components/Form.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _ContactItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ContactItem */ "./src/main/frontend/components/ContactItem.js");
+/* harmony import */ var _Form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Form */ "./src/main/frontend/components/Form.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -53162,12 +53230,37 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  text-align: center;\n  margin-top: 7rem;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-evenly;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
 
 
 
 
+
+
+var EvenlySpaced = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject());
+var Title = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].h1(_templateObject2());
 
 var Contacts = function Contacts() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
@@ -53187,35 +53280,25 @@ var Contacts = function Contacts() {
     setSearchString(e.target.value);
   };
 
-  console.log(filteredContacts.length);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: "main"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, {
+    as: "h1"
+  }, "Dashboard"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(EvenlySpaced, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     style: {
-      marginTop: '2rem'
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    style: {
-      textAlign: 'center'
-    }
-  }, "Dashboard")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container-even"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_5__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    style: {
-      width: '100%',
-      marginTop: '50px'
+      marginTop: '50px',
+      width: '100%'
     },
     type: "text",
     value: searchString,
     placeholder: "Search Contacts ...",
     onChange: onChange
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["TransitionGroup"], null, filteredContacts.map(function (contact) {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["TransitionGroup"], null, filteredContacts.map(function (contact, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["CSSTransition"], {
       key: contact._links.self.href,
       timeout: 500,
       classNames: "item"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ContactItem__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      contact: contact
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ContactItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      contact: contact,
+      index: index
     }));
   })))));
 };
@@ -53513,18 +53596,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Login */ "./src/main/frontend/components/Login.js");
 /* harmony import */ var _Contacts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Contacts */ "./src/main/frontend/components/Contacts.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  text-align: center;\n  margin: 20px 0;\n  padding: 0.5rem;\n  border: 1px solid #f5c6cb;\n  border-top-color: #a6e1ec;\n  border-radius: 5px;\n  color: #721c24;\n  background-color: #f8d7da;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  text-align: center;\n  margin: 20px 0;\n  padding: 0.5rem;\n  border: 1px solid #bce8f1;\n  border-top-color: #a6e1ec;\n  border-radius: 5px;\n  background-color: #d9edf7;\n  color: #31708f;\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-align: center;\n  margin: 20px 0;\n  padding: 0.5rem;\n  border-radius: 5px;\n  border: 1px solid ", ";\n  background-color: ", ";\n  color: ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -53543,8 +53616,13 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var Info = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject());
-var Error = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject2());
+var Notification = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject(), function (props) {
+  return props.info ? "#bce8f1" : "#f5c6cb";
+}, function (props) {
+  return props.info ? "#d9edf7" : "#f8d7da";
+}, function (props) {
+  return props.info ? "#31708f" : "#721c24";
+});
 
 function Home() {
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
@@ -53569,11 +53647,13 @@ function Home() {
 
     if (loginState.notification.error !== "" || loginState.notification.type !== "") {
       if (loginState.notification.type === "error") {
-        notification = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Error, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        notification = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Notification, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
           className: "fas fa-info-circle"
         }), " " + loginState.notification.error));
       } else {
-        notification = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Info, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        notification = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Notification, {
+          info: true
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
           className: "fas fa-info-circle"
         }), " " + loginState.notification.error));
       }
@@ -53626,8 +53706,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  border-radius: 50%;\n  background-color: rgb(79, 91, 136); \n  width: 5rem; \n  height: 5rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  margin-top: 2rem;\n  width: 30rem;\n  height: 20rem;\n  background-color: rgb(232, 232, 232);\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: center;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 2.0rem;\n  color: red;\n  font-family: Verdana;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin-top: 100px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -53641,34 +53751,28 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h1(_templateObject());
+var Section = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].section(_templateObject());
+var DivFlexedCenter = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject2());
+var LoginContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject3());
+var LoginIconUserContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject4());
 
 function Login(_ref) {
   var notification = _ref.notification,
       render = _ref.render;
 
   if (render) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-      className: "main"
-    }, notification !== "" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "container"
-    }, notification), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "container"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "login"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "With GitHub: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, notification !== "" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivFlexedCenter, null, notification), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivFlexedCenter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LoginContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LoginIconUserContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      style: {
+        color: "whitesmoke"
+      },
+      className: "fas fa-users fa-3x"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "With GitHub: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       href: "/oauth2/authorization/github"
     }, "click here")))));
   } else {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-      className: "main",
-      style: {
-        textAlign: 'center',
-        fontSize: '1.3rem'
-      }
-    }, "You are logged in! ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivFlexedCenter, null, "You are logged in!\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/dashboard"
-    }, "proceed to the side"), ".");
+    }, "proceed to the side")));
   }
 }
 

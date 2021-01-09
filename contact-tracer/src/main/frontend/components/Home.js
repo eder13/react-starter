@@ -17,6 +17,13 @@ const Notification = styled.div`
   color: ${props => props.info ? "#31708f" : "#721c24"};
 `;
 
+const StyledLink = styled(Link)`
+  padding: 0.25rem 0.75rem;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(0, 167, 135);
+`;
+
 function Home() {
   const dispatch = useDispatch();
   const loginState = useSelector(loginInfoSelector);
@@ -67,7 +74,7 @@ function Home() {
     return (
       <Router>
         <Navbar title="fas fa-viruses" user={loginState.user !== "" ? loginState.user : "You are not signed in"}
-                dash={loginState.user !== "" ? <Link to="/dashboard">Dashboard</Link> : ""}
+                dash={loginState.user !== "" ? <StyledLink to="/dashboard">Dashboard</StyledLink> : ""}
                 logout={loginState.user !== ""}/>
         <Switch>
           <Route exact path="/" render={() => <Login notification={notification} render={loginState.user === ""}/>}/>

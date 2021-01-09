@@ -8,6 +8,56 @@ import {
   tmpContactSelector,
   updateContact
 } from "../store/entities/reducers/contact";
+import styled from "styled-components";
+
+const Button = styled.button`
+  display: inline-block;
+  padding: 0 20px;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  width: 100%;
+`;
+
+const ButtonPrimary = styled(Button)`
+  background-color: transparent; 
+  height: 38px; 
+  margin: 0.5rem 0rem;
+`;
+
+const ButtonSecondary = styled(Button)`
+  color: #000; 
+  background-color: rgb(248, 249, 250); 
+  border-color: #ff974c; 
+  padding-top: 0.25rem; 
+  padding-bottom: 0.25rem;
+`;
+
+const ButtonDanger = styled(Button)`
+  background-color: rgb(240, 0, 57); 
+  height: 38px; 
+  margin: 0.5rem 0rem;
+`;
+
+const ButtonWarning = styled(Button)`
+  background-color: rgb(255, 194, 0); 
+  height: 38px; 
+  margin: 0.5rem 0rem;
+`;
+
+const SubStringPrimary = (props) => {
+  return <ButtonPrimary {...props} children={props.children.substr(5, 9)}/>;
+};
 
 const Form = () => {
 
@@ -67,9 +117,11 @@ const Form = () => {
 
   const onSubmit = async (e) => {
 
-    e.preventDefault();
     // TODO: Validation before dispatching with contactAdded
-    // check if update-mode is on
+
+    e.preventDefault();
+
+    // check if update-mode is on (-> tmp fields are set)
     if (href && firstName && lastName && email && date) {
       // Edit Mode
       dispatch(updateContact(href, localFirstName, localLastName, localEmail, localDate));
@@ -136,12 +188,15 @@ const Form = () => {
       </div>
       <div className="padding-1y">
         {(href && firstName && lastName && email && date) ?
-          <input id="form-submit" type="submit" style={{backgroundColor: 'orange', marginBottom: '1rem'}}
-                 className="full-width" value="Update"/> :
-          <input id="form-submit" type="submit" className="full-width" value="Add"/>}
+          <ButtonWarning type="submit">Update</ButtonWarning> :
+          <ButtonPrimary type="submit">Add</ButtonPrimary>}
         {(href && firstName && lastName && email && date) &&
-        <input id="form-submit" style={{backgroundColor: 'red'}} type="button" onClick={onDiscard}
-               className="full-width" value="Discard"/>}
+        <ButtonDanger onClick={onDiscard}>Discard</ButtonDanger>}
+
+        <ButtonPrimary style={{display: 'none'}} as={SubStringPrimary}>A Primary Button</ButtonPrimary>
+
+
+
       </div>
     </form>
   );
