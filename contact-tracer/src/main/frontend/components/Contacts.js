@@ -1,10 +1,11 @@
-import React, {Fragment, useLayoutEffect, useState} from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 import {filteredContactsSelector, loadContacts} from "../store/entities/reducers/contact";
 import styled from "styled-components";
 import ContactItem from "./ContactItem";
 import Form from "./Form";
+import {loginInfoSelector} from "../store/auth/auth";
 
 const EvenlySpaced = styled.div`
   display: flex;
@@ -23,10 +24,11 @@ const Contacts = () => {
 
   const dispatch = useDispatch();
   const filteredContacts = useSelector(filteredContactsSelector(searchString));
+  const loginState = useSelector(loginInfoSelector);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     dispatch(loadContacts()).then(res => console.log(res));
-  }, []);
+  }, [loginState.isAuthenticated]);
 
   const onChange = (e) => {
     setSearchString(e.target.value);

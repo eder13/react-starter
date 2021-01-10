@@ -4,14 +4,15 @@ import "./normalize.css";
 
 import createStore from "./store/configStore";
 import { Provider } from "react-redux";
-import Home from "./components/Home";
+import Router from "./components/Router";
 
 const store = createStore();
 
 function App() {
+
   return (
     <Provider store={store}>
-      <Home />
+      <Router />
     </Provider>
   );
 }

@@ -4,7 +4,7 @@ The Frontend is served on the server-endpoint `/` and is an SPA powered by React
 
 **Requirements**
 
-* Home System (with Registration) -> OAuth2
+* Router System (with Registration) -> OAuth2
 * Show Content only to authorized users
 * Each user has its own data (contacts)
     * Add, Remove, Delete and Alter Data
@@ -23,8 +23,8 @@ The Frontend is served on the server-endpoint `/` and is an SPA powered by React
 
 **API Endpoints (Backend)**
 
-Home System
-* Home with Github: `/oauth2/authorization/github`
+Router System
+* Router with Github: `/oauth2/authorization/github`
 * Logout of any service (POST): `/logout` <!-- TODO: HTTP 404 Not Found Custom Error (Not found does not return any JSON Data!), same with /login --> 
 * Authorization errors: `/error` <!-- TODO: HTTP 999 map to Not found -->
 * Try To Access Data when unauthenticated: redirect to homepage with message you have to be logged in (see TODO in spring)
@@ -118,7 +118,7 @@ Structure of the files
           ui.js
 ```
 
-Home dispatching design:
+Router dispatching design:
 
 // componentdidmount
 Initially, try to load resources from /user endpoint -> if not allowed, user is unauthenticated (auth state is empty)

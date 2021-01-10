@@ -15,6 +15,7 @@ const logoutFailed = createAction("logoutFailed");
 
 // UI actions
 export const loadLogin = () => async (dispatch, getState) => {
+  // user name email
   await dispatch(apiCallBegan({
     url: "/user", // FIXME: Remove Hardcoded URL
     method: "get",
@@ -27,12 +28,11 @@ export const loadLogin = () => async (dispatch, getState) => {
   if(getState().auth.user !== "")
     return Promise.resolve(true);
   else
-    return Promise.reject(false);
+    return Promise.reject("[auth] Could not get user endpoint.");
 }
-export const loadLoginUserId = () => (dispatch, getState) => {
-
+export const loadLoginUserId = () => async (dispatch, getState) => {
   // user credentials id
-  dispatch(apiCallBegan({
+  await dispatch(apiCallBegan({
     url: `/userid?email=${getState().auth.user}`, // FIXME: Remove Hardcoded URL
     method: "get",
     data: {},
@@ -40,6 +40,10 @@ export const loadLoginUserId = () => (dispatch, getState) => {
     onDone: loginRequestDone.type,
     onSuccess: loginUserIdReceived.type
   }));
+  if(getState().auth.userId !== "")
+    return Promise.resolve(true);
+  else
+    return Promise.reject("[auth] Could not get userId endpoint.");
 }
 export const loadLogout = () => (dispatch, getState) => {
   dispatch(apiCallBegan({
@@ -56,6 +60,7 @@ export const loadLogout = () => (dispatch, getState) => {
 /// Reducer
 export default createReducer(
   {
+    isAuthenticated: false,
     userId: "",
     user: "",
     loading: false,
@@ -73,12 +78,13 @@ export default createReducer(
     [loginRequestDone.type]: (loginState, action) => {
       loginState.loading = false;
     },
-    // Success: Store Data in state
+    // Success: Store Data in state - user is logged in successfully
     [loginUserNameReceived.type]: (loginState, action) => {
       loginState.user = action.payload.data.email;
     },
-    // Failed: Update error message
+    // Failed: Update error message - user is not logged in
     [loginUserNameFailed.type]: (loginState, action) => {
+      loginState.isAuthenticated = false;
       const {error, type} = action.payload;
       loginState.notification.error = error;
       loginState.notification.type = type;
@@ -86,6 +92,7 @@ export default createReducer(
     // Success: saved login userId to store
     [loginUserIdReceived.type]: (loginState, action) => {
       loginState.userId = action.payload.data.id;
+      loginState.isAuthenticated = true; // only true if username and id are set
     },
     // Loading Spinner start
     [logoutRequested.type]: (loginState, action) => {

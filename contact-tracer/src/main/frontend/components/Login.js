@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useLayoutEffect} from 'react';
 import {Link} from "react-router-dom";
 import styled from "styled-components";
+import {useDispatch, useSelector} from "react-redux";
+import {loadLogin, loadLoginUserId, loginInfoSelector} from "../store/auth/auth";
 
 const Section = styled.section`
   margin-top: 100px;
@@ -45,12 +47,22 @@ const LoginButton = styled.button`
   text-align: center;
 `;
 
-function Login({notification, render}) {
+const Notification = styled.div`
+  text-align: center;
+  margin: 20px 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid ${props => props.info ? "#bce8f1" : "#f5c6cb"};
+  background-color: ${props => props.info ? "#d9edf7" : "#f8d7da"};
+  color: ${props => props.info ? "#31708f" : "#721c24"};
+`;
 
-  if (render) {
+function Login() {
+
+  // TODO: Redirect if logged in to dashboard
+  //if (!loginState.isAuthenticated) {
     return (
       <Section>
-        {notification !== "" && <DivFlexedCenter>{notification}</DivFlexedCenter>}
         <DivFlexedCenter>
           <LoginContainer>
             <LoginIconUserContainer>
@@ -63,15 +75,15 @@ function Login({notification, render}) {
         </DivFlexedCenter>
       </Section>
     );
-  } else {
-    return (
-      <Section>
-        <DivFlexedCenter>
-          You are logged in!&nbsp;<Link to="/dashboard">proceed to the side</Link>
-        </DivFlexedCenter>
-      </Section>
-    );
-  }
+  // } else {
+  //   return (
+  //     <Section>
+  //       <DivFlexedCenter>
+  //         You are logged in!&nbsp;<Link to="/dashboard">proceed to the side</Link>
+  //       </DivFlexedCenter>
+  //     </Section>
+  //   );
+  // }
 }
 
 export default Login;
