@@ -53311,37 +53311,54 @@ var Contacts = function Contacts() {
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
   var filteredContacts = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_3__["filteredContactsSelector"])(searchString));
   var loginState = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_7__["loginInfoSelector"]);
+  var loading = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_7__["loadingBooleanSelector"]); // This is only needed if we don't use PrivateRoutes Layer -> Otherwise private route first called and then this
+  // useEffect(() => {
+  //   // only dispatch the action, when user info already loaded
+  //   // so the Component where we get user info has to be mounted
+  //   // first before we call this --> loginState.isAuthenticated must be true
+  //   if(loginState.isAuthenticated)
+  //     dispatch(loadContacts()).then(res => console.log(res));
+  // }, [loginState.isAuthenticated]);
+
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (loginState.isAuthenticated) dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_3__["loadContacts"])()).then(function (res) {
+    dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_3__["loadContacts"])()).then(function (res) {
       return console.log(res);
     });
-  }, [loginState.isAuthenticated]);
+  }, []);
 
   var onChange = function onChange(e) {
     setSearchString(e.target.value);
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, {
-    as: "h1"
-  }, "Dashboard"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(EvenlySpaced, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    style: {
-      marginTop: '50px',
-      width: '100%'
-    },
-    type: "text",
-    value: searchString,
-    placeholder: "Search Contacts ...",
-    onChange: onChange
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["TransitionGroup"], null, filteredContacts.map(function (contact, index) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["CSSTransition"], {
-      key: contact._links.self.href,
-      timeout: 500,
-      classNames: "item"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ContactItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      contact: contact,
-      index: index
+  if (!loading) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, {
+      as: "h1"
+    }, "Dashboard"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(EvenlySpaced, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      style: {
+        marginTop: '50px',
+        width: '100%'
+      },
+      type: "text",
+      value: searchString,
+      placeholder: "Search Contacts ...",
+      onChange: onChange
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["TransitionGroup"], null, filteredContacts.map(function (contact, index) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["CSSTransition"], {
+        key: contact._links.self.href,
+        timeout: 500,
+        classNames: "item"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ContactItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        contact: contact,
+        index: index
+      }));
+    })))));
+  } else {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "loader-wrap"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "loader"
     }));
-  })))));
+  }
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Contacts);
@@ -53690,7 +53707,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Home = function Home() {
   // login Loading: Let firstly dispatch everything and see if user is still logged in
-  var loading = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_2__["loadingBooleanSelector"]);
+  var loading = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_2__["loadingBooleanSelector"]); /// TODO: Let's make this front page beautiful with styled components
 
   if (loading) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -53989,6 +54006,51 @@ function Navbar(props) {
 
 /***/ }),
 
+/***/ "./src/main/frontend/components/PrivateRoute.js":
+/*!******************************************************!*\
+  !*** ./src/main/frontend/components/PrivateRoute.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+
+
+var PrivateRoute = function PrivateRoute(_ref) {
+  var Component = _ref.component,
+      rest = _objectWithoutProperties(_ref, ["component"]);
+
+  // check if the user is authenticated and not loading anymore (process while info is fetched)
+  var isAuthenticated = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_3__["loginIsAuthenticatedSelector"]);
+  var loading = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_3__["loadingBooleanSelector"]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], _extends({}, rest, {
+    render: function render(props) {
+      return !isAuthenticated && !loading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
+        to: "/login"
+      }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, props);
+    }
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PrivateRoute);
+
+/***/ }),
+
 /***/ "./src/main/frontend/components/Router.js":
 /*!************************************************!*\
   !*** ./src/main/frontend/components/Router.js ***!
@@ -54008,6 +54070,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Home */ "./src/main/frontend/components/Home.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
+/* harmony import */ var _PrivateRoute__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./PrivateRoute */ "./src/main/frontend/components/PrivateRoute.js");
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  padding: 0.25rem 0.75rem;\n  text-decoration: none;\n  color: white;\n  background-color: rgb(0, 167, 135);\n"]);
 
@@ -54035,13 +54098,18 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
 var StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_5__["default"])(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"])(_templateObject());
 
 var Router = function Router() {
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["useDispatch"])();
-  var loginState = Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_8__["loginInfoSelector"]); // Check if user is logged in (checks if calling endpoints produces 401)
+  var loginState = Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_8__["loginInfoSelector"]);
+  /** Authentication of User */
+  // As soon as the site loads we check if the user is currently logged in
+  // Check if user is logged in (checks if calling endpoints produces 401)
+  // This loads user Context inside the store whenever page loads
 
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useLayoutEffect"])(function () {
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     // load the username
     dispatch(Object(_store_auth_auth__WEBPACK_IMPORTED_MODULE_8__["loadLogin"])()).then(function (resolved) {
       console.log("[auth]: user name call to endpoint succeeded.");
@@ -54079,11 +54147,11 @@ var Router = function Router() {
     exact: true,
     path: "/login",
     component: _Login__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PrivateRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
     exact: true,
     path: "/dashboard",
     component: _Contacts__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }), " "));
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Router);
@@ -54137,7 +54205,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /*!**********************************************!*\
   !*** ./src/main/frontend/store/auth/auth.js ***!
   \**********************************************/
-/*! exports provided: loadLogin, loadLoginUserId, loadLogout, default, loginInfoSelector, loginUserIdSelector, loadingBooleanSelector */
+/*! exports provided: loadLogin, loadLoginUserId, loadLogout, default, loginInfoSelector, loginUserIdSelector, loadingBooleanSelector, loginIsAuthenticatedSelector */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -54148,6 +54216,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loginInfoSelector", function() { return loginInfoSelector; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loginUserIdSelector", function() { return loginUserIdSelector; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadingBooleanSelector", function() { return loadingBooleanSelector; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loginIsAuthenticatedSelector", function() { return loginIsAuthenticatedSelector; });
 /* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
 /* harmony import */ var reselect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reselect */ "./node_modules/reselect/es/index.js");
 /* harmony import */ var _middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../middleware/apiCreators */ "./src/main/frontend/store/middleware/apiCreators.js");
@@ -54298,6 +54367,7 @@ var loadLogout = function loadLogout() {
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createReducer"])({
   isAuthenticated: false,
+  // token:
   userId: "",
   user: "",
   loading: false,
@@ -54352,6 +54422,11 @@ var loadingBooleanSelector = Object(reselect__WEBPACK_IMPORTED_MODULE_1__["creat
   return state.auth;
 }, function (loginState) {
   return loginState.loading;
+});
+var loginIsAuthenticatedSelector = Object(reselect__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(function (state) {
+  return state.auth;
+}, function (loginState) {
+  return loginState.isAuthenticated;
 });
 
 /***/ }),
@@ -54486,14 +54561,15 @@ var loadContacts = function loadContacts() {
               userId = getState().auth.userId; // wait until userId is fetched before calling - otherwise fetching does not make sense
 
               if (!(userId === "")) {
-                _context.next = 3;
+                _context.next = 4;
                 break;
               }
 
+              console.error("[contacts]: The user context has not yet been stored.");
               return _context.abrupt("return");
 
-            case 3:
-              _context.next = 5;
+            case 4:
+              _context.next = 6;
               return dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
                 url: "/api/users/".concat(userId, "/contacts"),
                 // FIXME: Remove hardcoded url
@@ -54504,10 +54580,10 @@ var loadContacts = function loadContacts() {
                 onFailed: contactDataFailed.type
               }));
 
-            case 5:
+            case 6:
               return _context.abrupt("return", Promise.resolve(true));
 
-            case 6:
+            case 7:
             case "end":
               return _context.stop();
           }

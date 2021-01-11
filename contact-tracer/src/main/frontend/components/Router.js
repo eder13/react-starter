@@ -28,6 +28,7 @@ const Router = () => {
   const dispatch = useDispatch();
   const loginState = useSelector(loginInfoSelector);
 
+  /** Authentication of User */
   // As soon as the site loads we check if the user is currently logged in
   // Check if user is logged in (checks if calling endpoints produces 401)
   // This loads user Context inside the store whenever page loads
@@ -53,7 +54,6 @@ const Router = () => {
 
   return (
     <BrowserRouter>
-      {/*TODO: Check if Router works as intended*/}
       <Navbar title="fas fa-viruses" user={loginState.isAuthenticated ? loginState.user : "You are not signed in"}
               dash={!loginState.isAuthenticated ? <StyledLink to="/login">Login</StyledLink> :
                 <StyledLink to="/dashboard">Dashboard</StyledLink>}
