@@ -35,8 +35,10 @@ export const loadContacts = () => async (dispatch, getState) => {
 
   const userId = getState().auth.userId;
   // wait until userId is fetched before calling - otherwise fetching does not make sense
-  if (userId === "")
+  if (userId === "") {
+    console.error("[contacts]: The user context has not yet been stored.")
     return;
+  }
 
   await dispatch(apiCallBegan({
     url: `/api/users/${userId}/contacts`, // FIXME: Remove hardcoded url

@@ -69,9 +69,6 @@ const api = ({getState, dispatch}) => (next) => async (action) => {
             if (req.data !== "") {
               // dispatch error with generated error message
               dispatch({type: onFailed, payload: {error: req.data, type: "error"}});
-            } else {
-              // 403 error: dispatch error with custom unauthorized message
-              dispatch({type: onFailed, payload: {error: "Please login to use this service.", type: "info"}});
             }
           } catch (exception) {
             // General error: problem with url (not allowed, false url etc.)
@@ -83,7 +80,7 @@ const api = ({getState, dispatch}) => (next) => async (action) => {
         }
       }
       // login spinner end
-      dispatch({type: onDone, payload: {}});
+      setTimeout(() => dispatch({type: onDone, payload: {}}), 500);
       break;
 
     case "post":

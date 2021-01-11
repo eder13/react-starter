@@ -45,8 +45,8 @@ export const loadLoginUserId = () => async (dispatch, getState) => {
   else
     return Promise.reject("[auth] Could not get userId endpoint.");
 }
-export const loadLogout = () => (dispatch, getState) => {
-  dispatch(apiCallBegan({
+export const loadLogout = () => async (dispatch, getState) => {
+  await dispatch(apiCallBegan({
     url: "/logout", // FIXME: Remove Hardcoded URL
     method: "post",
     data: {},
@@ -55,12 +55,14 @@ export const loadLogout = () => (dispatch, getState) => {
     onSuccess: logoutSucceeded.type,
     onFailed: logoutFailed.type,
   }));
+  return Promise.resolve(true);
 }
 
 /// Reducer
 export default createReducer(
   {
     isAuthenticated: false,
+    // token:
     userId: "",
     user: "",
     loading: false,
@@ -127,4 +129,14 @@ export const loginInfoSelector = createSelector(
 export const loginUserIdSelector = createSelector(
   (state) => state.auth,
   (loginState) => loginState.userId
-)
+);
+
+export const loadingBooleanSelector = createSelector(
+  (state) => state.auth,
+  (loginState) => loginState.loading
+);
+
+export const loginIsAuthenticatedSelector = createSelector(
+  (state) => state.auth,
+  (loginState) => loginState.isAuthenticated
+);

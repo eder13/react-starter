@@ -1,8 +1,7 @@
 import React, {useLayoutEffect} from 'react';
-import {Link} from "react-router-dom";
 import styled from "styled-components";
-import {useDispatch, useSelector} from "react-redux";
-import {loadLogin, loadLoginUserId, loginInfoSelector} from "../store/auth/auth";
+import {useSelector} from "react-redux";
+import {loadingBooleanSelector, loginInfoSelector} from "../store/auth/auth";
 
 const Section = styled.section`
   margin-top: 100px;
@@ -10,8 +9,8 @@ const Section = styled.section`
 
 const DivFlexedCenter = styled.div`
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
+  flex-flow: column nowrap;
+  align-items: center;
 `;
 
 const LoginContainer = styled.div`
@@ -57,13 +56,28 @@ const Notification = styled.div`
   color: ${props => props.info ? "#31708f" : "#721c24"};
 `;
 
-function Login() {
+const Login = (props) => {
 
-  // TODO: Redirect if logged in to dashboard
-  //if (!loginState.isAuthenticated) {
+  // loginInfoSelector
+  const loginState = useSelector(loginInfoSelector);
+  const loading = useSelector(loadingBooleanSelector);
+
+  useLayoutEffect(() => {
+    // check if user is authenticated - redirect if yes
+    if (loginState.isAuthenticated)
+      props.history.push("/dashboard");
+
+  }, [loginState.isAuthenticated]);
+
+  if (!loading) {
     return (
       <Section>
         <DivFlexedCenter>
+          {loginState.notification.error !== "" &&
+          <Notification>
+            {loginState.notification.error}
+          </Notification>
+          }
           <LoginContainer>
             <LoginIconUserContainer>
               <i style={{color: "whitesmoke"}} className="fas fa-users fa-3x">{}</i>
@@ -75,15 +89,13 @@ function Login() {
         </DivFlexedCenter>
       </Section>
     );
-  // } else {
-  //   return (
-  //     <Section>
-  //       <DivFlexedCenter>
-  //         You are logged in!&nbsp;<Link to="/dashboard">proceed to the side</Link>
-  //       </DivFlexedCenter>
-  //     </Section>
-  //   );
-  // }
+  } else {
+    return (
+      <div className="loader-wrap">
+        <div className="loader">{}</div>
+      </div>
+    );
+  }
 }
 
 export default Login;

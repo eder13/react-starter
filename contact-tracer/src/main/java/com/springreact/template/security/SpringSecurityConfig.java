@@ -40,17 +40,18 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http
                 .authorizeRequests(a -> a
-                        .antMatchers("/", "/error", "/built/**").permitAll()
+                        .antMatchers("/", "/login", "/error", "/built/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(e -> e
+                        // Redirect to Login Endpoint if not authenticated
                         .authenticationEntryPoint(new AuthenticationEntryPoint() {
                             @Override
                             public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
                                 httpServletResponse.setContentType(MediaType.TEXT_HTML_VALUE);
                                 httpServletResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
                                 /// TODO: For deployment, replace window.location.href with homepage domain home-url
-                                httpServletResponse.getOutputStream().println("<script>window.location.href = \"http://localhost:8081/\"</script>");
+                                httpServletResponse.getOutputStream().println("<script>window.location.href = \"http://localhost:8081/login\"</script>");
                             }
                         })
                 )
@@ -60,7 +61,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout(l -> l
                         .logoutSuccessUrl("/").permitAll()
                 )
-                .oauth2Login().defaultSuccessUrl("/dashboard")
+                .oauth2Login().defaultSuccessUrl("/")
                 .successHandler(new SavedRequestAwareAuthenticationSuccessHandler() {
                     @Override
                     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {

@@ -5,7 +5,7 @@
  * if the user is logged in/out)
  * */
 
-import React, {useLayoutEffect} from "react";
+import React, {useEffect} from "react";
 import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
 import Navbar from "./Navbar";
 import Login from "./Login";
@@ -14,6 +14,7 @@ import styled from "styled-components";
 import Home from "./Home";
 import {useDispatch, useSelector} from "react-redux";
 import {loadLogin, loadLoginUserId, loginInfoSelector} from "../store/auth/auth";
+import PrivateRoute from "./PrivateRoute";
 
 const StyledLink = styled(Link)`
   padding: 0.25rem 0.75rem;
@@ -27,7 +28,10 @@ const Router = () => {
   const dispatch = useDispatch();
   const loginState = useSelector(loginInfoSelector);
 
-  useLayoutEffect(() => {
+  // As soon as the site loads we check if the user is currently logged in
+  // Check if user is logged in (checks if calling endpoints produces 401)
+  // This loads user Context inside the store whenever page loads
+  useEffect(() => {
     // load the username
     dispatch(loadLogin())
       .then((resolved) => {
@@ -49,6 +53,7 @@ const Router = () => {
 
   return (
     <BrowserRouter>
+      {/*TODO: Check if Router works as intended*/}
       <Navbar title="fas fa-viruses" user={loginState.isAuthenticated ? loginState.user : "You are not signed in"}
               dash={!loginState.isAuthenticated ? <StyledLink to="/login">Login</StyledLink> :
                 <StyledLink to="/dashboard">Dashboard</StyledLink>}
@@ -56,12 +61,10 @@ const Router = () => {
       <Switch>
         <Route exact path="/" render={() => <Home/>}/>
         <Route exact path="/login" component={Login}/>
-        <Route exact path="/dashboard"
-               component={Contacts}/> {/*TODO: this should be protected - any special functionality?*/}
+        <PrivateRoute exact path="/dashboard" component={Contacts}/>
       </Switch>
     </BrowserRouter>
   );
-
 }
 
 export default Router;

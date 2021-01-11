@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {Link} from "react-router-dom";
-import {useDispatch} from "react-redux";
-import {loadLogout} from "../store/auth/auth";
+import {useDispatch, useSelector} from "react-redux";
+import {loadingBooleanSelector, loadLogout} from "../store/auth/auth";
 import styled from "styled-components";
 
 Navbar.propTypes = {
@@ -21,9 +21,7 @@ const Button = styled.button`
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
-  ${props => props.primary && "background-color: transparent; height: 38px; margin: 0.5rem 0rem;"};
   ${props => props.secondary && "color: #000; background-color: rgb(248, 249, 250); border-color: #ff974c;"};
-  ${props => props.danger && "background-color: rgb(240, 0, 57); height: 38px; margin: 0.5rem 0rem;"}; 
   ${props => props.warning && "background-color: rgb(255, 194, 0); height: 38px; margin: 0.5rem 0rem;"};  
   border-radius: 4px;
   border: 1px soLid #bbb;
@@ -73,32 +71,38 @@ const StyledLink = styled(Link)`
 
 function Navbar(props) {
   const dispatch = useDispatch();
+  const loading = useSelector(loadingBooleanSelector);
 
-  return (
-    <HorizontalNavbar>
-      <Logo>
-        <StyledLink to="/"><i style={{color: 'red'}} className={props.title + " fa-3x"}/></StyledLink>
-      </Logo>
-      <NavbarNav>
-        <Ul>
-          <Li>{props.user}</Li>
-          <Li><StyledLink to="/"><i className="fas fa-home">{}</i></StyledLink></Li>
-          <Li>{props.dash}</Li>
-          <Li style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            {props.logout &&
-            <Button style={{padding: '0 0.5rem'}} secondary onClick={
-              (e) => {
-                dispatch(loadLogout());
-                // redirect to homepage
-                window.location.href = "/";
-              }}>
-              <i className="fas fa-sign-out-alt" />
-            </Button>}
-          </Li>
-        </Ul>
-      </NavbarNav>
-    </HorizontalNavbar>
-  );
+  if (!loading) {
+    return (
+      <HorizontalNavbar>
+        <Logo>
+          <StyledLink to="/"><i style={{color: 'red'}} className={props.title + " fa-3x"}/></StyledLink>
+        </Logo>
+        <NavbarNav>
+          <Ul>
+            <Li>{props.user}</Li>
+            <Li><StyledLink to="/"><i className="fas fa-home">{}</i></StyledLink></Li>
+            <Li>{props.dash}</Li>
+            <Li style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+              {props.logout &&
+              <Button style={{padding: '0 0.5rem'}} secondary onClick={
+                () => {
+                  dispatch(loadLogout()).then((resolve) => {
+                    if (resolve)
+                      window.location.href = "/";
+                  });
+                }}>
+                <i className="fas fa-sign-out-alt"/>
+              </Button>}
+            </Li>
+          </Ul>
+        </NavbarNav>
+      </HorizontalNavbar>
+    );
+  } else {
+    return <Fragment>{}</Fragment>;
+  }
 }
 
 export default Navbar;

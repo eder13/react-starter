@@ -117,8 +117,6 @@ const Form = () => {
 
   const onSubmit = async (e) => {
 
-    // TODO: Validation before dispatching with contactAdded
-
     e.preventDefault();
 
     // check if update-mode is on (-> tmp fields are set)
@@ -181,8 +179,7 @@ const Form = () => {
       </div>
       <div className="padding-05y">
         <label htmlFor="localDate">Date:</label>
-        <input className="full-width" type="date" id="localDate" name="localDate" /// TODO Regex Date
-          // value={`${new Date(Date.parse(localDate.toString())).getUTCFullYear()}-${((new Date(Date.parse(localDate.toString())).getMonth() + 1 < 10) ? '0' + new Date(Date.parse(localDate.toString())).getMonth() + 1 : new Date(Date.parse(localDate.toString())).getMonth() + 1)}-${((new Date(Date.parse(localDate.toString())).getDate() < 10) ? '0' + new Date(Date.parse(localDate.toString())).getDate() : new Date(Date.parse(localDate.toString())).getDate())}`}
+        <input className="full-width" type="date" id="localDate" name="localDate"
                value={localDate}
                onChange={onChange}/>
       </div>
@@ -194,9 +191,6 @@ const Form = () => {
         <ButtonDanger onClick={onDiscard}>Discard</ButtonDanger>}
 
         <ButtonPrimary style={{display: 'none'}} as={SubStringPrimary}>A Primary Button</ButtonPrimary>
-
-
-
       </div>
     </form>
   );
