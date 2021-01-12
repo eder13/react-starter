@@ -53701,9 +53701,71 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  background-color: ", ";\n  width: 400px;\n  height: 20px;\n  \n  &:hover {\n    color: ", "\n  }\n  \n  & > p {\n    background-color: blue;\n  }\n  \n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  margin: ", ";\n  text-align: center;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  width: 100px;\n  height: 100px;\n  margin: 50px;\n  padding: 10px;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
 
+
+
+var Thing = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject(), function (props) {
+  return props.backgroundColor;
+});
+var Thing2 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.attrs(function (props) {
+  return {
+    setColor: props.color ? props.color : "blue",
+    // “dynamic delegating prop”,
+    setMargin: "50px" // static prop
+
+  };
+})(_templateObject2(), function (props) {
+  return props.setColor;
+}, function (props) {
+  return props.setMargin;
+});
+var Thing3 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.attrs(function (props) {
+  return {
+    textColor: props.color ? props.color : "blue",
+    hoverColor: props.hover ? props.hover : "red",
+    bgColor: props.bgColor ? props.bgColor : "white"
+  };
+})(_templateObject3(), function (props) {
+  return props.textColor;
+}, function (props) {
+  return props.bgColor;
+}, function (props) {
+  return props.hoverColor;
+});
 
 var Home = function Home() {
   // login Loading: Let firstly dispatch everything and see if user is still logged in
@@ -53716,7 +53778,17 @@ var Home = function Home() {
       className: "loader"
     }));
   } else {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Contact Tracer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Contact is a Application that allows you to ..."));
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Contact Tracer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Contact is a Application that allows you to ..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Thing, {
+      backgroundColor: "blue"
+    }, "Test1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Thing2, null, "Thing2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Thing2, {
+      color: "red"
+    }, "Thing2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Thing3, null, "I am blue with a white background and a red hover!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Thing3, {
+      color: "red",
+      bgColor: "black",
+      hover: "white"
+    }, "I am red with a black background and white hover!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Thing3, {
+      color: "black"
+    }, "Text ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Styled")));
   }
 };
 
