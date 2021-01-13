@@ -50,7 +50,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                             public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
                                 httpServletResponse.setContentType(MediaType.TEXT_HTML_VALUE);
                                 httpServletResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                                /// TODO: For deployment, replace window.location.href with homepage domain home-url
+                                /// TODO: For deployment, replace window.location.href with homepage domain home-url and login endpoint
                                 httpServletResponse.getOutputStream().println("<script>window.location.href = \"http://localhost:8081/login\"</script>");
                             }
                         })

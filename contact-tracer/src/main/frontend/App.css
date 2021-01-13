@@ -94,7 +94,6 @@ label {
   font-weight: 600;
 }
 
-/* TODO: check how to use sudo selectors in styled components */
 input[type="submit"]:hover,
 input[type="submit"]:focus,
 input[type="button"]:hover,

@@ -53702,8 +53702,88 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+function _templateObject11() {
+  var data = _taggedTemplateLiteral(["\n  width: 50px;\n  height: 50px;\n  background-color: yellow;\n  animation: ", " 1s linear infinite;\n"]);
+
+  _templateObject11 = function _templateObject11() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject10() {
+  var data = _taggedTemplateLiteral(["\n  from {\n    transform: rotate(0deg);\n  }\n  \n  to {\n    transform: rotate(360deg);\n  }\n"]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n  &.start ~ &.next {\n    background-color: tomato;\n  }\n"]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n  .something-else & {\n    background-color: red;\n  }\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n  &.something {\n    background-color: red;\n  }\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  & > input {\n    background-color: red;\n  }\n\n  & > input[type=\"button\"] {\n    background-color: green;\n  }\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n  & > p[id] {\n    background-color: blue;\n  }\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  width: 400px;\n  height: 50px;\n  color: green;\n  position: static;\n  \n  & + & {\n    background-color: red;\n  }\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  background-color: ", ";\n  width: 400px;\n  height: 20px;\n  \n  &:hover {\n    color: ", "\n  }\n  \n  & > p {\n    background-color: blue;\n  }\n  \n"]);
+  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  background-color: ", ";\n  width: 400px;\n  height: 20px;\n  \n  &:hover {\n    color: ", "\n  }\n  \n  & p {\n    background-color: yellow;\n  }\n  \n  & p:first-child {\n    background-color: red;\n  }\n  \n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -53766,10 +53846,24 @@ var Thing3 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.attrs
 }, function (props) {
   return props.hoverColor;
 });
+var Thing4 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.attrs(function (props) {
+  return {};
+})(_templateObject4());
+var Thing5 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.attrs(function (props) {
+  return {};
+})(_templateObject5());
+var Thing6 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.attrs(function (props) {
+  return {};
+})(_templateObject6());
+var Thing7 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject7());
+var Thing8 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject8());
+var Thing9 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject9());
+var animate = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["keyframes"])(_templateObject10());
+var SpinningBox = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject11(), animate);
 
 var Home = function Home() {
   // login Loading: Let firstly dispatch everything and see if user is still logged in
-  var loading = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_2__["loadingBooleanSelector"]); /// TODO: Let's make this front page beautiful with styled components
+  var loading = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_2__["loadingBooleanSelector"]);
 
   if (loading) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -53782,13 +53876,7 @@ var Home = function Home() {
       backgroundColor: "blue"
     }, "Test1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Thing2, null, "Thing2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Thing2, {
       color: "red"
-    }, "Thing2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Thing3, null, "I am blue with a white background and a red hover!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Thing3, {
-      color: "red",
-      bgColor: "black",
-      hover: "white"
-    }, "I am red with a black background and white hover!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Thing3, {
-      color: "black"
-    }, "Text ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Styled")));
+    }, "Thing2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SpinningBox, null));
   }
 };
 
