@@ -30,8 +30,9 @@ spring:
       client:
         registration:
           github:
-            client-id: fb809632e360f0b89c95
-            client-secret: b008940f86bf6c947b0c26b340c71fcb33929530
+            # TODO: past client id and secret here
+            client-id: <client-id>
+            client-secret: <client-secret>
 
 #------------------------------------------------------------------------------
 # MySQL Enable Logging

@@ -14226,7 +14226,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "/* Global CSS <style></style> */\n* {\n  box-sizing: border-box;\n  font-family: Arial, serif;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\n/* TODO: check how to use sudo selectors in styled components */\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}\n\n/* Transition effects add/delete using react-transition-group */\n.item-enter {\n  opacity: 0;\n}\n.item-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n.item-exit {\n  opacity: 1;\n}\n.item-exit-active {\n  opacity: 0;\n  transition: opacity 500ms ease-in;\n}", "",{"version":3,"sources":["webpack://./src/main/frontend/App.css"],"names":[],"mappings":"AAAA,+BAA+B;AAC/B;EACE,sBAAsB;EACtB,yBAAyB;AAC3B;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,yBAAyB;EACzB,kBAAkB;EAClB,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,oCAAoC;AACtC;;AAEA;EACE,KAAK,uBAAuB,EAAE;EAC9B,OAAO,yBAAyB,EAAE;AACpC;;AAEA;EACE,gBAAgB;EAChB,uBAAuB;EACvB,aAAa;EACb,wBAAwB;EACxB,mBAAmB;EACnB,WAAW;EACX,wBAAwB;AAC1B;;AAEA;EACE,cAAc;EACd,gBAAgB;AAClB;;AAEA;;EAEE,YAAY;AACd;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;;;;EAIE,YAAY;EACZ,iBAAiB;EACjB,sBAAsB;EACtB,yBAAyB;EACzB,kBAAkB;EAClB,gBAAgB;EAChB,sBAAsB;AACxB;;AAEA;;;;EAIE,wBAAwB;EACxB,qBAAqB;EACrB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;;;;EAIE,yBAAyB;EACzB,UAAU;AACZ;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,gBAAgB;AAClB;;AAEA,+DAA+D;AAC/D;;;;EAIE,WAAW;EACX,kBAAkB;EAClB,UAAU;AACZ;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA,+DAA+D;AAC/D;EACE,UAAU;AACZ;AACA;EACE,UAAU;EACV,iCAAiC;AACnC;AACA;EACE,UAAU;AACZ;AACA;EACE,UAAU;EACV,iCAAiC;AACnC","sourcesContent":["/* Global CSS <style></style> */\n* {\n  box-sizing: border-box;\n  font-family: Arial, serif;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\n/* TODO: check how to use sudo selectors in styled components */\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}\n\n/* Transition effects add/delete using react-transition-group */\n.item-enter {\n  opacity: 0;\n}\n.item-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n.item-exit {\n  opacity: 1;\n}\n.item-exit-active {\n  opacity: 0;\n  transition: opacity 500ms ease-in;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "/* Global CSS <style></style> */\n* {\n  box-sizing: border-box;\n  font-family: Arial, serif;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}\n\n/* Transition effects add/delete using react-transition-group */\n.item-enter {\n  opacity: 0;\n}\n.item-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n.item-exit {\n  opacity: 1;\n}\n.item-exit-active {\n  opacity: 0;\n  transition: opacity 500ms ease-in;\n}", "",{"version":3,"sources":["webpack://./src/main/frontend/App.css"],"names":[],"mappings":"AAAA,+BAA+B;AAC/B;EACE,sBAAsB;EACtB,yBAAyB;AAC3B;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,yBAAyB;EACzB,kBAAkB;EAClB,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,oCAAoC;AACtC;;AAEA;EACE,KAAK,uBAAuB,EAAE;EAC9B,OAAO,yBAAyB,EAAE;AACpC;;AAEA;EACE,gBAAgB;EAChB,uBAAuB;EACvB,aAAa;EACb,wBAAwB;EACxB,mBAAmB;EACnB,WAAW;EACX,wBAAwB;AAC1B;;AAEA;EACE,cAAc;EACd,gBAAgB;AAClB;;AAEA;;EAEE,YAAY;AACd;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;;;;EAIE,YAAY;EACZ,iBAAiB;EACjB,sBAAsB;EACtB,yBAAyB;EACzB,kBAAkB;EAClB,gBAAgB;EAChB,sBAAsB;AACxB;;AAEA;;;;EAIE,wBAAwB;EACxB,qBAAqB;EACrB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;;;;EAIE,yBAAyB;EACzB,UAAU;AACZ;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,gBAAgB;AAClB;;AAEA;;;;EAIE,WAAW;EACX,kBAAkB;EAClB,UAAU;AACZ;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA,+DAA+D;AAC/D;EACE,UAAU;AACZ;AACA;EACE,UAAU;EACV,iCAAiC;AACnC;AACA;EACE,UAAU;AACZ;AACA;EACE,UAAU;EACV,iCAAiC;AACnC","sourcesContent":["/* Global CSS <style></style> */\n* {\n  box-sizing: border-box;\n  font-family: Arial, serif;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}\n\n/* Transition effects add/delete using react-transition-group */\n.item-enter {\n  opacity: 0;\n}\n.item-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n.item-exit {\n  opacity: 1;\n}\n.item-exit-active {\n  opacity: 0;\n  transition: opacity 500ms ease-in;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -53702,98 +53702,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n  width: 50px;\n  height: 50px;\n  background-color: yellow;\n  animation: ", " 1s linear infinite;\n"]);
-
-  _templateObject11 = function _templateObject11() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n  from {\n    transform: rotate(0deg);\n  }\n  \n  to {\n    transform: rotate(360deg);\n  }\n"]);
-
-  _templateObject10 = function _templateObject10() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n  &.start ~ &.next {\n    background-color: tomato;\n  }\n"]);
-
-  _templateObject9 = function _templateObject9() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n  .something-else & {\n    background-color: red;\n  }\n"]);
-
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  &.something {\n    background-color: red;\n  }\n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  & > input {\n    background-color: red;\n  }\n\n  & > input[type=\"button\"] {\n    background-color: green;\n  }\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  & > p[id] {\n    background-color: blue;\n  }\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  width: 400px;\n  height: 50px;\n  color: green;\n  position: static;\n  \n  & + & {\n    background-color: red;\n  }\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  background-color: ", ";\n  width: 400px;\n  height: 20px;\n  \n  &:hover {\n    color: ", "\n  }\n  \n  & p {\n    background-color: yellow;\n  }\n  \n  & p:first-child {\n    background-color: red;\n  }\n  \n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  margin: ", ";\n  text-align: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: center;\n  & > i {\n    animation: ", " 1s linear infinite;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -53803,7 +53713,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  width: 100px;\n  height: 100px;\n  margin: 50px;\n  padding: 10px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  from {\n    transform: rotate(0deg);\n  }\n  \n  to {\n    transform: rotate(360deg);\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -53818,48 +53728,8 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var Thing = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject(), function (props) {
-  return props.backgroundColor;
-});
-var Thing2 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.attrs(function (props) {
-  return {
-    setColor: props.color ? props.color : "blue",
-    // “dynamic delegating prop”,
-    setMargin: "50px" // static prop
-
-  };
-})(_templateObject2(), function (props) {
-  return props.setColor;
-}, function (props) {
-  return props.setMargin;
-});
-var Thing3 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.attrs(function (props) {
-  return {
-    textColor: props.color ? props.color : "blue",
-    hoverColor: props.hover ? props.hover : "red",
-    bgColor: props.bgColor ? props.bgColor : "white"
-  };
-})(_templateObject3(), function (props) {
-  return props.textColor;
-}, function (props) {
-  return props.bgColor;
-}, function (props) {
-  return props.hoverColor;
-});
-var Thing4 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.attrs(function (props) {
-  return {};
-})(_templateObject4());
-var Thing5 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.attrs(function (props) {
-  return {};
-})(_templateObject5());
-var Thing6 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.attrs(function (props) {
-  return {};
-})(_templateObject6());
-var Thing7 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject7());
-var Thing8 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject8());
-var Thing9 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject9());
-var animate = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["keyframes"])(_templateObject10());
-var SpinningBox = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject11(), animate);
+var animate = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["keyframes"])(_templateObject());
+var SpinningBox = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject2(), animate);
 
 var Home = function Home() {
   // login Loading: Let firstly dispatch everything and see if user is still logged in
@@ -53872,11 +53742,9 @@ var Home = function Home() {
       className: "loader"
     }));
   } else {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Contact Tracer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Contact is a Application that allows you to ..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Thing, {
-      backgroundColor: "blue"
-    }, "Test1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Thing2, null, "Thing2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Thing2, {
-      color: "red"
-    }, "Thing2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SpinningBox, null));
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Contact Tracer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Contact is a Application that allows you to document your latest contacts."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I was too lazy to style the front page, so here is a spinning cat instead:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SpinningBox, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-cat fa-3x"
+    })));
   }
 };
 
