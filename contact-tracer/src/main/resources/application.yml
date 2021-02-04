@@ -29,7 +29,7 @@ spring:
     oauth2:
       client:
         registration:
-          github:
+          google:
             # TODO: past client id and secret here
             client-id: <client-id>
             client-secret: <client-secret>

@@ -29,9 +29,9 @@ spring:
     oauth2:
       client:
         registration:
-          github:
-            client-id: fb809632e360f0b89c95
-            client-secret: b008940f86bf6c947b0c26b340c71fcb33929530
+          google:
+            client-id: 990623475543-a2qv72dkakoijmda62i4s0294oif2ngv.apps.googleusercontent.com
+            client-secret: 28z1Ektmp4cYPO6n0xc9JhEn
 
 #------------------------------------------------------------------------------
 # MySQL Enable Logging

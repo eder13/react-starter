@@ -3,7 +3,9 @@ package com.springreact.template.security;
 import com.springreact.template.db.User;
 import com.springreact.template.db.UserRepository;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.Authentication;
@@ -25,6 +27,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserRepository userRepository;
@@ -41,6 +44,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests(a -> a
                         .antMatchers("/", "/login", "/error", "/built/**").permitAll()
+                        .antMatchers(HttpMethod.POST, "/api/users/**").access("hasAnyAuthority('ROLE_ADMIN')")
+                        .antMatchers(HttpMethod.PUT, "/api/users/{\\d+}/**").access("hasAnyAuthority('ROLE_ADMIN')")
+                        .antMatchers(HttpMethod.PATCH, "/api/users/{\\d+}/**").access("hasAnyAuthority('ROLE_ADMIN')")
+                        .antMatchers(HttpMethod.DELETE, "/api/users/{\\d+}/**").access("hasAnyAuthority('ROLE_ADMIN')")
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(e -> e
@@ -77,7 +84,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
                             // check if user logs in the first time -> true: save to database
                             if (userRepository.findUserByEmail(map.get("email").toString()) == null) {
-                                User user = new User(map.get("name").toString(), map.get("email").toString(), false);
+                                User user = new User(map.get("name").toString(), map.get("email").toString());
                                 userRepository.save(user);
                             }
                         }

@@ -17,8 +17,6 @@ public class User {
     private Long id;
     private String name;
     private String email;
-    @Column(columnDefinition = "boolean default false")
-    private Boolean newsletter;
 
     @OneToMany(mappedBy = "user")
     private List<Contact> contacts;
@@ -26,10 +24,10 @@ public class User {
     public User() {
     }
 
-    public User(String name, String email, boolean newsletter) {
+    // no id, auto generate uuid in database
+    public User(String name, String email) {
         this.name = name;
         this.email = email;
-        this.newsletter = newsletter;
     }
 
     public Long getUserID() {
@@ -55,23 +53,4 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public Boolean getNewsletter() {
-        return newsletter;
-    }
-
-    public void setNewsletter(Boolean newsletter) {
-        this.newsletter = newsletter;
-    }
-
-    //@Override
-    //public String toString() {
-    //    return "User{" +
-    //            "id=" + id +
-    //            ", name='" + name + '\'' +
-    //            ", email='" + email + '\'' +
-    //            ", newsletter=" + newsletter +
-    //            ", contacts=" + contacts +
-    //            '}';
-    //}
 }

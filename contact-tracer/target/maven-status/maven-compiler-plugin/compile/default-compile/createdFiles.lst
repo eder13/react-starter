@@ -3,6 +3,7 @@ com/springreact/template/security/SpringSecurityConfig.class
 com/springreact/template/db/UserRepository.class
 com/springreact/template/db/ContactRepository.class
 com/springreact/template/security/SpringSecurityConfig$1.class
+com/springreact/template/security/AccessHandler.class
 com/springreact/template/SpringReactOAuthApplication.class
 com/springreact/template/db/Contact.class
 com/springreact/template/controller/MyErrorController.class

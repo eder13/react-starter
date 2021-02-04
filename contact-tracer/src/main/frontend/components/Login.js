@@ -82,8 +82,8 @@ const Login = (props) => {
             <LoginIconUserContainer>
               <i style={{color: "whitesmoke"}} className="fas fa-users fa-3x">{}</i>
             </LoginIconUserContainer>
-            <LoginButton as="a" href="/oauth2/authorization/github">
-              <i className="fab fa-github fa-1x">{}</i>&nbsp;Login With Github
+            <LoginButton as="a" href="/oauth2/authorization/google">
+              <i className="fab fa-google fa-1x">{}</i>&nbsp;Login With Google
             </LoginButton>
           </LoginContainer>
         </DivFlexedCenter>
