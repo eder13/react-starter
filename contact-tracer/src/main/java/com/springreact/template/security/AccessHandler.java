@@ -1,5 +1,6 @@
 package com.springreact.template.security;
 
+import com.springreact.template.db.ContactRepository;
 import com.springreact.template.db.UserRepository;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -16,9 +17,11 @@ import java.util.Collection;
 public class AccessHandler {
 
     private final UserRepository userRepository;
+    private final ContactRepository contactRepository;
 
-    public AccessHandler(UserRepository userRepository) {
+    public AccessHandler(UserRepository userRepository, ContactRepository contactRepository) {
         this.userRepository = userRepository;
+        this.contactRepository = contactRepository;
     }
 
     public boolean isAllowed(Authentication a, Long id) {
@@ -39,6 +42,23 @@ public class AccessHandler {
     public boolean isAdmin(Authentication a) {
         return a.getAuthorities().stream()
                 .anyMatch(r -> r.getAuthority().equals("ROLE_ADMIN"));
+    }
+
+    public boolean isOwner(Authentication a, Long id) {
+
+        if (a instanceof OAuth2AuthenticationToken) {
+            // get email of currently logged in user
+            OAuth2User oauth2user = ((OAuth2AuthenticationToken) a).getPrincipal();
+            String email = oauth2user.getAttribute("email");
+
+            // check if it belongs to current user -> returns null if not
+            Long foundId = contactRepository.getContactByUserAndId(userRepository.findUserByEmail(email), id);
+
+            return foundId != null;
+
+        } else {
+            return false;
+        }
     }
 
     //    public boolean isTestUser(Authentication a) {
