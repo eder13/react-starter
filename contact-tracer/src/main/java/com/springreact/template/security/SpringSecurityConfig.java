@@ -44,10 +44,13 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests(a -> a
                         .antMatchers("/", "/login", "/error", "/built/**").permitAll()
-                        .antMatchers(HttpMethod.POST, "/api/users/**").access("hasAnyAuthority('ROLE_ADMIN')")
-                        .antMatchers(HttpMethod.PUT, "/api/users/{\\d+}/**").access("hasAnyAuthority('ROLE_ADMIN')")
-                        .antMatchers(HttpMethod.PATCH, "/api/users/{\\d+}/**").access("hasAnyAuthority('ROLE_ADMIN')")
-                        .antMatchers(HttpMethod.DELETE, "/api/users/{\\d+}/**").access("hasAnyAuthority('ROLE_ADMIN')")
+                        // block users endpoint generally for all Roles to prevent altering the data in any way
+                        .antMatchers(HttpMethod.POST, "/api/users/**").denyAll()// access("hasAnyAuthority('ROLE_ROOT')")
+                        .antMatchers(HttpMethod.PUT, "/api/users/{\\d+}/**").denyAll()
+                        .antMatchers(HttpMethod.PATCH, "/api/users/{\\d+}/**").denyAll()
+                        .antMatchers(HttpMethod.DELETE, "/api/users/{\\d+}/**").denyAll()
+                        // block any access to /api/profile as we don't need that
+                        .antMatchers("/api/profile/**").denyAll()
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(e -> e

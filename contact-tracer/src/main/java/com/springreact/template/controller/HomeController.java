@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.Collections;
 import java.util.Map;
 
@@ -74,13 +73,10 @@ public class HomeController {
         }
     }
 
-
-
     /// DEBUG: Getting accessToken from currently logged in user
     //  @ResponseBody
     //  @GetMapping("/access-token")
     //  public String accessToken(@RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient) {
     //      return "{ " + "\"accessToken\":"  + " \"" + authorizedClient.getAccessToken().getTokenValue() + "\" " + "}";
     //  }
-
 }
