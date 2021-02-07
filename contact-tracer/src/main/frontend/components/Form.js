@@ -35,14 +35,6 @@ const ButtonPrimary = styled(Button)`
   margin: 0.5rem 0rem;
 `;
 
-const ButtonSecondary = styled(Button)`
-  color: #000; 
-  background-color: rgb(248, 249, 250); 
-  border-color: #ff974c; 
-  padding-top: 0.25rem; 
-  padding-bottom: 0.25rem;
-`;
-
 const ButtonDanger = styled(Button)`
   background-color: rgb(240, 0, 57); 
   height: 38px; 

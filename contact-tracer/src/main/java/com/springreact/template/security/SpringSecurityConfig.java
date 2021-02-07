@@ -44,13 +44,17 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests(a -> a
                         .antMatchers("/", "/login", "/error", "/built/**").permitAll()
+                        // block PATCH generally
+                        .antMatchers(HttpMethod.PATCH, "/**").denyAll()
                         // block users endpoint generally for all Roles to prevent altering the data in any way
                         .antMatchers(HttpMethod.POST, "/api/users/**").denyAll()// access("hasAnyAuthority('ROLE_ROOT')")
                         .antMatchers(HttpMethod.PUT, "/api/users/{\\d+}/**").denyAll()
                         .antMatchers(HttpMethod.PATCH, "/api/users/{\\d+}/**").denyAll()
                         .antMatchers(HttpMethod.DELETE, "/api/users/{\\d+}/**").denyAll()
-                        // block any access to /api/profile as we don't need that
+                        // block any access to /api/profile as we don't need that anyway
                         .antMatchers("/api/profile/**").denyAll()
+                        // users are only allowed associate/alter data own data (PUT)
+                        .antMatchers(HttpMethod.PUT, "/api/contacts/{id}/**").access("@accessHandler.isOwner(authentication, #id)")
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(e -> e

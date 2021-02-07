@@ -53429,18 +53429,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  background-color: rgb(255, 194, 0); \n  height: 38px; \n  margin: 0.5rem 0rem;\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  background-color: rgb(240, 0, 57); \n  height: 38px; \n  margin: 0.5rem 0rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: rgb(255, 194, 0); \n  height: 38px; \n  margin: 0.5rem 0rem;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -53450,7 +53440,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  color: #000; \n  background-color: rgb(248, 249, 250); \n  border-color: #ff974c; \n  padding-top: 0.25rem; \n  padding-bottom: 0.25rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: rgb(240, 0, 57); \n  height: 38px; \n  margin: 0.5rem 0rem;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -53487,9 +53477,8 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var Button = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].button(_templateObject());
 var ButtonPrimary = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(Button)(_templateObject2());
-var ButtonSecondary = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(Button)(_templateObject3());
-var ButtonDanger = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(Button)(_templateObject4());
-var ButtonWarning = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(Button)(_templateObject5());
+var ButtonDanger = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(Button)(_templateObject3());
+var ButtonWarning = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(Button)(_templateObject4());
 
 var SubStringPrimary = function SubStringPrimary(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonPrimary, _extends({}, props, {

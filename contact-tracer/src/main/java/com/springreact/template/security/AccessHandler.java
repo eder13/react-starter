@@ -1,6 +1,8 @@
 package com.springreact.template.security;
 
+import com.springreact.template.db.Contact;
 import com.springreact.template.db.ContactRepository;
+import com.springreact.template.db.User;
 import com.springreact.template.db.UserRepository;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -12,6 +14,7 @@ import org.springframework.stereotype.Component;
 
 import java.security.Principal;
 import java.util.Collection;
+import java.util.Optional;
 
 @Component
 public class AccessHandler {
@@ -51,10 +54,18 @@ public class AccessHandler {
             OAuth2User oauth2user = ((OAuth2AuthenticationToken) a).getPrincipal();
             String email = oauth2user.getAttribute("email");
 
-            // check if it belongs to current user -> returns null if not
-            Long foundId = contactRepository.getContactByUserAndId(userRepository.findUserByEmail(email), id);
+            // check if user_id is still NULL, which means that a user posted it and is now trying to connect it
+            // TODO production: On the SQL Server write a script that every x hours those entries will be deleted if still NULL
+            Long connectedBy = contactRepository.getAssociatedUserId(id);
 
-            return foundId != null;
+            if(connectedBy == null){
+                // allow to establish a new association
+                return true;
+            } else {
+                // user might want to alter data: Check if he's allowed to do that
+                Long foundId = contactRepository.getContactByUserAndId(userRepository.findUserByEmail(email), id);
+                return foundId != null;
+            }
 
         } else {
             return false;
