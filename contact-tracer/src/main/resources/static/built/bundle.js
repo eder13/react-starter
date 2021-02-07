@@ -53717,6 +53717,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/src/js.cookie.js");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_5__);
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _templateObject2() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: center;\n  & > i {\n    animation: ", " 1s linear infinite;\n  }\n"]);
 
@@ -53743,12 +53757,61 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
+
 var animate = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["keyframes"])(_templateObject());
-var SpinningBox = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject2(), animate);
+var SpinningBox = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject2(), animate); // axios config for csrf protection
+
+axios__WEBPACK_IMPORTED_MODULE_4___default.a.interceptors.request.use(function (req) {
+  if (req.method === "post" || req.method === "delete" || req.method === "put" || req.method === "patch") {
+    // check if relative to url only
+    if (!(/^http:.*/.test(req.url) || /^https:.*/.test(req.url))) {
+      req.headers.common = _objectSpread(_objectSpread({}, req.headers.common), {}, {
+        "X-XSRF-TOKEN": js_cookie__WEBPACK_IMPORTED_MODULE_5___default.a.get("XSRF-TOKEN")
+      });
+    }
+  }
+
+  return req;
+});
 
 var Home = function Home() {
   // login Loading: Let firstly dispatch everything and see if user is still logged in
   var loading = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_2__["loadingBooleanSelector"]);
+
+  var get = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+      var req;
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return axios__WEBPACK_IMPORTED_MODULE_4___default.a.patch("/api/users/1", {
+                name: "Test User",
+                email: "test@mail.com"
+              }, {
+                headers: {
+                  "Content-Type": "application/json"
+                }
+              });
+
+            case 2:
+              req = _context.sent;
+              console.log(req.status, req.statusText, req.data);
+
+            case 4:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function get() {
+      return _ref.apply(this, arguments);
+    };
+  }();
 
   if (loading) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -53759,7 +53822,9 @@ var Home = function Home() {
   } else {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Contact Tracer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Contact is a Application that allows you to document your latest contacts."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I was too lazy to style the front page, so here is a spinning cat instead:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SpinningBox, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fas fa-cat fa-3x"
-    })));
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: get
+    }, "POST"));
   }
 };
 

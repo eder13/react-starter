@@ -28,7 +28,7 @@ public interface ContactRepository extends PagingAndSortingRepository<Contact, L
             @Param("id") Long id
     );
 
-    // generally posting is allowed to /api/contacts to add a value (TODO: check user_id NULL)
+    // generally posting is allowed to /api/contacts to add a value
     // since PUT also uses the save method, we have to validate explicitely PUT inside
     // spring security and not here, otherwise it would treat PUT/POST the same here
 
@@ -72,22 +72,22 @@ public interface ContactRepository extends PagingAndSortingRepository<Contact, L
     @Override
     long count();
 
-    // only allow a user to delete his own data
+    // only allow a user to delete his own data (1)
     @PreAuthorize("@accessHandler.isOwner(authentication, #id) or @accessHandler.isAdmin(authentication)")
     @Override
     void deleteById(Long id);
 
-    // i would rather use deleteById if I need such a functionality
+    // only allow a user to delete his own data (1)
+    @PreAuthorize("@accessHandler.isOwner(authentication, #contact.id) or @accessHandler.isAdmin(authentication)")
     @Override
-    @RestResource(exported = false)
-    void delete(Contact var1);
+    void delete(Contact contact);
 
-    // don't allow any one to wipe selected user data
+    // don't allow anyone to wipe more selected user data
     @Override
     @RestResource(exported = false)
     void deleteAll(Iterable<? extends Contact> var1);
 
-    // don't allow any one to wipe whole user data
+    // don't allow anyone to wipe whole user data
     @Override
     @RestResource(exported = false)
     void deleteAll();

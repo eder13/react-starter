@@ -55,7 +55,7 @@ public class AccessHandler {
             String email = oauth2user.getAttribute("email");
 
             // check if user_id is still NULL, which means that a user posted it and is now trying to connect it
-            // TODO production: On the SQL Server write a script that every x hours those entries will be deleted if still NULL
+            // TODO: For deployment, on the SQL Server write a script that every x hours those entries will be deleted if still NULL
             Long connectedBy = contactRepository.getAssociatedUserId(id);
 
             if(connectedBy == null){
