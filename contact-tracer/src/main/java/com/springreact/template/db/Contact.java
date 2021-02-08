@@ -3,6 +3,7 @@ package com.springreact.template.db;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 @Entity
@@ -13,6 +14,7 @@ public class Contact {
     @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank
     private String firstName;
     private String lastName;
     private String email;

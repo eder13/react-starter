@@ -53787,17 +53787,15 @@ var Home = function Home() {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_4___default.a.patch("/api/users/1", {
-                name: "Test User",
-                email: "test@mail.com"
-              }, {
-                headers: {
-                  "Content-Type": "application/json"
-                }
-              });
+              return axios__WEBPACK_IMPORTED_MODULE_4___default.a["delete"]("/api/contacts/3");
 
             case 2:
               req = _context.sent;
+              // const req = await axios.put("/api/contacts/16/user", "/api/users/1", {
+              //   headers: {
+              //     "Content-Type": "text/uri-list"
+              //   }
+              // });
               console.log(req.status, req.statusText, req.data);
 
             case 4:
