@@ -1,8 +1,10 @@
 package com.springreact.template.db;
 
 import com.sun.istack.NotNull;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
@@ -16,8 +18,11 @@ public class Contact {
     private Long id;
     @NotBlank
     private String firstName;
+    @NotBlank
     private String lastName;
+    @Email
     private String email;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private Date date;
 
     @ManyToOne

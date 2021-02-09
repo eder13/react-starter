@@ -10,18 +10,10 @@ import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
 import Navbar from "./Navbar";
 import Login from "./Login";
 import Contacts from "./Contacts";
-import styled from "styled-components";
 import Home from "./Home";
 import {useDispatch, useSelector} from "react-redux";
 import {loadLogin, loadLoginUserId, loginInfoSelector} from "../store/auth/auth";
 import PrivateRoute from "./PrivateRoute";
-
-const StyledLink = styled(Link)`
-  padding: 0.25rem 0.75rem;
-  text-decoration: none;
-  color: white;
-  background-color: rgb(0, 167, 135);
-`;
 
 const Router = () => {
 
@@ -54,9 +46,8 @@ const Router = () => {
 
   return (
     <BrowserRouter>
-      <Navbar title="fas fa-viruses" user={loginState.isAuthenticated ? loginState.user : "You are not signed in"}
-              dash={!loginState.isAuthenticated ? <StyledLink to="/login">Login</StyledLink> :
-                <StyledLink to="/dashboard">Dashboard</StyledLink>}
+      <Navbar title="taskify."
+              dash={!loginState.isAuthenticated ? "/login" : "/dashboard"}
               logout={loginState.isAuthenticated}/>
       <Switch>
         <Route exact path="/" render={() => <Home/>}/>

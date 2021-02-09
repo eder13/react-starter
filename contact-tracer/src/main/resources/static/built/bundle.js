@@ -53721,10 +53721,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/src/js.cookie.js");
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_5__);
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -53779,38 +53775,6 @@ var Home = function Home() {
   // login Loading: Let firstly dispatch everything and see if user is still logged in
   var loading = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_2__["loadingBooleanSelector"]);
 
-  var get = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-      var req;
-      return regeneratorRuntime.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_4___default.a["delete"]("/api/contacts/3");
-
-            case 2:
-              req = _context.sent;
-              // const req = await axios.put("/api/contacts/16/user", "/api/users/1", {
-              //   headers: {
-              //     "Content-Type": "text/uri-list"
-              //   }
-              // });
-              console.log(req.status, req.statusText, req.data);
-
-            case 4:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    }));
-
-    return function get() {
-      return _ref.apply(this, arguments);
-    };
-  }();
-
   if (loading) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "loader-wrap"
@@ -53820,9 +53784,7 @@ var Home = function Home() {
   } else {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Contact Tracer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Contact is a Application that allows you to document your latest contacts."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I was too lazy to style the front page, so here is a spinning cat instead:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SpinningBox, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fas fa-cat fa-3x"
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      onClick: get
-    }, "POST"));
+    })));
   }
 };
 
@@ -53975,7 +53937,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  text-decoration: none;\n  color: white;\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-decoration: none;\n  color: rgb(34, 27, 113);\n  \n  font-size: 1.3rem;\n  font-family: 'Ubuntu', sans-serif;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -54005,7 +53967,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  padding: 0.5rem 0;\n"]);
+  var data = _taggedTemplateLiteral(["\n  padding: 0.5rem 0;\n  \n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -54025,7 +53987,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0 2rem;\n  background-color: #333;\n  color: white;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0 1rem;\n  background-color: rgb(229, 246, 249);\n  color: rgb(34, 27, 113);\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -54075,16 +54037,7 @@ function Navbar(props) {
   if (!loading) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HorizontalNavbar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, {
       to: "/"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      style: {
-        color: 'red'
-      },
-      className: props.title + " fa-3x"
-    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavbarNav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Ul, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Li, null, props.user), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Li, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, {
-      to: "/"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "fas fa-home"
-    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Li, null, props.dash), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Li, {
+    }, props.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavbarNav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Ul, null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Li, null, props.dash), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Li, {
       style: {
         display: 'flex',
         alignItems: 'center',
@@ -54235,8 +54188,7 @@ var Router = function Router() {
     });
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: "fas fa-viruses",
-    user: loginState.isAuthenticated ? loginState.user : "You are not signed in",
+    title: "Taskify.",
     dash: !loginState.isAuthenticated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, {
       to: "/login"
     }, "Login") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, {
