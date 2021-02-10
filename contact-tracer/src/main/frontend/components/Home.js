@@ -16,19 +16,22 @@ const Section = styled.section`
   & div:first-child {
   
     padding-top: 7rem;
-    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+    background-color: rgb(229, 246, 249);
   
     & h1 {
       margin: 0 0;
-      margin-bottom: 2rem;
+      padding-bottom: 2rem;
       padding: 0 1.5rem;
     }
   }
   
   & div:last-child {
+    background-color: rgb(229, 246, 249);
     & p {
       margin-top: 2rem;
     }
+    padding-bottom: 4rem;
   }
 `;
 
@@ -74,9 +77,11 @@ const Home = () => {
         </div>
         <div>
           {!isAuthenticated ? <Button as={Link} to="/login">Get taskify for free</Button>
-             : <Button as={Link} to="/dashboard">Go to Dashboard</Button>
+            : <Button as={Link} to="/dashboard">Go to Dashboard</Button>
           }
-          <p>It's free!</p>
+          {!isAuthenticated ? <p>It's free!</p>
+            : <p>You are logged in!</p>
+          }
         </div>
       </Section>
     );

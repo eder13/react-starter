@@ -15,7 +15,18 @@ const EvenlySpaced = styled.div`
 
 const Title = styled.h1`
   text-align: center;
-  margin-top: 7rem;
+  color: rgb(34, 27, 113);
+`;
+
+const Main = styled.main`
+  padding-top: 4rem;
+  background-color: rgb(245, 246, 251);
+  min-height: 100vh;
+`;
+
+const Work = styled.h4`
+  text-align: left;
+  display: flex;
 `;
 
 const Contacts = () => {
@@ -46,8 +57,15 @@ const Contacts = () => {
 
   if (!loading) {
     return (
-      <Fragment>
-        <Title as="h1">Dashboard</Title>
+      <Main>
+        <Title as="h3"> Hi {loginState.user} 👋</Title>
+        <p style={{textAlign: 'center'}}>Got some new tasks? ✅</p>
+
+        <Work><i className="fas fa-circle fa-xs" style={{color: 'rgb(94, 124, 255)', padding: '0.2rem'}}></i> <span>Work</span></Work>
+        <div>
+
+        </div>
+
         <EvenlySpaced>
           <Form/>
           <div>
@@ -62,7 +80,7 @@ const Contacts = () => {
             </TransitionGroup>
           </div>
         </EvenlySpaced>
-      </Fragment>
+      </Main>
     );
   } else {
     return (

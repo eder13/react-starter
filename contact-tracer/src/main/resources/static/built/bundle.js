@@ -53729,7 +53729,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background-color: rgb(229, 246, 249);\n  color: rgb(34, 27, 113);\n  margin-top: 0;\n  padding-top: 0;\n  flex-flow: column;\n  text-align: center;\n  height: 100vh;\n  \n  & div:first-child {\n  \n    padding-top: 7rem;\n    margin-bottom: 5rem;\n  \n    & h1 {\n      margin: 0 0;\n      margin-bottom: 2rem;\n    }\n  }\n  \n  & div:last-child {\n    & p {\n      margin-top: 2rem;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: rgb(229, 246, 249);\n  color: rgb(34, 27, 113);\n  margin-top: 0;\n  padding-top: 0;\n  flex-flow: column;\n  text-align: center;\n  height: 100vh;\n  \n  & div:first-child {\n  \n    padding-top: 7rem;\n    margin-bottom: 5rem;\n  \n    & h1 {\n      margin: 0 0;\n      margin-bottom: 2rem;\n      padding: 0 1.5rem;\n    }\n  }\n  \n  & div:last-child {\n    & p {\n      margin-top: 2rem;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
