@@ -3,26 +3,26 @@ import PropTypes from 'prop-types';
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {loadingBooleanSelector, loadLogout} from "../store/auth/auth";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 
-const Button = styled.button`
-  display: inline-block;
-  padding: 0 20px;
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-  color: #555;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
-  ${props => props.secondary && "color: #000; background-color: rgb(248, 249, 250); border-color: #ff974c;"};
-  ${props => props.warning && "background-color: rgb(255, 194, 0); height: 38px; margin: 0.5rem 0rem;"};  
-  border-radius: 4px;
-  border: 1px soLid #bbb;
-  cursor: pointer;
-  width: 100%;
-`;
+// const Button = styled.button`
+//   display: inline-block;
+//   padding: 0 20px;
+//   margin-left: 0.25rem;
+//   margin-right: 0.25rem;
+//   color: #555;
+//   text-align: center;
+//   font-size: 11px;
+//   font-weight: 600;
+//   text-transform: uppercase;
+//   text-decoration: none;
+//   ${props => props.secondary && "color: #000; background-color: rgb(248, 249, 250); border-color: #ff974c;"};
+//   ${props => props.warning && "background-color: rgb(255, 194, 0); height: 38px; margin: 0.5rem 0rem;"};
+//   border-radius: 4px;
+//   border: 1px soLid #bbb;
+//   cursor: pointer;
+//   width: 100%;
+// `;
 
 const NavbarWrapper = styled.section`
   position: fixed;
@@ -41,7 +41,6 @@ const NavbarWrapper = styled.section`
 
 const Logo = styled.div`
   padding: 0.5rem 0;
-  
 `;
 
 const StyledLink = styled(Link)`
@@ -49,17 +48,29 @@ const StyledLink = styled(Link)`
   color: rgb(34, 27, 113);
   font-size: 1.3rem;
   font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+`;
+
+const animate = keyframes`
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
 `;
 
 const Nav = styled.nav`
   position: fixed;
   top: 56px;
-  right: 0;
+  right: 15px;
   width: 30%;
   height: 100px;
   border-radius: 10px;
   z-index: 2;
   display: none;
+  animation: ${animate} 0.5s forwards ease-in;
   justify-content: center;
   align-items: center;
   background-color: rgb(229, 246, 249);
@@ -121,7 +132,7 @@ const HamburgerToggle = styled.input`
   z-index: 2;
   opacity: 0;
   cursor: pointer;
-  
+  margin-right: 1rem;
 `;
 
 const Hamburger = styled.div`
@@ -134,6 +145,7 @@ const Hamburger = styled.div`
   background-color: whitesmoke;
   border-radius: 50%;
   box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
+  margin-right: 0.9rem;
 
   & > div {
     width: 50%;
@@ -141,6 +153,7 @@ const Hamburger = styled.div`
     outline: 0.5px solid black;
     background-color: black;
     position: relative;
+    transition: all 0.2s ease-in-out;
     
     &:before {
       content: "";
@@ -162,30 +175,50 @@ const Hamburger = styled.div`
       outline: 0.5px solid black;
     }
   }
+  
+  ${HamburgerToggle}:checked + & > div {
+    transform: rotate(135deg);
+    
+    &:before, &:after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+  }
 `;
 
 const Navbar = (props) => {
   const dispatch = useDispatch();
   const loading = useSelector(loadingBooleanSelector);
 
+  // keeps sure that nav is closed when nav element was clicked
+  const handleMenu = (e) => {
+    if (e.target.classList.contains('innerLink')) {
+
+      // hide the navbar by
+      const checkBox = e.target.parentElement.parentElement.parentElement.parentElement.children.namedItem('hamburgerCheckbox');
+      checkBox.checked = false;
+
+    }
+  }
+
   if (!loading) {
     return (
       <NavbarWrapper>
         <Logo>
-          <StyledLink to="/">{props.title}</StyledLink>
+          <StyledLink as="a" href="/">{props.title}</StyledLink>
         </Logo>
 
-        <HamburgerToggle type="checkbox"/>
+        <HamburgerToggle id="hamburgerCheckbox" type="checkbox"/>
         <Hamburger>
           <div>{}</div>
         </Hamburger>
         <Nav>
-          <ul>
-            <li><StyledLink to="/">home</StyledLink></li>
-            <li><StyledLink to={props.dash}>{props.dash.replace("/", "")}</StyledLink></li>
+          <ul onClick={handleMenu}>
+            <li><StyledLink className="innerLink" to="/">home</StyledLink></li>
+            <li><StyledLink className="innerLink" to={props.dash}>{props.dash.replace("/", "")}</StyledLink></li>
             {props.logout &&
             <li>
-              <Button style={{padding: '0 0.5rem'}} secondary onClick={
+              <button style={{padding: '0 0.5rem'}} onClick={
                 () => {
                   dispatch(loadLogout()).then((resolve) => {
                     if (resolve)
@@ -193,7 +226,7 @@ const Navbar = (props) => {
                   });
                 }}>
                 <i className="fas fa-sign-out-alt"/>
-              </Button>
+              </button>
             </li>}
           </ul>
         </Nav>

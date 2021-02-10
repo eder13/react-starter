@@ -15,35 +15,14 @@ const DivFlexedCenter = styled.div`
 
 const LoginContainer = styled.div`
   margin-top: 2rem;
-  width: 30rem;
-  height: 18rem;
+  width: 20rem;
+  height: 13rem;
   background-color: rgb(232, 232, 232);
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-evenly;
   box-shadow: 3px 3px 5px 6px #ccc;
-`;
-
-const LoginIconUserContainer = styled.div`
-  border-radius: 50%;
-  background-color: #333; 
-  width: 5rem; 
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const LoginButton = styled.button`
-  font-size: 1.2rem;
-  margin: 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-  padding: 1rem 1.5rem;
-  color: white;
-  background-color: rgb(69, 69, 69);
-  text-align: center;
 `;
 
 const Notification = styled.div`
@@ -54,6 +33,56 @@ const Notification = styled.div`
   border: 1px solid ${props => props.info ? "#bce8f1" : "#f5c6cb"};
   background-color: ${props => props.info ? "#d9edf7" : "#f8d7da"};
   color: ${props => props.info ? "#31708f" : "#721c24"};
+`;
+
+const GoogleBtn = styled.div`
+  border: none;
+  width: 184px;
+  height: 42px;
+  background-color: #4285f4;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+  
+  &:hover {
+    box-shadow: 0 0 6px #4285f4;
+  }
+  
+  &:active {
+    background: #1669F2;
+  }
+`;
+
+const GoogleIconWrapper = styled.div`
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: white;
+    margin-left: 1px;
+    margin-top: 1px;
+`;
+
+const GoogleIcon = styled.img`
+  position: absolute;
+  left: 0;
+  margin-top: 11px;
+  margin-left: 11px;
+  width: 18px;
+  height: 18px;
+`;
+
+const BtnText = styled.p`
+    padding-left: 3rem;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    font-weight: 300;
 `;
 
 const Login = (props) => {
@@ -73,18 +102,26 @@ const Login = (props) => {
     return (
       <Section>
         <DivFlexedCenter>
+          <p>You are just one click away! Give it a shot.</p>
+
           {loginState.notification.error !== "" &&
           <Notification>
             {loginState.notification.error}
           </Notification>
           }
           <LoginContainer>
-            <LoginIconUserContainer>
-              <i style={{color: "whitesmoke"}} className="fas fa-users fa-3x">{}</i>
-            </LoginIconUserContainer>
-            <LoginButton as="a" href="/oauth2/authorization/google">
-              <i className="fab fa-google fa-1x">{}</i>&nbsp;Login With Google
-            </LoginButton>
+            <h1>Login</h1>
+            <GoogleBtn as="a" href="/oauth2/authorization/google">
+              <GoogleIconWrapper>
+                <GoogleIcon
+                     src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                     alt="Google Logo"
+                />
+              </GoogleIconWrapper>
+              <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end', height: '100%', margin: '0', padding: '0', paddingRight: '0.5rem'}}>
+                <BtnText className="btn-text">Sign in with Google</BtnText>
+              </div>
+            </GoogleBtn>
           </LoginContainer>
         </DivFlexedCenter>
       </Section>

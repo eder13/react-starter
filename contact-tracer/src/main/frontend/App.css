@@ -1,7 +1,7 @@
 /* Global CSS <style></style> */
 * {
   box-sizing: border-box;
-  font-family: Verdana, serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .loader-wrap {

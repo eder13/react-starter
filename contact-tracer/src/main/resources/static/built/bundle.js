@@ -14251,7 +14251,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "/* Global CSS <style></style> */\n* {\n  box-sizing: border-box;\n  font-family: Arial, serif;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}\n\n/* Transition effects add/delete using react-transition-group */\n.item-enter {\n  opacity: 0;\n}\n.item-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n.item-exit {\n  opacity: 1;\n}\n.item-exit-active {\n  opacity: 0;\n  transition: opacity 500ms ease-in;\n}", "",{"version":3,"sources":["webpack://./src/main/frontend/App.css"],"names":[],"mappings":"AAAA,+BAA+B;AAC/B;EACE,sBAAsB;EACtB,yBAAyB;AAC3B;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,yBAAyB;EACzB,kBAAkB;EAClB,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,oCAAoC;AACtC;;AAEA;EACE,KAAK,uBAAuB,EAAE;EAC9B,OAAO,yBAAyB,EAAE;AACpC;;AAEA;EACE,gBAAgB;EAChB,uBAAuB;EACvB,aAAa;EACb,wBAAwB;EACxB,mBAAmB;EACnB,WAAW;EACX,wBAAwB;AAC1B;;AAEA;EACE,cAAc;EACd,gBAAgB;AAClB;;AAEA;;EAEE,YAAY;AACd;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;;;;EAIE,YAAY;EACZ,iBAAiB;EACjB,sBAAsB;EACtB,yBAAyB;EACzB,kBAAkB;EAClB,gBAAgB;EAChB,sBAAsB;AACxB;;AAEA;;;;EAIE,wBAAwB;EACxB,qBAAqB;EACrB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;;;;EAIE,yBAAyB;EACzB,UAAU;AACZ;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,gBAAgB;AAClB;;AAEA;;;;EAIE,WAAW;EACX,kBAAkB;EAClB,UAAU;AACZ;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA,+DAA+D;AAC/D;EACE,UAAU;AACZ;AACA;EACE,UAAU;EACV,iCAAiC;AACnC;AACA;EACE,UAAU;AACZ;AACA;EACE,UAAU;EACV,iCAAiC;AACnC","sourcesContent":["/* Global CSS <style></style> */\n* {\n  box-sizing: border-box;\n  font-family: Arial, serif;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}\n\n/* Transition effects add/delete using react-transition-group */\n.item-enter {\n  opacity: 0;\n}\n.item-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n.item-exit {\n  opacity: 1;\n}\n.item-exit-active {\n  opacity: 0;\n  transition: opacity 500ms ease-in;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "/* Global CSS <style></style> */\n* {\n  box-sizing: border-box;\n  font-family: 'Roboto', sans-serif;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}\n\n/* Transition effects add/delete using react-transition-group */\n.item-enter {\n  opacity: 0;\n}\n.item-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n.item-exit {\n  opacity: 1;\n}\n.item-exit-active {\n  opacity: 0;\n  transition: opacity 500ms ease-in;\n}", "",{"version":3,"sources":["webpack://./src/main/frontend/App.css"],"names":[],"mappings":"AAAA,+BAA+B;AAC/B;EACE,sBAAsB;EACtB,iCAAiC;AACnC;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,yBAAyB;EACzB,kBAAkB;EAClB,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,oCAAoC;AACtC;;AAEA;EACE,KAAK,uBAAuB,EAAE;EAC9B,OAAO,yBAAyB,EAAE;AACpC;;AAEA;EACE,gBAAgB;EAChB,uBAAuB;EACvB,aAAa;EACb,wBAAwB;EACxB,mBAAmB;EACnB,WAAW;EACX,wBAAwB;AAC1B;;AAEA;EACE,cAAc;EACd,gBAAgB;AAClB;;AAEA;;EAEE,YAAY;AACd;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;;;;EAIE,YAAY;EACZ,iBAAiB;EACjB,sBAAsB;EACtB,yBAAyB;EACzB,kBAAkB;EAClB,gBAAgB;EAChB,sBAAsB;AACxB;;AAEA;;;;EAIE,wBAAwB;EACxB,qBAAqB;EACrB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;;;;EAIE,yBAAyB;EACzB,UAAU;AACZ;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,gBAAgB;AAClB;;AAEA;;;;EAIE,WAAW;EACX,kBAAkB;EAClB,UAAU;AACZ;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA,+DAA+D;AAC/D;EACE,UAAU;AACZ;AACA;EACE,UAAU;EACV,iCAAiC;AACnC;AACA;EACE,UAAU;AACZ;AACA;EACE,UAAU;EACV,iCAAiC;AACnC","sourcesContent":["/* Global CSS <style></style> */\n* {\n  box-sizing: border-box;\n  font-family: 'Roboto', sans-serif;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  margin-top: 50px;\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n  border: 1px dotted black;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}\n\n/* Transition effects add/delete using react-transition-group */\n.item-enter {\n  opacity: 0;\n}\n.item-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n.item-exit {\n  opacity: 1;\n}\n.item-exit-active {\n  opacity: 0;\n  transition: opacity 500ms ease-in;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -53717,18 +53717,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/src/js.cookie.js");
-/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_5__);
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: center;\n  & > i {\n    animation: ", " 1s linear infinite;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n    color: white;\n    background-color: rgb(63, 119, 255);\n    border: none;\n    font-family: 'Ubuntu', sans-serif;\n    font-weight: 300;\n    padding: 1.25rem 6rem;\n    border-radius: 50px;\n    cursor: pointer;\n    text-decoration: none;\n    transition: background 0.4s ease-out;\n    \n    &:hover {\n      background-color: rgb(63, 119, 200);\n    }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -53738,7 +53729,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  from {\n    transform: rotate(0deg);\n  }\n  \n  to {\n    transform: rotate(360deg);\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: rgb(229, 246, 249);\n  color: rgb(34, 27, 113);\n  margin-top: 0;\n  padding-top: 0;\n  flex-flow: column;\n  text-align: center;\n  height: 100vh;\n  \n  & div:first-child {\n  \n    padding-top: 7rem;\n    margin-bottom: 5rem;\n  \n    & h1 {\n      margin: 0 0;\n      margin-bottom: 2rem;\n    }\n  }\n  \n  & div:last-child {\n    & p {\n      margin-top: 2rem;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -53754,26 +53745,13 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-
-var animate = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["keyframes"])(_templateObject());
-var SpinningBox = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject2(), animate); // axios config for csrf protection
-
-axios__WEBPACK_IMPORTED_MODULE_4___default.a.interceptors.request.use(function (req) {
-  if (req.method === "post" || req.method === "delete" || req.method === "put" || req.method === "patch") {
-    // check if relative to url only
-    if (!(/^http:.*/.test(req.url) || /^https:.*/.test(req.url))) {
-      req.headers.common = _objectSpread(_objectSpread({}, req.headers.common), {}, {
-        "X-XSRF-TOKEN": js_cookie__WEBPACK_IMPORTED_MODULE_5___default.a.get("XSRF-TOKEN")
-      });
-    }
-  }
-
-  return req;
-});
+var Section = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].section(_templateObject());
+var Button = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].button(_templateObject2());
 
 var Home = function Home() {
   // login Loading: Let firstly dispatch everything and see if user is still logged in
   var loading = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_2__["loadingBooleanSelector"]);
+  var isAuthenticated = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_2__["loginIsAuthenticatedSelector"]);
 
   if (loading) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -53782,9 +53760,17 @@ var Home = function Home() {
       className: "loader"
     }));
   } else {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Contact Tracer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Contact is a Application that allows you to document your latest contacts."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I was too lazy to style the front page, so here is a spinning cat instead:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SpinningBox, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "fas fa-cat fa-3x"
-    })));
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Manage your Tasks with a breeze."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      width: "70%",
+      src: "https://blush.design/api/download?shareUri=AtJqwLxSI&w=800&h=800&fm=png",
+      alt: "messy doodle image"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "taskify helps you to keep your brain organized.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, !isAuthenticated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
+      as: react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"],
+      to: "/login"
+    }, "Get taskify for free") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
+      as: react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"],
+      to: "/dashboard"
+    }, "Go to Dashboard"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "It's free!")));
   }
 };
 
@@ -53806,8 +53792,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n    padding-left: 3rem;\n    color: white;\n    font-size: 14px;\n    letter-spacing: 0.2px;\n    font-weight: 300;\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  left: 0;\n  margin-top: 11px;\n  margin-left: 11px;\n  width: 18px;\n  height: 18px;\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  text-align: center;\n  margin: 20px 0;\n  padding: 0.5rem;\n  border-radius: 5px;\n  border: 1px solid ", ";\n  background-color: ", ";\n  color: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    width: 40px;\n    height: 40px;\n    border-radius: 2px;\n    background-color: white;\n    margin-left: 1px;\n    margin-top: 1px;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -53817,7 +53823,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 1.2rem;\n  margin: 1rem;\n  border-radius: 5px;\n  text-decoration: none;\n  padding: 1rem 1.5rem;\n  color: white;\n  background-color: rgb(69, 69, 69);\n  text-align: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n  border: none;\n  width: 184px;\n  height: 42px;\n  background-color: #4285f4;\n  border-radius: 2px;\n  box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);\n  padding: 0;\n  margin: 0;\n  cursor: pointer;\n  display: flex;\n  align-items: flex-start;\n  text-decoration: none;\n  \n  &:hover {\n    box-shadow: 0 0 6px #4285f4;\n  }\n  \n  &:active {\n    background: #1669F2;\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -53827,7 +53833,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  border-radius: 50%;\n  background-color: #333; \n  width: 5rem; \n  height: 5rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-align: center;\n  margin: 20px 0;\n  padding: 0.5rem;\n  border-radius: 5px;\n  border: 1px solid ", ";\n  background-color: ", ";\n  color: ", ";\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -53837,7 +53843,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: 2rem;\n  width: 30rem;\n  height: 18rem;\n  background-color: rgb(232, 232, 232);\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: space-evenly;\n  box-shadow: 3px 3px 5px 6px #ccc;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin-top: 2rem;\n  width: 20rem;\n  height: 13rem;\n  background-color: rgb(232, 232, 232);\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: space-evenly;\n  box-shadow: 3px 3px 5px 6px #ccc;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -53875,15 +53881,17 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var Section = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject());
 var DivFlexedCenter = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject2());
 var LoginContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject3());
-var LoginIconUserContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject4());
-var LoginButton = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject5());
-var Notification = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject6(), function (props) {
+var Notification = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject4(), function (props) {
   return props.info ? "#bce8f1" : "#f5c6cb";
 }, function (props) {
   return props.info ? "#d9edf7" : "#f8d7da";
 }, function (props) {
   return props.info ? "#31708f" : "#721c24";
 });
+var GoogleBtn = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject5());
+var GoogleIconWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject6());
+var GoogleIcon = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject7());
+var BtnText = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject8());
 
 var Login = function Login(props) {
   // loginInfoSelector
@@ -53895,17 +53903,25 @@ var Login = function Login(props) {
   }, [loginState.isAuthenticated]);
 
   if (!loading) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivFlexedCenter, null, loginState.notification.error !== "" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Notification, null, loginState.notification.error), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LoginContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LoginIconUserContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      style: {
-        color: "whitesmoke"
-      },
-      className: "fas fa-users fa-3x"
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LoginButton, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DivFlexedCenter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You are just one click away! Give it a shot."), loginState.notification.error !== "" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Notification, null, loginState.notification.error), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LoginContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GoogleBtn, {
       as: "a",
       href: "/oauth2/authorization/google"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "fab fa-google fa-1x"
-    }), "\xA0Login With Google"))));
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GoogleIconWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GoogleIcon, {
+      src: "https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg",
+      alt: "Google Logo"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        height: '100%',
+        margin: '0',
+        padding: '0',
+        paddingRight: '0.5rem'
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BtnText, {
+      className: "btn-text"
+    }, "Sign in with Google"))))));
   } else {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "loader-wrap"
@@ -53937,7 +53953,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  text-decoration: none;\n  color: rgb(34, 27, 113);\n  \n  font-size: 1.3rem;\n  font-family: 'Ubuntu', sans-serif;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 42px;\n  height: 40px;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  justify-content: center;\n  background-color: whitesmoke;\n  border-radius: 50%;\n  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);\n  margin-right: 0.9rem;\n\n  & > div {\n    width: 50%;\n    height: 2px;\n    outline: 0.5px solid black;\n    background-color: black;\n    position: relative;\n    transition: all 0.2s ease-in-out;\n    \n    &:before {\n      content: \"\";\n      position: absolute;\n      background-color: black;\n      top: -8px;\n      width: 100%;\n      height: 2px;\n      outline: 0.5px solid black;\n    }\n\n    &:after {\n      content: \"\";\n      position: absolute;\n      background-color: black;\n      top: 8px;\n      width: 100%;\n      height: 2px;\n      outline: 0.5px solid black;\n    }\n  }\n  \n  ", ":checked + & > div {\n    transform: rotate(135deg);\n    \n    &:before, &:after {\n      top: 0;\n      transform: rotate(90deg);\n    }\n  }\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -53947,7 +53963,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  margin: 0 1rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n  &:checked ~ ", " {\n    display: flex;\n  }\n  \n  position: fixed;\n  right: 14px;\n  width: 42px;\n  height: 40px;\n  z-index: 2;\n  opacity: 0;\n  cursor: pointer;\n  margin-right: 1rem;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -53957,7 +53973,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  List-style-type: none;\n  display: flex;\n  flex-flow: row nowrap;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 56px;\n  right: 15px;\n  width: 30%;\n  height: 100px;\n  border-radius: 10px;\n  z-index: 2;\n  display: none;\n  animation: ", " 0.5s forwards ease-in;\n  justify-content: center;\n  align-items: center;\n  background-color: rgb(229, 246, 249);\n  \n  &::before {\n    content: '';\n    position: absolute;\n    top: -5px;\n    right: 31px;\n    border-left: 5px solid transparent;\n    border-right: 5px solid transparent;\n    border-bottom: 5px solid black;\n  }\n  \n  & ul {\n    list-style-type: none;\n    margin: 0;\n    padding: 0;\n    display: flex;\n    flex-flow: column nowrap;\n    justify-content: space-evenly;\n    width: 100%;\n    height: 100%;\n    border-radius: 10px;\n    \n    & li {\n      display: flex;\n      flex-flow: column nowrap;\n      align-items: center;\n      justify-content: center;\n      border: 1px solid lightblue;\n      flex: 1;\n      \n      &:first-child {\n        border-radius: 10px 10px 0 0;\n      }      \n      \n      &:last-child {\n        border-radius: 0px 0px 10px 10px;\n      }\n      \n      & ", " {\n        font-size: 1.0rem;\n      }\n    }\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -53967,7 +53983,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  padding: 0.5rem 0;\n  \n"]);
+  var data = _taggedTemplateLiteral(["\n  from {\n    opacity: 0;\n  }\n  \n  to {\n    opacity: 1;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -53977,7 +53993,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-decoration: none;\n  color: rgb(34, 27, 113);\n  font-size: 1.3rem;\n  font-family: 'Ubuntu', sans-serif;\n  font-weight: 500;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -53987,7 +54003,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0 1rem;\n  background-color: rgb(229, 246, 249);\n  color: rgb(34, 27, 113);\n"]);
+  var data = _taggedTemplateLiteral(["\n  padding: 0.5rem 0;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -53997,7 +54013,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  padding: 0 20px;\n  margin-left: 0.25rem;\n  margin-right: 0.25rem;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  text-transform: uppercase;\n  text-decoration: none;\n  ", ";\n  ", ";  \n  border-radius: 4px;\n  border: 1px soLid #bbb;\n  cursor: pointer;\n  width: 100%;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  height: 56px;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0 1rem;\n  background-color: lightblue;\n  color: rgb(34, 27, 113);\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -54013,41 +54029,64 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+ // const Button = styled.button`
+//   display: inline-block;
+//   padding: 0 20px;
+//   margin-left: 0.25rem;
+//   margin-right: 0.25rem;
+//   color: #555;
+//   text-align: center;
+//   font-size: 11px;
+//   font-weight: 600;
+//   text-transform: uppercase;
+//   text-decoration: none;
+//   ${props => props.secondary && "color: #000; background-color: rgb(248, 249, 250); border-color: #ff974c;"};
+//   ${props => props.warning && "background-color: rgb(255, 194, 0); height: 38px; margin: 0.5rem 0rem;"};
+//   border-radius: 4px;
+//   border: 1px soLid #bbb;
+//   cursor: pointer;
+//   width: 100%;
+// `;
 
-Navbar.propTypes = {
-  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
-  user: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
-};
-var Button = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].button(_templateObject(), function (props) {
-  return props.secondary && "color: #000; background-color: rgb(248, 249, 250); border-color: #ff974c;";
-}, function (props) {
-  return props.warning && "background-color: rgb(255, 194, 0); height: 38px; margin: 0.5rem 0rem;";
-});
-var HorizontalNavbar = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].section(_templateObject2());
-var NavbarNav = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].nav(_templateObject3());
-var Logo = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div(_templateObject4());
-var Ul = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].ul(_templateObject5());
-var Li = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].li(_templateObject6());
-var StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_5__["default"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"])(_templateObject7());
+var NavbarWrapper = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].section(_templateObject());
+var Logo = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div(_templateObject2());
+var StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_5__["default"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"])(_templateObject3());
+var animate = Object(styled_components__WEBPACK_IMPORTED_MODULE_5__["keyframes"])(_templateObject4());
+var Nav = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].nav(_templateObject5(), animate, StyledLink);
+var HamburgerToggle = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].input(_templateObject6(), Nav);
+var Hamburger = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div(_templateObject7(), HamburgerToggle);
 
-function Navbar(props) {
+var Navbar = function Navbar(props) {
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useDispatch"])();
-  var loading = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_4__["loadingBooleanSelector"]);
+  var loading = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_4__["loadingBooleanSelector"]); // keeps sure that nav is closed when nav element was clicked
+
+  var handleMenu = function handleMenu(e) {
+    if (e.target.classList.contains('innerLink')) {
+      // hide the navbar by
+      var checkBox = e.target.parentElement.parentElement.parentElement.parentElement.children.namedItem('hamburgerCheckbox');
+      checkBox.checked = false;
+    }
+  };
 
   if (!loading) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HorizontalNavbar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavbarWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, {
+      as: "a",
+      href: "/"
+    }, props.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HamburgerToggle, {
+      id: "hamburgerCheckbox",
+      type: "checkbox"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Hamburger, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Nav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      onClick: handleMenu
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, {
+      className: "innerLink",
       to: "/"
-    }, props.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavbarNav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Ul, null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Li, null, props.dash), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Li, {
-      style: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }
-    }, props.logout && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
+    }, "home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, {
+      className: "innerLink",
+      to: props.dash
+    }, props.dash.replace("/", ""))), props.logout && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       style: {
         padding: '0 0.5rem'
       },
-      secondary: true,
       onClick: function onClick() {
         dispatch(Object(_store_auth_auth__WEBPACK_IMPORTED_MODULE_4__["loadLogout"])()).then(function (resolve) {
           if (resolve) window.location.href = "/";
@@ -54059,8 +54098,13 @@ function Navbar(props) {
   } else {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null);
   }
-}
+};
 
+Navbar.propTypes = {
+  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+  dash: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired,
+  logout: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool.isRequired
+};
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
 
 /***/ }),
@@ -54125,23 +54169,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar */ "./src/main/frontend/components/Navbar.js");
 /* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Login */ "./src/main/frontend/components/Login.js");
 /* harmony import */ var _Contacts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Contacts */ "./src/main/frontend/components/Contacts.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Home */ "./src/main/frontend/components/Home.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
-/* harmony import */ var _PrivateRoute__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./PrivateRoute */ "./src/main/frontend/components/PrivateRoute.js");
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  padding: 0.25rem 0.75rem;\n  text-decoration: none;\n  color: white;\n  background-color: rgb(0, 167, 135);\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
+/* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Home */ "./src/main/frontend/components/Home.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
+/* harmony import */ var _PrivateRoute__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./PrivateRoute */ "./src/main/frontend/components/PrivateRoute.js");
 /**
  * This file handles the Routes.
  * Only the Navbar component is always
@@ -54158,11 +54189,9 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_5__["default"])(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"])(_templateObject());
-
 var Router = function Router() {
-  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["useDispatch"])();
-  var loginState = Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_8__["loginInfoSelector"]);
+  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_6__["useDispatch"])();
+  var loginState = Object(react_redux__WEBPACK_IMPORTED_MODULE_6__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_7__["loginInfoSelector"]);
   /** Authentication of User */
   // As soon as the site loads we check if the user is currently logged in
   // Check if user is logged in (checks if calling endpoints produces 401)
@@ -54170,13 +54199,13 @@ var Router = function Router() {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     // load the username
-    dispatch(Object(_store_auth_auth__WEBPACK_IMPORTED_MODULE_8__["loadLogin"])()).then(function (resolved) {
+    dispatch(Object(_store_auth_auth__WEBPACK_IMPORTED_MODULE_7__["loadLogin"])()).then(function (resolved) {
       console.log("[auth]: user name call to endpoint succeeded.");
 
       if (resolved) {
         console.log("[auth]: user name successfully stored."); // load the userId
 
-        dispatch(Object(_store_auth_auth__WEBPACK_IMPORTED_MODULE_8__["loadLoginUserId"])()).then(function (resolved) {
+        dispatch(Object(_store_auth_auth__WEBPACK_IMPORTED_MODULE_7__["loadLoginUserId"])()).then(function (resolved) {
           console.log("[auth]: user id call to endpoint succeeded.");
           if (resolved) console.log("[auth]: user id successfully stored.");
         })["catch"](function (reason) {
@@ -54188,24 +54217,20 @@ var Router = function Router() {
     });
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: "Taskify.",
-    dash: !loginState.isAuthenticated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, {
-      to: "/login"
-    }, "Login") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, {
-      to: "/dashboard"
-    }, "Dashboard"),
+    title: "taskify.",
+    dash: !loginState.isAuthenticated ? "/login" : "/dashboard",
     logout: loginState.isAuthenticated
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/",
     render: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Home__WEBPACK_IMPORTED_MODULE_6__["default"], null);
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Home__WEBPACK_IMPORTED_MODULE_5__["default"], null);
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/login",
     component: _Login__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PrivateRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PrivateRoute__WEBPACK_IMPORTED_MODULE_8__["default"], {
     exact: true,
     path: "/dashboard",
     component: _Contacts__WEBPACK_IMPORTED_MODULE_4__["default"]
