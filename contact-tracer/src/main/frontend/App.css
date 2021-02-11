@@ -28,13 +28,11 @@
 }
 
 form {
-  margin-top: 50px;
   background-color: white;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   width: 40vw;
-  border: 1px dotted black;
 }
 
 form > * {

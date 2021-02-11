@@ -53295,8 +53295,68 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n  text-align: left;\n  display: flex;\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: row nowrap;\n  width: 100%;\n  height: 150px;\n  background-color: white;\n  border-radius: 20px;\n  margin: 0.3rem 0;\n  \n  & > div:first-child {\n    align-self: center;\n    margin-left: 1rem;\n  }\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  margin: auto 2rem;\n  width: 3rem;\n  height: 3rem;\n  margin-top: 2.2rem;\n  border: none;\n  position: relative;\n  \n  & input[type='checkbox'] {\n    width: 3rem;\n    height: 3rem;\n    z-index: 5;\n    position: absolute;\n    top: 0;\n    left: 0;\n    opacity: 0;\n    \n    &:hover ~ .checkmark {\n      background-color: rgb(187, 253, 235);\n    }\n  }\n  \n  & .checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 3rem;\n    height: 3rem;\n    border-radius: 50%;\n    border: 2px solid #ccc;\n  }\n  \n  & :checked ~ .checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 3rem;\n    height: 3rem;\n    background-color: rgb(0, 235, 191);\n    border-radius: 50%;\n    z-index: 2;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    border: none;\n    \n    & .innerMark {\n      width: 12px;\n      height: 4px;\n      background-color: white;\n      z-index: 2;\n      transform: rotate(225deg);\n      margin-left: 0.7rem;\n      position: relative;\n      top: 4px;\n      \n      &::after {\n        content: '';\n        width: 24px;\n        height: 4px;\n        background-color: white;\n        position: absolute;\n        top: 10px;\n        left: -10px;\n        right: 10px;\n        z-index: 1;\n        transform: rotate(270deg);\n      }\n    }\n  }\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: column nowrap;\n  justify-content: center;\n  align-items: center;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: column;\n  width: 94%;\n  margin: 0 auto;\n  padding-bottom: 3rem;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  padding-top: 4rem;\n  background-color: rgb(245, 246, 251);\n  min-height: 100vh;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  text-align: center;\n  margin-top: 7rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-align: center;\n  color: rgb(34, 27, 113);\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -53327,6 +53387,12 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var EvenlySpaced = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject());
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].h1(_templateObject2());
+var Main = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].main(_templateObject3());
+var WorkSection = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].section(_templateObject4());
+var WorkWrapper = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject5());
+var WorkCheck = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject6());
+var WorkCard = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject7());
+var WorkIcon = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].h4(_templateObject8());
 
 var Contacts = function Contacts() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
@@ -53357,9 +53423,76 @@ var Contacts = function Contacts() {
   };
 
   if (!loading) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, {
-      as: "h1"
-    }, "Dashboard"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(EvenlySpaced, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, {
+      as: "h3"
+    }, " Hi ", loginState.user, " \uD83D\uDC4B"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      style: {
+        textAlign: 'center'
+      }
+    }, "Got some new tasks? \u2705"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkSection, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkIcon, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-circle fa-xs",
+      style: {
+        color: 'rgb(94, 124, 255)',
+        padding: '0.2rem'
+      }
+    }), "Work"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        backgroundColor: 'rgb(94, 124, 255)',
+        height: '70%',
+        width: '4px'
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCheck, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "checkbox"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "checkmark"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "innerMark"
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Title"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem Ipsum Dolor amet."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Due to:\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      style: {
+        color: 'rgb(94, 124, 255)',
+        fontWeight: 'bold'
+      }
+    }, "23.12.1997")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkSection, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkIcon, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-circle fa-xs",
+      style: {
+        color: 'rgb(255, 184, 0)',
+        padding: '0.2rem'
+      }
+    }), "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        backgroundColor: 'rgb(255, 184, 0)',
+        height: '70%',
+        width: '4px'
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCheck, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "checkbox"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "checkmark"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "innerMark"
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Title"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem Ipsum Dolor amet."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      style: {
+        color: 'rgb(255, 184, 0)',
+        fontWeight: 'bold'
+      }
+    }, "23.12.1997, 16:00"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        backgroundColor: 'rgb(255, 184, 0)',
+        height: '70%',
+        width: '4px'
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCheck, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "checkbox"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "checkmark"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "innerMark"
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Title"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem Ipsum Dolor amet."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      style: {
+        color: 'rgb(255, 184, 0)',
+        fontWeight: 'bold'
+      }
+    }, "23.12.1997, 16:00"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(EvenlySpaced, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       style: {
         marginTop: '50px',
         width: '100%'
@@ -53621,10 +53754,13 @@ var Form = function Form() {
   }();
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    style: {
+      width: '100%'
+    },
     onSubmit: onSubmit,
     className: "padding-1y",
     name: "contact"
-  }, href && firstName && lastName && email && date ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Update Data") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Add Data"), type !== "" && error !== "" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, href && firstName && lastName && email && date ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Update Task") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Add Task"), type !== "" && error !== "" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: type
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-info-circle"
@@ -53643,7 +53779,7 @@ var Form = function Form() {
     className: "padding-05y"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     htmlFor: "localFirstName"
-  }, "First name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }, "title:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     className: "full-width",
     type: "text",
     id: "localFirstName",
@@ -53654,7 +53790,7 @@ var Form = function Form() {
     className: "padding-05y"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     htmlFor: "localLastName"
-  }, "Last name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }, "description:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     className: "full-width",
     type: "text",
     id: "localLastName",
@@ -53664,19 +53800,8 @@ var Form = function Form() {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "padding-05y"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "localEmail"
-  }, "E-Mail:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "full-width",
-    type: "email",
-    id: "localEmail",
-    name: "localEmail",
-    value: localEmail,
-    onChange: onChange
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "padding-05y"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     htmlFor: "localDate"
-  }, "Date:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }, "date:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     className: "full-width",
     type: "date",
     id: "localDate",
@@ -53729,7 +53854,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background-color: rgb(229, 246, 249);\n  color: rgb(34, 27, 113);\n  margin-top: 0;\n  padding-top: 0;\n  flex-flow: column;\n  text-align: center;\n  height: 100vh;\n  \n  & div:first-child {\n  \n    padding-top: 7rem;\n    margin-bottom: 5rem;\n  \n    & h1 {\n      margin: 0 0;\n      margin-bottom: 2rem;\n      padding: 0 1.5rem;\n    }\n  }\n  \n  & div:last-child {\n    & p {\n      margin-top: 2rem;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: rgb(229, 246, 249);\n  color: rgb(34, 27, 113);\n  margin-top: 0;\n  padding-top: 0;\n  flex-flow: column;\n  text-align: center;\n  height: 100vh;\n  \n  & div:first-child {\n  \n    padding-top: 7rem;\n    padding-bottom: 5rem;\n    background-color: rgb(229, 246, 249);\n  \n    & h1 {\n      margin: 0 0;\n      padding-bottom: 2rem;\n      padding: 0 1.5rem;\n    }\n  }\n  \n  & div:last-child {\n    background-color: rgb(229, 246, 249);\n    & p {\n      margin-top: 2rem;\n    }\n    padding-bottom: 4rem;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -53770,7 +53895,7 @@ var Home = function Home() {
     }, "Get taskify for free") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
       as: react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"],
       to: "/dashboard"
-    }, "Go to Dashboard"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "It's free!")));
+    }, "Go to Dashboard"), !isAuthenticated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "It's free!") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You are logged in!")));
   }
 };
 
@@ -54013,7 +54138,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  height: 56px;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0 1rem;\n  background-color: lightblue;\n  color: rgb(34, 27, 113);\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  height: 56px;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0 1rem;\n  background-color: lightblue;\n  color: rgb(34, 27, 113);\n  z-index: 10;\n"]);
 
   _templateObject = function _templateObject() {
     return data;

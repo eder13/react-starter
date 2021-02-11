@@ -37,6 +37,7 @@ const NavbarWrapper = styled.section`
   padding: 0 1rem;
   background-color: lightblue;
   color: rgb(34, 27, 113);
+  z-index: 10;
 `;
 
 const Logo = styled.div`

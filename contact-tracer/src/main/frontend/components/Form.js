@@ -138,8 +138,7 @@ const Form = () => {
   }
 
   return (
-    <form onSubmit={onSubmit} className="padding-1y" name="contact">
-      {(href && firstName && lastName && email && date) ? <h1>Update Data</h1> : <h1>Add Data</h1>}
+    <form style={{width: '100%'}} onSubmit={onSubmit} name="contact">
 
       {(type !== "" && error !== "") &&
       <div className={type}>
@@ -150,31 +149,30 @@ const Form = () => {
       </div>
       }
 
+      {/*invisible id */}
       <div className="padding-05y">
         <input style={{display: 'none'}} className="full-width" type="text" name="localHref" value={localHref}
                onChange={onChange}/>
       </div>
+
       <div className="padding-05y">
-        <label htmlFor="localFirstName">First name:</label>
+        <label htmlFor="localFirstName">title:</label>
         <input className="full-width" type="text" id="localFirstName" name="localFirstName" value={localFirstName}
                onChange={onChange}/>
       </div>
       <div className="padding-05y">
-        <label htmlFor="localLastName">Last name:</label>
+        <label htmlFor="localLastName">description:</label>
         <input className="full-width" type="text" id="localLastName" name="localLastName" value={localLastName}
                onChange={onChange}/>
       </div>
       <div className="padding-05y">
-        <label htmlFor="localEmail">E-Mail:</label>
-        <input className="full-width" type="email" id="localEmail" name="localEmail" value={localEmail}
-               onChange={onChange}/>
-      </div>
-      <div className="padding-05y">
-        <label htmlFor="localDate">Date:</label>
+        <label htmlFor="localDate">date:</label>
         <input className="full-width" type="date" id="localDate" name="localDate"
                value={localDate}
                onChange={onChange}/>
       </div>
+
+      {/*Submit*/}
       <div className="padding-1y">
         {(href && firstName && lastName && email && date) ?
           <ButtonWarning type="submit">Update</ButtonWarning> :
