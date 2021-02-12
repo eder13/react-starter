@@ -76,7 +76,7 @@ const Home = () => {
           <p>taskify helps you to keep your brain organized.</p>
         </div>
         <div>
-          {!isAuthenticated ? <Button as={Link} to="/login">Get taskify for free</Button>
+          {!isAuthenticated ? <Button as={Link} to="/login">Get taskify</Button>
             : <Button as={Link} to="/dashboard">Go to Dashboard</Button>
           }
           {!isAuthenticated ? <p>It's free!</p>
