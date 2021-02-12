@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {
-  addContact,
-  bindNewContact,
-  clearTmpContact,
+  addContact, // addTask
+  bindNewContact, // bindNewTask
+  clearTmpContact, // clearTmpTask
   notificationSelector,
-  tmpContactSelector,
-  updateContact
-} from "../store/entities/reducers/contact";
+  tmpContactSelector, // tmpTaskSelector
+  updateContact // updateTask
+} from "../store/entities/reducers/contact"; // "../store/entities/reducers/task"
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -54,6 +54,7 @@ const SubStringPrimary = (props) => {
 const Form = () => {
 
   // local form data state
+  // TODO: taskForm
   const [contactForm, setContactForm] = useState({
     localHref: '',
     localFirstName: '',
@@ -66,11 +67,11 @@ const Form = () => {
   // pull out data from parent object state
   const {localHref, localFirstName, localLastName, localEmail, localDate} = contactForm;
   const dispatch = useDispatch();
-  const tmpContact = useSelector(tmpContactSelector); // specify selector to set/get data inside form when edit
+  const tmpContact = useSelector(tmpContactSelector);// TODO // specify selector to set/get data inside form when edit
   const notification = useSelector(notificationSelector); // specify ui messages if something fails
   const {type, error} = notification;
 
-  const {href, firstName, lastName, email, date} = tmpContact;
+  const {href, firstName, lastName, email, date} = tmpContact; // TODO
   useEffect(() => {
     if (href && firstName && lastName && email && date) // exist check - could also be empty (cleared)
       setContactForm({
@@ -91,12 +92,12 @@ const Form = () => {
   }, [tmpContact]);
 
   const onChange = (e) => {
-    setContactForm({...contactForm, [e.target.name]: e.target.value});
+    setContactForm({...contactForm, [e.target.name]: e.target.value}); // TODO
   }
 
   const onDiscard = (e) => {
     // clear temp field in state
-    dispatch(clearTmpContact());
+    dispatch(clearTmpContact()); // TODO
     // clear input field
     setContactForm({
       localHref: '',
@@ -114,14 +115,14 @@ const Form = () => {
     // check if update-mode is on (-> tmp fields are set)
     if (href && firstName && lastName && email && date) {
       // Edit Mode
-      dispatch(updateContact(href, localFirstName, localLastName, localEmail, localDate));
+      dispatch(updateContact(href, localFirstName, localLastName, localEmail, localDate)); // TODO
     } else {
       // Add Mode
       // add the contact to our api/mysql generally
       try {
-        const res = await dispatch(addContact(localFirstName, localLastName, localEmail, localDate));
+        const res = await dispatch(addContact(localFirstName, localLastName, localEmail, localDate)); // TODO
         if (res)
-          await dispatch(bindNewContact());
+          await dispatch(bindNewContact()); // TODO
       } catch (e) {
         console.log(e);
       }
@@ -149,7 +150,7 @@ const Form = () => {
       </div>
       }
 
-      {/*invisible id */}
+      {/*invisible id with id href*/}
       <div className="padding-05y">
         <input style={{display: 'none'}} className="full-width" type="text" name="localHref" value={localHref}
                onChange={onChange}/>
@@ -179,8 +180,6 @@ const Form = () => {
           <ButtonPrimary type="submit">Add</ButtonPrimary>}
         {(href && firstName && lastName && email && date) &&
         <ButtonDanger onClick={onDiscard}>Discard</ButtonDanger>}
-
-        <ButtonPrimary style={{display: 'none'}} as={SubStringPrimary}>A Primary Button</ButtonPrimary>
       </div>
     </form>
   );

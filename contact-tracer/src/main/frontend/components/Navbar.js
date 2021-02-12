@@ -240,7 +240,7 @@ const Navbar = (props) => {
 
 Navbar.propTypes = {
   title: PropTypes.string.isRequired,
-  dash: PropTypes.object.isRequired,
+  dash: PropTypes.string.isRequired,
   logout: PropTypes.bool.isRequired,
 };
 

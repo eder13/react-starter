@@ -53873,7 +53873,7 @@ var Home = function Home() {
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "taskify helps you to keep your brain organized.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, !isAuthenticated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
       as: react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"],
       to: "/login"
-    }, "Get taskify for free") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
+    }, "Get taskify") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
       as: react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"],
       to: "/dashboard"
     }, "Go to Dashboard"), !isAuthenticated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "It's free!") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You are logged in!")));
@@ -54279,16 +54279,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
 /* harmony import */ var _PrivateRoute__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./PrivateRoute */ "./src/main/frontend/components/PrivateRoute.js");
-/**
- * This file handles the Routes.
- * Only the Navbar component is always
- * rendered (it's layout depends on
- * if the user is logged in/out)
- * */
 
 
 
 
+ // import
 
 
 
@@ -54651,9 +54646,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
 /* harmony import */ var _reducers_contact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reducers/contact */ "./src/main/frontend/store/entities/reducers/contact.js");
 
+ //import taskReducer from "./reducers/task"
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  contactReducer: _reducers_contact__WEBPACK_IMPORTED_MODULE_1__["default"]
+  contactReducer: _reducers_contact__WEBPACK_IMPORTED_MODULE_1__["default"] // taskReducer
+
 }));
 
 /***/ }),
@@ -54734,12 +54731,21 @@ var contactUpdated = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["creat
 var contactUpdateFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactUpdateFailed"); //const taskUpdateFailed = createAction("taskUpdateFailed");
 // delete a task
 
-var contactDeleteRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDeleteRequested");
-var contactDeleteRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDeleteRequestDone");
-var contactDeleted = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDeleted");
-var contactDeleteFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDeleteFailed"); // UI Popups data wipe
+var contactDeleteRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDeleteRequested"); //const taskDeleteRequested = createAction("taskDeleteRequested");
 
-var contactUiMessageWiped = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactUiMessageWiped"); // export const loadTasks = () => async (dispatch, getState) => {
+var contactDeleteRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDeleteRequestDone"); //const taskDeleteRequestDone = createAction("taskDeleteRequestDone");
+
+var contactDeleted = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDeleted"); //const taskDeleted = createAction("taskDeleted");
+
+var contactDeleteFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDeleteFailed"); //const taskDeleteFailed = createAction("taskDeleteFailed");
+// wipe ui error/info message
+
+var contactUiMessageWiped = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactUiMessageWiped"); //const taskUiMessageWiped = createAction("taskUiMessageWiped");
+
+/*==============
+  action methods
+ ===============*/
+//export const loadTasks = () => async (dispatch, getState) => {
 
 var loadContacts = function loadContacts() {
   return /*#__PURE__*/function () {
@@ -54749,26 +54755,30 @@ var loadContacts = function loadContacts() {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              userId = getState().auth.userId; // wait until userId is fetched before calling - otherwise fetching does not make sense
+              userId = getState().auth.userId; // wait until userId is fetched before calling
 
               if (!(userId === "")) {
                 _context.next = 4;
                 break;
               }
 
-              console.error("[contacts]: The user context has not been stored yet.");
+              console.error("[tasks]: The user context has not been stored yet.");
               return _context.abrupt("return");
 
             case 4:
               _context.next = 6;
               return dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
                 url: "/api/users/".concat(userId, "/contacts"),
-                // FIXME: `/api/users/${userId}/tasks`
+                // `/api/users/${userId}/tasks`
                 method: "get",
                 onStart: contactDataRequested.type,
+                // taskDataRequested.type
                 onDone: contactDataRequestDone.type,
+                // taskDataRequestDone.type
                 onSuccess: contactDataReceived.type,
-                onFailed: contactDataFailed.type
+                // taskDataReceived.type
+                onFailed: contactDataFailed.type // taskDataFailed.type
+
               }));
 
             case 6:
@@ -54786,7 +54796,7 @@ var loadContacts = function loadContacts() {
       return _ref.apply(this, arguments);
     };
   }();
-}; // add contact without binding first
+}; //export const addTask = (firstName, lastName, email, date) => async (dispatch, getState) => {
 
 var addContact = function addContact(firstName, lastName, email, date) {
   return /*#__PURE__*/function () {
@@ -54796,11 +54806,12 @@ var addContact = function addContact(firstName, lastName, email, date) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              before = getState().entities.contactReducer.contacts.length;
+              before = getState().entities.contactReducer.contacts.length; //getState().entities.taskReducer.tasks.length;
+
               _context2.next = 3;
               return dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
                 url: "/api/contacts",
-                // FIXME: Remove hardcoded url
+                // "/api/tasks"
                 method: "post",
                 data: {
                   firstName: firstName,
@@ -54809,13 +54820,18 @@ var addContact = function addContact(firstName, lastName, email, date) {
                   date: date
                 },
                 onStart: contactAddRequested.type,
+                // taskAddRequested.type
                 onDone: contactAddRequestDone.type,
+                // taskAddRequestDone.type
                 onSuccess: contactAdded.type,
-                onFailed: contactAddFailed.type
+                // taskAdded.type
+                onFailed: contactAddFailed.type // taskAddFailed.type
+
               }));
 
             case 3:
-              after = getState().entities.contactReducer.contacts.length; // Promise based check
+              after = getState().entities.contactReducer.contacts.length; //getState().entities.taskReducer.tasks.length;
+              // check if we were able to post the data
 
               if (!(before < after)) {
                 _context2.next = 8;
@@ -54825,7 +54841,7 @@ var addContact = function addContact(firstName, lastName, email, date) {
               return _context2.abrupt("return", Promise.resolve(true));
 
             case 8:
-              return _context2.abrupt("return", Promise.reject("Failed to Add Contact to /api/contacts"));
+              return _context2.abrupt("return", Promise.reject("[tasks]: Failed to Add Contact to /api/tasks"));
 
             case 9:
             case "end":
@@ -54839,7 +54855,7 @@ var addContact = function addContact(firstName, lastName, email, date) {
       return _ref2.apply(this, arguments);
     };
   }();
-}; // bind contact to relational table
+}; //export const bindNewTask = () => async (dispatch, getState) => {
 
 var bindNewContact = function bindNewContact() {
   return /*#__PURE__*/function () {
@@ -54850,25 +54866,25 @@ var bindNewContact = function bindNewContact() {
           switch (_context3.prev = _context3.next) {
             case 0:
               userId = getState().auth.userId;
-              tmpReference = getState().entities.contactReducer.tmpReference; // wait until userId and tmpReference are set before making the call
-              // if (userId === "" || tmpReference === "")
-              //   return;
+              tmpReference = getState().entities.contactReducer.tmpReference; //getState().entities.taskReducer;
 
               dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
                 url: tmpReference,
-                // FIXME: Remove hardcoded url
                 method: 'put',
                 data: "/api/users/".concat(userId),
-                // FIXME: Remove hardcoded relation data-url for contacts
                 params: {
                   headers: {
                     "Content-Type": "text/uri-list"
                   }
                 },
                 onStart: contactRelationSetRequested.type,
+                // taskRelationSetRequested.type
                 onDone: contactRelationSetRequestDone.type,
+                // taskRelationSetRequestDone.type
                 onSuccess: contactRelationSet.type,
-                onFailed: contactRelationSettingFailed.type
+                // taskRelationSet.type
+                onFailed: contactRelationSettingFailed.type // taskRelationSettingFailed
+
               }));
 
             case 3:
@@ -54883,7 +54899,8 @@ var bindNewContact = function bindNewContact() {
       return _ref3.apply(this, arguments);
     };
   }();
-};
+}; //export const setTmpTask = (href, firstName, lastName, email, date) => (dispatch, getState) => {
+
 var setTmpContact = function setTmpContact(href, firstName, lastName, email, date) {
   return function (dispatch, getState) {
     dispatch({
@@ -54895,17 +54912,19 @@ var setTmpContact = function setTmpContact(href, firstName, lastName, email, dat
         email: email,
         date: date
       }
-    });
+    }); //dispatch({type: tmpTaskDataSet.type, payload: {href, firstName, lastName, email, date}});
   };
-};
+}; //export const clearTmpTask = () => (dispatch, getState) => {
+
 var clearTmpContact = function clearTmpContact() {
   return function (dispatch, getState) {
     dispatch({
       type: tmpContactDataWiped.type,
       payload: {}
-    });
+    }); //dispatch({type: tmpTaskDataWiped.type, payload: {}});
   };
-};
+}; //export const updateContact = (localHref, localFirstName, localLastName, localEmail, localDate) => (dispatch, getState) => {
+
 var updateContact = function updateContact(localHref, localFirstName, localLastName, localEmail, localDate) {
   return function (dispatch, getState) {
     dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
@@ -54923,21 +54942,30 @@ var updateContact = function updateContact(localHref, localFirstName, localLastN
         }
       },
       onStart: contactUpdateRequested.type,
+      // taskUpdateRequested.type
       onDone: contactUpdateRequestDone.type,
+      // taskUpdateRequestDone.type
       onSuccess: contactUpdated.type,
-      onFailed: contactUpdateFailed.type
+      // taskUpdated.type
+      onFailed: contactUpdateFailed.type // taskUpdateFailed.type
+
     }));
   };
-};
+}; //export const deleteTask = (url) => (dispatch, getState) => {
+
 var deleteContact = function deleteContact(url) {
   return function (dispatch, getState) {
     dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
       url: url,
       method: "delete",
       onStart: contactDeleteRequested.type,
+      // taskDeleteRequested.type
       onDone: contactDeleteRequestDone.type,
+      // taskDeleteRequestDone.type
       onSuccess: contactDeleted.type,
-      onFailed: contactDeleteFailed.type
+      // taskDeleted.type
+      onFailed: contactDeleteFailed.type // taskDeleteFailed.type
+
     }));
   };
 };
@@ -54947,30 +54975,30 @@ var deleteContact = function deleteContact(url) {
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createReducer"])({
   contacts: [],
+  // tasks: []
   tmpReference: "",
-  // temporary reference for later put call to set relation for added data
+  // temporary reference url for later binding (1:n)
   tmpContact: {},
+  // tmpTask: {} // used for updating a task
   loading: false,
   lastFetch: null,
   notification: {
     error: "",
     type: ""
   }
-}, (_createReducer = {}, _defineProperty(_createReducer, contactDataRequested.type, function (contactState, action) {
+}, (_createReducer = {}, _defineProperty(_createReducer, contactDataRequested.type, function (contactState) {
   contactState.loading = true;
-}), _defineProperty(_createReducer, contactDataRequestDone.type, function (contactState, action) {
+}), _defineProperty(_createReducer, contactDataRequestDone.type, function (contactState) {
   contactState.loading = false;
 }), _defineProperty(_createReducer, contactDataReceived.type, function (contactState, action) {
   contactState.contacts = action.payload.data._embedded.contacts;
-  contactState.notification.error = "";
-  contactState.notification.type = "";
 }), _defineProperty(_createReducer, contactDataFailed.type, function (contactState, action) {
   var _action$payload = action.payload,
       type = _action$payload.type,
       error = _action$payload.error;
   contactState.notification.type = type;
   contactState.notification.error = error;
-}), _defineProperty(_createReducer, contactAddRequested.type, function (contactState, action) {
+}), _defineProperty(_createReducer, contactAddRequested.type, function (contactState) {
   contactState.loading = true;
 }), _defineProperty(_createReducer, contactAddRequestDone.type, function (contactState, action) {
   contactState.loading = false;
@@ -54979,10 +55007,8 @@ var deleteContact = function deleteContact(url) {
   contactState.tmpReference = action.payload.data._links.user.href;
   console.log(contactState.tmpReference);
 }), _defineProperty(_createReducer, contactAddFailed.type, function (contactState, action) {
-  // show ui message on screen
   contactState.notification.type = action.payload.type;
-  contactState.notification.error = action.payload.error; // clear tmpReference
-
+  contactState.notification.error = action.payload.error;
   contactState.tmpReference = "";
 }), _defineProperty(_createReducer, contactRelationSetRequested.type, function (contactState, action) {
   contactState.loading = true;
@@ -54993,8 +55019,7 @@ var deleteContact = function deleteContact(url) {
   contactState.tmpReference = "";
 }), _defineProperty(_createReducer, contactRelationSettingFailed.type, function (contactState, action) {
   contactState.notification.type = action.payload.type;
-  contactState.notification.error = action.payload.error; // clear tmpReference
-
+  contactState.notification.error = action.payload.error;
   contactState.tmpReference = "";
 }), _defineProperty(_createReducer, tmpContactDataSet.type, function (contactState, action) {
   var _action$payload2 = action.payload,
@@ -55053,25 +55078,32 @@ var deleteContact = function deleteContact(url) {
 }), _defineProperty(_createReducer, contactDeleteFailed.type, function (contactState, action) {
   contactState.notification.type = action.payload.type;
   contactState.notification.error = action.payload.error;
-}), _defineProperty(_createReducer, contactUiMessageWiped.type, function (contactState, action) {
+}), _defineProperty(_createReducer, contactUiMessageWiped.type, function (contactState) {
   contactState.notification.type = "";
   contactState.notification.error = "";
-}), _createReducer))); // Selectors
-// export const allContactsSelector = createSelector(
-//   (state) => state.entities.contactReducer,
-//   (contactState) => contactState.contacts
-// );
+}), _createReducer)));
+/*==============
+    selectors
+ ===============*/
 
 var tmpContactSelector = Object(reselect__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(function (state) {
   return state.entities.contactReducer;
 }, function (contactState) {
   return contactState.tmpContact;
-});
+}); // export const tmpTaskSelector = createSelector(
+//   (state) => state.entities.taskReducer,
+//   (taskState) => taskState.tmpTask
+// );
+
 var notificationSelector = Object(reselect__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(function (state) {
   return state.entities.contactReducer;
 }, function (contactState) {
   return contactState.notification;
-});
+}); // export const notificationSelector = createSelector(
+//   (state) => state.entities.taskReducer,
+//   (taskState) => contactState.notification
+// );
+
 var filteredContactsSelector = function filteredContactsSelector(searchString) {
   return Object(reselect__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(function (state) {
     return state.entities.contactReducer;
@@ -55080,7 +55112,11 @@ var filteredContactsSelector = function filteredContactsSelector(searchString) {
       return contact.firstName.indexOf(searchString) !== -1;
     });
   });
-};
+}; // TODO: replace filtered with allContacts
+// export const allTasksSelector = createSelector(
+//   state => state.entities.taskReducer,
+//   taskState => taskState.tasks
+// );
 
 /***/ }),
 
