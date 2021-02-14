@@ -150,26 +150,6 @@ __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerat
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js ***!
-  \**************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _assertThisInitialized; });
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
 /*!************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
@@ -14251,7 +14231,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "/* Global CSS <style></style> */\n* {\n  box-sizing: border-box;\n  font-family: 'Roboto', sans-serif;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}\n\n/* Transition effects add/delete using react-transition-group */\n.item-enter {\n  opacity: 0;\n}\n.item-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n.item-exit {\n  opacity: 1;\n}\n.item-exit-active {\n  opacity: 0;\n  transition: opacity 500ms ease-in;\n}", "",{"version":3,"sources":["webpack://./src/main/frontend/App.css"],"names":[],"mappings":"AAAA,+BAA+B;AAC/B;EACE,sBAAsB;EACtB,iCAAiC;AACnC;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,yBAAyB;EACzB,kBAAkB;EAClB,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,oCAAoC;AACtC;;AAEA;EACE,KAAK,uBAAuB,EAAE;EAC9B,OAAO,yBAAyB,EAAE;AACpC;;AAEA;EACE,uBAAuB;EACvB,aAAa;EACb,wBAAwB;EACxB,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,cAAc;EACd,gBAAgB;AAClB;;AAEA;;EAEE,YAAY;AACd;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;;;;EAIE,YAAY;EACZ,iBAAiB;EACjB,sBAAsB;EACtB,yBAAyB;EACzB,kBAAkB;EAClB,gBAAgB;EAChB,sBAAsB;AACxB;;AAEA;;;;EAIE,wBAAwB;EACxB,qBAAqB;EACrB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;;;;EAIE,yBAAyB;EACzB,UAAU;AACZ;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,gBAAgB;AAClB;;AAEA;;;;EAIE,WAAW;EACX,kBAAkB;EAClB,UAAU;AACZ;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA,+DAA+D;AAC/D;EACE,UAAU;AACZ;AACA;EACE,UAAU;EACV,iCAAiC;AACnC;AACA;EACE,UAAU;AACZ;AACA;EACE,UAAU;EACV,iCAAiC;AACnC","sourcesContent":["/* Global CSS <style></style> */\n* {\n  box-sizing: border-box;\n  font-family: 'Roboto', sans-serif;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}\n\n/* Transition effects add/delete using react-transition-group */\n.item-enter {\n  opacity: 0;\n}\n.item-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n.item-exit {\n  opacity: 1;\n}\n.item-exit-active {\n  opacity: 0;\n  transition: opacity 500ms ease-in;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "/* Global CSS <style></style> */\n* {\n  box-sizing: border-box;\n  font-family: 'Roboto', sans-serif;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}", "",{"version":3,"sources":["webpack://./src/main/frontend/App.css"],"names":[],"mappings":"AAAA,+BAA+B;AAC/B;EACE,sBAAsB;EACtB,iCAAiC;AACnC;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,yBAAyB;EACzB,kBAAkB;EAClB,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,oCAAoC;AACtC;;AAEA;EACE,KAAK,uBAAuB,EAAE;EAC9B,OAAO,yBAAyB,EAAE;AACpC;;AAEA;EACE,uBAAuB;EACvB,aAAa;EACb,wBAAwB;EACxB,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,cAAc;EACd,gBAAgB;AAClB;;AAEA;;EAEE,YAAY;AACd;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;;;;EAIE,YAAY;EACZ,iBAAiB;EACjB,sBAAsB;EACtB,yBAAyB;EACzB,kBAAkB;EAClB,gBAAgB;EAChB,sBAAsB;AACxB;;AAEA;;;;EAIE,wBAAwB;EACxB,qBAAqB;EACrB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;;;;EAIE,yBAAyB;EACzB,UAAU;AACZ;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,gBAAgB;AAClB;;AAEA;;;;EAIE,WAAW;EACX,kBAAkB;EAClB,UAAU;AACZ;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd","sourcesContent":["/* Global CSS <style></style> */\n* {\n  box-sizing: border-box;\n  font-family: 'Roboto', sans-serif;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -14375,68 +14355,6 @@ module.exports = function cssWithMappingToString(item) {
 
   return [content].join('\n');
 };
-
-/***/ }),
-
-/***/ "./node_modules/dom-helpers/esm/addClass.js":
-/*!**************************************************!*\
-  !*** ./node_modules/dom-helpers/esm/addClass.js ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return addClass; });
-/* harmony import */ var _hasClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hasClass */ "./node_modules/dom-helpers/esm/hasClass.js");
-
-function addClass(element, className) {
-  if (element.classList) element.classList.add(className);else if (!Object(_hasClass__WEBPACK_IMPORTED_MODULE_0__["default"])(element, className)) if (typeof element.className === 'string') element.className = element.className + " " + className;else element.setAttribute('class', (element.className && element.className.baseVal || '') + " " + className);
-}
-
-/***/ }),
-
-/***/ "./node_modules/dom-helpers/esm/hasClass.js":
-/*!**************************************************!*\
-  !*** ./node_modules/dom-helpers/esm/hasClass.js ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return hasClass; });
-function hasClass(element, className) {
-  if (element.classList) return !!className && element.classList.contains(className);
-  return (" " + (element.className.baseVal || element.className) + " ").indexOf(" " + className + " ") !== -1;
-}
-
-/***/ }),
-
-/***/ "./node_modules/dom-helpers/esm/removeClass.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/dom-helpers/esm/removeClass.js ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return removeClass; });
-function replaceClassName(origClass, classToRemove) {
-  return origClass.replace(new RegExp("(^|\\s)" + classToRemove + "(?:\\s|$)", 'g'), '$1').replace(/\s+/g, ' ').replace(/^\s*|\s*$/g, '');
-}
-
-function removeClass(element, className) {
-  if (element.classList) {
-    element.classList.remove(className);
-  } else if (typeof element.className === 'string') {
-    ;
-    element.className = replaceClassName(element.className, className);
-  } else {
-    element.setAttribute('class', replaceClassName(element.className && element.className.baseVal || '', className));
-  }
-}
 
 /***/ }),
 
@@ -45565,1986 +45483,6 @@ if (true) {
 
 /***/ }),
 
-/***/ "./node_modules/react-transition-group/esm/CSSTransition.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/react-transition-group/esm/CSSTransition.js ***!
-  \******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var dom_helpers_addClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dom-helpers/addClass */ "./node_modules/dom-helpers/esm/addClass.js");
-/* harmony import */ var dom_helpers_removeClass__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! dom-helpers/removeClass */ "./node_modules/dom-helpers/esm/removeClass.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _Transition__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Transition */ "./node_modules/react-transition-group/esm/Transition.js");
-/* harmony import */ var _utils_PropTypes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./utils/PropTypes */ "./node_modules/react-transition-group/esm/utils/PropTypes.js");
-
-
-
-
-
-
-
-
-
-
-var _addClass = function addClass(node, classes) {
-  return node && classes && classes.split(' ').forEach(function (c) {
-    return Object(dom_helpers_addClass__WEBPACK_IMPORTED_MODULE_4__["default"])(node, c);
-  });
-};
-
-var removeClass = function removeClass(node, classes) {
-  return node && classes && classes.split(' ').forEach(function (c) {
-    return Object(dom_helpers_removeClass__WEBPACK_IMPORTED_MODULE_5__["default"])(node, c);
-  });
-};
-/**
- * A transition component inspired by the excellent
- * [ng-animate](https://docs.angularjs.org/api/ngAnimate) library, you should
- * use it if you're using CSS transitions or animations. It's built upon the
- * [`Transition`](https://reactcommunity.org/react-transition-group/transition)
- * component, so it inherits all of its props.
- *
- * `CSSTransition` applies a pair of class names during the `appear`, `enter`,
- * and `exit` states of the transition. The first class is applied and then a
- * second `*-active` class in order to activate the CSS transition. After the
- * transition, matching `*-done` class names are applied to persist the
- * transition state.
- *
- * ```jsx
- * function App() {
- *   const [inProp, setInProp] = useState(false);
- *   return (
- *     <div>
- *       <CSSTransition in={inProp} timeout={200} classNames="my-node">
- *         <div>
- *           {"I'll receive my-node-* classes"}
- *         </div>
- *       </CSSTransition>
- *       <button type="button" onClick={() => setInProp(true)}>
- *         Click to Enter
- *       </button>
- *     </div>
- *   );
- * }
- * ```
- *
- * When the `in` prop is set to `true`, the child component will first receive
- * the class `example-enter`, then the `example-enter-active` will be added in
- * the next tick. `CSSTransition` [forces a
- * reflow](https://github.com/reactjs/react-transition-group/blob/5007303e729a74be66a21c3e2205e4916821524b/src/CSSTransition.js#L208-L215)
- * between before adding the `example-enter-active`. This is an important trick
- * because it allows us to transition between `example-enter` and
- * `example-enter-active` even though they were added immediately one after
- * another. Most notably, this is what makes it possible for us to animate
- * _appearance_.
- *
- * ```css
- * .my-node-enter {
- *   opacity: 0;
- * }
- * .my-node-enter-active {
- *   opacity: 1;
- *   transition: opacity 200ms;
- * }
- * .my-node-exit {
- *   opacity: 1;
- * }
- * .my-node-exit-active {
- *   opacity: 0;
- *   transition: opacity 200ms;
- * }
- * ```
- *
- * `*-active` classes represent which styles you want to animate **to**, so it's
- * important to add `transition` declaration only to them, otherwise transitions
- * might not behave as intended! This might not be obvious when the transitions
- * are symmetrical, i.e. when `*-enter-active` is the same as `*-exit`, like in
- * the example above (minus `transition`), but it becomes apparent in more
- * complex transitions.
- *
- * **Note**: If you're using the
- * [`appear`](http://reactcommunity.org/react-transition-group/transition#Transition-prop-appear)
- * prop, make sure to define styles for `.appear-*` classes as well.
- */
-
-
-var CSSTransition = /*#__PURE__*/function (_React$Component) {
-  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(CSSTransition, _React$Component);
-
-  function CSSTransition() {
-    var _this;
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
-    _this.appliedClasses = {
-      appear: {},
-      enter: {},
-      exit: {}
-    };
-
-    _this.onEnter = function (maybeNode, maybeAppearing) {
-      var _this$resolveArgument = _this.resolveArguments(maybeNode, maybeAppearing),
-          node = _this$resolveArgument[0],
-          appearing = _this$resolveArgument[1];
-
-      _this.removeClasses(node, 'exit');
-
-      _this.addClass(node, appearing ? 'appear' : 'enter', 'base');
-
-      if (_this.props.onEnter) {
-        _this.props.onEnter(maybeNode, maybeAppearing);
-      }
-    };
-
-    _this.onEntering = function (maybeNode, maybeAppearing) {
-      var _this$resolveArgument2 = _this.resolveArguments(maybeNode, maybeAppearing),
-          node = _this$resolveArgument2[0],
-          appearing = _this$resolveArgument2[1];
-
-      var type = appearing ? 'appear' : 'enter';
-
-      _this.addClass(node, type, 'active');
-
-      if (_this.props.onEntering) {
-        _this.props.onEntering(maybeNode, maybeAppearing);
-      }
-    };
-
-    _this.onEntered = function (maybeNode, maybeAppearing) {
-      var _this$resolveArgument3 = _this.resolveArguments(maybeNode, maybeAppearing),
-          node = _this$resolveArgument3[0],
-          appearing = _this$resolveArgument3[1];
-
-      var type = appearing ? 'appear' : 'enter';
-
-      _this.removeClasses(node, type);
-
-      _this.addClass(node, type, 'done');
-
-      if (_this.props.onEntered) {
-        _this.props.onEntered(maybeNode, maybeAppearing);
-      }
-    };
-
-    _this.onExit = function (maybeNode) {
-      var _this$resolveArgument4 = _this.resolveArguments(maybeNode),
-          node = _this$resolveArgument4[0];
-
-      _this.removeClasses(node, 'appear');
-
-      _this.removeClasses(node, 'enter');
-
-      _this.addClass(node, 'exit', 'base');
-
-      if (_this.props.onExit) {
-        _this.props.onExit(maybeNode);
-      }
-    };
-
-    _this.onExiting = function (maybeNode) {
-      var _this$resolveArgument5 = _this.resolveArguments(maybeNode),
-          node = _this$resolveArgument5[0];
-
-      _this.addClass(node, 'exit', 'active');
-
-      if (_this.props.onExiting) {
-        _this.props.onExiting(maybeNode);
-      }
-    };
-
-    _this.onExited = function (maybeNode) {
-      var _this$resolveArgument6 = _this.resolveArguments(maybeNode),
-          node = _this$resolveArgument6[0];
-
-      _this.removeClasses(node, 'exit');
-
-      _this.addClass(node, 'exit', 'done');
-
-      if (_this.props.onExited) {
-        _this.props.onExited(maybeNode);
-      }
-    };
-
-    _this.resolveArguments = function (maybeNode, maybeAppearing) {
-      return _this.props.nodeRef ? [_this.props.nodeRef.current, maybeNode] // here `maybeNode` is actually `appearing`
-      : [maybeNode, maybeAppearing];
-    };
-
-    _this.getClassNames = function (type) {
-      var classNames = _this.props.classNames;
-      var isStringClassNames = typeof classNames === 'string';
-      var prefix = isStringClassNames && classNames ? classNames + "-" : '';
-      var baseClassName = isStringClassNames ? "" + prefix + type : classNames[type];
-      var activeClassName = isStringClassNames ? baseClassName + "-active" : classNames[type + "Active"];
-      var doneClassName = isStringClassNames ? baseClassName + "-done" : classNames[type + "Done"];
-      return {
-        baseClassName: baseClassName,
-        activeClassName: activeClassName,
-        doneClassName: doneClassName
-      };
-    };
-
-    return _this;
-  }
-
-  var _proto = CSSTransition.prototype;
-
-  _proto.addClass = function addClass(node, type, phase) {
-    var className = this.getClassNames(type)[phase + "ClassName"];
-
-    var _this$getClassNames = this.getClassNames('enter'),
-        doneClassName = _this$getClassNames.doneClassName;
-
-    if (type === 'appear' && phase === 'done' && doneClassName) {
-      className += " " + doneClassName;
-    } // This is for to force a repaint,
-    // which is necessary in order to transition styles when adding a class name.
-
-
-    if (phase === 'active') {
-      /* eslint-disable no-unused-expressions */
-      node && node.scrollTop;
-    }
-
-    if (className) {
-      this.appliedClasses[type][phase] = className;
-
-      _addClass(node, className);
-    }
-  };
-
-  _proto.removeClasses = function removeClasses(node, type) {
-    var _this$appliedClasses$ = this.appliedClasses[type],
-        baseClassName = _this$appliedClasses$.base,
-        activeClassName = _this$appliedClasses$.active,
-        doneClassName = _this$appliedClasses$.done;
-    this.appliedClasses[type] = {};
-
-    if (baseClassName) {
-      removeClass(node, baseClassName);
-    }
-
-    if (activeClassName) {
-      removeClass(node, activeClassName);
-    }
-
-    if (doneClassName) {
-      removeClass(node, doneClassName);
-    }
-  };
-
-  _proto.render = function render() {
-    var _this$props = this.props,
-        _ = _this$props.classNames,
-        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["classNames"]);
-
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Transition__WEBPACK_IMPORTED_MODULE_7__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-      onEnter: this.onEnter,
-      onEntered: this.onEntered,
-      onEntering: this.onEntering,
-      onExit: this.onExit,
-      onExiting: this.onExiting,
-      onExited: this.onExited
-    }));
-  };
-
-  return CSSTransition;
-}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
-
-CSSTransition.defaultProps = {
-  classNames: ''
-};
-CSSTransition.propTypes =  true ? Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _Transition__WEBPACK_IMPORTED_MODULE_7__["default"].propTypes, {
-  /**
-   * The animation classNames applied to the component as it appears, enters,
-   * exits or has finished the transition. A single name can be provided, which
-   * will be suffixed for each stage, e.g. `classNames="fade"` applies:
-   *
-   * - `fade-appear`, `fade-appear-active`, `fade-appear-done`
-   * - `fade-enter`, `fade-enter-active`, `fade-enter-done`
-   * - `fade-exit`, `fade-exit-active`, `fade-exit-done`
-   *
-   * A few details to note about how these classes are applied:
-   *
-   * 1. They are _joined_ with the ones that are already defined on the child
-   *    component, so if you want to add some base styles, you can use
-   *    `className` without worrying that it will be overridden.
-   *
-   * 2. If the transition component mounts with `in={false}`, no classes are
-   *    applied yet. You might be expecting `*-exit-done`, but if you think
-   *    about it, a component cannot finish exiting if it hasn't entered yet.
-   *
-   * 2. `fade-appear-done` and `fade-enter-done` will _both_ be applied. This
-   *    allows you to define different behavior for when appearing is done and
-   *    when regular entering is done, using selectors like
-   *    `.fade-enter-done:not(.fade-appear-done)`. For example, you could apply
-   *    an epic entrance animation when element first appears in the DOM using
-   *    [Animate.css](https://daneden.github.io/animate.css/). Otherwise you can
-   *    simply use `fade-enter-done` for defining both cases.
-   *
-   * Each individual classNames can also be specified independently like:
-   *
-   * ```js
-   * classNames={{
-   *  appear: 'my-appear',
-   *  appearActive: 'my-active-appear',
-   *  appearDone: 'my-done-appear',
-   *  enter: 'my-enter',
-   *  enterActive: 'my-active-enter',
-   *  enterDone: 'my-done-enter',
-   *  exit: 'my-exit',
-   *  exitActive: 'my-active-exit',
-   *  exitDone: 'my-done-exit',
-   * }}
-   * ```
-   *
-   * If you want to set these classes using CSS Modules:
-   *
-   * ```js
-   * import styles from './styles.css';
-   * ```
-   *
-   * you might want to use camelCase in your CSS file, that way could simply
-   * spread them instead of listing them one by one:
-   *
-   * ```js
-   * classNames={{ ...styles }}
-   * ```
-   *
-   * @type {string | {
-   *  appear?: string,
-   *  appearActive?: string,
-   *  appearDone?: string,
-   *  enter?: string,
-   *  enterActive?: string,
-   *  enterDone?: string,
-   *  exit?: string,
-   *  exitActive?: string,
-   *  exitDone?: string,
-   * }}
-   */
-  classNames: _utils_PropTypes__WEBPACK_IMPORTED_MODULE_8__["classNamesShape"],
-
-  /**
-   * A `<Transition>` callback fired immediately after the 'enter' or 'appear' class is
-   * applied.
-   *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
-   *
-   * @type Function(node: HtmlElement, isAppearing: bool)
-   */
-  onEnter: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
-
-  /**
-   * A `<Transition>` callback fired immediately after the 'enter-active' or
-   * 'appear-active' class is applied.
-   *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
-   *
-   * @type Function(node: HtmlElement, isAppearing: bool)
-   */
-  onEntering: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
-
-  /**
-   * A `<Transition>` callback fired immediately after the 'enter' or
-   * 'appear' classes are **removed** and the `done` class is added to the DOM node.
-   *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
-   *
-   * @type Function(node: HtmlElement, isAppearing: bool)
-   */
-  onEntered: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
-
-  /**
-   * A `<Transition>` callback fired immediately after the 'exit' class is
-   * applied.
-   *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed
-   *
-   * @type Function(node: HtmlElement)
-   */
-  onExit: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
-
-  /**
-   * A `<Transition>` callback fired immediately after the 'exit-active' is applied.
-   *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed
-   *
-   * @type Function(node: HtmlElement)
-   */
-  onExiting: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
-
-  /**
-   * A `<Transition>` callback fired immediately after the 'exit' classes
-   * are **removed** and the `exit-done` class is added to the DOM node.
-   *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed
-   *
-   * @type Function(node: HtmlElement)
-   */
-  onExited: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func
-}) : undefined;
-/* harmony default export */ __webpack_exports__["default"] = (CSSTransition);
-
-/***/ }),
-
-/***/ "./node_modules/react-transition-group/esm/ReplaceTransition.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/react-transition-group/esm/ReplaceTransition.js ***!
-  \**********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _TransitionGroup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./TransitionGroup */ "./node_modules/react-transition-group/esm/TransitionGroup.js");
-
-
-
-
-
-
-/**
- * The `<ReplaceTransition>` component is a specialized `Transition` component
- * that animates between two children.
- *
- * ```jsx
- * <ReplaceTransition in>
- *   <Fade><div>I appear first</div></Fade>
- *   <Fade><div>I replace the above</div></Fade>
- * </ReplaceTransition>
- * ```
- */
-
-var ReplaceTransition = /*#__PURE__*/function (_React$Component) {
-  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(ReplaceTransition, _React$Component);
-
-  function ReplaceTransition() {
-    var _this;
-
-    for (var _len = arguments.length, _args = new Array(_len), _key = 0; _key < _len; _key++) {
-      _args[_key] = arguments[_key];
-    }
-
-    _this = _React$Component.call.apply(_React$Component, [this].concat(_args)) || this;
-
-    _this.handleEnter = function () {
-      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-        args[_key2] = arguments[_key2];
-      }
-
-      return _this.handleLifecycle('onEnter', 0, args);
-    };
-
-    _this.handleEntering = function () {
-      for (var _len3 = arguments.length, args = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
-        args[_key3] = arguments[_key3];
-      }
-
-      return _this.handleLifecycle('onEntering', 0, args);
-    };
-
-    _this.handleEntered = function () {
-      for (var _len4 = arguments.length, args = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
-        args[_key4] = arguments[_key4];
-      }
-
-      return _this.handleLifecycle('onEntered', 0, args);
-    };
-
-    _this.handleExit = function () {
-      for (var _len5 = arguments.length, args = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {
-        args[_key5] = arguments[_key5];
-      }
-
-      return _this.handleLifecycle('onExit', 1, args);
-    };
-
-    _this.handleExiting = function () {
-      for (var _len6 = arguments.length, args = new Array(_len6), _key6 = 0; _key6 < _len6; _key6++) {
-        args[_key6] = arguments[_key6];
-      }
-
-      return _this.handleLifecycle('onExiting', 1, args);
-    };
-
-    _this.handleExited = function () {
-      for (var _len7 = arguments.length, args = new Array(_len7), _key7 = 0; _key7 < _len7; _key7++) {
-        args[_key7] = arguments[_key7];
-      }
-
-      return _this.handleLifecycle('onExited', 1, args);
-    };
-
-    return _this;
-  }
-
-  var _proto = ReplaceTransition.prototype;
-
-  _proto.handleLifecycle = function handleLifecycle(handler, idx, originalArgs) {
-    var _child$props;
-
-    var children = this.props.children;
-    var child = react__WEBPACK_IMPORTED_MODULE_3___default.a.Children.toArray(children)[idx];
-    if (child.props[handler]) (_child$props = child.props)[handler].apply(_child$props, originalArgs);
-
-    if (this.props[handler]) {
-      var maybeNode = child.props.nodeRef ? undefined : react_dom__WEBPACK_IMPORTED_MODULE_4___default.a.findDOMNode(this);
-      this.props[handler](maybeNode);
-    }
-  };
-
-  _proto.render = function render() {
-    var _this$props = this.props,
-        children = _this$props.children,
-        inProp = _this$props.in,
-        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(_this$props, ["children", "in"]);
-
-    var _React$Children$toArr = react__WEBPACK_IMPORTED_MODULE_3___default.a.Children.toArray(children),
-        first = _React$Children$toArr[0],
-        second = _React$Children$toArr[1];
-
-    delete props.onEnter;
-    delete props.onEntering;
-    delete props.onEntered;
-    delete props.onExit;
-    delete props.onExiting;
-    delete props.onExited;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_TransitionGroup__WEBPACK_IMPORTED_MODULE_5__["default"], props, inProp ? react__WEBPACK_IMPORTED_MODULE_3___default.a.cloneElement(first, {
-      key: 'first',
-      onEnter: this.handleEnter,
-      onEntering: this.handleEntering,
-      onEntered: this.handleEntered
-    }) : react__WEBPACK_IMPORTED_MODULE_3___default.a.cloneElement(second, {
-      key: 'second',
-      onEnter: this.handleExit,
-      onEntering: this.handleExiting,
-      onEntered: this.handleExited
-    }));
-  };
-
-  return ReplaceTransition;
-}(react__WEBPACK_IMPORTED_MODULE_3___default.a.Component);
-
-ReplaceTransition.propTypes =  true ? {
-  in: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool.isRequired,
-  children: function children(props, propName) {
-    if (react__WEBPACK_IMPORTED_MODULE_3___default.a.Children.count(props[propName]) !== 2) return new Error("\"" + propName + "\" must be exactly two transition components.");
-    return null;
-  }
-} : undefined;
-/* harmony default export */ __webpack_exports__["default"] = (ReplaceTransition);
-
-/***/ }),
-
-/***/ "./node_modules/react-transition-group/esm/SwitchTransition.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/react-transition-group/esm/SwitchTransition.js ***!
-  \*********************************************************************/
-/*! exports provided: modes, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "modes", function() { return modes; });
-/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Transition__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Transition */ "./node_modules/react-transition-group/esm/Transition.js");
-/* harmony import */ var _TransitionGroupContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./TransitionGroupContext */ "./node_modules/react-transition-group/esm/TransitionGroupContext.js");
-
-
-var _leaveRenders, _enterRenders;
-
-
-
-
-
-
-function areChildrenDifferent(oldChildren, newChildren) {
-  if (oldChildren === newChildren) return false;
-
-  if (react__WEBPACK_IMPORTED_MODULE_1___default.a.isValidElement(oldChildren) && react__WEBPACK_IMPORTED_MODULE_1___default.a.isValidElement(newChildren) && oldChildren.key != null && oldChildren.key === newChildren.key) {
-    return false;
-  }
-
-  return true;
-}
-/**
- * Enum of modes for SwitchTransition component
- * @enum { string }
- */
-
-
-var modes = {
-  out: 'out-in',
-  in: 'in-out'
-};
-
-var callHook = function callHook(element, name, cb) {
-  return function () {
-    var _element$props;
-
-    element.props[name] && (_element$props = element.props)[name].apply(_element$props, arguments);
-    cb();
-  };
-};
-
-var leaveRenders = (_leaveRenders = {}, _leaveRenders[modes.out] = function (_ref) {
-  var current = _ref.current,
-      changeState = _ref.changeState;
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.cloneElement(current, {
-    in: false,
-    onExited: callHook(current, 'onExited', function () {
-      changeState(_Transition__WEBPACK_IMPORTED_MODULE_3__["ENTERING"], null);
-    })
-  });
-}, _leaveRenders[modes.in] = function (_ref2) {
-  var current = _ref2.current,
-      changeState = _ref2.changeState,
-      children = _ref2.children;
-  return [current, react__WEBPACK_IMPORTED_MODULE_1___default.a.cloneElement(children, {
-    in: true,
-    onEntered: callHook(children, 'onEntered', function () {
-      changeState(_Transition__WEBPACK_IMPORTED_MODULE_3__["ENTERING"]);
-    })
-  })];
-}, _leaveRenders);
-var enterRenders = (_enterRenders = {}, _enterRenders[modes.out] = function (_ref3) {
-  var children = _ref3.children,
-      changeState = _ref3.changeState;
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.cloneElement(children, {
-    in: true,
-    onEntered: callHook(children, 'onEntered', function () {
-      changeState(_Transition__WEBPACK_IMPORTED_MODULE_3__["ENTERED"], react__WEBPACK_IMPORTED_MODULE_1___default.a.cloneElement(children, {
-        in: true
-      }));
-    })
-  });
-}, _enterRenders[modes.in] = function (_ref4) {
-  var current = _ref4.current,
-      children = _ref4.children,
-      changeState = _ref4.changeState;
-  return [react__WEBPACK_IMPORTED_MODULE_1___default.a.cloneElement(current, {
-    in: false,
-    onExited: callHook(current, 'onExited', function () {
-      changeState(_Transition__WEBPACK_IMPORTED_MODULE_3__["ENTERED"], react__WEBPACK_IMPORTED_MODULE_1___default.a.cloneElement(children, {
-        in: true
-      }));
-    })
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.cloneElement(children, {
-    in: true
-  })];
-}, _enterRenders);
-/**
- * A transition component inspired by the [vue transition modes](https://vuejs.org/v2/guide/transitions.html#Transition-Modes).
- * You can use it when you want to control the render between state transitions.
- * Based on the selected mode and the child's key which is the `Transition` or `CSSTransition` component, the `SwitchTransition` makes a consistent transition between them.
- *
- * If the `out-in` mode is selected, the `SwitchTransition` waits until the old child leaves and then inserts a new child.
- * If the `in-out` mode is selected, the `SwitchTransition` inserts a new child first, waits for the new child to enter and then removes the old child.
- *
- * **Note**: If you want the animation to happen simultaneously
- * (that is, to have the old child removed and a new child inserted **at the same time**),
- * you should use
- * [`TransitionGroup`](https://reactcommunity.org/react-transition-group/transition-group)
- * instead.
- *
- * ```jsx
- * function App() {
- *  const [state, setState] = useState(false);
- *  return (
- *    <SwitchTransition>
- *      <CSSTransition
- *        key={state ? "Goodbye, world!" : "Hello, world!"}
- *        addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
- *        classNames='fade'
- *      >
- *        <button onClick={() => setState(state => !state)}>
- *          {state ? "Goodbye, world!" : "Hello, world!"}
- *        </button>
- *      </CSSTransition>
- *    </SwitchTransition>
- *  );
- * }
- * ```
- *
- * ```css
- * .fade-enter{
- *    opacity: 0;
- * }
- * .fade-exit{
- *    opacity: 1;
- * }
- * .fade-enter-active{
- *    opacity: 1;
- * }
- * .fade-exit-active{
- *    opacity: 0;
- * }
- * .fade-enter-active,
- * .fade-exit-active{
- *    transition: opacity 500ms;
- * }
- * ```
- */
-
-var SwitchTransition = /*#__PURE__*/function (_React$Component) {
-  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(SwitchTransition, _React$Component);
-
-  function SwitchTransition() {
-    var _this;
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
-    _this.state = {
-      status: _Transition__WEBPACK_IMPORTED_MODULE_3__["ENTERED"],
-      current: null
-    };
-    _this.appeared = false;
-
-    _this.changeState = function (status, current) {
-      if (current === void 0) {
-        current = _this.state.current;
-      }
-
-      _this.setState({
-        status: status,
-        current: current
-      });
-    };
-
-    return _this;
-  }
-
-  var _proto = SwitchTransition.prototype;
-
-  _proto.componentDidMount = function componentDidMount() {
-    this.appeared = true;
-  };
-
-  SwitchTransition.getDerivedStateFromProps = function getDerivedStateFromProps(props, state) {
-    if (props.children == null) {
-      return {
-        current: null
-      };
-    }
-
-    if (state.status === _Transition__WEBPACK_IMPORTED_MODULE_3__["ENTERING"] && props.mode === modes.in) {
-      return {
-        status: _Transition__WEBPACK_IMPORTED_MODULE_3__["ENTERING"]
-      };
-    }
-
-    if (state.current && areChildrenDifferent(state.current, props.children)) {
-      return {
-        status: _Transition__WEBPACK_IMPORTED_MODULE_3__["EXITING"]
-      };
-    }
-
-    return {
-      current: react__WEBPACK_IMPORTED_MODULE_1___default.a.cloneElement(props.children, {
-        in: true
-      })
-    };
-  };
-
-  _proto.render = function render() {
-    var _this$props = this.props,
-        children = _this$props.children,
-        mode = _this$props.mode,
-        _this$state = this.state,
-        status = _this$state.status,
-        current = _this$state.current;
-    var data = {
-      children: children,
-      current: current,
-      changeState: this.changeState,
-      status: status
-    };
-    var component;
-
-    switch (status) {
-      case _Transition__WEBPACK_IMPORTED_MODULE_3__["ENTERING"]:
-        component = enterRenders[mode](data);
-        break;
-
-      case _Transition__WEBPACK_IMPORTED_MODULE_3__["EXITING"]:
-        component = leaveRenders[mode](data);
-        break;
-
-      case _Transition__WEBPACK_IMPORTED_MODULE_3__["ENTERED"]:
-        component = current;
-    }
-
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_TransitionGroupContext__WEBPACK_IMPORTED_MODULE_4__["default"].Provider, {
-      value: {
-        isMounting: !this.appeared
-      }
-    }, component);
-  };
-
-  return SwitchTransition;
-}(react__WEBPACK_IMPORTED_MODULE_1___default.a.Component);
-
-SwitchTransition.propTypes =  true ? {
-  /**
-   * Transition modes.
-   * `out-in`: Current element transitions out first, then when complete, the new element transitions in.
-   * `in-out`: New element transitions in first, then when complete, the current element transitions out.
-   *
-   * @type {'out-in'|'in-out'}
-   */
-  mode: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.oneOf([modes.in, modes.out]),
-
-  /**
-   * Any `Transition` or `CSSTransition` component.
-   */
-  children: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.element.isRequired])
-} : undefined;
-SwitchTransition.defaultProps = {
-  mode: modes.out
-};
-/* harmony default export */ __webpack_exports__["default"] = (SwitchTransition);
-
-/***/ }),
-
-/***/ "./node_modules/react-transition-group/esm/Transition.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/react-transition-group/esm/Transition.js ***!
-  \***************************************************************/
-/*! exports provided: UNMOUNTED, EXITED, ENTERING, ENTERED, EXITING, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UNMOUNTED", function() { return UNMOUNTED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EXITED", function() { return EXITED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ENTERING", function() { return ENTERING; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ENTERED", function() { return ENTERED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EXITING", function() { return EXITING; });
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./config */ "./node_modules/react-transition-group/esm/config.js");
-/* harmony import */ var _utils_PropTypes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils/PropTypes */ "./node_modules/react-transition-group/esm/utils/PropTypes.js");
-/* harmony import */ var _TransitionGroupContext__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./TransitionGroupContext */ "./node_modules/react-transition-group/esm/TransitionGroupContext.js");
-
-
-
-
-
-
-
-
-var UNMOUNTED = 'unmounted';
-var EXITED = 'exited';
-var ENTERING = 'entering';
-var ENTERED = 'entered';
-var EXITING = 'exiting';
-/**
- * The Transition component lets you describe a transition from one component
- * state to another _over time_ with a simple declarative API. Most commonly
- * it's used to animate the mounting and unmounting of a component, but can also
- * be used to describe in-place transition states as well.
- *
- * ---
- *
- * **Note**: `Transition` is a platform-agnostic base component. If you're using
- * transitions in CSS, you'll probably want to use
- * [`CSSTransition`](https://reactcommunity.org/react-transition-group/css-transition)
- * instead. It inherits all the features of `Transition`, but contains
- * additional features necessary to play nice with CSS transitions (hence the
- * name of the component).
- *
- * ---
- *
- * By default the `Transition` component does not alter the behavior of the
- * component it renders, it only tracks "enter" and "exit" states for the
- * components. It's up to you to give meaning and effect to those states. For
- * example we can add styles to a component when it enters or exits:
- *
- * ```jsx
- * import { Transition } from 'react-transition-group';
- *
- * const duration = 300;
- *
- * const defaultStyle = {
- *   transition: `opacity ${duration}ms ease-in-out`,
- *   opacity: 0,
- * }
- *
- * const transitionStyles = {
- *   entering: { opacity: 1 },
- *   entered:  { opacity: 1 },
- *   exiting:  { opacity: 0 },
- *   exited:  { opacity: 0 },
- * };
- *
- * const Fade = ({ in: inProp }) => (
- *   <Transition in={inProp} timeout={duration}>
- *     {state => (
- *       <div style={{
- *         ...defaultStyle,
- *         ...transitionStyles[state]
- *       }}>
- *         I'm a fade Transition!
- *       </div>
- *     )}
- *   </Transition>
- * );
- * ```
- *
- * There are 4 main states a Transition can be in:
- *  - `'entering'`
- *  - `'entered'`
- *  - `'exiting'`
- *  - `'exited'`
- *
- * Transition state is toggled via the `in` prop. When `true` the component
- * begins the "Enter" stage. During this stage, the component will shift from
- * its current transition state, to `'entering'` for the duration of the
- * transition and then to the `'entered'` stage once it's complete. Let's take
- * the following example (we'll use the
- * [useState](https://reactjs.org/docs/hooks-reference.html#usestate) hook):
- *
- * ```jsx
- * function App() {
- *   const [inProp, setInProp] = useState(false);
- *   return (
- *     <div>
- *       <Transition in={inProp} timeout={500}>
- *         {state => (
- *           // ...
- *         )}
- *       </Transition>
- *       <button onClick={() => setInProp(true)}>
- *         Click to Enter
- *       </button>
- *     </div>
- *   );
- * }
- * ```
- *
- * When the button is clicked the component will shift to the `'entering'` state
- * and stay there for 500ms (the value of `timeout`) before it finally switches
- * to `'entered'`.
- *
- * When `in` is `false` the same thing happens except the state moves from
- * `'exiting'` to `'exited'`.
- */
-
-var Transition = /*#__PURE__*/function (_React$Component) {
-  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(Transition, _React$Component);
-
-  function Transition(props, context) {
-    var _this;
-
-    _this = _React$Component.call(this, props, context) || this;
-    var parentGroup = context; // In the context of a TransitionGroup all enters are really appears
-
-    var appear = parentGroup && !parentGroup.isMounting ? props.enter : props.appear;
-    var initialStatus;
-    _this.appearStatus = null;
-
-    if (props.in) {
-      if (appear) {
-        initialStatus = EXITED;
-        _this.appearStatus = ENTERING;
-      } else {
-        initialStatus = ENTERED;
-      }
-    } else {
-      if (props.unmountOnExit || props.mountOnEnter) {
-        initialStatus = UNMOUNTED;
-      } else {
-        initialStatus = EXITED;
-      }
-    }
-
-    _this.state = {
-      status: initialStatus
-    };
-    _this.nextCallback = null;
-    return _this;
-  }
-
-  Transition.getDerivedStateFromProps = function getDerivedStateFromProps(_ref, prevState) {
-    var nextIn = _ref.in;
-
-    if (nextIn && prevState.status === UNMOUNTED) {
-      return {
-        status: EXITED
-      };
-    }
-
-    return null;
-  } // getSnapshotBeforeUpdate(prevProps) {
-  //   let nextStatus = null
-  //   if (prevProps !== this.props) {
-  //     const { status } = this.state
-  //     if (this.props.in) {
-  //       if (status !== ENTERING && status !== ENTERED) {
-  //         nextStatus = ENTERING
-  //       }
-  //     } else {
-  //       if (status === ENTERING || status === ENTERED) {
-  //         nextStatus = EXITING
-  //       }
-  //     }
-  //   }
-  //   return { nextStatus }
-  // }
-  ;
-
-  var _proto = Transition.prototype;
-
-  _proto.componentDidMount = function componentDidMount() {
-    this.updateStatus(true, this.appearStatus);
-  };
-
-  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
-    var nextStatus = null;
-
-    if (prevProps !== this.props) {
-      var status = this.state.status;
-
-      if (this.props.in) {
-        if (status !== ENTERING && status !== ENTERED) {
-          nextStatus = ENTERING;
-        }
-      } else {
-        if (status === ENTERING || status === ENTERED) {
-          nextStatus = EXITING;
-        }
-      }
-    }
-
-    this.updateStatus(false, nextStatus);
-  };
-
-  _proto.componentWillUnmount = function componentWillUnmount() {
-    this.cancelNextCallback();
-  };
-
-  _proto.getTimeouts = function getTimeouts() {
-    var timeout = this.props.timeout;
-    var exit, enter, appear;
-    exit = enter = appear = timeout;
-
-    if (timeout != null && typeof timeout !== 'number') {
-      exit = timeout.exit;
-      enter = timeout.enter; // TODO: remove fallback for next major
-
-      appear = timeout.appear !== undefined ? timeout.appear : enter;
-    }
-
-    return {
-      exit: exit,
-      enter: enter,
-      appear: appear
-    };
-  };
-
-  _proto.updateStatus = function updateStatus(mounting, nextStatus) {
-    if (mounting === void 0) {
-      mounting = false;
-    }
-
-    if (nextStatus !== null) {
-      // nextStatus will always be ENTERING or EXITING.
-      this.cancelNextCallback();
-
-      if (nextStatus === ENTERING) {
-        this.performEnter(mounting);
-      } else {
-        this.performExit();
-      }
-    } else if (this.props.unmountOnExit && this.state.status === EXITED) {
-      this.setState({
-        status: UNMOUNTED
-      });
-    }
-  };
-
-  _proto.performEnter = function performEnter(mounting) {
-    var _this2 = this;
-
-    var enter = this.props.enter;
-    var appearing = this.context ? this.context.isMounting : mounting;
-
-    var _ref2 = this.props.nodeRef ? [appearing] : [react_dom__WEBPACK_IMPORTED_MODULE_4___default.a.findDOMNode(this), appearing],
-        maybeNode = _ref2[0],
-        maybeAppearing = _ref2[1];
-
-    var timeouts = this.getTimeouts();
-    var enterTimeout = appearing ? timeouts.appear : timeouts.enter; // no enter animation skip right to ENTERED
-    // if we are mounting and running this it means appear _must_ be set
-
-    if (!mounting && !enter || _config__WEBPACK_IMPORTED_MODULE_5__["default"].disabled) {
-      this.safeSetState({
-        status: ENTERED
-      }, function () {
-        _this2.props.onEntered(maybeNode);
-      });
-      return;
-    }
-
-    this.props.onEnter(maybeNode, maybeAppearing);
-    this.safeSetState({
-      status: ENTERING
-    }, function () {
-      _this2.props.onEntering(maybeNode, maybeAppearing);
-
-      _this2.onTransitionEnd(enterTimeout, function () {
-        _this2.safeSetState({
-          status: ENTERED
-        }, function () {
-          _this2.props.onEntered(maybeNode, maybeAppearing);
-        });
-      });
-    });
-  };
-
-  _proto.performExit = function performExit() {
-    var _this3 = this;
-
-    var exit = this.props.exit;
-    var timeouts = this.getTimeouts();
-    var maybeNode = this.props.nodeRef ? undefined : react_dom__WEBPACK_IMPORTED_MODULE_4___default.a.findDOMNode(this); // no exit animation skip right to EXITED
-
-    if (!exit || _config__WEBPACK_IMPORTED_MODULE_5__["default"].disabled) {
-      this.safeSetState({
-        status: EXITED
-      }, function () {
-        _this3.props.onExited(maybeNode);
-      });
-      return;
-    }
-
-    this.props.onExit(maybeNode);
-    this.safeSetState({
-      status: EXITING
-    }, function () {
-      _this3.props.onExiting(maybeNode);
-
-      _this3.onTransitionEnd(timeouts.exit, function () {
-        _this3.safeSetState({
-          status: EXITED
-        }, function () {
-          _this3.props.onExited(maybeNode);
-        });
-      });
-    });
-  };
-
-  _proto.cancelNextCallback = function cancelNextCallback() {
-    if (this.nextCallback !== null) {
-      this.nextCallback.cancel();
-      this.nextCallback = null;
-    }
-  };
-
-  _proto.safeSetState = function safeSetState(nextState, callback) {
-    // This shouldn't be necessary, but there are weird race conditions with
-    // setState callbacks and unmounting in testing, so always make sure that
-    // we can cancel any pending setState callbacks after we unmount.
-    callback = this.setNextCallback(callback);
-    this.setState(nextState, callback);
-  };
-
-  _proto.setNextCallback = function setNextCallback(callback) {
-    var _this4 = this;
-
-    var active = true;
-
-    this.nextCallback = function (event) {
-      if (active) {
-        active = false;
-        _this4.nextCallback = null;
-        callback(event);
-      }
-    };
-
-    this.nextCallback.cancel = function () {
-      active = false;
-    };
-
-    return this.nextCallback;
-  };
-
-  _proto.onTransitionEnd = function onTransitionEnd(timeout, handler) {
-    this.setNextCallback(handler);
-    var node = this.props.nodeRef ? this.props.nodeRef.current : react_dom__WEBPACK_IMPORTED_MODULE_4___default.a.findDOMNode(this);
-    var doesNotHaveTimeoutOrListener = timeout == null && !this.props.addEndListener;
-
-    if (!node || doesNotHaveTimeoutOrListener) {
-      setTimeout(this.nextCallback, 0);
-      return;
-    }
-
-    if (this.props.addEndListener) {
-      var _ref3 = this.props.nodeRef ? [this.nextCallback] : [node, this.nextCallback],
-          maybeNode = _ref3[0],
-          maybeNextCallback = _ref3[1];
-
-      this.props.addEndListener(maybeNode, maybeNextCallback);
-    }
-
-    if (timeout != null) {
-      setTimeout(this.nextCallback, timeout);
-    }
-  };
-
-  _proto.render = function render() {
-    var status = this.state.status;
-
-    if (status === UNMOUNTED) {
-      return null;
-    }
-
-    var _this$props = this.props,
-        children = _this$props.children,
-        _in = _this$props.in,
-        _mountOnEnter = _this$props.mountOnEnter,
-        _unmountOnExit = _this$props.unmountOnExit,
-        _appear = _this$props.appear,
-        _enter = _this$props.enter,
-        _exit = _this$props.exit,
-        _timeout = _this$props.timeout,
-        _addEndListener = _this$props.addEndListener,
-        _onEnter = _this$props.onEnter,
-        _onEntering = _this$props.onEntering,
-        _onEntered = _this$props.onEntered,
-        _onExit = _this$props.onExit,
-        _onExiting = _this$props.onExiting,
-        _onExited = _this$props.onExited,
-        _nodeRef = _this$props.nodeRef,
-        childProps = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(_this$props, ["children", "in", "mountOnEnter", "unmountOnExit", "appear", "enter", "exit", "timeout", "addEndListener", "onEnter", "onEntering", "onEntered", "onExit", "onExiting", "onExited", "nodeRef"]);
-
-    return (
-      /*#__PURE__*/
-      // allows for nested Transitions
-      react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_TransitionGroupContext__WEBPACK_IMPORTED_MODULE_7__["default"].Provider, {
-        value: null
-      }, typeof children === 'function' ? children(status, childProps) : react__WEBPACK_IMPORTED_MODULE_3___default.a.cloneElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Children.only(children), childProps))
-    );
-  };
-
-  return Transition;
-}(react__WEBPACK_IMPORTED_MODULE_3___default.a.Component);
-
-Transition.contextType = _TransitionGroupContext__WEBPACK_IMPORTED_MODULE_7__["default"];
-Transition.propTypes =  true ? {
-  /**
-   * A React reference to DOM element that need to transition:
-   * https://stackoverflow.com/a/51127130/4671932
-   *
-   *   - When `nodeRef` prop is used, `node` is not passed to callback functions
-   *      (e.g. `onEnter`) because user already has direct access to the node.
-   *   - When changing `key` prop of `Transition` in a `TransitionGroup` a new
-   *     `nodeRef` need to be provided to `Transition` with changed `key` prop
-   *     (see
-   *     [test/CSSTransition-test.js](https://github.com/reactjs/react-transition-group/blob/13435f897b3ab71f6e19d724f145596f5910581c/test/CSSTransition-test.js#L362-L437)).
-   */
-  nodeRef: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.shape({
-    current: typeof Element === 'undefined' ? prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.any : prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.instanceOf(Element)
-  }),
-
-  /**
-   * A `function` child can be used instead of a React element. This function is
-   * called with the current transition status (`'entering'`, `'entered'`,
-   * `'exiting'`, `'exited'`), which can be used to apply context
-   * specific props to a component.
-   *
-   * ```jsx
-   * <Transition in={this.state.in} timeout={150}>
-   *   {state => (
-   *     <MyComponent className={`fade fade-${state}`} />
-   *   )}
-   * </Transition>
-   * ```
-   */
-  children: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired, prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.element.isRequired]).isRequired,
-
-  /**
-   * Show the component; triggers the enter or exit states
-   */
-  in: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
-
-  /**
-   * By default the child component is mounted immediately along with
-   * the parent `Transition` component. If you want to "lazy mount" the component on the
-   * first `in={true}` you can set `mountOnEnter`. After the first enter transition the component will stay
-   * mounted, even on "exited", unless you also specify `unmountOnExit`.
-   */
-  mountOnEnter: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
-
-  /**
-   * By default the child component stays mounted after it reaches the `'exited'` state.
-   * Set `unmountOnExit` if you'd prefer to unmount the component after it finishes exiting.
-   */
-  unmountOnExit: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
-
-  /**
-   * By default the child component does not perform the enter transition when
-   * it first mounts, regardless of the value of `in`. If you want this
-   * behavior, set both `appear` and `in` to `true`.
-   *
-   * > **Note**: there are no special appear states like `appearing`/`appeared`, this prop
-   * > only adds an additional enter transition. However, in the
-   * > `<CSSTransition>` component that first enter transition does result in
-   * > additional `.appear-*` classes, that way you can choose to style it
-   * > differently.
-   */
-  appear: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
-
-  /**
-   * Enable or disable enter transitions.
-   */
-  enter: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
-
-  /**
-   * Enable or disable exit transitions.
-   */
-  exit: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
-
-  /**
-   * The duration of the transition, in milliseconds.
-   * Required unless `addEndListener` is provided.
-   *
-   * You may specify a single timeout for all transitions:
-   *
-   * ```jsx
-   * timeout={500}
-   * ```
-   *
-   * or individually:
-   *
-   * ```jsx
-   * timeout={{
-   *  appear: 500,
-   *  enter: 300,
-   *  exit: 500,
-   * }}
-   * ```
-   *
-   * - `appear` defaults to the value of `enter`
-   * - `enter` defaults to `0`
-   * - `exit` defaults to `0`
-   *
-   * @type {number | { enter?: number, exit?: number, appear?: number }}
-   */
-  timeout: function timeout(props) {
-    var pt = _utils_PropTypes__WEBPACK_IMPORTED_MODULE_6__["timeoutsShape"];
-    if (!props.addEndListener) pt = pt.isRequired;
-
-    for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      args[_key - 1] = arguments[_key];
-    }
-
-    return pt.apply(void 0, [props].concat(args));
-  },
-
-  /**
-   * Add a custom transition end trigger. Called with the transitioning
-   * DOM node and a `done` callback. Allows for more fine grained transition end
-   * logic. Timeouts are still used as a fallback if provided.
-   *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
-   *
-   * ```jsx
-   * addEndListener={(node, done) => {
-   *   // use the css transitionend event to mark the finish of a transition
-   *   node.addEventListener('transitionend', done, false);
-   * }}
-   * ```
-   */
-  addEndListener: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
-
-  /**
-   * Callback fired before the "entering" status is applied. An extra parameter
-   * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
-   *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
-   *
-   * @type Function(node: HtmlElement, isAppearing: bool) -> void
-   */
-  onEnter: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
-
-  /**
-   * Callback fired after the "entering" status is applied. An extra parameter
-   * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
-   *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
-   *
-   * @type Function(node: HtmlElement, isAppearing: bool)
-   */
-  onEntering: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
-
-  /**
-   * Callback fired after the "entered" status is applied. An extra parameter
-   * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
-   *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
-   *
-   * @type Function(node: HtmlElement, isAppearing: bool) -> void
-   */
-  onEntered: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
-
-  /**
-   * Callback fired before the "exiting" status is applied.
-   *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
-   *
-   * @type Function(node: HtmlElement) -> void
-   */
-  onExit: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
-
-  /**
-   * Callback fired after the "exiting" status is applied.
-   *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
-   *
-   * @type Function(node: HtmlElement) -> void
-   */
-  onExiting: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
-
-  /**
-   * Callback fired after the "exited" status is applied.
-   *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed
-   *
-   * @type Function(node: HtmlElement) -> void
-   */
-  onExited: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func
-} : undefined; // Name the function so it is clearer in the documentation
-
-function noop() {}
-
-Transition.defaultProps = {
-  in: false,
-  mountOnEnter: false,
-  unmountOnExit: false,
-  appear: false,
-  enter: true,
-  exit: true,
-  onEnter: noop,
-  onEntering: noop,
-  onEntered: noop,
-  onExit: noop,
-  onExiting: noop,
-  onExited: noop
-};
-Transition.UNMOUNTED = UNMOUNTED;
-Transition.EXITED = EXITED;
-Transition.ENTERING = ENTERING;
-Transition.ENTERED = ENTERED;
-Transition.EXITING = EXITING;
-/* harmony default export */ __webpack_exports__["default"] = (Transition);
-
-/***/ }),
-
-/***/ "./node_modules/react-transition-group/esm/TransitionGroup.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/react-transition-group/esm/TransitionGroup.js ***!
-  \********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _TransitionGroupContext__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./TransitionGroupContext */ "./node_modules/react-transition-group/esm/TransitionGroupContext.js");
-/* harmony import */ var _utils_ChildMapping__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./utils/ChildMapping */ "./node_modules/react-transition-group/esm/utils/ChildMapping.js");
-
-
-
-
-
-
-
-
-
-var values = Object.values || function (obj) {
-  return Object.keys(obj).map(function (k) {
-    return obj[k];
-  });
-};
-
-var defaultProps = {
-  component: 'div',
-  childFactory: function childFactory(child) {
-    return child;
-  }
-};
-/**
- * The `<TransitionGroup>` component manages a set of transition components
- * (`<Transition>` and `<CSSTransition>`) in a list. Like with the transition
- * components, `<TransitionGroup>` is a state machine for managing the mounting
- * and unmounting of components over time.
- *
- * Consider the example below. As items are removed or added to the TodoList the
- * `in` prop is toggled automatically by the `<TransitionGroup>`.
- *
- * Note that `<TransitionGroup>`  does not define any animation behavior!
- * Exactly _how_ a list item animates is up to the individual transition
- * component. This means you can mix and match animations across different list
- * items.
- */
-
-var TransitionGroup = /*#__PURE__*/function (_React$Component) {
-  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_3__["default"])(TransitionGroup, _React$Component);
-
-  function TransitionGroup(props, context) {
-    var _this;
-
-    _this = _React$Component.call(this, props, context) || this;
-
-    var handleExited = _this.handleExited.bind(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this)); // Initial children should all be entering, dependent on appear
-
-
-    _this.state = {
-      contextValue: {
-        isMounting: true
-      },
-      handleExited: handleExited,
-      firstRender: true
-    };
-    return _this;
-  }
-
-  var _proto = TransitionGroup.prototype;
-
-  _proto.componentDidMount = function componentDidMount() {
-    this.mounted = true;
-    this.setState({
-      contextValue: {
-        isMounting: false
-      }
-    });
-  };
-
-  _proto.componentWillUnmount = function componentWillUnmount() {
-    this.mounted = false;
-  };
-
-  TransitionGroup.getDerivedStateFromProps = function getDerivedStateFromProps(nextProps, _ref) {
-    var prevChildMapping = _ref.children,
-        handleExited = _ref.handleExited,
-        firstRender = _ref.firstRender;
-    return {
-      children: firstRender ? Object(_utils_ChildMapping__WEBPACK_IMPORTED_MODULE_7__["getInitialChildMapping"])(nextProps, handleExited) : Object(_utils_ChildMapping__WEBPACK_IMPORTED_MODULE_7__["getNextChildMapping"])(nextProps, prevChildMapping, handleExited),
-      firstRender: false
-    };
-  } // node is `undefined` when user provided `nodeRef` prop
-  ;
-
-  _proto.handleExited = function handleExited(child, node) {
-    var currentChildMapping = Object(_utils_ChildMapping__WEBPACK_IMPORTED_MODULE_7__["getChildMapping"])(this.props.children);
-    if (child.key in currentChildMapping) return;
-
-    if (child.props.onExited) {
-      child.props.onExited(node);
-    }
-
-    if (this.mounted) {
-      this.setState(function (state) {
-        var children = Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, state.children);
-
-        delete children[child.key];
-        return {
-          children: children
-        };
-      });
-    }
-  };
-
-  _proto.render = function render() {
-    var _this$props = this.props,
-        Component = _this$props.component,
-        childFactory = _this$props.childFactory,
-        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(_this$props, ["component", "childFactory"]);
-
-    var contextValue = this.state.contextValue;
-    var children = values(this.state.children).map(childFactory);
-    delete props.appear;
-    delete props.enter;
-    delete props.exit;
-
-    if (Component === null) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_TransitionGroupContext__WEBPACK_IMPORTED_MODULE_6__["default"].Provider, {
-        value: contextValue
-      }, children);
-    }
-
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_TransitionGroupContext__WEBPACK_IMPORTED_MODULE_6__["default"].Provider, {
-      value: contextValue
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Component, props, children));
-  };
-
-  return TransitionGroup;
-}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
-
-TransitionGroup.propTypes =  true ? {
-  /**
-   * `<TransitionGroup>` renders a `<div>` by default. You can change this
-   * behavior by providing a `component` prop.
-   * If you use React v16+ and would like to avoid a wrapping `<div>` element
-   * you can pass in `component={null}`. This is useful if the wrapping div
-   * borks your css styles.
-   */
-  component: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.any,
-
-  /**
-   * A set of `<Transition>` components, that are toggled `in` and out as they
-   * leave. the `<TransitionGroup>` will inject specific transition props, so
-   * remember to spread them through if you are wrapping the `<Transition>` as
-   * with our `<Fade>` example.
-   *
-   * While this component is meant for multiple `Transition` or `CSSTransition`
-   * children, sometimes you may want to have a single transition child with
-   * content that you want to be transitioned out and in when you change it
-   * (e.g. routes, images etc.) In that case you can change the `key` prop of
-   * the transition child as you change its content, this will cause
-   * `TransitionGroup` to transition the child out and back in.
-   */
-  children: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.node,
-
-  /**
-   * A convenience prop that enables or disables appear animations
-   * for all children. Note that specifying this will override any defaults set
-   * on individual children Transitions.
-   */
-  appear: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
-
-  /**
-   * A convenience prop that enables or disables enter animations
-   * for all children. Note that specifying this will override any defaults set
-   * on individual children Transitions.
-   */
-  enter: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
-
-  /**
-   * A convenience prop that enables or disables exit animations
-   * for all children. Note that specifying this will override any defaults set
-   * on individual children Transitions.
-   */
-  exit: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
-
-  /**
-   * You may need to apply reactive updates to a child as it is exiting.
-   * This is generally done by using `cloneElement` however in the case of an exiting
-   * child the element has already been removed and not accessible to the consumer.
-   *
-   * If you do need to update a child as it leaves you can provide a `childFactory`
-   * to wrap every child, even the ones that are leaving.
-   *
-   * @type Function(child: ReactElement) -> ReactElement
-   */
-  childFactory: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func
-} : undefined;
-TransitionGroup.defaultProps = defaultProps;
-/* harmony default export */ __webpack_exports__["default"] = (TransitionGroup);
-
-/***/ }),
-
-/***/ "./node_modules/react-transition-group/esm/TransitionGroupContext.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/react-transition-group/esm/TransitionGroupContext.js ***!
-  \***************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-/* harmony default export */ __webpack_exports__["default"] = (react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null));
-
-/***/ }),
-
-/***/ "./node_modules/react-transition-group/esm/config.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/react-transition-group/esm/config.js ***!
-  \***********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  disabled: false
-});
-
-/***/ }),
-
-/***/ "./node_modules/react-transition-group/esm/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/react-transition-group/esm/index.js ***!
-  \**********************************************************/
-/*! exports provided: CSSTransition, ReplaceTransition, SwitchTransition, TransitionGroup, Transition, config */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _CSSTransition__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CSSTransition */ "./node_modules/react-transition-group/esm/CSSTransition.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CSSTransition", function() { return _CSSTransition__WEBPACK_IMPORTED_MODULE_0__["default"]; });
-
-/* harmony import */ var _ReplaceTransition__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReplaceTransition */ "./node_modules/react-transition-group/esm/ReplaceTransition.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ReplaceTransition", function() { return _ReplaceTransition__WEBPACK_IMPORTED_MODULE_1__["default"]; });
-
-/* harmony import */ var _SwitchTransition__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SwitchTransition */ "./node_modules/react-transition-group/esm/SwitchTransition.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SwitchTransition", function() { return _SwitchTransition__WEBPACK_IMPORTED_MODULE_2__["default"]; });
-
-/* harmony import */ var _TransitionGroup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TransitionGroup */ "./node_modules/react-transition-group/esm/TransitionGroup.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TransitionGroup", function() { return _TransitionGroup__WEBPACK_IMPORTED_MODULE_3__["default"]; });
-
-/* harmony import */ var _Transition__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Transition */ "./node_modules/react-transition-group/esm/Transition.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Transition", function() { return _Transition__WEBPACK_IMPORTED_MODULE_4__["default"]; });
-
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./config */ "./node_modules/react-transition-group/esm/config.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "config", function() { return _config__WEBPACK_IMPORTED_MODULE_5__["default"]; });
-
-
-
-
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/react-transition-group/esm/utils/ChildMapping.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/react-transition-group/esm/utils/ChildMapping.js ***!
-  \***********************************************************************/
-/*! exports provided: getChildMapping, mergeChildMappings, getInitialChildMapping, getNextChildMapping */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getChildMapping", function() { return getChildMapping; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mergeChildMappings", function() { return mergeChildMappings; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getInitialChildMapping", function() { return getInitialChildMapping; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNextChildMapping", function() { return getNextChildMapping; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-/**
- * Given `this.props.children`, return an object mapping key to child.
- *
- * @param {*} children `this.props.children`
- * @return {object} Mapping of key to child
- */
-
-function getChildMapping(children, mapFn) {
-  var mapper = function mapper(child) {
-    return mapFn && Object(react__WEBPACK_IMPORTED_MODULE_0__["isValidElement"])(child) ? mapFn(child) : child;
-  };
-
-  var result = Object.create(null);
-  if (children) react__WEBPACK_IMPORTED_MODULE_0__["Children"].map(children, function (c) {
-    return c;
-  }).forEach(function (child) {
-    // run the map function here instead so that the key is the computed one
-    result[child.key] = mapper(child);
-  });
-  return result;
-}
-/**
- * When you're adding or removing children some may be added or removed in the
- * same render pass. We want to show *both* since we want to simultaneously
- * animate elements in and out. This function takes a previous set of keys
- * and a new set of keys and merges them with its best guess of the correct
- * ordering. In the future we may expose some of the utilities in
- * ReactMultiChild to make this easy, but for now React itself does not
- * directly have this concept of the union of prevChildren and nextChildren
- * so we implement it here.
- *
- * @param {object} prev prev children as returned from
- * `ReactTransitionChildMapping.getChildMapping()`.
- * @param {object} next next children as returned from
- * `ReactTransitionChildMapping.getChildMapping()`.
- * @return {object} a key set that contains all keys in `prev` and all keys
- * in `next` in a reasonable order.
- */
-
-function mergeChildMappings(prev, next) {
-  prev = prev || {};
-  next = next || {};
-
-  function getValueForKey(key) {
-    return key in next ? next[key] : prev[key];
-  } // For each key of `next`, the list of keys to insert before that key in
-  // the combined list
-
-
-  var nextKeysPending = Object.create(null);
-  var pendingKeys = [];
-
-  for (var prevKey in prev) {
-    if (prevKey in next) {
-      if (pendingKeys.length) {
-        nextKeysPending[prevKey] = pendingKeys;
-        pendingKeys = [];
-      }
-    } else {
-      pendingKeys.push(prevKey);
-    }
-  }
-
-  var i;
-  var childMapping = {};
-
-  for (var nextKey in next) {
-    if (nextKeysPending[nextKey]) {
-      for (i = 0; i < nextKeysPending[nextKey].length; i++) {
-        var pendingNextKey = nextKeysPending[nextKey][i];
-        childMapping[nextKeysPending[nextKey][i]] = getValueForKey(pendingNextKey);
-      }
-    }
-
-    childMapping[nextKey] = getValueForKey(nextKey);
-  } // Finally, add the keys which didn't appear before any key in `next`
-
-
-  for (i = 0; i < pendingKeys.length; i++) {
-    childMapping[pendingKeys[i]] = getValueForKey(pendingKeys[i]);
-  }
-
-  return childMapping;
-}
-
-function getProp(child, prop, props) {
-  return props[prop] != null ? props[prop] : child.props[prop];
-}
-
-function getInitialChildMapping(props, onExited) {
-  return getChildMapping(props.children, function (child) {
-    return Object(react__WEBPACK_IMPORTED_MODULE_0__["cloneElement"])(child, {
-      onExited: onExited.bind(null, child),
-      in: true,
-      appear: getProp(child, 'appear', props),
-      enter: getProp(child, 'enter', props),
-      exit: getProp(child, 'exit', props)
-    });
-  });
-}
-function getNextChildMapping(nextProps, prevChildMapping, onExited) {
-  var nextChildMapping = getChildMapping(nextProps.children);
-  var children = mergeChildMappings(prevChildMapping, nextChildMapping);
-  Object.keys(children).forEach(function (key) {
-    var child = children[key];
-    if (!Object(react__WEBPACK_IMPORTED_MODULE_0__["isValidElement"])(child)) return;
-    var hasPrev = (key in prevChildMapping);
-    var hasNext = (key in nextChildMapping);
-    var prevChild = prevChildMapping[key];
-    var isLeaving = Object(react__WEBPACK_IMPORTED_MODULE_0__["isValidElement"])(prevChild) && !prevChild.props.in; // item is new (entering)
-
-    if (hasNext && (!hasPrev || isLeaving)) {
-      // console.log('entering', key)
-      children[key] = Object(react__WEBPACK_IMPORTED_MODULE_0__["cloneElement"])(child, {
-        onExited: onExited.bind(null, child),
-        in: true,
-        exit: getProp(child, 'exit', nextProps),
-        enter: getProp(child, 'enter', nextProps)
-      });
-    } else if (!hasNext && hasPrev && !isLeaving) {
-      // item is old (exiting)
-      // console.log('leaving', key)
-      children[key] = Object(react__WEBPACK_IMPORTED_MODULE_0__["cloneElement"])(child, {
-        in: false
-      });
-    } else if (hasNext && hasPrev && Object(react__WEBPACK_IMPORTED_MODULE_0__["isValidElement"])(prevChild)) {
-      // item hasn't changed transition states
-      // copy over the last transition props;
-      // console.log('unchanged', key)
-      children[key] = Object(react__WEBPACK_IMPORTED_MODULE_0__["cloneElement"])(child, {
-        onExited: onExited.bind(null, child),
-        in: prevChild.props.in,
-        exit: getProp(child, 'exit', nextProps),
-        enter: getProp(child, 'enter', nextProps)
-      });
-    }
-  });
-  return children;
-}
-
-/***/ }),
-
-/***/ "./node_modules/react-transition-group/esm/utils/PropTypes.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/react-transition-group/esm/utils/PropTypes.js ***!
-  \********************************************************************/
-/*! exports provided: timeoutsShape, classNamesShape */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "timeoutsShape", function() { return timeoutsShape; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "classNamesShape", function() { return classNamesShape; });
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
-
-var timeoutsShape =  true ? prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number, prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.shape({
-  enter: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
-  exit: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
-  appear: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number
-}).isRequired]) : undefined;
-var classNamesShape =  true ? prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.shape({
-  enter: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-  exit: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-  active: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string
-}), prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.shape({
-  enter: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-  enterDone: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-  enterActive: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-  exit: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-  exitDone: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-  exitActive: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string
-})]) : undefined;
-
-/***/ }),
-
 /***/ "./node_modules/react/cjs/react.development.js":
 /*!*****************************************************!*\
   !*** ./node_modules/react/cjs/react.development.js ***!
@@ -53119,393 +51057,6 @@ function App() {
 
 /***/ }),
 
-/***/ "./src/main/frontend/components/ContactItem.js":
-/*!*****************************************************!*\
-  !*** ./src/main/frontend/components/ContactItem.js ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/entities/reducers/contact */ "./src/main/frontend/store/entities/reducers/contact.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  padding: 0 20px;\n  margin-left: 0.25rem;\n  margin-right: 0.25rem;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  ", ";\n  ", ";\n  ", "; \n  ", ";  \n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  width: 100%;\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  background-color: #eeeeee;\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  list-style-type: none;\n  display: flex;\n  flex-flow: column nowrap;\n  height: 70px;\n  min-width: 300px;\n  justify-content: space-evenly;\n  padding: 0 1rem;\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  text-align: center;\n  color: white;\n  background-color: #333;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  display: flex;\n  flex-flow: column nowrap;\n  justify-content: center;\n  align-items: center;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: 50px auto 50px auto;\n  display: grid;\n  grid-template-rows: 50px auto 50px;\n  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);\n  background-color: white;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: 0 auto;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
-
-
- // Styled Components
-
-var ContainerCard = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject());
-var Card = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject2());
-var CardTop = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject3());
-var Ul = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].ul(_templateObject4());
-var CardBottom = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject5());
-var Button = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].button(_templateObject6(), function (props) {
-  return props.primary && "background-color: transparent; height: 38px; margin: 0.5rem 0rem;";
-}, function (props) {
-  return props.secondary && "color: #000; background-color: rgb(248, 249, 250); border-color: #ff974c; padding-top: 0.25rem; padding-bottom: 0.25rem;";
-}, function (props) {
-  return props.danger && "background-color: rgb(240, 0, 57); height: 38px; margin: 0.5rem 0rem;";
-}, function (props) {
-  return props.warning && "background-color: rgb(255, 194, 0); height: 38px; margin: 0.5rem 0rem;";
-});
-
-var ContactItem = function ContactItem(_ref) {
-  var contact = _ref.contact,
-      index = _ref.index;
-  var firstName = contact.firstName,
-      lastName = contact.lastName,
-      email = contact.email,
-      date = contact.date,
-      _links = contact._links;
-  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
-  var dateParsed = new Date(Date.parse(date.toString()));
-
-  var deleteEntry = function deleteEntry(e) {
-    dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["deleteContact"])(_links.self.href));
-    dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["clearTmpContact"])());
-  };
-
-  var setEditForm = function setEditForm(e) {
-    // clear previous stuff
-    dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["clearTmpContact"])()); // set tmp contact when clicked
-
-    dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["setTmpContact"])(_links.self.href, firstName, lastName, email, date));
-  };
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContainerCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Card, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardTop, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Ul, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    style: {
-      display: 'none'
-    },
-    id: _links.self.href
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-hands-wash"
-  }, "\xA0"), "".concat(dateParsed.getDate(), ".").concat(dateParsed.getMonth() + 1, ".").concat(dateParsed.getUTCFullYear())), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-user"
-  }, "\xA0"), firstName, "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, lastName)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-envelope"
-  }, "\xA0"), email)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardBottom, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
-    secondary: true,
-    onClick: setEditForm
-  }, "edit"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
-    secondary: true,
-    style: {
-      backgroundColor: 'red'
-    },
-    onClick: deleteEntry
-  }, "delete")))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (ContactItem);
-
-/***/ }),
-
-/***/ "./src/main/frontend/components/Contacts.js":
-/*!**************************************************!*\
-  !*** ./src/main/frontend/components/Contacts.js ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-transition-group */ "./node_modules/react-transition-group/esm/index.js");
-/* harmony import */ var _store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/entities/reducers/contact */ "./src/main/frontend/store/entities/reducers/contact.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _ContactItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ContactItem */ "./src/main/frontend/components/ContactItem.js");
-/* harmony import */ var _Form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Form */ "./src/main/frontend/components/Form.js");
-/* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n  text-align: left;\n  display: flex;\n"]);
-
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: row nowrap;\n  width: 100%;\n  height: 150px;\n  background-color: white;\n  border-radius: 20px;\n  margin: 0.3rem 0;\n  \n  & > div:first-child {\n    align-self: center;\n    margin-left: 1rem;\n  }\n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  margin: auto 2rem;\n  width: 3rem;\n  height: 3rem;\n  margin-top: 2.2rem;\n  border: none;\n  position: relative;\n  \n  & input[type='checkbox'] {\n    width: 3rem;\n    height: 3rem;\n    z-index: 5;\n    position: absolute;\n    top: 0;\n    left: 0;\n    opacity: 0;\n    \n    &:hover ~ .checkmark {\n      background-color: rgb(187, 253, 235);\n    }\n  }\n  \n  & .checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 3rem;\n    height: 3rem;\n    border-radius: 50%;\n    border: 2px solid #ccc;\n  }\n  \n  & :checked ~ .checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 3rem;\n    height: 3rem;\n    background-color: rgb(0, 235, 191);\n    border-radius: 50%;\n    z-index: 2;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    border: none;\n    \n    & .innerMark {\n      width: 12px;\n      height: 4px;\n      background-color: white;\n      z-index: 2;\n      transform: rotate(225deg);\n      margin-left: 0.7rem;\n      position: relative;\n      top: 4px;\n      \n      &::after {\n        content: '';\n        width: 24px;\n        height: 4px;\n        background-color: white;\n        position: absolute;\n        top: 10px;\n        left: -10px;\n        right: 10px;\n        z-index: 1;\n        transform: rotate(270deg);\n      }\n    }\n  }\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: column nowrap;\n  justify-content: center;\n  align-items: center;\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: column;\n  width: 94%;\n  margin: 0 auto;\n  padding-bottom: 3rem;\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  padding-top: 4rem;\n  background-color: rgb(245, 246, 251);\n  min-height: 100vh;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  text-align: center;\n  color: rgb(34, 27, 113);\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-evenly;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
-
-
-
-
-
-
-
-var EvenlySpaced = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject());
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].h1(_templateObject2());
-var Main = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].main(_templateObject3());
-var WorkSection = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].section(_templateObject4());
-var WorkWrapper = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject5());
-var WorkCheck = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject6());
-var WorkCard = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject7());
-var WorkIcon = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].h4(_templateObject8());
-
-var Contacts = function Contacts() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
-      _useState2 = _slicedToArray(_useState, 2),
-      searchString = _useState2[0],
-      setSearchString = _useState2[1];
-
-  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
-  var filteredContacts = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_3__["filteredContactsSelector"])(searchString));
-  var loginState = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_7__["loginInfoSelector"]);
-  var loading = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_7__["loadingBooleanSelector"]); // This is only needed if we don't use PrivateRoutes Layer -> Otherwise private route first called and then this
-  // useEffect(() => {
-  //   // only dispatch the action, when user info already loaded
-  //   // so the Component where we get user info has to be mounted
-  //   // first before we call this --> loginState.isAuthenticated must be true
-  //   if(loginState.isAuthenticated)
-  //     dispatch(loadContacts()).then(res => console.log(res));
-  // }, [loginState.isAuthenticated]);
-
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_3__["loadContacts"])()).then(function (res) {
-      return console.log(res);
-    });
-  }, []);
-
-  var onChange = function onChange(e) {
-    setSearchString(e.target.value);
-  };
-
-  if (!loading) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, {
-      as: "h3"
-    }, " Hi ", loginState.user, " \uD83D\uDC4B"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-      style: {
-        textAlign: 'center'
-      }
-    }, "Got some new tasks? \u2705"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkSection, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkIcon, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "fas fa-circle fa-xs",
-      style: {
-        color: 'rgb(94, 124, 255)',
-        padding: '0.2rem'
-      }
-    }), "Work"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      style: {
-        backgroundColor: 'rgb(94, 124, 255)',
-        height: '70%',
-        width: '4px'
-      }
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCheck, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-      type: "checkbox"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "checkmark"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "innerMark"
-    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Title"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem Ipsum Dolor amet."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Due to:\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      style: {
-        color: 'rgb(94, 124, 255)',
-        fontWeight: 'bold'
-      }
-    }, "23.12.1997")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkSection, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkIcon, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "fas fa-circle fa-xs",
-      style: {
-        color: 'rgb(255, 184, 0)',
-        padding: '0.2rem'
-      }
-    }), "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      style: {
-        backgroundColor: 'rgb(255, 184, 0)',
-        height: '70%',
-        width: '4px'
-      }
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCheck, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-      type: "checkbox"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "checkmark"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "innerMark"
-    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Title"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem Ipsum Dolor amet."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-      style: {
-        color: 'rgb(255, 184, 0)',
-        fontWeight: 'bold'
-      }
-    }, "23.12.1997, 16:00"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      style: {
-        backgroundColor: 'rgb(255, 184, 0)',
-        height: '70%',
-        width: '4px'
-      }
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCheck, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-      type: "checkbox"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "checkmark"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "innerMark"
-    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Title"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem Ipsum Dolor amet."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-      style: {
-        color: 'rgb(255, 184, 0)',
-        fontWeight: 'bold'
-      }
-    }, "23.12.1997, 16:00"))))));
-  } else {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "loader-wrap"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "loader"
-    }));
-  }
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Contacts);
-
-/***/ }),
-
 /***/ "./src/main/frontend/components/Form.js":
 /*!**********************************************!*\
   !*** ./src/main/frontend/components/Form.js ***!
@@ -53518,7 +51069,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/entities/reducers/contact */ "./src/main/frontend/store/entities/reducers/contact.js");
+/* harmony import */ var _store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/entities/reducers/task */ "./src/main/frontend/store/entities/reducers/task.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -53541,8 +51092,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _templateObject4() {
   var data = _taggedTemplateLiteral(["\n  background-color: rgb(255, 194, 0); \n  height: 38px; \n  margin: 0.5rem 0rem;\n"]);
@@ -53595,76 +51144,85 @@ var ButtonPrimary = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["defau
 var ButtonDanger = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(Button)(_templateObject3());
 var ButtonWarning = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(Button)(_templateObject4());
 
-var SubStringPrimary = function SubStringPrimary(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonPrimary, _extends({}, props, {
-    children: props.children.substr(5, 9)
-  }));
-};
-
 var Form = function Form() {
   // local form data state
+  // TODO: taskForm
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     localHref: '',
-    localFirstName: '',
-    localLastName: '',
-    localEmail: '',
-    // transform input field with type=date to yyyy-mm-dd
-    localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate())
+    // needed for updates
+    localTitle: '',
+    localDescription: '',
+    localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate()),
+    localType: true
   }),
       _useState2 = _slicedToArray(_useState, 2),
-      contactForm = _useState2[0],
-      setContactForm = _useState2[1]; // pull out data from parent object state
+      taskForm = _useState2[0],
+      setTaskForm = _useState2[1]; // destructure data from input user
 
 
-  var localHref = contactForm.localHref,
-      localFirstName = contactForm.localFirstName,
-      localLastName = contactForm.localLastName,
-      localEmail = contactForm.localEmail,
-      localDate = contactForm.localDate;
+  var localHref = taskForm.localHref,
+      localTitle = taskForm.localTitle,
+      localDescription = taskForm.localDescription,
+      localDate = taskForm.localDate,
+      localType = taskForm.localType;
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
-  var tmpContact = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["tmpContactSelector"]); // specify selector to set/get data inside form when edit
+  var tmpTask = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["tmpTaskSelector"]); // specify selector to set/get data inside form when edit
 
-  var notification = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["notificationSelector"]); // specify ui messages if something fails
+  var notification = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["notificationSelector"]); // specify ui messages if something fails
 
-  var type = notification.type,
-      error = notification.error;
-  var href = tmpContact.href,
-      firstName = tmpContact.firstName,
-      lastName = tmpContact.lastName,
-      email = tmpContact.email,
-      date = tmpContact.date;
+  var href = tmpTask.href,
+      title = tmpTask.title,
+      description = tmpTask.description,
+      date = tmpTask.date,
+      workHome = tmpTask.workHome;
+  console.log(tmpTask); // whenever tmpTask changes set it to regarding the text fields (update state)
+
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (href && firstName && lastName && email && date) // exist check - could also be empty (cleared)
-      setContactForm({
+    console.log("useEffectForm triggered");
+    if (href && title && description && date) //
+      setTaskForm({
         localHref: href,
-        localFirstName: firstName,
-        localLastName: lastName,
-        localEmail: email,
-        localDate: "".concat(new Date(Date.parse(date.toString())).getUTCFullYear(), "-").concat(parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1) : parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1, "-").concat(parseInt(new Date(Date.parse(date.toString())).getDate().toString()) < 10 ? '0' + parseInt(new Date(Date.parse(date.toString())).getDate().toString()) : parseInt(new Date(Date.parse(date.toString())).getDate().toString()))
+        localTitle: title,
+        localDescription: description,
+        localDate: "".concat(new Date(Date.parse(date.toString())).getUTCFullYear(), "-").concat(parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1) : parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1, "-").concat(parseInt(new Date(Date.parse(date.toString())).getDate().toString()) < 10 ? '0' + parseInt(new Date(Date.parse(date.toString())).getDate().toString()) : parseInt(new Date(Date.parse(date.toString())).getDate().toString())),
+        localType: workHome
       });else // this specifies the case if the use is in edit mode and then deletes it anyways -> clear out local form as well
-      setContactForm({
-        localHref: '',
-        localFirstName: '',
-        localLastName: '',
-        localEmail: '',
-        localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate())
-      });
-  }, [tmpContact]);
+      {
+        console.log("Here after set");
+        setTaskForm({
+          localHref: '',
+          localTitle: '',
+          localDescription: '',
+          localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate()),
+          localType: true
+        });
+      }
+  }, [tmpTask]);
 
   var onChange = function onChange(e) {
-    setContactForm(_objectSpread(_objectSpread({}, contactForm), {}, _defineProperty({}, e.target.name, e.target.value)));
-  };
+    if (e.target.id === "work" || e.target.id === "home") {
+      if (e.target.id === "work") setTaskForm(_objectSpread(_objectSpread({}, taskForm), {}, {
+        localType: true
+      })); // WORK
+      else setTaskForm(_objectSpread(_objectSpread({}, taskForm), {}, {
+          localType: false
+        })); // HOME
+    } else {
+      setTaskForm(_objectSpread(_objectSpread({}, taskForm), {}, _defineProperty({}, e.target.name, e.target.value)));
+    }
+  }; // if user aborts update, reset local form and clear tmp in state
+
 
   var onDiscard = function onDiscard(e) {
     // clear temp field in state
-    dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["clearTmpContact"])()); // clear input field
+    dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["clearTmpTask"])()); // clear input field
 
-    setContactForm({
+    setTaskForm({
       localHref: '',
-      localFirstName: '',
-      localLastName: '',
-      localEmail: '',
-      localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate())
+      localTitle: '',
+      localDescription: '',
+      localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate()),
+      localType: true
     });
   };
 
@@ -53675,22 +51233,22 @@ var Form = function Form() {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              e.preventDefault(); // check if update-mode is on (-> tmp fields are set)
+              e.preventDefault(); // check if update-mode is on by checking if tmpTask is set
 
-              if (!(href && firstName && lastName && email && date)) {
+              if (!(href && title && description && date)) {
                 _context.next = 5;
                 break;
               }
 
               // Edit Mode
-              dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["updateContact"])(href, localFirstName, localLastName, localEmail, localDate));
+              dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["updateTask"])(href, localTitle, localDescription, localDate, localType));
               _context.next = 17;
               break;
 
             case 5:
               _context.prev = 5;
               _context.next = 8;
-              return dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["addContact"])(localFirstName, localLastName, localEmail, localDate));
+              return dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["addTask"])(localTitle, localDescription, localDate, localType));
 
             case 8:
               res = _context.sent;
@@ -53701,7 +51259,7 @@ var Form = function Form() {
               }
 
               _context.next = 12;
-              return dispatch(Object(_store_entities_reducers_contact__WEBPACK_IMPORTED_MODULE_2__["bindNewContact"])());
+              return dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["bindNewTask"])());
 
             case 12:
               _context.next = 17;
@@ -53714,12 +51272,12 @@ var Form = function Form() {
 
             case 17:
               // clear input fields
-              setContactForm({
+              setTaskForm({
                 localHref: '',
-                localFirstName: '',
-                localLastName: '',
-                localEmail: '',
-                localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate())
+                localTitle: '',
+                localDescription: '',
+                localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate()),
+                localType: true
               });
 
             case 18:
@@ -53741,11 +51299,11 @@ var Form = function Form() {
     },
     onSubmit: onSubmit,
     name: "contact"
-  }, type !== "" && error !== "" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: type
+  }, notification.type !== "" && notification.error !== "" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: notification.type
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-info-circle"
-  }), " " + error)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), " " + notification.error)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "padding-05y"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     style: {
@@ -53759,24 +51317,24 @@ var Form = function Form() {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "padding-05y"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "localFirstName"
+    htmlFor: "localTitle"
   }, "title:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     className: "full-width",
     type: "text",
-    id: "localFirstName",
-    name: "localFirstName",
-    value: localFirstName,
+    id: "localTitle",
+    name: "localTitle",
+    value: localTitle,
     onChange: onChange
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "padding-05y"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "localLastName"
+    htmlFor: "localDescription"
   }, "description:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     className: "full-width",
     type: "text",
-    id: "localLastName",
-    name: "localLastName",
-    value: localLastName,
+    id: "localDescription",
+    name: "localDescription",
+    value: localDescription,
     onChange: onChange
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "padding-05y"
@@ -53790,19 +51348,27 @@ var Form = function Form() {
     value: localDate,
     onChange: onChange
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "padding-05y"
+  }, "Work: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    checked: true,
+    type: "radio",
+    id: "work",
+    name: "localType",
+    onChange: onChange
+  }), " \xA0 Home: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "home",
+    type: "radio",
+    name: "localType",
+    onChange: onChange
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "padding-1y"
-  }, href && firstName && lastName && email && date ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonWarning, {
+  }, href && title && description && date ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonWarning, {
     type: "submit"
   }, "Update") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonPrimary, {
     type: "submit"
-  }, "Add"), href && firstName && lastName && email && date && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonDanger, {
+  }, "Add"), href && title && description && date && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonDanger, {
     onClick: onDiscard
-  }, "Discard"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonPrimary, {
-    style: {
-      display: 'none'
-    },
-    as: SubStringPrimary
-  }, "A Primary Button")));
+  }, "Discard")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Form);
@@ -54135,24 +51701,6 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
- // const Button = styled.button`
-//   display: inline-block;
-//   padding: 0 20px;
-//   margin-left: 0.25rem;
-//   margin-right: 0.25rem;
-//   color: #555;
-//   text-align: center;
-//   font-size: 11px;
-//   font-weight: 600;
-//   text-transform: uppercase;
-//   text-decoration: none;
-//   ${props => props.secondary && "color: #000; background-color: rgb(248, 249, 250); border-color: #ff974c;"};
-//   ${props => props.warning && "background-color: rgb(255, 194, 0); height: 38px; margin: 0.5rem 0rem;"};
-//   border-radius: 4px;
-//   border: 1px soLid #bbb;
-//   cursor: pointer;
-//   width: 100%;
-// `;
 
 var NavbarWrapper = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].section(_templateObject());
 var Logo = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div(_templateObject2());
@@ -54208,7 +51756,7 @@ var Navbar = function Navbar(props) {
 
 Navbar.propTypes = {
   title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
-  dash: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired,
+  dash: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
   logout: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool.isRequired
 };
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
@@ -54274,7 +51822,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar */ "./src/main/frontend/components/Navbar.js");
 /* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Login */ "./src/main/frontend/components/Login.js");
-/* harmony import */ var _Contacts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Contacts */ "./src/main/frontend/components/Contacts.js");
+/* harmony import */ var _Tasks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Tasks */ "./src/main/frontend/components/Tasks.js");
 /* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Home */ "./src/main/frontend/components/Home.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
@@ -54283,7 +51831,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import
 
 
 
@@ -54294,8 +51841,7 @@ var Router = function Router() {
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_6__["useDispatch"])();
   var loginState = Object(react_redux__WEBPACK_IMPORTED_MODULE_6__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_7__["loginInfoSelector"]);
   /** Authentication of User */
-  // As soon as the site loads we check if the user is currently logged in
-  // Check if user is logged in (checks if calling endpoints produces 401)
+  // As soon as the site loads we check if the user is still logged in (session)
   // This loads user Context inside the store whenever page loads
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
@@ -54334,11 +51880,389 @@ var Router = function Router() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PrivateRoute__WEBPACK_IMPORTED_MODULE_8__["default"], {
     exact: true,
     path: "/dashboard",
-    component: _Contacts__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: _Tasks__WEBPACK_IMPORTED_MODULE_4__["default"]
   })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Router);
+
+/***/ }),
+
+/***/ "./src/main/frontend/components/TaskItem.js":
+/*!**************************************************!*\
+  !*** ./src/main/frontend/components/TaskItem.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/entities/reducers/task */ "./src/main/frontend/store/entities/reducers/task.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: row nowrap;\n  width: 100%;\n  height: 150px;\n  background-color: white;\n  border-radius: 20px;\n  margin: 0.3rem 0;\n\n  & > div:first-child {\n    align-self: center;\n    margin-left: 1rem;\n  }\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n  margin: auto 2rem;\n  width: 3rem;\n  height: 3rem;\n  margin-top: 2.2rem;\n  border: none;\n  position: relative;\n\n  & input[type='checkbox'] {\n    width: 3rem;\n    height: 3rem;\n    z-index: 5;\n    position: absolute;\n    top: 0;\n    left: 0;\n    opacity: 0;\n\n    &:hover ~ .checkmark {\n      background-color: rgb(187, 253, 235);\n    }\n  }\n\n  & .checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 3rem;\n    height: 3rem;\n    border-radius: 50%;\n    border: 2px solid #ccc;\n  }\n\n  & :checked ~ .checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 3rem;\n    height: 3rem;\n    background-color: rgb(0, 235, 191);\n    border-radius: 50%;\n    z-index: 2;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    border: none;\n\n    & .innerMark {\n      width: 12px;\n      height: 4px;\n      background-color: white;\n      z-index: 2;\n      transform: rotate(225deg);\n      margin-left: 0.7rem;\n      position: relative;\n      top: 4px;\n\n      &::after {\n        content: '';\n        width: 24px;\n        height: 4px;\n        background-color: white;\n        position: absolute;\n        top: 10px;\n        left: -10px;\n        right: 10px;\n        z-index: 1;\n        transform: rotate(270deg);\n      }\n    }\n  }\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  padding: 0 20px;\n  margin-left: 0.25rem;\n  margin-right: 0.25rem;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  ", ";\n  ", ";\n  ", "; \n  ", ";  \n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  width: 100%;\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  background-color: #eeeeee;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  list-style-type: none;\n  display: flex;\n  flex-flow: column nowrap;\n  height: 70px;\n  min-width: 300px;\n  justify-content: space-evenly;\n  padding: 0 1rem;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  text-align: center;\n  color: white;\n  background-color: #333;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  display: flex;\n  flex-flow: column nowrap;\n  justify-content: center;\n  align-items: center;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: 50px auto 50px auto;\n  display: grid;\n  grid-template-rows: 50px auto 50px;\n  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);\n  background-color: white;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: 0 auto;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+var ContainerCard = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject());
+var Card = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject2());
+var CardTop = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject3());
+var Ul = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].ul(_templateObject4());
+var CardBottom = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject5());
+var Button = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].button(_templateObject6(), function (props) {
+  return props.primary && "background-color: transparent; height: 38px; margin: 0.5rem 0rem;";
+}, function (props) {
+  return props.secondary && "color: #000; background-color: rgb(248, 249, 250); border-color: #ff974c; padding-top: 0.25rem; padding-bottom: 0.25rem;";
+}, function (props) {
+  return props.danger && "background-color: rgb(240, 0, 57); height: 38px; margin: 0.5rem 0rem;";
+}, function (props) {
+  return props.warning && "background-color: rgb(255, 194, 0); height: 38px; margin: 0.5rem 0rem;";
+});
+var WorkCheck = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject7());
+var WorkCard = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject8());
+
+var TaskItem = function TaskItem(_ref) {
+  var task = _ref.task;
+  var title = task.title,
+      description = task.description,
+      date = task.date,
+      workHome = task.workHome,
+      _links = task._links;
+  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
+  var dateParsed = new Date(Date.parse(date.toString()));
+
+  var deleteEntry = function deleteEntry(e) {
+    dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["deleteTask"])(_links.self.href));
+    dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["clearTmpTask"])());
+  };
+
+  var setEditForm = function setEditForm(e) {
+    console.log("Set Edit"); // clear previous stuff
+
+    dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["clearTmpTask"])()); // set tmp contact when clicked
+
+    dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["setTmpTask"])(_links.self.href, title, description, date, workHome));
+  }; // WORK = true and HOME = false
+
+
+  if (workHome) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        backgroundColor: 'rgb(94, 124, 255)',
+        height: '70%',
+        width: '4px'
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCheck, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "checkbox"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "checkmark"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "innerMark"
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Due to:\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      style: {
+        color: 'rgb(94, 124, 255)',
+        fontWeight: 'bold'
+      }
+    }, "".concat(dateParsed.getDate(), ".").concat(dateParsed.getMonth() + 1, ".").concat(dateParsed.getUTCFullYear())))));
+  } else {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        backgroundColor: 'rgb(255, 184, 0)',
+        height: '70%',
+        width: '4px'
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCheck, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "checkbox"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "checkmark"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "innerMark"
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Due to: \xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      style: {
+        color: 'rgb(255, 184, 0)',
+        fontWeight: 'bold'
+      }
+    }, "".concat(dateParsed.getDate(), ".").concat(dateParsed.getMonth() + 1, ".").concat(dateParsed.getUTCFullYear())))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: 1
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        marginRight: '1rem'
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: setEditForm
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-edit fa-1x"
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        marginRight: '1rem'
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: deleteEntry
+    }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-trash fa-1x"
+    })))));
+  } // return (
+  //   <Fragment>
+  //     <ContainerCard>
+  //       <Card>
+  //         <CardTop/>
+  //         <Ul>
+  //           <li style={{display: 'none'}} id={_links.self.href}>{}</li>
+  //           <li><i
+  //             className="fas fa-hands-wash">&nbsp;</i>{`${dateParsed.getDate()}.${dateParsed.getMonth() + 1}.${dateParsed.getUTCFullYear()}`}
+  //           </li>
+  //           <li><i className="fas fa-user">&nbsp;</i>{firstName}&nbsp;<strong>{lastName}</strong></li>
+  //           <li><i className="fas fa-envelope">&nbsp;</i>{email}</li>
+  //         </Ul>
+  //         <CardBottom>
+  //           <Button secondary onClick={setEditForm}>edit</Button>
+  //           <Button secondary style={{backgroundColor: 'red'}} onClick={deleteEntry}>delete</Button>
+  //         </CardBottom>
+  //       </Card>
+  //     </ContainerCard>
+  //   </Fragment>
+  // );
+
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TaskItem);
+
+/***/ }),
+
+/***/ "./src/main/frontend/components/Tasks.js":
+/*!***********************************************!*\
+  !*** ./src/main/frontend/components/Tasks.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/entities/reducers/task */ "./src/main/frontend/store/entities/reducers/task.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _TaskItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./TaskItem */ "./src/main/frontend/components/TaskItem.js");
+/* harmony import */ var _Form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Form */ "./src/main/frontend/components/Form.js");
+/* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  text-align: left;\n  display: flex;\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: column;\n  width: 94%;\n  margin: 0 auto;\n  padding-bottom: 3rem;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: column;\n  width: 94%;\n  margin: 0 auto;\n  padding-bottom: 3rem;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: column nowrap;\n  justify-content: center;\n  align-items: center;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  padding-top: 4rem;\n  background-color: rgb(245, 246, 251);\n  min-height: 100vh;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  text-align: center;\n  color: rgb(34, 27, 113);\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+
+
+
+var Title = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].h1(_templateObject());
+var Main = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].main(_templateObject2());
+var TaskWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject3());
+var WorkSection = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].section(_templateObject4());
+var HomeSection = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].section(_templateObject5());
+var IconStyle = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].h4(_templateObject6());
+
+var Tasks = function Tasks() {
+  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
+  var workTasks = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["workTasksSelector"]);
+  var homeTasks = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["homeTasksSelector"]);
+  var loginState = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_6__["loginInfoSelector"]);
+  var loading = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_6__["loadingBooleanSelector"]);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["loadTasks"])()).then(function (res) {
+      return console.log(res);
+    });
+  }, []);
+
+  if (!loading) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, {
+      as: "h3"
+    }, " Hi ", loginState.user, " \uD83D\uDC4B"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      style: {
+        textAlign: 'center'
+      }
+    }, "Got some new tasks? \u2705"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkSection, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconStyle, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-circle fa-xs",
+      style: {
+        color: 'rgb(94, 124, 255)',
+        padding: '0.2rem'
+      }
+    }), "Work"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TaskWrapper, null, workTasks.map(function (workTask) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TaskItem__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        key: workTask._links.self.href,
+        task: workTask
+      });
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HomeSection, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IconStyle, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-circle fa-xs",
+      style: {
+        color: 'rgb(255, 184, 0)',
+        padding: '0.2rem'
+      }
+    }), "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TaskWrapper, null, homeTasks.map(function (homeTask) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TaskItem__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        key: homeTask._links.self.href,
+        task: homeTask
+      });
+    }))));
+  } else {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "loader-wrap"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "loader"
+    }));
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Tasks);
 
 /***/ }),
 
@@ -54644,36 +52568,36 @@ var createStore = function createStore() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
-/* harmony import */ var _reducers_contact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reducers/contact */ "./src/main/frontend/store/entities/reducers/contact.js");
+/* harmony import */ var _reducers_task__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reducers/task */ "./src/main/frontend/store/entities/reducers/task.js");
 
- //import taskReducer from "./reducers/task"
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  contactReducer: _reducers_contact__WEBPACK_IMPORTED_MODULE_1__["default"] // taskReducer
-
+  taskReducer: _reducers_task__WEBPACK_IMPORTED_MODULE_1__["default"]
 }));
 
 /***/ }),
 
-/***/ "./src/main/frontend/store/entities/reducers/contact.js":
-/*!**************************************************************!*\
-  !*** ./src/main/frontend/store/entities/reducers/contact.js ***!
-  \**************************************************************/
-/*! exports provided: loadContacts, addContact, bindNewContact, setTmpContact, clearTmpContact, updateContact, deleteContact, default, tmpContactSelector, notificationSelector, filteredContactsSelector */
+/***/ "./src/main/frontend/store/entities/reducers/task.js":
+/*!***********************************************************!*\
+  !*** ./src/main/frontend/store/entities/reducers/task.js ***!
+  \***********************************************************/
+/*! exports provided: loadTasks, addTask, bindNewTask, setTmpTask, clearTmpTask, updateTask, deleteTask, default, tmpTaskSelector, notificationSelector, workTasksSelector, homeTasksSelector, allTasksSelector */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadContacts", function() { return loadContacts; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addContact", function() { return addContact; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bindNewContact", function() { return bindNewContact; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setTmpContact", function() { return setTmpContact; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearTmpContact", function() { return clearTmpContact; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateContact", function() { return updateContact; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteContact", function() { return deleteContact; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tmpContactSelector", function() { return tmpContactSelector; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadTasks", function() { return loadTasks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addTask", function() { return addTask; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bindNewTask", function() { return bindNewTask; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setTmpTask", function() { return setTmpTask; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearTmpTask", function() { return clearTmpTask; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateTask", function() { return updateTask; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteTask", function() { return deleteTask; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tmpTaskSelector", function() { return tmpTaskSelector; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "notificationSelector", function() { return notificationSelector; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filteredContactsSelector", function() { return filteredContactsSelector; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "workTasksSelector", function() { return workTasksSelector; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "homeTasksSelector", function() { return homeTasksSelector; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allTasksSelector", function() { return allTasksSelector; });
 /* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
 /* harmony import */ var reselect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reselect */ "./node_modules/reselect/es/index.js");
 /* harmony import */ var _middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../middleware/apiCreators */ "./src/main/frontend/store/middleware/apiCreators.js");
@@ -54693,61 +52617,38 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
  ===============*/
 // loading data
 
-var contactDataRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDataRequested"); //const taskDataRequested = createAction("taskDataRequested");
+var taskDataRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskDataRequested");
+var taskDataRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskDataRequestDone");
+var taskDataReceived = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskDataReceived");
+var taskDataFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskDataFailed"); // adding data + setting relation to user
 
-var contactDataRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDataRequestDone"); //const taskDataRequestDone = createAction("taskDataRequestDone");
+var taskAddRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskAddRequested");
+var taskAddRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskAddRequestDone");
+var taskAdded = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskAdded");
+var taskAddFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskAddFailed");
+var taskRelationSetRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskRelationSetRequested");
+var taskRelationSetRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskRelationSetRequestDone");
+var taskRelationSet = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskRelationSet");
+var taskRelationSettingFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskRelationSettingFailed"); // temp data: edit inside form field
 
-var contactDataReceived = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDataReceived"); //const taskDataReceived = createAction("taskDataReceived");
+var tmpTaskDataSet = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("tmpTaskDataSet");
+var tmpTaskDataWiped = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("tmpTaskDataWiped");
+var taskUpdateRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskUpdateRequested");
+var taskUpdateRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskUpdateRequestDone");
+var taskUpdated = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskUpdated");
+var taskUpdateFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskUpdateFailed"); // delete a task
 
-var contactDataFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDataFailed"); // adding data + setting relation to user
+var taskDeleteRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskDeleteRequested");
+var taskDeleteRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskDeleteRequestDone");
+var taskDeleted = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskDeleted");
+var taskDeleteFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskDeleteFailed"); // wipe ui error/info message
 
-var contactAddRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactAddRequested"); //const taskAddRequested = createAction("taskAddRequested");
-
-var contactAddRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactAddRequestDone"); //const taskAddRequestDone = createAction("taskAddRequestDone");
-
-var contactAdded = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactAdded"); //const taskAdded = createAction("taskAdded");
-
-var contactAddFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactAddFailed"); //const taskAddFailed = createAction("taskAddFailed");
-
-var contactRelationSetRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactRelationSetRequested"); //const taskRelationSetRequested = createAction("taskRelationSetRequested");
-
-var contactRelationSetRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactRelationSetRequestDone"); //const taskRelationSetRequestDone = createAction("taskRelationSetRequestDone");
-
-var contactRelationSet = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactRelationSet"); //const taskRelationSet = createAction("taskRelationSet");
-
-var contactRelationSettingFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactRelationSettingFailed"); //const taskRelationSettingFailed = createAction("taskRelationSettingFailed");
-// temp data: edit inside form field
-
-var tmpContactDataSet = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("tmpContactDataSet"); //const tmpTaskDataSet = createAction("tmpTaskDataSet");
-
-var tmpContactDataWiped = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("tmpContactDataWiped"); //const tmpTaskDataWiped = createAction("tmpTaskDataWiped");
-
-var contactUpdateRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactUpdateRequested"); //const taskUpdateRequested = createAction("taskUpdateRequested");
-
-var contactUpdateRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactUpdateRequestDone"); //const taskUpdateRequestDone = createAction("taskUpdateRequestDone");
-
-var contactUpdated = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactUpdated"); //const taskUpdated = createAction("taskUpdated");
-
-var contactUpdateFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactUpdateFailed"); //const taskUpdateFailed = createAction("taskUpdateFailed");
-// delete a task
-
-var contactDeleteRequested = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDeleteRequested"); //const taskDeleteRequested = createAction("taskDeleteRequested");
-
-var contactDeleteRequestDone = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDeleteRequestDone"); //const taskDeleteRequestDone = createAction("taskDeleteRequestDone");
-
-var contactDeleted = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDeleted"); //const taskDeleted = createAction("taskDeleted");
-
-var contactDeleteFailed = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactDeleteFailed"); //const taskDeleteFailed = createAction("taskDeleteFailed");
-// wipe ui error/info message
-
-var contactUiMessageWiped = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("contactUiMessageWiped"); //const taskUiMessageWiped = createAction("taskUiMessageWiped");
-
+var taskUiMessageWiped = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAction"])("taskUiMessageWiped");
 /*==============
   action methods
  ===============*/
-//export const loadTasks = () => async (dispatch, getState) => {
 
-var loadContacts = function loadContacts() {
+var loadTasks = function loadTasks() {
   return /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(dispatch, getState) {
       var userId;
@@ -54768,17 +52669,12 @@ var loadContacts = function loadContacts() {
             case 4:
               _context.next = 6;
               return dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
-                url: "/api/users/".concat(userId, "/contacts"),
-                // `/api/users/${userId}/tasks`
+                url: "/api/users/".concat(userId, "/tasks"),
                 method: "get",
-                onStart: contactDataRequested.type,
-                // taskDataRequested.type
-                onDone: contactDataRequestDone.type,
-                // taskDataRequestDone.type
-                onSuccess: contactDataReceived.type,
-                // taskDataReceived.type
-                onFailed: contactDataFailed.type // taskDataFailed.type
-
+                onStart: taskDataRequested.type,
+                onDone: taskDataRequestDone.type,
+                onSuccess: taskDataReceived.type,
+                onFailed: taskDataFailed.type
               }));
 
             case 6:
@@ -54796,9 +52692,8 @@ var loadContacts = function loadContacts() {
       return _ref.apply(this, arguments);
     };
   }();
-}; //export const addTask = (firstName, lastName, email, date) => async (dispatch, getState) => {
-
-var addContact = function addContact(firstName, lastName, email, date) {
+};
+var addTask = function addTask(title, description, date, workHome) {
   return /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(dispatch, getState) {
       var before, after;
@@ -54806,32 +52701,25 @@ var addContact = function addContact(firstName, lastName, email, date) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              before = getState().entities.contactReducer.contacts.length; //getState().entities.taskReducer.tasks.length;
-
+              before = getState().entities.taskReducer.tasks.length;
               _context2.next = 3;
               return dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
-                url: "/api/contacts",
-                // "/api/tasks"
+                url: "/api/tasks",
                 method: "post",
                 data: {
-                  firstName: firstName,
-                  lastName: lastName,
-                  email: email,
-                  date: date
+                  title: title,
+                  description: description,
+                  date: date,
+                  workHome: workHome
                 },
-                onStart: contactAddRequested.type,
-                // taskAddRequested.type
-                onDone: contactAddRequestDone.type,
-                // taskAddRequestDone.type
-                onSuccess: contactAdded.type,
-                // taskAdded.type
-                onFailed: contactAddFailed.type // taskAddFailed.type
-
+                onStart: taskAddRequested.type,
+                onDone: taskAddRequestDone.type,
+                onSuccess: taskAdded.type,
+                onFailed: taskAddFailed.type
               }));
 
             case 3:
-              after = getState().entities.contactReducer.contacts.length; //getState().entities.taskReducer.tasks.length;
-              // check if we were able to post the data
+              after = getState().entities.taskReducer.tasks.length; // check if we were able to post the data
 
               if (!(before < after)) {
                 _context2.next = 8;
@@ -54841,7 +52729,7 @@ var addContact = function addContact(firstName, lastName, email, date) {
               return _context2.abrupt("return", Promise.resolve(true));
 
             case 8:
-              return _context2.abrupt("return", Promise.reject("[tasks]: Failed to Add Contact to /api/tasks"));
+              return _context2.abrupt("return", Promise.reject("[tasks]: Failed to Add Task to /api/tasks"));
 
             case 9:
             case "end":
@@ -54855,9 +52743,8 @@ var addContact = function addContact(firstName, lastName, email, date) {
       return _ref2.apply(this, arguments);
     };
   }();
-}; //export const bindNewTask = () => async (dispatch, getState) => {
-
-var bindNewContact = function bindNewContact() {
+};
+var bindNewTask = function bindNewTask() {
   return /*#__PURE__*/function () {
     var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(dispatch, getState) {
       var userId, tmpReference;
@@ -54866,8 +52753,7 @@ var bindNewContact = function bindNewContact() {
           switch (_context3.prev = _context3.next) {
             case 0:
               userId = getState().auth.userId;
-              tmpReference = getState().entities.contactReducer.tmpReference; //getState().entities.taskReducer;
-
+              tmpReference = getState().entities.taskReducer.tmpReference;
               dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
                 url: tmpReference,
                 method: 'put',
@@ -54877,14 +52763,10 @@ var bindNewContact = function bindNewContact() {
                     "Content-Type": "text/uri-list"
                   }
                 },
-                onStart: contactRelationSetRequested.type,
-                // taskRelationSetRequested.type
-                onDone: contactRelationSetRequestDone.type,
-                // taskRelationSetRequestDone.type
-                onSuccess: contactRelationSet.type,
-                // taskRelationSet.type
-                onFailed: contactRelationSettingFailed.type // taskRelationSettingFailed
-
+                onStart: taskRelationSetRequested.type,
+                onDone: taskRelationSetRequestDone.type,
+                onSuccess: taskRelationSet.type,
+                onFailed: taskRelationSettingFailed.type
               }));
 
             case 3:
@@ -54899,73 +52781,61 @@ var bindNewContact = function bindNewContact() {
       return _ref3.apply(this, arguments);
     };
   }();
-}; //export const setTmpTask = (href, firstName, lastName, email, date) => (dispatch, getState) => {
-
-var setTmpContact = function setTmpContact(href, firstName, lastName, email, date) {
+};
+var setTmpTask = function setTmpTask(href, title, description, date, workHome) {
   return function (dispatch, getState) {
     dispatch({
-      type: tmpContactDataSet.type,
+      type: tmpTaskDataSet.type,
       payload: {
         href: href,
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        date: date
+        title: title,
+        description: description,
+        date: date,
+        workHome: workHome
       }
-    }); //dispatch({type: tmpTaskDataSet.type, payload: {href, firstName, lastName, email, date}});
+    });
   };
-}; //export const clearTmpTask = () => (dispatch, getState) => {
-
-var clearTmpContact = function clearTmpContact() {
+};
+var clearTmpTask = function clearTmpTask() {
   return function (dispatch, getState) {
     dispatch({
-      type: tmpContactDataWiped.type,
+      type: tmpTaskDataWiped.type,
       payload: {}
-    }); //dispatch({type: tmpTaskDataWiped.type, payload: {}});
+    });
   };
-}; //export const updateContact = (localHref, localFirstName, localLastName, localEmail, localDate) => (dispatch, getState) => {
-
-var updateContact = function updateContact(localHref, localFirstName, localLastName, localEmail, localDate) {
+};
+var updateTask = function updateTask(href, title, description, date, workHome) {
   return function (dispatch, getState) {
     dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
-      url: localHref,
+      url: href,
       method: "put",
       data: {
-        firstName: localFirstName,
-        lastName: localLastName,
-        email: localEmail,
-        date: localDate
+        title: title,
+        description: description,
+        date: date,
+        workHome: workHome
       },
       params: {
         headers: {
           "Content-Type": "application/json"
         }
       },
-      onStart: contactUpdateRequested.type,
-      // taskUpdateRequested.type
-      onDone: contactUpdateRequestDone.type,
-      // taskUpdateRequestDone.type
-      onSuccess: contactUpdated.type,
-      // taskUpdated.type
-      onFailed: contactUpdateFailed.type // taskUpdateFailed.type
-
+      onStart: taskUpdateRequested.type,
+      onDone: taskUpdateRequestDone.type,
+      onSuccess: taskUpdated.type,
+      onFailed: taskUpdateFailed.type
     }));
   };
-}; //export const deleteTask = (url) => (dispatch, getState) => {
-
-var deleteContact = function deleteContact(url) {
+};
+var deleteTask = function deleteTask(url) {
   return function (dispatch, getState) {
     dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
       url: url,
       method: "delete",
-      onStart: contactDeleteRequested.type,
-      // taskDeleteRequested.type
-      onDone: contactDeleteRequestDone.type,
-      // taskDeleteRequestDone.type
-      onSuccess: contactDeleted.type,
-      // taskDeleted.type
-      onFailed: contactDeleteFailed.type // taskDeleteFailed.type
-
+      onStart: taskDeleteRequested.type,
+      onDone: taskDeleteRequestDone.type,
+      onSuccess: taskDeleted.type,
+      onFailed: taskDeleteFailed.type
     }));
   };
 };
@@ -54974,149 +52844,146 @@ var deleteContact = function deleteContact(url) {
  ===============*/
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createReducer"])({
-  contacts: [],
-  // tasks: []
+  tasks: [],
   tmpReference: "",
   // temporary reference url for later binding (1:n)
-  tmpContact: {},
-  // tmpTask: {} // used for updating a task
+  tmpTask: {},
+  // used for updating a task
   loading: false,
   lastFetch: null,
   notification: {
     error: "",
     type: ""
   }
-}, (_createReducer = {}, _defineProperty(_createReducer, contactDataRequested.type, function (contactState) {
-  contactState.loading = true;
-}), _defineProperty(_createReducer, contactDataRequestDone.type, function (contactState) {
-  contactState.loading = false;
-}), _defineProperty(_createReducer, contactDataReceived.type, function (contactState, action) {
-  contactState.contacts = action.payload.data._embedded.contacts;
-}), _defineProperty(_createReducer, contactDataFailed.type, function (contactState, action) {
+}, (_createReducer = {}, _defineProperty(_createReducer, taskDataRequested.type, function (taskState) {
+  taskState.loading = true;
+}), _defineProperty(_createReducer, taskDataRequestDone.type, function (taskState) {
+  taskState.loading = false;
+}), _defineProperty(_createReducer, taskDataReceived.type, function (taskState, action) {
+  taskState.tasks = action.payload.data._embedded.tasks;
+}), _defineProperty(_createReducer, taskDataFailed.type, function (taskState, action) {
   var _action$payload = action.payload,
       type = _action$payload.type,
       error = _action$payload.error;
-  contactState.notification.type = type;
-  contactState.notification.error = error;
-}), _defineProperty(_createReducer, contactAddRequested.type, function (contactState) {
-  contactState.loading = true;
-}), _defineProperty(_createReducer, contactAddRequestDone.type, function (contactState, action) {
-  contactState.loading = false;
-}), _defineProperty(_createReducer, contactAdded.type, function (contactState, action) {
-  contactState.contacts.push(action.payload.data);
-  contactState.tmpReference = action.payload.data._links.user.href;
-  console.log(contactState.tmpReference);
-}), _defineProperty(_createReducer, contactAddFailed.type, function (contactState, action) {
-  contactState.notification.type = action.payload.type;
-  contactState.notification.error = action.payload.error;
-  contactState.tmpReference = "";
-}), _defineProperty(_createReducer, contactRelationSetRequested.type, function (contactState, action) {
-  contactState.loading = true;
-}), _defineProperty(_createReducer, contactRelationSetRequestDone.type, function (contactState, action) {
-  contactState.loading = false;
-}), _defineProperty(_createReducer, contactRelationSet.type, function (contactState, action) {
-  // clear tmpReference
-  contactState.tmpReference = "";
-}), _defineProperty(_createReducer, contactRelationSettingFailed.type, function (contactState, action) {
-  contactState.notification.type = action.payload.type;
-  contactState.notification.error = action.payload.error;
-  contactState.tmpReference = "";
-}), _defineProperty(_createReducer, tmpContactDataSet.type, function (contactState, action) {
+  taskState.notification.type = type;
+  taskState.notification.error = error;
+}), _defineProperty(_createReducer, taskAddRequested.type, function (taskState) {
+  taskState.loading = true;
+}), _defineProperty(_createReducer, taskAddRequestDone.type, function (taskState) {
+  taskState.loading = false;
+}), _defineProperty(_createReducer, taskAdded.type, function (taskState, action) {
+  taskState.tasks.push(action.payload.data);
+  taskState.tmpReference = action.payload.data._links.user.href;
+}), _defineProperty(_createReducer, taskAddFailed.type, function (taskState, action) {
+  taskState.notification.type = action.payload.type;
+  taskState.notification.error = action.payload.error;
+  taskState.tmpReference = "";
+}), _defineProperty(_createReducer, taskRelationSetRequested.type, function (taskState) {
+  taskState.loading = true;
+}), _defineProperty(_createReducer, taskRelationSetRequestDone.type, function (taskState) {
+  taskState.loading = false;
+}), _defineProperty(_createReducer, taskRelationSet.type, function (taskState) {
+  taskState.tmpReference = "";
+}), _defineProperty(_createReducer, taskRelationSettingFailed.type, function (taskState, action) {
+  taskState.notification.type = action.payload.type;
+  taskState.notification.error = action.payload.error;
+  taskState.tmpReference = "";
+}), _defineProperty(_createReducer, tmpTaskDataSet.type, function (taskState, action) {
   var _action$payload2 = action.payload,
       href = _action$payload2.href,
-      firstName = _action$payload2.firstName,
-      lastName = _action$payload2.lastName,
-      email = _action$payload2.email,
-      date = _action$payload2.date;
-  contactState.tmpContact.href = href;
-  contactState.tmpContact.firstName = firstName;
-  contactState.tmpContact.lastName = lastName;
-  contactState.tmpContact.email = email;
-  contactState.tmpContact.date = date;
-}), _defineProperty(_createReducer, tmpContactDataWiped.type, function (contactState, action) {
-  contactState.tmpContact = {};
-}), _defineProperty(_createReducer, contactUpdateRequested.type, function (contactState, action) {
-  contactState.loading = true;
-}), _defineProperty(_createReducer, contactUpdateRequestDone.type, function (contactState, action) {
-  contactState.loading = false;
-}), _defineProperty(_createReducer, contactUpdated.type, function (contactState, action) {
+      title = _action$payload2.title,
+      description = _action$payload2.description,
+      date = _action$payload2.date,
+      workHome = _action$payload2.workHome;
+  taskState.tmpTask.href = href;
+  taskState.tmpTask.title = title;
+  taskState.tmpTask.description = description;
+  taskState.tmpTask.date = date;
+  taskState.tmpTask.workHome = workHome;
+}), _defineProperty(_createReducer, tmpTaskDataWiped.type, function (taskState) {
+  taskState.tmpTask = {};
+}), _defineProperty(_createReducer, taskUpdateRequested.type, function (taskState) {
+  taskState.loading = true;
+}), _defineProperty(_createReducer, taskUpdateRequestDone.type, function (taskState) {
+  taskState.loading = false;
+}), _defineProperty(_createReducer, taskUpdated.type, function (taskState, action) {
   var _action$payload$data = action.payload.data,
       _links = _action$payload$data._links,
-      firstName = _action$payload$data.firstName,
-      lastName = _action$payload$data.lastName,
-      email = _action$payload$data.email,
-      date = _action$payload$data.date; // find the updated by id (href)
+      title = _action$payload$data.title,
+      description = _action$payload$data.description,
+      date = _action$payload$data.date,
+      workHome = _action$payload$data.workHome; // find the index of contact by id (href)
 
-  var index = contactState.contacts.findIndex(function (contact) {
-    return contact._links.self.href === _links.self.href;
+  var index = taskState.tasks.findIndex(function (task) {
+    return task._links.self.href === _links.self.href;
   }); // set updated values
 
-  contactState.contacts[index].href = _links.self.href;
-  contactState.contacts[index].firstName = firstName;
-  contactState.contacts[index].lastName = lastName;
-  contactState.contacts[index].email = email;
-  contactState.contacts[index].date = date;
-  contactState.tmpContact = {}; // wipe tmp
-}), _defineProperty(_createReducer, contactUpdateFailed.type, function (contactState, action) {
-  contactState.notification.type = action.payload.type;
-  contactState.notification.error = action.payload.error;
-  contactState.tmpContact = {}; // wipe tmp
-}), _defineProperty(_createReducer, contactDeleteRequested.type, function (contactState, action) {
-  contactState.loading = true;
-}), _defineProperty(_createReducer, contactDeleteRequestDone.type, function (contactState, action) {
-  contactState.loading = false;
-}), _defineProperty(_createReducer, contactDeleted.type, function (contactState, action) {
-  // need self.href = id (HATEOAS)
-  var id = action.payload.id; // find the array position with id (=self href) -> findIndex
+  taskState.tasks[index].href = _links.self.href;
+  taskState.tasks[index].title = title;
+  taskState.tasks[index].description = description;
+  taskState.tasks[index].date = date;
+  taskState.tasks[index].workHome = workHome;
+  taskState.tmpTask = {}; // wipe tmp
+}), _defineProperty(_createReducer, taskUpdateFailed.type, function (taskState, action) {
+  taskState.notification.type = action.payload.type;
+  taskState.notification.error = action.payload.error;
+  taskState.tmpTask = {}; // wipe tmp
+}), _defineProperty(_createReducer, taskDeleteRequested.type, function (taskState) {
+  taskState.loading = true;
+}), _defineProperty(_createReducer, taskDeleteRequestDone.type, function (taskState) {
+  taskState.loading = false;
+}), _defineProperty(_createReducer, taskDeleted.type, function (taskState, action) {
+  // need id (= self.href)
+  var id = action.payload.id; // find the array position with id
 
-  var index = contactState.contacts.findIndex(function (contact) {
-    return contact._links.self.href === id;
-  });
-  contactState.contacts.splice(index, 1); // for safety also wipe tmp (e.g. user is in edit mode, but then wants to delete it anyways)
+  var index = taskState.tasks.findIndex(function (task) {
+    return task._links.self.href === id;
+  }); // cut that part
 
-  contactState.tmpContact = {};
-}), _defineProperty(_createReducer, contactDeleteFailed.type, function (contactState, action) {
-  contactState.notification.type = action.payload.type;
-  contactState.notification.error = action.payload.error;
-}), _defineProperty(_createReducer, contactUiMessageWiped.type, function (contactState) {
-  contactState.notification.type = "";
-  contactState.notification.error = "";
+  taskState.tasks.splice(index, 1); // for safety also wipe tmp
+  // (e.g. user is in edit mode, but then wants to delete it anyways)
+
+  taskState.tmpTask = {};
+}), _defineProperty(_createReducer, taskDeleteFailed.type, function (taskState, action) {
+  taskState.notification.type = action.payload.type;
+  taskState.notification.error = action.payload.error;
+}), _defineProperty(_createReducer, taskUiMessageWiped.type, function (taskState) {
+  taskState.notification.type = "";
+  taskState.notification.error = "";
 }), _createReducer)));
 /*==============
     selectors
  ===============*/
 
-var tmpContactSelector = Object(reselect__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(function (state) {
-  return state.entities.contactReducer;
-}, function (contactState) {
-  return contactState.tmpContact;
-}); // export const tmpTaskSelector = createSelector(
-//   (state) => state.entities.taskReducer,
-//   (taskState) => taskState.tmpTask
-// );
-
+var tmpTaskSelector = Object(reselect__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(function (state) {
+  return state.entities.taskReducer;
+}, function (taskState) {
+  return taskState.tmpTask;
+});
 var notificationSelector = Object(reselect__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(function (state) {
-  return state.entities.contactReducer;
-}, function (contactState) {
-  return contactState.notification;
-}); // export const notificationSelector = createSelector(
-//   (state) => state.entities.taskReducer,
-//   (taskState) => contactState.notification
-// );
-
-var filteredContactsSelector = function filteredContactsSelector(searchString) {
-  return Object(reselect__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(function (state) {
-    return state.entities.contactReducer;
-  }, function (contactState) {
-    return contactState.contacts.filter(function (contact) {
-      return contact.firstName.indexOf(searchString) !== -1;
-    });
+  return state.entities.taskReducer;
+}, function (taskState) {
+  return taskState.notification;
+});
+var workTasksSelector = Object(reselect__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(function (state) {
+  return state.entities.taskReducer;
+}, function (taskState) {
+  return taskState.tasks.filter(function (task) {
+    return task.workHome === true;
   });
-}; // TODO: replace filtered with allContacts
-// export const allTasksSelector = createSelector(
-//   state => state.entities.taskReducer,
-//   taskState => taskState.tasks
-// );
+});
+var homeTasksSelector = Object(reselect__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(function (state) {
+  return state.entities.taskReducer;
+}, function (taskState) {
+  return taskState.tasks.filter(function (task) {
+    return task.workHome === false;
+  });
+});
+var allTasksSelector = Object(reselect__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(function (state) {
+  return state.entities.taskReducer;
+}, function (taskState) {
+  return taskState.tasks;
+});
 
 /***/ }),
 
@@ -55193,7 +53060,7 @@ var api = function api(_ref) {
                 console.info("URL to call: " + url); // check http method
 
                 _context.t0 = method;
-                _context.next = _context.t0 === "get" ? 10 : _context.t0 === "post" ? 36 : _context.t0 === "put" ? 51 : _context.t0 === "delete" ? 66 : 81;
+                _context.next = _context.t0 === "get" ? 10 : _context.t0 === "post" ? 36 : _context.t0 === "put" ? 52 : _context.t0 === "delete" ? 67 : 82;
                 break;
 
               case 10:
@@ -55282,18 +53149,19 @@ var api = function api(_ref) {
                     payload: {}
                   });
                 }, 500);
-                return _context.abrupt("break", 82);
+                return _context.abrupt("break", 83);
 
               case 36:
-                _context.prev = 36;
-                _context.next = 39;
+                console.log(data);
+                _context.prev = 37;
+                _context.next = 40;
                 return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(url, data, {
                   headers: {
                     "Content-Type": "application/json"
                   }
                 });
 
-              case 39:
+              case 40:
                 _req2 = _context.sent;
                 console.info(_req2.status, _req2.data);
                 dispatch({
@@ -55306,12 +53174,12 @@ var api = function api(_ref) {
                     data: _req2.data
                   }
                 });
-                _context.next = 49;
+                _context.next = 50;
                 break;
 
-              case 45:
-                _context.prev = 45;
-                _context.t3 = _context["catch"](36);
+              case 46:
+                _context.prev = 46;
+                _context.t3 = _context["catch"](37);
                 dispatch({
                   type: _apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallFailed"].type,
                   payload: {}
@@ -55324,21 +53192,21 @@ var api = function api(_ref) {
                   }
                 });
 
-              case 49:
+              case 50:
                 setTimeout(function () {
                   return dispatch({
                     type: onDone,
                     payload: {}
                   });
                 }, 500);
-                return _context.abrupt("break", 82);
+                return _context.abrupt("break", 83);
 
-              case 51:
-                _context.prev = 51;
-                _context.next = 54;
+              case 52:
+                _context.prev = 52;
+                _context.next = 55;
                 return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put(url, data, params);
 
-              case 54:
+              case 55:
                 _req3 = _context.sent;
                 console.log(_req3.status, _req3.data);
                 dispatch({
@@ -55351,12 +53219,12 @@ var api = function api(_ref) {
                     data: _req3.data
                   }
                 });
-                _context.next = 64;
+                _context.next = 65;
                 break;
 
-              case 60:
-                _context.prev = 60;
-                _context.t4 = _context["catch"](51);
+              case 61:
+                _context.prev = 61;
+                _context.t4 = _context["catch"](52);
                 dispatch({
                   type: _apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallFailed"].type,
                   payload: {}
@@ -55369,21 +53237,21 @@ var api = function api(_ref) {
                   }
                 });
 
-              case 64:
+              case 65:
                 setTimeout(function () {
                   return dispatch({
                     type: onDone,
                     payload: {}
                   });
                 }, 500);
-                return _context.abrupt("break", 82);
+                return _context.abrupt("break", 83);
 
-              case 66:
-                _context.prev = 66;
-                _context.next = 69;
+              case 67:
+                _context.prev = 67;
+                _context.next = 70;
                 return axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"](url);
 
-              case 69:
+              case 70:
                 _req4 = _context.sent;
                 console.log(_req4.status, _req4.data);
                 dispatch({
@@ -55397,12 +53265,12 @@ var api = function api(_ref) {
                   }
                 }); // HATEOAS - self.href = id
 
-                _context.next = 79;
+                _context.next = 80;
                 break;
 
-              case 75:
-                _context.prev = 75;
-                _context.t5 = _context["catch"](66);
+              case 76:
+                _context.prev = 76;
+                _context.t5 = _context["catch"](67);
                 dispatch({
                   type: _apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallFailed"].type,
                   payload: {}
@@ -55415,24 +53283,24 @@ var api = function api(_ref) {
                   }
                 });
 
-              case 79:
+              case 80:
                 setTimeout(function () {
                   return dispatch({
                     type: onDone,
                     payload: {}
                   });
                 }, 500);
-                return _context.abrupt("break", 82);
-
-              case 81:
-                return _context.abrupt("break", 82);
+                return _context.abrupt("break", 83);
 
               case 82:
+                return _context.abrupt("break", 83);
+
+              case 83:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[10, 20], [24, 31], [36, 45], [51, 60], [66, 75]]);
+        }, _callee, null, [[10, 20], [24, 31], [37, 46], [52, 61], [67, 76]]);
       }));
 
       return function (_x) {
@@ -55490,7 +53358,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _entities_entities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./entities/entities */ "./src/main/frontend/store/entities/entities.js");
 
 
- /// TODO: add ui reducer
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   entities: _entities_entities__WEBPACK_IMPORTED_MODULE_2__["default"],

@@ -53,7 +53,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                         // block any access to /api/profile as we don't need that anyway
                         .antMatchers("/api/profile/**").denyAll()
                         // users are only allowed associate/alter data own data (PUT)
-                        .antMatchers(HttpMethod.PUT, "/api/contacts/{id}/**").access("@accessHandler.isOwner(authentication, #id)")
+                        .antMatchers(HttpMethod.PUT, "/api/tasks/{id}/**").access("@accessHandler.isOwner(authentication, #id)")
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(e -> e

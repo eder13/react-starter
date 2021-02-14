@@ -1,9 +1,6 @@
 package com.springreact.template.security;
 
-import com.springreact.template.db.Contact;
-import com.springreact.template.db.ContactRepository;
-import com.springreact.template.db.User;
-import com.springreact.template.db.UserRepository;
+import com.springreact.template.db.*;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -20,11 +17,11 @@ import java.util.Optional;
 public class AccessHandler {
 
     private final UserRepository userRepository;
-    private final ContactRepository contactRepository;
+    private final TaskRepository taskRepository;
 
-    public AccessHandler(UserRepository userRepository, ContactRepository contactRepository) {
+    public AccessHandler(UserRepository userRepository, TaskRepository taskRepository) {
         this.userRepository = userRepository;
-        this.contactRepository = contactRepository;
+        this.taskRepository = taskRepository;
     }
 
     public boolean isAllowed(Authentication a, Long id) {
@@ -56,14 +53,14 @@ public class AccessHandler {
 
             // check if user_id is still NULL, which means that a user posted it and is now trying to connect it
             // TODO: For deployment, on the SQL Server write a script that every x hours those entries will be deleted if still NULL
-            Long connectedBy = contactRepository.getAssociatedUserId(id);
+            Long connectedBy = taskRepository.getAssociatedUserId(id);
 
             if(connectedBy == null){
                 // allow to establish a new association
                 return true;
             } else {
                 // user might want to alter data: Check if he's allowed to do that
-                Long foundId = contactRepository.getContactByUserAndId(userRepository.findUserByEmail(email), id);
+                Long foundId = taskRepository.getTaskByUserAndId(userRepository.findUserByEmail(email), id);
                 return foundId != null;
             }
 

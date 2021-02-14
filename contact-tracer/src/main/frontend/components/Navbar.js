@@ -5,25 +5,6 @@ import {useDispatch, useSelector} from "react-redux";
 import {loadingBooleanSelector, loadLogout} from "../store/auth/auth";
 import styled, {keyframes} from "styled-components";
 
-// const Button = styled.button`
-//   display: inline-block;
-//   padding: 0 20px;
-//   margin-left: 0.25rem;
-//   margin-right: 0.25rem;
-//   color: #555;
-//   text-align: center;
-//   font-size: 11px;
-//   font-weight: 600;
-//   text-transform: uppercase;
-//   text-decoration: none;
-//   ${props => props.secondary && "color: #000; background-color: rgb(248, 249, 250); border-color: #ff974c;"};
-//   ${props => props.warning && "background-color: rgb(255, 194, 0); height: 38px; margin: 0.5rem 0rem;"};
-//   border-radius: 4px;
-//   border: 1px soLid #bbb;
-//   cursor: pointer;
-//   width: 100%;
-// `;
-
 const NavbarWrapper = styled.section`
   position: fixed;
   top: 0;

@@ -73,7 +73,7 @@ public class HomeController {
         }
     }
 
-    /// DEBUG: Getting accessToken from currently logged in user
+    /// DEBUG: Getting accessToken from currently logged in user -> this is the access token to Google
     //  @ResponseBody
     //  @GetMapping("/access-token")
     //  public String accessToken(@RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient) {

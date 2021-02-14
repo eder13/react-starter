@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Navbar from "./Navbar";
 import Login from "./Login";
-import Contacts from "./Contacts"; // import
+import Tasks from "./Tasks";
 import Home from "./Home";
 import {useDispatch, useSelector} from "react-redux";
 import {loadLogin, loadLoginUserId, loginInfoSelector} from "../store/auth/auth";
@@ -44,7 +44,7 @@ const Router = () => {
       <Switch>
         <Route exact path="/" render={() => <Home/>}/>
         <Route exact path="/login" component={Login}/>
-        <PrivateRoute exact path="/dashboard" component={Contacts}/> {/*Tasks*/}
+        <PrivateRoute exact path="/dashboard" component={Tasks}/>
       </Switch>
     </BrowserRouter>
   );

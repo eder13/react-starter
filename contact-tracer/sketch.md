@@ -110,8 +110,8 @@ Structure of the files
         middleware/             
         entities/
            reducers/
-              contact.js
-           entitites.js		// combines contact.js reducer to entities.js reducer
+              task.js
+           entitites.js		// combines task.js reducer to entities.js reducer
        auth/
           auth.js
         ui/

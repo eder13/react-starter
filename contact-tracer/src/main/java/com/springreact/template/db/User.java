@@ -19,7 +19,7 @@ public class User {
     private String email;
 
     @OneToMany(mappedBy = "user")
-    private List<Contact> contacts;
+    private List<Task> tasks;
 
     public User() {
     }

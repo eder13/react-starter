@@ -84,6 +84,9 @@ const api = ({getState, dispatch}) => (next) => async (action) => {
       break;
 
     case "post":
+
+      console.log(data);
+
       try {
         const req = await axios.post(url, data, {headers: {"Content-Type": "application/json"}});
         console.info(req.status, req.data);

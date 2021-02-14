@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {
-  addContact, // addTask
-  bindNewContact, // bindNewTask
-  clearTmpContact, // clearTmpTask
+  addTask,
+  bindNewTask,
+  clearTmpTask,
   notificationSelector,
-  tmpContactSelector, // tmpTaskSelector
-  updateContact // updateTask
-} from "../store/entities/reducers/contact"; // "../store/entities/reducers/task"
+  tmpTaskSelector,
+  updateTask
+} from "../store/entities/reducers/task";
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -47,64 +47,80 @@ const ButtonWarning = styled(Button)`
   margin: 0.5rem 0rem;
 `;
 
-const SubStringPrimary = (props) => {
-  return <ButtonPrimary {...props} children={props.children.substr(5, 9)}/>;
-};
-
 const Form = () => {
 
   // local form data state
   // TODO: taskForm
-  const [contactForm, setContactForm] = useState({
-    localHref: '',
-    localFirstName: '',
-    localLastName: '',
-    localEmail: '',
-    // transform input field with type=date to yyyy-mm-dd
-    localDate: `${new Date((Date.now())).getUTCFullYear()}-${(((parseInt(new Date((Date.now())).getMonth().toString()) + 1) < 10) ? '0' + (parseInt(new Date((Date.now())).getMonth().toString()) + 1) : parseInt(new Date((Date.now())).getMonth().toString() + 1))}-${((parseInt(new Date((Date.now())).getDate().toString()) < 10) ? '0' + new Date((Date.now())).getDate() : new Date((Date.now())).getDate())}`
+  const [taskForm, setTaskForm] = useState({
+    localHref: '', // needed for updates
+    localTitle: '',
+    localDescription: '',
+    localDate: `${new Date((Date.now())).getUTCFullYear()}-${(((parseInt(new Date((Date.now())).getMonth().toString()) + 1) < 10) ? '0' + (parseInt(new Date((Date.now())).getMonth().toString()) + 1) : parseInt(new Date((Date.now())).getMonth().toString() + 1))}-${((parseInt(new Date((Date.now())).getDate().toString()) < 10) ? '0' + new Date((Date.now())).getDate() : new Date((Date.now())).getDate())}`,
+    localType: true,
   });
 
-  // pull out data from parent object state
-  const {localHref, localFirstName, localLastName, localEmail, localDate} = contactForm;
+  // destructure data from input user
+  const {localHref, localTitle, localDescription, localDate, localType} = taskForm;
   const dispatch = useDispatch();
-  const tmpContact = useSelector(tmpContactSelector);// TODO // specify selector to set/get data inside form when edit
+  const tmpTask = useSelector(tmpTaskSelector); // specify selector to set/get data inside form when edit
   const notification = useSelector(notificationSelector); // specify ui messages if something fails
-  const {type, error} = notification;
 
-  const {href, firstName, lastName, email, date} = tmpContact; // TODO
+  const {href, title, description, date, workHome} = tmpTask;
+
+  console.log(tmpTask);
+
+  // whenever tmpTask changes set it to regarding the text fields (update state)
   useEffect(() => {
-    if (href && firstName && lastName && email && date) // exist check - could also be empty (cleared)
-      setContactForm({
+
+    console.log("useEffectForm triggered");
+
+
+    if (href && title && description && date) //
+      setTaskForm({
         localHref: href,
-        localFirstName: firstName,
-        localLastName: lastName,
-        localEmail: email,
-        localDate: `${new Date(Date.parse(date.toString())).getUTCFullYear()}-${(((parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1) < 10) ? '0' + (parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1) : (parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1))}-${((parseInt(new Date(Date.parse(date.toString())).getDate().toString()) < 10) ? '0' + parseInt(new Date(Date.parse(date.toString())).getDate().toString()) : parseInt(new Date(Date.parse(date.toString())).getDate().toString()))}`
+        localTitle: title,
+        localDescription: description,
+        localDate: `${new Date(Date.parse(date.toString())).getUTCFullYear()}-${(((parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1) < 10) ? '0' + (parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1) : (parseInt(new Date(Date.parse(date.toString())).getMonth().toString()) + 1))}-${((parseInt(new Date(Date.parse(date.toString())).getDate().toString()) < 10) ? '0' + parseInt(new Date(Date.parse(date.toString())).getDate().toString()) : parseInt(new Date(Date.parse(date.toString())).getDate().toString()))}`,
+        localType: workHome,
       })
     else // this specifies the case if the use is in edit mode and then deletes it anyways -> clear out local form as well
-      setContactForm({
+    {
+      console.log("Here after set");
+
+      setTaskForm({
         localHref: '',
-        localFirstName: '',
-        localLastName: '',
-        localEmail: '',
-        localDate: `${new Date((Date.now())).getUTCFullYear()}-${(((parseInt(new Date((Date.now())).getMonth().toString()) + 1) < 10) ? '0' + (parseInt(new Date((Date.now())).getMonth().toString()) + 1) : parseInt(new Date((Date.now())).getMonth().toString() + 1))}-${((parseInt(new Date((Date.now())).getDate().toString()) < 10) ? '0' + new Date((Date.now())).getDate() : new Date((Date.now())).getDate())}`
+        localTitle: '',
+        localDescription: '',
+        localDate: `${new Date((Date.now())).getUTCFullYear()}-${(((parseInt(new Date((Date.now())).getMonth().toString()) + 1) < 10) ? '0' + (parseInt(new Date((Date.now())).getMonth().toString()) + 1) : parseInt(new Date((Date.now())).getMonth().toString() + 1))}-${((parseInt(new Date((Date.now())).getDate().toString()) < 10) ? '0' + new Date((Date.now())).getDate() : new Date((Date.now())).getDate())}`,
+        localType: true,
       });
-  }, [tmpContact]);
+    }
+  }, [tmpTask]);
 
   const onChange = (e) => {
-    setContactForm({...contactForm, [e.target.name]: e.target.value}); // TODO
+    if(e.target.id === "work" || e.target.id === "home") {
+      if(e.target.id === "work")
+        setTaskForm({...taskForm, localType: true}); // WORK
+      else
+        setTaskForm({...taskForm, localType: false});  // HOME
+    } else {
+      setTaskForm({...taskForm, [e.target.name]: e.target.value});
+    }
   }
 
+  // if user aborts update, reset local form and clear tmp in state
   const onDiscard = (e) => {
+
     // clear temp field in state
-    dispatch(clearTmpContact()); // TODO
+    dispatch(clearTmpTask());
+
     // clear input field
-    setContactForm({
+    setTaskForm({
       localHref: '',
-      localFirstName: '',
-      localLastName: '',
-      localEmail: '',
-      localDate: `${new Date((Date.now())).getUTCFullYear()}-${(((parseInt(new Date((Date.now())).getMonth().toString()) + 1) < 10) ? '0' + (parseInt(new Date((Date.now())).getMonth().toString()) + 1) : parseInt(new Date((Date.now())).getMonth().toString() + 1))}-${((parseInt(new Date((Date.now())).getDate().toString()) < 10) ? '0' + new Date((Date.now())).getDate() : new Date((Date.now())).getDate())}`
+      localTitle: '',
+      localDescription: '',
+      localDate: `${new Date((Date.now())).getUTCFullYear()}-${(((parseInt(new Date((Date.now())).getMonth().toString()) + 1) < 10) ? '0' + (parseInt(new Date((Date.now())).getMonth().toString()) + 1) : parseInt(new Date((Date.now())).getMonth().toString() + 1))}-${((parseInt(new Date((Date.now())).getDate().toString()) < 10) ? '0' + new Date((Date.now())).getDate() : new Date((Date.now())).getDate())}`,
+      localType: true
     });
   }
 
@@ -112,40 +128,40 @@ const Form = () => {
 
     e.preventDefault();
 
-    // check if update-mode is on (-> tmp fields are set)
-    if (href && firstName && lastName && email && date) {
+    // check if update-mode is on by checking if tmpTask is set
+    if (href && title && description && date) {
       // Edit Mode
-      dispatch(updateContact(href, localFirstName, localLastName, localEmail, localDate)); // TODO
+      dispatch(updateTask(href, localTitle, localDescription, localDate, localType));
     } else {
       // Add Mode
       // add the contact to our api/mysql generally
       try {
-        const res = await dispatch(addContact(localFirstName, localLastName, localEmail, localDate)); // TODO
+        const res = await dispatch(addTask(localTitle, localDescription, localDate, localType));
         if (res)
-          await dispatch(bindNewContact()); // TODO
+          await dispatch(bindNewTask());
       } catch (e) {
         console.log(e);
       }
     }
 
     // clear input fields
-    setContactForm({
+    setTaskForm({
       localHref: '',
-      localFirstName: '',
-      localLastName: '',
-      localEmail: '',
-      localDate: `${new Date((Date.now())).getUTCFullYear()}-${(((parseInt(new Date((Date.now())).getMonth().toString()) + 1) < 10) ? '0' + (parseInt(new Date((Date.now())).getMonth().toString()) + 1) : parseInt(new Date((Date.now())).getMonth().toString() + 1))}-${((parseInt(new Date((Date.now())).getDate().toString()) < 10) ? '0' + new Date((Date.now())).getDate() : new Date((Date.now())).getDate())}`
+      localTitle: '',
+      localDescription: '',
+      localDate: `${new Date((Date.now())).getUTCFullYear()}-${(((parseInt(new Date((Date.now())).getMonth().toString()) + 1) < 10) ? '0' + (parseInt(new Date((Date.now())).getMonth().toString()) + 1) : parseInt(new Date((Date.now())).getMonth().toString() + 1))}-${((parseInt(new Date((Date.now())).getDate().toString()) < 10) ? '0' + new Date((Date.now())).getDate() : new Date((Date.now())).getDate())}`,
+      localType: true
     });
   }
 
   return (
     <form style={{width: '100%'}} onSubmit={onSubmit} name="contact">
 
-      {(type !== "" && error !== "") &&
-      <div className={type}>
+      {(notification.type !== "" && notification.error !== "") &&
+      <div className={notification.type}>
         <p>
           <i className="fas fa-info-circle"/>
-          {" " + error}
+          {" " + notification.error}
         </p>
       </div>
       }
@@ -157,15 +173,17 @@ const Form = () => {
       </div>
 
       <div className="padding-05y">
-        <label htmlFor="localFirstName">title:</label>
-        <input className="full-width" type="text" id="localFirstName" name="localFirstName" value={localFirstName}
+        <label htmlFor="localTitle">title:</label>
+        <input className="full-width" type="text" id="localTitle" name="localTitle" value={localTitle}
                onChange={onChange}/>
       </div>
+
       <div className="padding-05y">
-        <label htmlFor="localLastName">description:</label>
-        <input className="full-width" type="text" id="localLastName" name="localLastName" value={localLastName}
+        <label htmlFor="localDescription">description:</label>
+        <input className="full-width" type="text" id="localDescription" name="localDescription" value={localDescription}
                onChange={onChange}/>
       </div>
+
       <div className="padding-05y">
         <label htmlFor="localDate">date:</label>
         <input className="full-width" type="date" id="localDate" name="localDate"
@@ -173,12 +191,18 @@ const Form = () => {
                onChange={onChange}/>
       </div>
 
+      <div className="padding-05y">
+        Work: <input type="radio" id="work" name="localType" onChange={onChange} /> &nbsp;
+        Home: <input id="home" type="radio" name="localType" onChange={onChange} />
+      </div>
+
       {/*Submit*/}
       <div className="padding-1y">
-        {(href && firstName && lastName && email && date) ?
+        {/*check if tmp fields are set -> if so we are in update mode*/}
+        {(href && title && description && date) ?
           <ButtonWarning type="submit">Update</ButtonWarning> :
           <ButtonPrimary type="submit">Add</ButtonPrimary>}
-        {(href && firstName && lastName && email && date) &&
+        {(href && title && description && date) &&
         <ButtonDanger onClick={onDiscard}>Discard</ButtonDanger>}
       </div>
     </form>

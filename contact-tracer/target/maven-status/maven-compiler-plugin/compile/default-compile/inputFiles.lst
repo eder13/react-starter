@@ -1,9 +1,9 @@
 /Users/Christina/Desktop/react-starter/contact-tracer/src/main/java/com/springreact/template/SpringReactOAuthApplication.java
 /Users/Christina/Desktop/react-starter/contact-tracer/src/main/java/com/springreact/template/security/AccessHandler.java
+/Users/Christina/Desktop/react-starter/contact-tracer/src/main/java/com/springreact/template/db/Task.java
 /Users/Christina/Desktop/react-starter/contact-tracer/src/main/java/com/springreact/template/controller/HomeController.java
 /Users/Christina/Desktop/react-starter/contact-tracer/src/main/java/com/springreact/template/db/User.java
-/Users/Christina/Desktop/react-starter/contact-tracer/src/main/java/com/springreact/template/db/Contact.java
+/Users/Christina/Desktop/react-starter/contact-tracer/src/main/java/com/springreact/template/db/TaskRepository.java
 /Users/Christina/Desktop/react-starter/contact-tracer/src/main/java/com/springreact/template/security/SpringSecurityConfig.java
 /Users/Christina/Desktop/react-starter/contact-tracer/src/main/java/com/springreact/template/controller/MyErrorController.java
 /Users/Christina/Desktop/react-starter/contact-tracer/src/main/java/com/springreact/template/db/UserRepository.java
-/Users/Christina/Desktop/react-starter/contact-tracer/src/main/java/com/springreact/template/db/ContactRepository.java
