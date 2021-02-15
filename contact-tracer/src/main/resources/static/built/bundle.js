@@ -14231,7 +14231,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "/* Global CSS <style></style> */\n* {\n  box-sizing: border-box;\n  font-family: 'Roboto', sans-serif;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}", "",{"version":3,"sources":["webpack://./src/main/frontend/App.css"],"names":[],"mappings":"AAAA,+BAA+B;AAC/B;EACE,sBAAsB;EACtB,iCAAiC;AACnC;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,yBAAyB;EACzB,kBAAkB;EAClB,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,oCAAoC;AACtC;;AAEA;EACE,KAAK,uBAAuB,EAAE;EAC9B,OAAO,yBAAyB,EAAE;AACpC;;AAEA;EACE,uBAAuB;EACvB,aAAa;EACb,wBAAwB;EACxB,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,cAAc;EACd,gBAAgB;AAClB;;AAEA;;EAEE,YAAY;AACd;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;;;;EAIE,YAAY;EACZ,iBAAiB;EACjB,sBAAsB;EACtB,yBAAyB;EACzB,kBAAkB;EAClB,gBAAgB;EAChB,sBAAsB;AACxB;;AAEA;;;;EAIE,wBAAwB;EACxB,qBAAqB;EACrB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;;;;EAIE,yBAAyB;EACzB,UAAU;AACZ;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,gBAAgB;AAClB;;AAEA;;;;EAIE,WAAW;EACX,kBAAkB;EAClB,UAAU;AACZ;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd","sourcesContent":["/* Global CSS <style></style> */\n* {\n  box-sizing: border-box;\n  font-family: 'Roboto', sans-serif;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "/* Global CSS */\n* {\n  box-sizing: border-box;\n  font-family: 'Roboto', sans-serif;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}\n\n.error {\n  padding: .5rem;\n  background-color: #f8d7da;\n  color: #721c24;\n  border-radius: 5px;\n}", "",{"version":3,"sources":["webpack://./src/main/frontend/App.css"],"names":[],"mappings":"AAAA,eAAe;AACf;EACE,sBAAsB;EACtB,iCAAiC;AACnC;;AAEA;EACE,aAAa;EACb,qBAAqB;EACrB,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,yBAAyB;EACzB,kBAAkB;EAClB,mCAAmC;EACnC,WAAW;EACX,YAAY;EACZ,oCAAoC;AACtC;;AAEA;EACE,KAAK,uBAAuB,EAAE;EAC9B,OAAO,yBAAyB,EAAE;AACpC;;AAEA;EACE,uBAAuB;EACvB,aAAa;EACb,wBAAwB;EACxB,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,cAAc;EACd,gBAAgB;AAClB;;AAEA;;EAEE,YAAY;AACd;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;;;;EAIE,YAAY;EACZ,iBAAiB;EACjB,sBAAsB;EACtB,yBAAyB;EACzB,kBAAkB;EAClB,gBAAgB;EAChB,sBAAsB;AACxB;;AAEA;;;;EAIE,wBAAwB;EACxB,qBAAqB;EACrB,gBAAgB;AAClB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;;;;EAIE,yBAAyB;EACzB,UAAU;AACZ;AACA;EACE,cAAc;EACd,qBAAqB;EACrB,gBAAgB;AAClB;;AAEA;;;;EAIE,WAAW;EACX,kBAAkB;EAClB,UAAU;AACZ;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,cAAc;EACd,yBAAyB;EACzB,cAAc;EACd,kBAAkB;AACpB","sourcesContent":["/* Global CSS */\n* {\n  box-sizing: border-box;\n  font-family: 'Roboto', sans-serif;\n}\n\n.loader-wrap {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n}\n\n.loader-wrap .loader {\n  border: 9px solid #f3f3f3;\n  border-radius: 50%;\n  border-top: 9px solid rgb(85,85,85);\n  width: 50px;\n  height: 50px;\n  animation: spin 1.3s linear infinite;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\nform {\n  background-color: white;\n  display: flex;\n  flex-flow: column nowrap;\n  align-items: center;\n  width: 40vw;\n}\n\nform > * {\n  display: block;\n  margin: 0.3rem 0;\n}\n\nform > input[type=\"text\"],\nform > input[type=\"email\"] {\n  height: 2rem;\n}\n\n.padding-1y {\n  padding: 1rem 0;\n}\n\n.padding-05y {\n  padding: 0.5rem 0;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  height: 38px;\n  padding: 6px 10px;\n  background-color: #fff;\n  border: 1px solid #d1d1d1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box;\n}\n\ninput[type=\"email\"],\ninput[type=\"text\"],\ninput[type=\"date\"],\ntextarea {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px;\n}\ninput[type=\"email\"]:focus,\ninput[type=\"text\"]:focus,\ninput[type=\"date\"]:focus,\ntextarea:focus {\n  border: 1px solid #ff974c;\n  outline: 0;\n}\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 600;\n}\n\ninput[type=\"submit\"]:hover,\ninput[type=\"submit\"]:focus,\ninput[type=\"button\"]:hover,\ninput[type=\"button\"]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0;\n}\n\n.edit {\n  background-color: #ffa600;\n  color: white;\n}\n\n.delete {\n  background-color: #721c24;\n  color: white;\n}\n\n.error {\n  padding: .5rem;\n  background-color: #f8d7da;\n  color: #721c24;\n  border-radius: 5px;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -51146,14 +51146,13 @@ var ButtonWarning = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["defau
 
 var Form = function Form() {
   // local form data state
-  // TODO: taskForm
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     localHref: '',
     // needed for updates
     localTitle: '',
     localDescription: '',
     localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate()),
-    localType: true
+    localType: ''
   }),
       _useState2 = _slicedToArray(_useState, 2),
       taskForm = _useState2[0],
@@ -51174,11 +51173,10 @@ var Form = function Form() {
       title = tmpTask.title,
       description = tmpTask.description,
       date = tmpTask.date,
-      workHome = tmpTask.workHome;
-  console.log(tmpTask); // whenever tmpTask changes set it to regarding the text fields (update state)
+      workHome = tmpTask.workHome,
+      done = tmpTask.done; // whenever tmpTask changes set it to regarding the text fields (update state)
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    console.log("useEffectForm triggered");
     if (href && title && description && date) //
       setTaskForm({
         localHref: href,
@@ -51188,13 +51186,12 @@ var Form = function Form() {
         localType: workHome
       });else // this specifies the case if the use is in edit mode and then deletes it anyways -> clear out local form as well
       {
-        console.log("Here after set");
         setTaskForm({
           localHref: '',
           localTitle: '',
           localDescription: '',
           localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate()),
-          localType: true
+          localType: ''
         });
       }
   }, [tmpTask]);
@@ -51222,13 +51219,14 @@ var Form = function Form() {
       localTitle: '',
       localDescription: '',
       localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate()),
-      localType: true
+      localType: ''
     });
   };
 
   var onSubmit = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(e) {
-      var res;
+      var res, _res;
+
       return regeneratorRuntime.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -51236,56 +51234,69 @@ var Form = function Form() {
               e.preventDefault(); // check if update-mode is on by checking if tmpTask is set
 
               if (!(href && title && description && date)) {
-                _context.next = 5;
+                _context.next = 8;
                 break;
               }
 
-              // Edit Mode
-              dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["updateTask"])(href, localTitle, localDescription, localDate, localType));
-              _context.next = 17;
-              break;
+              _context.next = 4;
+              return dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["updateTask"])(href, localTitle, localDescription, localDate, localType, done));
 
-            case 5:
-              _context.prev = 5;
-              _context.next = 8;
-              return dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["addTask"])(localTitle, localDescription, localDate, localType));
-
-            case 8:
+            case 4:
               res = _context.sent;
 
-              if (!res) {
-                _context.next = 12;
+              if (res) {
+                setTaskForm({
+                  localHref: '',
+                  localTitle: '',
+                  localDescription: '',
+                  localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate()),
+                  localType: ''
+                });
+              }
+
+              _context.next = 21;
+              break;
+
+            case 8:
+              _context.prev = 8;
+              _context.next = 11;
+              return dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["addTask"])(localTitle, localDescription, localDate, localType));
+
+            case 11:
+              _res = _context.sent;
+
+              if (!_res) {
+                _context.next = 16;
                 break;
               }
 
-              _context.next = 12;
+              _context.next = 15;
               return dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["bindNewTask"])());
 
-            case 12:
-              _context.next = 17;
-              break;
-
-            case 14:
-              _context.prev = 14;
-              _context.t0 = _context["catch"](5);
-              console.log(_context.t0);
-
-            case 17:
-              // clear input fields
+            case 15:
               setTaskForm({
                 localHref: '',
                 localTitle: '',
                 localDescription: '',
                 localDate: "".concat(new Date(Date.now()).getUTCFullYear(), "-").concat(parseInt(new Date(Date.now()).getMonth().toString()) + 1 < 10 ? '0' + (parseInt(new Date(Date.now()).getMonth().toString()) + 1) : parseInt(new Date(Date.now()).getMonth().toString() + 1), "-").concat(parseInt(new Date(Date.now()).getDate().toString()) < 10 ? '0' + new Date(Date.now()).getDate() : new Date(Date.now()).getDate()),
-                localType: true
+                localType: ''
               });
 
+            case 16:
+              _context.next = 21;
+              break;
+
             case 18:
+              _context.prev = 18;
+              _context.t0 = _context["catch"](8);
+              console.log(_context.t0);
+
+            case 21:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, null, [[5, 14]]);
+      }, _callee, null, [[8, 18]]);
     }));
 
     return function onSubmit(_x) {
@@ -51350,7 +51361,6 @@ var Form = function Form() {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "padding-05y"
   }, "Work: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    checked: true,
     type: "radio",
     id: "work",
     name: "localType",
@@ -51902,68 +51912,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/entities/reducers/task */ "./src/main/frontend/store/entities/reducers/task.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: row nowrap;\n  width: 100%;\n  height: 150px;\n  background-color: white;\n  border-radius: 20px;\n  margin: 0.3rem 0;\n\n  & > div:first-child {\n    align-self: center;\n    margin-left: 1rem;\n  }\n"]);
-
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  margin: auto 2rem;\n  width: 3rem;\n  height: 3rem;\n  margin-top: 2.2rem;\n  border: none;\n  position: relative;\n\n  & input[type='checkbox'] {\n    width: 3rem;\n    height: 3rem;\n    z-index: 5;\n    position: absolute;\n    top: 0;\n    left: 0;\n    opacity: 0;\n\n    &:hover ~ .checkmark {\n      background-color: rgb(187, 253, 235);\n    }\n  }\n\n  & .checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 3rem;\n    height: 3rem;\n    border-radius: 50%;\n    border: 2px solid #ccc;\n  }\n\n  & :checked ~ .checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 3rem;\n    height: 3rem;\n    background-color: rgb(0, 235, 191);\n    border-radius: 50%;\n    z-index: 2;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    border: none;\n\n    & .innerMark {\n      width: 12px;\n      height: 4px;\n      background-color: white;\n      z-index: 2;\n      transform: rotate(225deg);\n      margin-left: 0.7rem;\n      position: relative;\n      top: 4px;\n\n      &::after {\n        content: '';\n        width: 24px;\n        height: 4px;\n        background-color: white;\n        position: absolute;\n        top: 10px;\n        left: -10px;\n        right: 10px;\n        z-index: 1;\n        transform: rotate(270deg);\n      }\n    }\n  }\n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  padding: 0 20px;\n  margin-left: 0.25rem;\n  margin-right: 0.25rem;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  letter-spacing: 0.1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  ", ";\n  ", ";\n  ", "; \n  ", ";  \n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  width: 100%;\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  background-color: #eeeeee;\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  list-style-type: none;\n  display: flex;\n  flex-flow: column nowrap;\n  height: 70px;\n  min-width: 300px;\n  justify-content: space-evenly;\n  padding: 0 1rem;\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  text-align: center;\n  color: white;\n  background-color: #333;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n  display: flex;\n  flex-flow: column nowrap;\n  justify-content: center;\n  align-items: center;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: 50px auto 50px auto;\n  display: grid;\n  grid-template-rows: 50px auto 50px;\n  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);\n  background-color: white;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: row nowrap;\n  width: 100%;\n  height: 150px;\n  background-color: white;\n  border-radius: 20px;\n  margin: 0.3rem 0;\n\n  & > div:first-child {\n    align-self: center;\n    margin-left: 1rem;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -51973,7 +51923,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: 0 auto;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: auto 2rem;\n  width: 3rem;\n  height: 3rem;\n  margin-top: 2.2rem;\n  border: none;\n  position: relative;\n\n  & input[type='checkbox'] {\n    width: 3rem;\n    height: 3rem;\n    z-index: 5;\n    position: absolute;\n    top: 0;\n    left: 0;\n    opacity: 0;\n\n    &:hover ~ .checkmark {\n      background-color: rgb(187, 253, 235);\n    }\n  }\n\n  & .checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 3rem;\n    height: 3rem;\n    border-radius: 50%;\n    border: 2px solid #ccc;\n  }\n\n  & :checked ~ .checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 3rem;\n    height: 3rem;\n    background-color: rgb(0, 235, 191);\n    border-radius: 50%;\n    z-index: 2;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    border: none;\n\n    & .innerMark {\n      width: 12px;\n      height: 4px;\n      background-color: white;\n      z-index: 2;\n      transform: rotate(225deg);\n      margin-left: 0.7rem;\n      position: relative;\n      top: 4px;\n\n      &::after {\n        content: '';\n        width: 24px;\n        height: 4px;\n        background-color: white;\n        position: absolute;\n        top: 10px;\n        left: -10px;\n        right: 10px;\n        z-index: 1;\n        transform: rotate(270deg);\n      }\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -51988,22 +51938,8 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var ContainerCard = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject());
+var Checkbox = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject());
 var Card = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject2());
-var CardTop = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject3());
-var Ul = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].ul(_templateObject4());
-var CardBottom = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject5());
-var Button = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].button(_templateObject6(), function (props) {
-  return props.primary && "background-color: transparent; height: 38px; margin: 0.5rem 0rem;";
-}, function (props) {
-  return props.secondary && "color: #000; background-color: rgb(248, 249, 250); border-color: #ff974c; padding-top: 0.25rem; padding-bottom: 0.25rem;";
-}, function (props) {
-  return props.danger && "background-color: rgb(240, 0, 57); height: 38px; margin: 0.5rem 0rem;";
-}, function (props) {
-  return props.warning && "background-color: rgb(255, 194, 0); height: 38px; margin: 0.5rem 0rem;";
-});
-var WorkCheck = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject7());
-var WorkCard = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject8());
 
 var TaskItem = function TaskItem(_ref) {
   var task = _ref.task;
@@ -52011,6 +51947,7 @@ var TaskItem = function TaskItem(_ref) {
       description = task.description,
       date = task.date,
       workHome = task.workHome,
+      done = task.done,
       _links = task._links;
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
   var dateParsed = new Date(Date.parse(date.toString()));
@@ -52021,22 +51958,21 @@ var TaskItem = function TaskItem(_ref) {
   };
 
   var setEditForm = function setEditForm(e) {
-    console.log("Set Edit"); // clear previous stuff
-
+    // clear previous stuff
     dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["clearTmpTask"])()); // set tmp contact when clicked
 
-    dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["setTmpTask"])(_links.self.href, title, description, date, workHome));
+    dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["setTmpTask"])(_links.self.href, title, description, date, workHome, done));
   }; // WORK = true and HOME = false
 
 
   if (workHome) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Card, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       style: {
         backgroundColor: 'rgb(94, 124, 255)',
         height: '70%',
         width: '4px'
       }
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCheck, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Checkbox, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       type: "checkbox"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: "checkmark"
@@ -52047,15 +51983,38 @@ var TaskItem = function TaskItem(_ref) {
         color: 'rgb(94, 124, 255)',
         fontWeight: 'bold'
       }
-    }, "".concat(dateParsed.getDate(), ".").concat(dateParsed.getMonth() + 1, ".").concat(dateParsed.getUTCFullYear())))));
+    }, "".concat(dateParsed.getDate(), ".").concat(dateParsed.getMonth() + 1, ".").concat(dateParsed.getUTCFullYear())))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: 1
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        marginRight: '1rem'
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: setEditForm
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-edit fa-1x"
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        marginRight: '1rem'
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: deleteEntry
+    }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-trash fa-1x"
+    })))));
   } else {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Card, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       style: {
         backgroundColor: 'rgb(255, 184, 0)',
         height: '70%',
         width: '4px'
       }
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WorkCheck, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Checkbox, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       type: "checkbox"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: "checkmark"
@@ -52090,28 +52049,7 @@ var TaskItem = function TaskItem(_ref) {
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fas fa-trash fa-1x"
     })))));
-  } // return (
-  //   <Fragment>
-  //     <ContainerCard>
-  //       <Card>
-  //         <CardTop/>
-  //         <Ul>
-  //           <li style={{display: 'none'}} id={_links.self.href}>{}</li>
-  //           <li><i
-  //             className="fas fa-hands-wash">&nbsp;</i>{`${dateParsed.getDate()}.${dateParsed.getMonth() + 1}.${dateParsed.getUTCFullYear()}`}
-  //           </li>
-  //           <li><i className="fas fa-user">&nbsp;</i>{firstName}&nbsp;<strong>{lastName}</strong></li>
-  //           <li><i className="fas fa-envelope">&nbsp;</i>{email}</li>
-  //         </Ul>
-  //         <CardBottom>
-  //           <Button secondary onClick={setEditForm}>edit</Button>
-  //           <Button secondary style={{backgroundColor: 'red'}} onClick={deleteEntry}>delete</Button>
-  //         </CardBottom>
-  //       </Card>
-  //     </ContainerCard>
-  //   </Fragment>
-  // );
-
+  }
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TaskItem);
@@ -52135,6 +52073,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TaskItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./TaskItem */ "./src/main/frontend/components/TaskItem.js");
 /* harmony import */ var _Form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Form */ "./src/main/frontend/components/Form.js");
 /* harmony import */ var _store_auth_auth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../store/auth/auth */ "./src/main/frontend/store/auth/auth.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/src/js.cookie.js");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_8__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _templateObject6() {
   var data = _taggedTemplateLiteral(["\n  text-align: left;\n  display: flex;\n"]);
 
@@ -52204,12 +52152,27 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
+
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].h1(_templateObject());
 var Main = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].main(_templateObject2());
 var TaskWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject3());
 var WorkSection = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].section(_templateObject4());
 var HomeSection = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].section(_templateObject5());
-var IconStyle = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].h4(_templateObject6());
+var IconStyle = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].h4(_templateObject6()); // axios config for csrf protection
+
+axios__WEBPACK_IMPORTED_MODULE_7___default.a.interceptors.request.use(function (req) {
+  if (req.method === "post" || req.method === "delete" || req.method === "put" || req.method === "patch") {
+    // check if relative to url only
+    if (!(/^http:.*/.test(req.url) || /^https:.*/.test(req.url))) {
+      req.headers.common = _objectSpread(_objectSpread({}, req.headers.common), {}, {
+        "X-XSRF-TOKEN": js_cookie__WEBPACK_IMPORTED_MODULE_8___default.a.get("XSRF-TOKEN")
+      });
+    }
+  }
+
+  return req;
+});
 
 var Tasks = function Tasks() {
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
@@ -52218,8 +52181,8 @@ var Tasks = function Tasks() {
   var loginState = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_6__["loginInfoSelector"]);
   var loading = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_store_auth_auth__WEBPACK_IMPORTED_MODULE_6__["loadingBooleanSelector"]);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["loadTasks"])()).then(function (res) {
-      return console.log(res);
+    dispatch(Object(_store_entities_reducers_task__WEBPACK_IMPORTED_MODULE_2__["loadTasks"])()).then(function () {
+      return console.log("[tasks]: tasks successfully loaded from server");
     });
   }, []);
 
@@ -52342,7 +52305,6 @@ var loadLogin = function loadLogin() {
               _context.next = 2;
               return dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
                 url: "/user",
-                // FIXME: Remove Hardcoded URL
                 method: "get",
                 data: {},
                 onStart: loginRequested.type,
@@ -52385,7 +52347,6 @@ var loadLoginUserId = function loadLoginUserId() {
               _context2.next = 2;
               return dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
                 url: "/userid?email=".concat(getState().auth.user),
-                // FIXME: Remove Hardcoded URL
                 method: "get",
                 data: {},
                 onStart: loginRequested.type,
@@ -52427,7 +52388,6 @@ var loadLogout = function loadLogout() {
               _context3.next = 2;
               return dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
                 url: "/logout",
-                // FIXME: Remove Hardcoded URL
                 method: "post",
                 data: {},
                 onStart: logoutRequested.type,
@@ -52701,8 +52661,23 @@ var addTask = function addTask(title, description, date, workHome) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
+              if (!(title === "" || description === "" || date === "" || workHome === "")) {
+                _context2.next = 3;
+                break;
+              }
+
+              dispatch({
+                type: taskAddFailed.type,
+                payload: {
+                  type: "error",
+                  error: "Please fill out the form!"
+                }
+              });
+              return _context2.abrupt("return", Promise.resolve(false));
+
+            case 3:
               before = getState().entities.taskReducer.tasks.length;
-              _context2.next = 3;
+              _context2.next = 6;
               return dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
                 url: "/api/tasks",
                 method: "post",
@@ -52710,7 +52685,8 @@ var addTask = function addTask(title, description, date, workHome) {
                   title: title,
                   description: description,
                   date: date,
-                  workHome: workHome
+                  workHome: workHome,
+                  done: false
                 },
                 onStart: taskAddRequested.type,
                 onDone: taskAddRequestDone.type,
@@ -52718,20 +52694,20 @@ var addTask = function addTask(title, description, date, workHome) {
                 onFailed: taskAddFailed.type
               }));
 
-            case 3:
+            case 6:
               after = getState().entities.taskReducer.tasks.length; // check if we were able to post the data
 
               if (!(before < after)) {
-                _context2.next = 8;
+                _context2.next = 11;
                 break;
               }
 
               return _context2.abrupt("return", Promise.resolve(true));
 
-            case 8:
+            case 11:
               return _context2.abrupt("return", Promise.reject("[tasks]: Failed to Add Task to /api/tasks"));
 
-            case 9:
+            case 12:
             case "end":
               return _context2.stop();
           }
@@ -52782,7 +52758,7 @@ var bindNewTask = function bindNewTask() {
     };
   }();
 };
-var setTmpTask = function setTmpTask(href, title, description, date, workHome) {
+var setTmpTask = function setTmpTask(href, title, description, date, workHome, done) {
   return function (dispatch, getState) {
     dispatch({
       type: tmpTaskDataSet.type,
@@ -52791,7 +52767,8 @@ var setTmpTask = function setTmpTask(href, title, description, date, workHome) {
         title: title,
         description: description,
         date: date,
-        workHome: workHome
+        workHome: workHome,
+        done: done
       }
     });
   };
@@ -52804,28 +52781,62 @@ var clearTmpTask = function clearTmpTask() {
     });
   };
 };
-var updateTask = function updateTask(href, title, description, date, workHome) {
-  return function (dispatch, getState) {
-    dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
-      url: href,
-      method: "put",
-      data: {
-        title: title,
-        description: description,
-        date: date,
-        workHome: workHome
-      },
-      params: {
-        headers: {
-          "Content-Type": "application/json"
+var updateTask = function updateTask(href, title, description, date, workHome, done) {
+  return /*#__PURE__*/function () {
+    var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(dispatch, getState) {
+      return regeneratorRuntime.wrap(function _callee4$(_context4) {
+        while (1) {
+          switch (_context4.prev = _context4.next) {
+            case 0:
+              if (!(title === "" || description === "" || date === "" || workHome === "")) {
+                _context4.next = 3;
+                break;
+              }
+
+              dispatch({
+                type: taskAddFailed.type,
+                payload: {
+                  type: "error",
+                  error: "Please fill out the form!"
+                }
+              });
+              return _context4.abrupt("return", Promise.resolve(false));
+
+            case 3:
+              dispatch(Object(_middleware_apiCreators__WEBPACK_IMPORTED_MODULE_2__["apiCallBegan"])({
+                url: href,
+                method: "put",
+                data: {
+                  title: title,
+                  description: description,
+                  date: date,
+                  workHome: workHome,
+                  done: done
+                },
+                params: {
+                  headers: {
+                    "Content-Type": "application/json"
+                  }
+                },
+                onStart: taskUpdateRequested.type,
+                onDone: taskUpdateRequestDone.type,
+                onSuccess: taskUpdated.type,
+                onFailed: taskUpdateFailed.type
+              }));
+              return _context4.abrupt("return", Promise.resolve(true));
+
+            case 5:
+            case "end":
+              return _context4.stop();
+          }
         }
-      },
-      onStart: taskUpdateRequested.type,
-      onDone: taskUpdateRequestDone.type,
-      onSuccess: taskUpdated.type,
-      onFailed: taskUpdateFailed.type
+      }, _callee4);
     }));
-  };
+
+    return function (_x7, _x8) {
+      return _ref4.apply(this, arguments);
+    };
+  }();
 };
 var deleteTask = function deleteTask(url) {
   return function (dispatch, getState) {
@@ -52873,7 +52884,10 @@ var deleteTask = function deleteTask(url) {
   taskState.loading = false;
 }), _defineProperty(_createReducer, taskAdded.type, function (taskState, action) {
   taskState.tasks.push(action.payload.data);
-  taskState.tmpReference = action.payload.data._links.user.href;
+  taskState.tmpReference = action.payload.data._links.user.href; // wipe possible ui messages
+
+  taskState.notification.type = '';
+  taskState.notification.error = '';
 }), _defineProperty(_createReducer, taskAddFailed.type, function (taskState, action) {
   taskState.notification.type = action.payload.type;
   taskState.notification.error = action.payload.error;
@@ -52894,12 +52908,17 @@ var deleteTask = function deleteTask(url) {
       title = _action$payload2.title,
       description = _action$payload2.description,
       date = _action$payload2.date,
-      workHome = _action$payload2.workHome;
+      workHome = _action$payload2.workHome,
+      done = _action$payload2.done;
   taskState.tmpTask.href = href;
   taskState.tmpTask.title = title;
   taskState.tmpTask.description = description;
   taskState.tmpTask.date = date;
   taskState.tmpTask.workHome = workHome;
+  taskState.tmpTask.done = done; // wipe possible ui messages
+
+  taskState.notification.type = '';
+  taskState.notification.error = '';
 }), _defineProperty(_createReducer, tmpTaskDataWiped.type, function (taskState) {
   taskState.tmpTask = {};
 }), _defineProperty(_createReducer, taskUpdateRequested.type, function (taskState) {
@@ -52912,7 +52931,8 @@ var deleteTask = function deleteTask(url) {
       title = _action$payload$data.title,
       description = _action$payload$data.description,
       date = _action$payload$data.date,
-      workHome = _action$payload$data.workHome; // find the index of contact by id (href)
+      workHome = _action$payload$data.workHome,
+      done = _action$payload$data.done; // find the index of contact by id (href)
 
   var index = taskState.tasks.findIndex(function (task) {
     return task._links.self.href === _links.self.href;
@@ -52923,7 +52943,12 @@ var deleteTask = function deleteTask(url) {
   taskState.tasks[index].description = description;
   taskState.tasks[index].date = date;
   taskState.tasks[index].workHome = workHome;
+  taskState.tasks[index].done = done;
   taskState.tmpTask = {}; // wipe tmp
+  // wipe possible ui messages
+
+  taskState.notification.type = '';
+  taskState.notification.error = '';
 }), _defineProperty(_createReducer, taskUpdateFailed.type, function (taskState, action) {
   taskState.notification.type = action.payload.type;
   taskState.notification.error = action.payload.error;

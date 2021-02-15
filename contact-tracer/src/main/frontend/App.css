@@ -1,4 +1,4 @@
-/* Global CSS <style></style> */
+/* Global CSS */
 * {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
@@ -109,4 +109,11 @@ input[type="button"]:focus {
 .delete {
   background-color: #721c24;
   color: white;
+}
+
+.error {
+  padding: .5rem;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 5px;
 }

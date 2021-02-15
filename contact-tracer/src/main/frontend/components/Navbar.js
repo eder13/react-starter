@@ -43,7 +43,37 @@ const animate = keyframes`
   }
 `;
 
+const DesktopNav = styled.nav`
+  display: none;
+  @media only screen and (min-width: 800px) {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 400px;
+    
+    & ul {
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      
+      & li {
+        display: flex;
+        flex-flow: row nowrap;
+        flex: 1;
+        justify-content: space-evenly;
+        
+        & ${StyledLink} {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+`;
+
 const Nav = styled.nav`
+  @media only screen and (min-width: 800px) {
+    display: none;
+  }
+
   position: fixed;
   top: 56px;
   right: 15px;
@@ -102,9 +132,16 @@ const Nav = styled.nav`
 `;
 
 const HamburgerToggle = styled.input`
+  @media only screen and (min-width: 800px) {
+    display: none;
+  }
+
 
   &:checked ~ ${Nav} {
     display: flex;
+    @media only screen and (min-width: 800px) {
+      display: none;
+    }
   }
   
   position: fixed;
@@ -118,6 +155,10 @@ const HamburgerToggle = styled.input`
 `;
 
 const Hamburger = styled.div`
+  @media only screen and (min-width: 800px) {
+    display: none;
+  }
+
   width: 42px;
   height: 40px;
   display: flex;
@@ -189,6 +230,25 @@ const Navbar = (props) => {
         <Logo>
           <StyledLink as="a" href="/">{props.title}</StyledLink>
         </Logo>
+
+        <DesktopNav>
+          <ul>
+            <li><StyledLink to="/">home</StyledLink></li>
+            <li><StyledLink to={props.dash}>{props.dash.replace("/", "")}</StyledLink></li>
+            {props.logout &&
+            <li>
+              <button style={{padding: '0 0.5rem'}} onClick={
+                () => {
+                  dispatch(loadLogout()).then((resolve) => {
+                    if (resolve)
+                      window.location.href = "/";
+                  });
+                }}>
+                <i className="fas fa-sign-out-alt"/>
+              </button>
+            </li>}
+          </ul>
+        </DesktopNav>
 
         <HamburgerToggle id="hamburgerCheckbox" type="checkbox"/>
         <Hamburger>

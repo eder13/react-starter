@@ -27,18 +27,21 @@ public class Task {
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private Date date;
 
+    private boolean done;
+
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = true)
     private User user;
 
     public Task() {}
 
-    public Task(Long id, @NotBlank String title, @NotBlank String description, @NotBlank boolean workHome, Date date, User user) {
+    public Task(Long id, @NotBlank String title, @NotBlank String description, @NotBlank boolean workHome, Date date, boolean done, User user) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.workHome = workHome;
         this.date = date;
+        this.done = done;
         this.user = user;
     }
 
@@ -80,6 +83,14 @@ public class Task {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public boolean isDone() {
+        return done;
+    }
+
+    public void setDone(boolean done) {
+        this.done = done;
     }
 
     public User getUser() {

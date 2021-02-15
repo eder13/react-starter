@@ -22,7 +22,7 @@ const taskRelationSetRequestDone = createAction("taskRelationSetRequestDone");
 const taskRelationSet = createAction("taskRelationSet");
 const taskRelationSettingFailed = createAction("taskRelationSettingFailed");
 
-// temp data: edit inside form field
+// edit task (via temp in form) and set task to done
 const tmpTaskDataSet = createAction("tmpTaskDataSet");
 const tmpTaskDataWiped = createAction("tmpTaskDataWiped");
 const taskUpdateRequested = createAction("taskUpdateRequested");
@@ -67,6 +67,17 @@ export const loadTasks = () => async (dispatch, getState) => {
 
 export const addTask = (title, description, date, workHome) => async (dispatch, getState) => {
 
+  // check if fields are nonEmpty
+  if (title === "" || description === "" || date === "") {
+    dispatch({
+      type: taskAddFailed.type, payload: {
+        type: "error",
+        error: "Please fill out the form!"
+      }
+    });
+    return Promise.resolve(false);
+  }
+
   const before = getState().entities.taskReducer.tasks.length;
 
   await dispatch(apiCallBegan({
@@ -76,7 +87,8 @@ export const addTask = (title, description, date, workHome) => async (dispatch, 
       title,
       description,
       date,
-      workHome
+      workHome,
+      done: false
     },
     onStart: taskAddRequested.type,
     onDone: taskAddRequestDone.type,
@@ -113,15 +125,26 @@ export const bindNewTask = () => async (dispatch, getState) => {
   }));
 }
 
-export const setTmpTask = (href, title, description, date, workHome) => (dispatch, getState) => {
-  dispatch({type: tmpTaskDataSet.type, payload: {href, title, description, date, workHome}});
+export const setTmpTask = (href, title, description, date, workHome, done) => (dispatch, getState) => {
+  dispatch({type: tmpTaskDataSet.type, payload: {href, title, description, date, workHome, done}});
 }
 
 export const clearTmpTask = () => (dispatch, getState) => {
   dispatch({type: tmpTaskDataWiped.type, payload: {}});
 }
 
-export const updateTask = (href, title, description, date, workHome) => (dispatch, getState) => {
+export const updateTask = (href, title, description, date, workHome, done) => async (dispatch, getState) => {
+
+  // check if fields are nonEmpty
+  if (title === "" || description === "" || date === "") {
+    dispatch({
+      type: taskAddFailed.type, payload: {
+        type: "error",
+        error: "Please fill out the form!"
+      }
+    });
+    return Promise.resolve(false);
+  }
 
   dispatch(apiCallBegan({
     url: href,
@@ -130,7 +153,8 @@ export const updateTask = (href, title, description, date, workHome) => (dispatc
       title,
       description,
       date,
-      workHome
+      workHome,
+      done
     },
     params: {
       headers: {
@@ -142,6 +166,8 @@ export const updateTask = (href, title, description, date, workHome) => (dispatc
     onSuccess: taskUpdated.type,
     onFailed: taskUpdateFailed.type
   }));
+
+  return Promise.resolve(true);
 }
 
 export const deleteTask = (url) => (dispatch, getState) => {
@@ -193,6 +219,10 @@ export default createReducer({
   [taskAdded.type]: (taskState, action) => {
     taskState.tasks.push(action.payload.data);
     taskState.tmpReference = action.payload.data._links.user.href;
+
+    // wipe possible ui messages
+    taskState.notification.type = '';
+    taskState.notification.error = '';
   },
   [taskAddFailed.type]: (taskState, action) => {
     taskState.notification.type = action.payload.type;
@@ -214,12 +244,17 @@ export default createReducer({
     taskState.tmpReference = "";
   },
   [tmpTaskDataSet.type]: (taskState, action) => {
-    const {href, title, description, date, workHome} = action.payload;
+    const {href, title, description, date, workHome, done} = action.payload;
     taskState.tmpTask.href = href;
     taskState.tmpTask.title = title;
     taskState.tmpTask.description = description;
     taskState.tmpTask.date = date;
     taskState.tmpTask.workHome = workHome;
+    taskState.tmpTask.done = done;
+
+    // wipe possible ui messages
+    taskState.notification.type = '';
+    taskState.notification.error = '';
   },
   [tmpTaskDataWiped.type]: (taskState) => {
     taskState.tmpTask = {};
@@ -231,7 +266,7 @@ export default createReducer({
     taskState.loading = false;
   },
   [taskUpdated.type]: (taskState, action) => {
-    const {_links, title, description, date, workHome} = action.payload.data;
+    const {_links, title, description, date, workHome, done} = action.payload.data;
 
     // find the index of contact by id (href)
     const index = taskState.tasks.findIndex(task => task._links.self.href === _links.self.href);
@@ -242,7 +277,12 @@ export default createReducer({
     taskState.tasks[index].description = description;
     taskState.tasks[index].date = date;
     taskState.tasks[index].workHome = workHome;
+    taskState.tasks[index].done = done;
     taskState.tmpTask = {}; // wipe tmp
+
+    // wipe possible ui messages
+    taskState.notification.type = '';
+    taskState.notification.error = '';
   },
   [taskUpdateFailed.type]: (taskState, action) => {
     taskState.notification.type = action.payload.type;

@@ -17,7 +17,7 @@ const logoutFailed = createAction("logoutFailed");
 export const loadLogin = () => async (dispatch, getState) => {
   // user name email
   await dispatch(apiCallBegan({
-    url: "/user", // FIXME: Remove Hardcoded URL
+    url: "/user",
     method: "get",
     data: {},
     onStart: loginRequested.type,
@@ -33,7 +33,7 @@ export const loadLogin = () => async (dispatch, getState) => {
 export const loadLoginUserId = () => async (dispatch, getState) => {
   // user credentials id
   await dispatch(apiCallBegan({
-    url: `/userid?email=${getState().auth.user}`, // FIXME: Remove Hardcoded URL
+    url: `/userid?email=${getState().auth.user}`,
     method: "get",
     data: {},
     onStart: loginRequested.type,
@@ -47,7 +47,7 @@ export const loadLoginUserId = () => async (dispatch, getState) => {
 }
 export const loadLogout = () => async (dispatch, getState) => {
   await dispatch(apiCallBegan({
-    url: "/logout", // FIXME: Remove Hardcoded URL
+    url: "/logout",
     method: "post",
     data: {},
     onStart: logoutRequested.type,

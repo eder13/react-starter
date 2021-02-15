@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useDispatch} from "react-redux";
-import {clearTmpTask, deleteTask, setTmpTask} from "../store/entities/reducers/task";
+import {clearTmpTask, deleteTask, setTmpTask, updateTask} from "../store/entities/reducers/task";
 import styled from "styled-components";
 
 const Checkbox = styled.div`
@@ -92,7 +92,9 @@ const Card = styled.div`
 
 const TaskItem = ({task}) => {
 
-  const {title, description, date, workHome, _links} = task;
+  const {title, description, date, workHome, done, _links} = task;
+
+  const [localDone, setLocalDone] = useState(done);
 
   const dispatch = useDispatch();
   const dateParsed = new Date(Date.parse(date.toString()));
@@ -108,8 +110,19 @@ const TaskItem = ({task}) => {
     dispatch(clearTmpTask());
 
     // set tmp contact when clicked
-    dispatch(setTmpTask(_links.self.href, title, description, date, workHome));
+    dispatch(setTmpTask(_links.self.href, title, description, date, workHome, done));
 
+  }
+
+  const onChange = (e) => {
+    if(e.target.checked) {
+      setLocalDone(true);
+      dispatch(updateTask(_links.self.href, title, description, date, workHome, true));
+    }
+    else {
+      setLocalDone(false);
+      dispatch(updateTask(_links.self.href, title, description, date, workHome, false));
+    }
   }
 
   // WORK = true and HOME = false
@@ -119,25 +132,31 @@ const TaskItem = ({task}) => {
       <Card>
         <div style={{backgroundColor: 'rgb(94, 124, 255)', height: '70%', width: '4px'}}>{}</div>
         <Checkbox>
-          <input type="checkbox"/>
+          <input type="checkbox" checked={localDone} onChange={onChange}/>
           <span className="checkmark">
                 <span className="innerMark"/>
               </span>
         </Checkbox>
         <div>
-          <h3>{title}</h3>
-          <p>{description}</p>
-          <p>Due to:&nbsp;<span style={{
-            color: 'rgb(94, 124, 255)',
-            fontWeight: 'bold'
-          }}>{`${dateParsed.getDate()}.${dateParsed.getMonth() + 1}.${dateParsed.getUTCFullYear()}`}</span></p>
+          {!done ? <h3>{title}</h3> : <h3 style={{textDecoration: 'line-through'}}>{title}</h3>}
+          {!done ? <p>{description}</p> : <p style={{textDecoration: 'line-through'}}>{description}</p>}
+          {!done ?
+            <p>Due to:&nbsp;<span style={{
+              color: 'rgb(94, 124, 255)',
+              fontWeight: 'bold'
+            }}>{`${dateParsed.getDate()}.${dateParsed.getMonth() + 1}.${dateParsed.getUTCFullYear()}`}</span></p>
+            :
+            <p style={{textDecoration: 'line-through'}}>Due to:&nbsp;<span style={{
+              color: 'rgb(94, 124, 255)',
+              fontWeight: 'bold'
+            }}>{`${dateParsed.getDate()}.${dateParsed.getMonth() + 1}.${dateParsed.getUTCFullYear()}`}</span></p>}
         </div>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 1}}>
           <div style={{marginRight: '1rem'}}>
             <button onClick={setEditForm}><i className="fas fa-edit fa-1x">{}</i></button>
           </div>
           <div style={{marginRight: '1rem'}}>
-            <button onClick={deleteEntry}> <i className="fas fa-trash fa-1x">{}</i></button>
+            <button onClick={deleteEntry}><i className="fas fa-trash fa-1x">{}</i></button>
           </div>
         </div>
       </Card>
@@ -148,26 +167,33 @@ const TaskItem = ({task}) => {
       <Card>
         <div style={{backgroundColor: 'rgb(255, 184, 0)', height: '70%', width: '4px'}}>{}</div>
         <Checkbox>
-          <input type="checkbox"/>
+          <input type="checkbox" checked={localDone} onChange={onChange}/>
           <span className="checkmark">
                 <span className="innerMark"/>
               </span>
         </Checkbox>
         <div>
-          <h3>{title}</h3>
-          <p>{description}</p>
-          <p>Due to: &nbsp;<span style={{
-            color: 'rgb(255, 184, 0)',
-            fontWeight: 'bold'
-          }}>{`${dateParsed.getDate()}.${dateParsed.getMonth() + 1}.${dateParsed.getUTCFullYear()}`}</span>
-          </p>
+          {!done ? <h3>{title}</h3> : <h3 style={{textDecoration: 'line-through'}}>{title}</h3>}
+          {!done ? <p>{description}</p> : <p style={{textDecoration: 'line-through'}}>{description}</p>}
+          {!done ?
+            <p>Due to: &nbsp;<span style={{
+              color: 'rgb(255, 184, 0)',
+              fontWeight: 'bold'
+            }}>{`${dateParsed.getDate()}.${dateParsed.getMonth() + 1}.${dateParsed.getUTCFullYear()}`}</span>
+            </p>
+            :
+            <p style={{textDecoration: 'line-through'}}>Due to: &nbsp;<span style={{
+              color: 'rgb(255, 184, 0)',
+              fontWeight: 'bold'
+            }}>{`${dateParsed.getDate()}.${dateParsed.getMonth() + 1}.${dateParsed.getUTCFullYear()}`}</span>
+            </p>}
         </div>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 1}}>
           <div style={{marginRight: '1rem'}}>
             <button onClick={setEditForm}><i className="fas fa-edit fa-1x">{}</i></button>
           </div>
           <div style={{marginRight: '1rem'}}>
-            <button onClick={deleteEntry}> <i className="fas fa-trash fa-1x">{}</i></button>
+            <button onClick={deleteEntry}><i className="fas fa-trash fa-1x">{}</i></button>
           </div>
         </div>
       </Card>

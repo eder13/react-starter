@@ -32,9 +32,6 @@ public interface TaskRepository extends PagingAndSortingRepository<Task, Long> {
     // since PUT also uses the save method, we have to validate explicitely PUT inside
     // spring security and not here, otherwise it would treat PUT/POST the same here
 
-    /// TODO: check if POST /foos/{id} does not work (wanted behavior)
-    ///       What does HEAD /foos/{id} do?
-
     // saveAll should be disabled generally
     @Override
     @RestResource(exported = false)

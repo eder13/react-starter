@@ -70,7 +70,7 @@ const Home = () => {
         <div>
           <h1>Manage your Tasks with a breeze.</h1>
 
-          <img width="70%" src="https://blush.design/api/download?shareUri=AtJqwLxSI&w=800&h=800&fm=png"
+          <img style={{maxWidth: '470px'}} width="70%" src="https://blush.design/api/download?shareUri=AtJqwLxSI&w=800&h=800&fm=png"
                alt="messy doodle image"/>
 
           <p>taskify helps you to keep your brain organized.</p>

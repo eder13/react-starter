@@ -5,6 +5,8 @@ import styled from "styled-components";
 import TaskItem from "./TaskItem";
 import Form from "./Form";
 import {loadingBooleanSelector, loginInfoSelector} from "../store/auth/auth";
+import axios from "axios";
+import Cookies from "js-cookie";
 
 const Title = styled.h1`
   text-align: center;
@@ -45,6 +47,27 @@ const IconStyle = styled.h4`
   display: flex;
 `;
 
+// axios config for csrf protection
+axios.interceptors.request.use((req) => {
+
+  if (
+    req.method === "post" ||
+    req.method === "delete" ||
+    req.method === "put" ||
+    req.method === "patch"
+  ) {
+    // check if relative to url only
+    if (!(/^http:.*/.test(req.url) || /^https:.*/.test(req.url))) {
+      req.headers.common = {
+        ...req.headers.common,
+        "X-XSRF-TOKEN": Cookies.get("XSRF-TOKEN"),
+      };
+    }
+  }
+
+  return req;
+});
+
 const Tasks = () => {
 
   const dispatch = useDispatch();
@@ -54,7 +77,7 @@ const Tasks = () => {
   const loading = useSelector(loadingBooleanSelector);
 
   useEffect(() => {
-    dispatch(loadTasks()).then(res => console.log(res));
+    dispatch(loadTasks()).then(() => console.log("[tasks]: tasks successfully loaded from server"));
   }, []);
 
   if (!loading) {
@@ -71,9 +94,9 @@ const Tasks = () => {
             Work
           </IconStyle>
           <TaskWrapper>
-            {workTasks.map(workTask =>
+            {workTasks.length > 0 ? workTasks.map(workTask =>
               <TaskItem key={workTask._links.self.href} task={workTask}/>
-            )}
+            ) : <p>Add some work tasks ...</p>}
           </TaskWrapper>
         </WorkSection>
 
@@ -83,9 +106,9 @@ const Tasks = () => {
             Home
           </IconStyle>
           <TaskWrapper>
-            {homeTasks.map(homeTask =>
+            {homeTasks.length > 0 ? homeTasks.map(homeTask =>
               <TaskItem key={homeTask._links.self.href} task={homeTask}/>
-            )}
+            ) : <p>Add some home tasks ...</p>}
           </TaskWrapper>
         </HomeSection>
       </Main>

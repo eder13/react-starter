@@ -2,16 +2,9 @@ package com.springreact.template.security;
 
 import com.springreact.template.db.*;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Component;
-
-import java.security.Principal;
-import java.util.Collection;
-import java.util.Optional;
 
 @Component
 public class AccessHandler {
@@ -52,7 +45,7 @@ public class AccessHandler {
             String email = oauth2user.getAttribute("email");
 
             // check if user_id is still NULL, which means that a user posted it and is now trying to connect it
-            // TODO: For deployment, on the SQL Server write a script that every x hours those entries will be deleted if still NULL
+            // TODO: maybe write a script that every x hours those entries will be deleted if still NULL?
             Long connectedBy = taskRepository.getAssociatedUserId(id);
 
             if(connectedBy == null){
